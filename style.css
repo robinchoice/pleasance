@@ -1364,3 +1364,118 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Dark Mode === */
+[data-theme="dark"] {
+  --color-primary: #C4845C;
+  --color-primary-light: #D4A07A;
+  --color-bg: #1E1A17;
+  --color-bg-alt: #2A2420;
+  --color-text: #E8E0D8;
+  --color-text-light: #A89888;
+  --color-accent: #A0B080;
+  --color-white: #252019;
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(30, 26, 23, 0.92);
+}
+
+[data-theme="dark"] .nav.scrolled {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .nav__links {
+  background: var(--color-bg);
+}
+
+[data-theme="dark"] .btn--primary:hover {
+  box-shadow: 0 4px 20px rgba(196, 132, 92, 0.3);
+}
+
+[data-theme="dark"] .door {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .door:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-door {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .workshop-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .quiz__container {
+  background: var(--color-bg-alt);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .faq__item {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .newsletter__input {
+  background: var(--color-bg-alt);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .cv-cta__inner {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Nav Tools (lang + theme toggles) === */
+.nav__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.nav__lang {
+  background: none;
+  border: 1px solid var(--color-text-light);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.28rem 0.65rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.nav__lang:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.nav__theme {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.nav__theme:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .nav__tools {
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+}

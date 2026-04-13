@@ -9,21 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="kontakt">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -31,9 +42,9 @@
 
   <!-- Hero -->
   <div class="page-hero reveal">
-    <span class="page-hero__label">Kontakt</span>
-    <h1>Sprechen wir.</h1>
-    <p class="hero__subtitle" style="margin-top: 1rem;">
+    <span class="page-hero__label" data-i18n="kontakt.hero.label">Kontakt</span>
+    <h1 data-i18n="kontakt.hero.h1">Sprechen wir.</h1>
+    <p class="hero__subtitle" style="margin-top: 1rem;" data-i18n="kontakt.hero.subtitle">
       Such dir aus, worum es geht. Ich melde mich innerhalb weniger Tage.
     </p>
   </div>
@@ -42,33 +53,37 @@
   <div class="contact-doors reveal">
 
     <div class="contact-door" id="coaching">
-      <span class="contact-door__label">Coaching</span>
-      <h2 class="contact-door__title">Du suchst Begleitung in einer Veränderungsphase.</h2>
-      <p class="contact-door__text">
+      <span class="contact-door__label" data-i18n="kontakt.coaching.label">Coaching</span>
+      <h2 class="contact-door__title" data-i18n="kontakt.coaching.title">Du suchst Begleitung in einer Veränderungsphase.</h2>
+      <p class="contact-door__text" data-i18n="kontakt.coaching.text">
         Systemisches Coaching und Logotherapie. Wir beginnen mit einem
         kostenlosen Erstgespräch — such dir einfach einen Termin aus.
       </p>
-      <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener">Termin buchen</a>
+      <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="kontakt.coaching.btn">Termin buchen</a>
     </div>
 
     <div class="contact-door" id="studio">
-      <span class="contact-door__label">Studio</span>
-      <h2 class="contact-door__title">Du brauchst eine Website, ein Tech-Setup oder eine Knowledge Base.</h2>
-      <p class="contact-door__text">
+      <span class="contact-door__label" data-i18n="kontakt.studio.label">Studio</span>
+      <h2 class="contact-door__title" data-i18n="kontakt.studio.title">Du brauchst eine Website, ein Tech-Setup oder eine Knowledge Base.</h2>
+      <p class="contact-door__text" data-i18n="kontakt.studio.text">
         Schreib mir kurz, was du vorhast. Kein Formular, kein Briefing-Template —
         ein paar Zeilen reichen.
       </p>
-      <a href="mailto:hallo@pleasance.org?subject=Studio-Anfrage" class="btn btn--primary">Anfrage schreiben</a>
+      <a href="mailto:hallo@pleasance.org?subject=Studio-Anfrage"
+         data-i18n-href-en="mailto:hallo@pleasance.org?subject=Studio+inquiry"
+         class="btn btn--primary" data-i18n="kontakt.studio.btn">Anfrage schreiben</a>
     </div>
 
     <div class="contact-door" id="buehne">
-      <span class="contact-door__label">Bühne</span>
-      <h2 class="contact-door__title">Du machst Musik oder vertrittst Künstler.</h2>
-      <p class="contact-door__text">
+      <span class="contact-door__label" data-i18n="kontakt.buehne.label">Bühne</span>
+      <h2 class="contact-door__title" data-i18n="kontakt.buehne.title">Du machst Musik oder vertrittst Künstler.</h2>
+      <p class="contact-door__text" data-i18n="kontakt.buehne.text">
         Erzähl mir von deinem Projekt — Produktion, Booking oder beides.
         Ich schaue, ob und wie ich helfen kann.
       </p>
-      <a href="mailto:hallo@pleasance.org?subject=Bühne-Anfrage" class="btn btn--primary">Nachricht senden</a>
+      <a href="mailto:hallo@pleasance.org?subject=Bühne-Anfrage"
+         data-i18n-href-en="mailto:hallo@pleasance.org?subject=Stage+inquiry"
+         class="btn btn--primary" data-i18n="kontakt.buehne.btn">Nachricht senden</a>
     </div>
 
   </div>
@@ -78,61 +93,30 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

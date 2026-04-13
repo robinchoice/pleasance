@@ -9,21 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="studio">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -31,26 +42,26 @@
 
   <!-- Hero -->
   <div class="page-hero reveal">
-    <span class="page-hero__label">Studio</span>
-    <h1>Websites, die nicht aus<br>dem Baukasten kommen.</h1>
-    <p class="hero__subtitle" style="margin-top: 1.5rem;">
+    <span class="page-hero__label" data-i18n="studio.hero.label">Studio</span>
+    <h1 data-i18n="studio.hero.h1">Websites, die nicht aus<br>dem Baukasten kommen.</h1>
+    <p class="hero__subtitle" style="margin-top: 1.5rem;" data-i18n="studio.hero.subtitle">
       Ich baue Websites, Tech-Setups und Wissensarbeit für Menschen, die ihr Handwerk
       ernst nehmen — mit Sorgfalt, ohne Effekthascherei, und ohne dass dir morgen
       jemand das Theme abschaltet.
     </p>
-    <a href="kontakt.html#studio" class="btn btn--primary" style="margin-top: 2rem;">Lass uns sprechen</a>
+    <a href="kontakt.html#studio" class="btn btn--primary" style="margin-top: 2rem;" data-i18n="studio.hero.cta">Lass uns sprechen</a>
   </div>
 
   <!-- Drei Werkstätten -->
   <section class="workshops reveal">
     <div class="workshops__container">
-      <span class="section__label">Drei Bereiche</span>
-      <h2>Drei Werkstätten unter einem Dach.</h2>
+      <span class="section__label" data-i18n="studio.workshops.label">Drei Bereiche</span>
+      <h2 data-i18n="studio.workshops.h2">Drei Werkstätten unter einem Dach.</h2>
       <div class="workshops__grid">
 
         <div class="workshop">
-          <h3 class="workshop__title">Webdesign &amp; Webentwicklung</h3>
-          <p class="workshop__text">
+          <h3 class="workshop__title" data-i18n="studio.w1.title">Webdesign &amp; Webentwicklung</h3>
+          <p class="workshop__text" data-i18n="studio.w1.text">
             Neue Websites und Redesigns für Selbstständige, kleine Unternehmen, Coaches,
             Studios. Ich arbeite gern auf bestehender Infrastruktur weiter, statt alles
             abzureißen — und ich baue lieber etwas Einfaches, das hält, als etwas
@@ -59,8 +70,8 @@
         </div>
 
         <div class="workshop">
-          <h3 class="workshop__title">Tech-Beratung &amp; Selfhosting</h3>
-          <p class="workshop__text">
+          <h3 class="workshop__title" data-i18n="studio.w2.title">Tech-Beratung &amp; Selfhosting</h3>
+          <p class="workshop__text" data-i18n="studio.w2.text">
             Wenn du raus willst aus den großen Plattformen — eigener Server, Coolify,
             eigene E-Mail, eigene Analytics, eigene KI-Tools — helfe ich dir beim Aufbau
             und der Betreuung. Open Source zuerst. Wenig Lock-in.
@@ -68,8 +79,8 @@
         </div>
 
         <div class="workshop">
-          <h3 class="workshop__title">Wissensarbeit &amp; Knowledge Bases</h3>
-          <p class="workshop__text">
+          <h3 class="workshop__title" data-i18n="studio.w3.title">Wissensarbeit &amp; Knowledge Bases</h3>
+          <p class="workshop__text" data-i18n="studio.w3.text">
             Ich richte dir Notion, Obsidian oder einen Zettelkasten so ein, dass du ihn
             auch in zwei Jahren noch benutzt. Für Solo-Wissensarbeit, kleine Teams,
             Coaches mit komplexem Material.
@@ -83,9 +94,9 @@
   <!-- Vorgehen -->
   <section class="process reveal">
     <div class="process__container">
-      <span class="section__label">Vorgehen</span>
-      <h2>Erst zuhören, dann anbieten.</h2>
-      <p class="process__intro">
+      <span class="section__label" data-i18n="studio.process.label">Vorgehen</span>
+      <h2 data-i18n="studio.process.h2">Erst zuhören, dann anbieten.</h2>
+      <p class="process__intro" data-i18n="studio.process.intro">
         Bevor ich dir ein Angebot mache, will ich verstehen, was du brauchst.
         Deshalb arbeite ich in zwei Stufen.
       </p>
@@ -93,8 +104,8 @@
 
         <div class="process__step">
           <div class="process__step-num">01</div>
-          <h3 class="process__step-title">Discovery &amp; Konzept</h3>
-          <p class="process__step-text">
+          <h3 class="process__step-title" data-i18n="studio.step1.title">Discovery &amp; Konzept</h3>
+          <p class="process__step-text" data-i18n="studio.step1.text">
             Ein 90-minütiges Gespräch, ein technisches Audit deiner aktuellen Situation,
             eine Sitemap, ein Moodboard, Wireframes für die wichtigsten Seiten — und ein
             konkretes Festpreisangebot für die Umsetzung. Dauer: ein bis zwei Wochen.
@@ -105,8 +116,8 @@
 
         <div class="process__step">
           <div class="process__step-num">02</div>
-          <h3 class="process__step-title">Umsetzung</h3>
-          <p class="process__step-text">
+          <h3 class="process__step-title" data-i18n="studio.step2.title">Umsetzung</h3>
+          <p class="process__step-text" data-i18n="studio.step2.text">
             Festpreis auf Basis dessen, was wir in der Discovery gemeinsam definiert haben.
             Keine bösen Überraschungen, kein Stundenzettel-Spiel.
           </p>
@@ -119,18 +130,13 @@
   <!-- Für wen -->
   <section class="for-whom reveal">
     <div class="for-whom__container">
-      <span class="section__label">Mit wem ich gern arbeite</span>
-      <h2>Für Menschen, die ihr Handwerk ernst nehmen.</h2>
+      <span class="section__label" data-i18n="studio.forwhom.label">Mit wem ich gern arbeite</span>
+      <h2 data-i18n="studio.forwhom.h2">Für Menschen, die ihr Handwerk ernst nehmen.</h2>
       <div class="for-whom__text">
-        <p>
+        <p data-i18n="studio.forwhom.text">
           Coaches, Therapeutinnen, Tonstudios, Handwerker, kleine Marken,
-          Solo-Selbstständige. Vom Saarland über Freiburg, Baden-Württemberg,
-          Luxemburg, die Schweiz bis Berlin — vor Ort, wenn es passt, sonst
-          gerne remote.
-        </p>
-        <p>
-          Wenn du eine 20-köpfige Marketing-Abteilung und ein Briefing über
-          sechs Stakeholder hast, bin ich nicht der Richtige.
+          Solo-Selbstständige. Ich arbeite remote und komme vor Ort, wenn
+          es passt und der Rahmen stimmt.
         </p>
       </div>
     </div>
@@ -139,27 +145,27 @@
   <!-- Werte -->
   <section class="values-section reveal">
     <div class="values-section__container">
-      <span class="section__label">Werte</span>
-      <h2>Wofür ich stehe.</h2>
+      <span class="section__label" data-i18n="studio.values.label">Werte</span>
+      <h2 data-i18n="studio.values.h2">Wofür ich stehe.</h2>
       <div class="values-grid">
         <div class="value-item">
-          <h3 class="value-item__title">Sorgfalt vor Tempo.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="studio.v1.title">Sorgfalt vor Tempo.</h3>
+          <p class="value-item__text" data-i18n="studio.v1.text">
             Ich liefere lieber etwas Gutes spät als etwas Halbes pünktlich.
             Aber meistens auch pünktlich.
           </p>
         </div>
         <div class="value-item">
-          <h3 class="value-item__title">Open Source zuerst.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="studio.v2.title">Open Source zuerst.</h3>
+          <p class="value-item__text" data-i18n="studio.v2.text">
             Wenn es eine freie Lösung gibt, die genauso gut ist, nehme ich die.
             Du sollst nicht in zehn Jahren bei einem Anbieter feststecken, der
             seine Preise verdoppelt hat.
           </p>
         </div>
         <div class="value-item">
-          <h3 class="value-item__title">Eigentum vor Miete.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="studio.v3.title">Eigentum vor Miete.</h3>
+          <p class="value-item__text" data-i18n="studio.v3.text">
             Deine Inhalte, dein Server, deine Domain, dein Wissen. Ich helfe dir,
             davon möglichst viel selbst zu besitzen.
           </p>
@@ -171,12 +177,12 @@
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="cta-section__container">
-      <h2>Lass uns reden.</h2>
-      <p>
+      <h2 data-i18n="studio.cta.h2">Lass uns reden.</h2>
+      <p data-i18n="studio.cta.text">
         Schreib mir eine kurze Nachricht, was du vorhast. Ich melde mich innerhalb
         von ein paar Tagen mit konkreten nächsten Schritten zurück.
       </p>
-      <a href="kontakt.html#studio" class="btn btn--primary">Anfrage senden</a>
+      <a href="kontakt.html#studio" class="btn btn--primary" data-i18n="studio.cta.btn">Anfrage senden</a>
     </div>
   </section>
 
@@ -185,61 +191,30 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

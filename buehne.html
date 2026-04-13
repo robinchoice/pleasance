@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bühne — Pleasance</title>
-  <meta name="description" content="Musikproduktion und Booking für Künstler, die mehr wollen als einen schnellen Take. Aus dem Saar-/Südwest-Raum, offen nach überall.">
+  <meta name="description" content="Musikproduktion und Booking für Künstler, die mehr wollen als einen schnellen Take.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="buehne">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -31,9 +42,9 @@
 
   <!-- Hero -->
   <div class="page-hero reveal">
-    <span class="page-hero__label">Bühne</span>
-    <h1>Wo Musik wirklich klingt.</h1>
-    <p class="hero__subtitle" style="margin-top: 1.5rem;">
+    <span class="page-hero__label" data-i18n="buehne.hero.label">Bühne</span>
+    <h1 data-i18n="buehne.hero.h1">Wo Musik wirklich klingt.</h1>
+    <p class="hero__subtitle" style="margin-top: 1.5rem;" data-i18n="buehne.hero.subtitle">
       Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen,
       die zu ihnen passen. Beides aus derselben Überzeugung: dass es sich lohnt,
       langsamer zu arbeiten als der Markt es verlangt.
@@ -45,17 +56,17 @@
 
     <div class="stage__section">
       <div class="stage__label-block">
-        <span class="section__label">Im Studio</span>
-        <h2>Aufnahme, Mix und Mastering.</h2>
+        <span class="section__label" data-i18n="buehne.prod.label">Im Studio</span>
+        <h2 data-i18n="buehne.prod.h2">Aufnahme, Mix und Mastering.</h2>
       </div>
       <div class="stage__text">
-        <p>
+        <p data-i18n="buehne.prod.text1">
           Ich arbeite mit einem Netzwerk von Tonstudios im Saar-/Südwest-Raum.
           Recording, Mixing, Mastering — von der einzelnen Single bis zum vollen Album.
           Wenn du nicht weißt, welches Studio zu deinem Projekt passt, finde ich das
           mit dir gemeinsam heraus.
         </p>
-        <p>
+        <p data-i18n="buehne.prod.text2">
           Meine Rolle ist je nach Projekt unterschiedlich: manchmal Producer,
           manchmal Vermittler, manchmal beides.
         </p>
@@ -64,17 +75,16 @@
 
     <div class="stage__section">
       <div class="stage__label-block">
-        <span class="section__label">Auf der Bühne</span>
-        <h2>Künstler an Orte bringen, die sie verdienen.</h2>
+        <span class="section__label" data-i18n="buehne.booking.label">Auf der Bühne</span>
+        <h2 data-i18n="buehne.booking.h2">Künstler an Orte bringen, die sie verdienen.</h2>
       </div>
       <div class="stage__text">
-        <p>
+        <p data-i18n="buehne.booking.text1">
           Ich arbeite mit Künstlern, deren Musik mehr Aufmerksamkeit verdient,
           als ein Algorithmus ihr gibt. Ich vermittle an Veranstalter, Festivals
-          und Räume, die zu ihnen passen — im Saarland, in Baden-Württemberg,
-          Berlin, der Schweiz, Luxemburg.
+          und Räume, die zu ihnen passen.
         </p>
-        <p>
+        <p data-i18n="buehne.booking.text2">
           Kein Massengeschäft. Wenige Künstler, dafür mit Zeit.
         </p>
       </div>
@@ -85,9 +95,9 @@
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="cta-section__container">
-      <h2>Du machst Musik, oder bookst sie?</h2>
-      <p>Schreib mir, was du vorhast. Ich melde mich.</p>
-      <a href="kontakt.html#buehne" class="btn btn--primary">Anfrage senden</a>
+      <h2 data-i18n="buehne.cta.h2">Du machst Musik, oder bookst sie?</h2>
+      <p data-i18n="buehne.cta.text">Schreib mir, was du vorhast. Ich melde mich.</p>
+      <a href="kontakt.html#buehne" class="btn btn--primary" data-i18n="buehne.cta.btn">Anfrage senden</a>
     </div>
   </section>
 
@@ -96,61 +106,30 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

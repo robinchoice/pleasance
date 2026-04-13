@@ -9,21 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="coaching">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span>
       <span></span>
@@ -34,37 +45,37 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero__content">
-      <span class="hero__label">Systemisches Coaching</span>
-      <h1>Raum für<br><em>Veränderung</em></h1>
-      <p class="hero__subtitle">
+      <span class="hero__label" data-i18n="coaching.hero.label">Systemisches Coaching</span>
+      <h1 data-i18n="coaching.hero.h1">Raum für<br><em>Veränderung</em></h1>
+      <p class="hero__subtitle" data-i18n="coaching.hero.subtitle">
         Du spürst, dass sich etwas verändern will — aber der Weg ist noch unklar.
         Ich höre zu und begleite dich dabei, Klarheit zu finden.
       </p>
-      <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener">Gespräch vereinbaren</a>
+      <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="coaching.hero.cta">Gespräch vereinbaren</a>
     </div>
   </section>
 
   <!-- Über mich -->
   <section class="section reveal" id="ueber">
     <div class="section__container">
-      <span class="section__label">Über mich</span>
-      <h2>Zuhören ist der Anfang</h2>
+      <span class="section__label" data-i18n="coaching.about.label">Über mich</span>
+      <h2 data-i18n="coaching.about.h2">Zuhören ist der Anfang</h2>
       <div class="about__grid">
         <div class="about__image">
           <img src="img/robin.jpg" alt="Robin Wahl — Systemischer Coach">
         </div>
         <div class="about__text">
-          <p>
+          <p data-i18n="coaching.about.p1">
             Ich bin systemischer Coach mit einem Hintergrund in Logotherapie.
             Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung
             dort beginnt, wo jemand wirklich gehört wird.
           </p>
-          <p>
+          <p data-i18n="coaching.about.p2">
             In meiner Arbeit geht es nicht darum, dir Ratschläge zu geben.
             Es geht darum, gemeinsam hinzuschauen: Was bewegt dich? Was hält dich?
             Und was will sich verändern?
           </p>
-          <p>
+          <p data-i18n="coaching.about.p3">
             Ich arbeite mit Menschen, die an einem Wendepunkt stehen — beruflich,
             persönlich oder beides. Wenn du das Gefühl hast, dass es Zeit ist für
             einen neuen Weg, bist du hier richtig.
@@ -77,95 +88,95 @@
   <!-- Quiz -->
   <section class="section quiz reveal" id="quiz">
     <div class="section__container">
-      <span class="section__label">Selbstcheck</span>
-      <h2>Wo stehst du gerade?</h2>
+      <span class="section__label" data-i18n="coaching.quiz.label">Selbstcheck</span>
+      <h2 data-i18n="coaching.quiz.h2">Wo stehst du gerade?</h2>
       <div class="quiz__container" id="quizBox">
         <div class="quiz__progress" id="quizProgress"></div>
 
         <div class="quiz__step active" data-step="0">
-          <p class="quiz__question">Wie zufrieden bist du gerade mit deiner beruflichen Situation?</p>
+          <p class="quiz__question" data-i18n="coaching.quiz.q0">Wie zufrieden bist du gerade mit deiner beruflichen Situation?</p>
           <div class="quiz__options">
-            <button class="quiz__option" data-value="1">Sehr zufrieden — es passt gut so</button>
-            <button class="quiz__option" data-value="2">Ganz okay, aber da ist ein leises Grummeln</button>
-            <button class="quiz__option" data-value="3">Eher unzufrieden — ich merke, dass etwas nicht stimmt</button>
-            <button class="quiz__option" data-value="4">Ich halte es kaum noch aus</button>
+            <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q0a1">Sehr zufrieden — es passt gut so</button>
+            <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q0a2">Ganz okay, aber da ist ein leises Grummeln</button>
+            <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q0a3">Eher unzufrieden — ich merke, dass etwas nicht stimmt</button>
+            <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q0a4">Ich halte es kaum noch aus</button>
           </div>
         </div>
 
         <div class="quiz__step" data-step="1">
-          <p class="quiz__question">Wie oft denkst du darüber nach, etwas Grundlegendes zu verändern?</p>
+          <p class="quiz__question" data-i18n="coaching.quiz.q1">Wie oft denkst du darüber nach, etwas Grundlegendes zu verändern?</p>
           <div class="quiz__options">
-            <button class="quiz__option" data-value="1">Selten bis nie</button>
-            <button class="quiz__option" data-value="2">Ab und zu, aber ich schiebe es weg</button>
-            <button class="quiz__option" data-value="3">Regelmäßig — der Gedanke lässt mich nicht los</button>
-            <button class="quiz__option" data-value="4">Ständig, es ist das Erste woran ich morgens denke</button>
+            <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q1a1">Selten bis nie</button>
+            <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q1a2">Ab und zu, aber ich schiebe es weg</button>
+            <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q1a3">Regelmäßig — der Gedanke lässt mich nicht los</button>
+            <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q1a4">Ständig, es ist das Erste woran ich morgens denke</button>
           </div>
         </div>
 
         <div class="quiz__step" data-step="2">
-          <p class="quiz__question">Hast du das Gefühl, dass dein Leben gerade einen tieferen Sinn hat?</p>
+          <p class="quiz__question" data-i18n="coaching.quiz.q2">Hast du das Gefühl, dass dein Leben gerade einen tieferen Sinn hat?</p>
           <div class="quiz__options">
-            <button class="quiz__option" data-value="1">Ja, ich weiß wofür ich aufstehe</button>
-            <button class="quiz__option" data-value="2">Meistens schon, aber manchmal zweifle ich</button>
-            <button class="quiz__option" data-value="3">Ich bin mir nicht sicher — die Frage beschäftigt mich</button>
-            <button class="quiz__option" data-value="4">Nein, mir fehlt gerade die Richtung</button>
+            <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q2a1">Ja, ich weiß wofür ich aufstehe</button>
+            <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q2a2">Meistens schon, aber manchmal zweifle ich</button>
+            <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q2a3">Ich bin mir nicht sicher — die Frage beschäftigt mich</button>
+            <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q2a4">Nein, mir fehlt gerade die Richtung</button>
           </div>
         </div>
 
         <div class="quiz__step" data-step="3">
-          <p class="quiz__question">Wenn du an eine Veränderung denkst — was hält dich zurück?</p>
+          <p class="quiz__question" data-i18n="coaching.quiz.q3">Wenn du an eine Veränderung denkst — was hält dich zurück?</p>
           <div class="quiz__options">
-            <button class="quiz__option" data-value="1">Eigentlich nichts, mir geht es gut</button>
-            <button class="quiz__option" data-value="2">Unsicherheit — ich weiß nicht, wohin</button>
-            <button class="quiz__option" data-value="3">Angst vor den Konsequenzen</button>
-            <button class="quiz__option" data-value="4">Ich fühle mich festgefahren und allein damit</button>
+            <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q3a1">Eigentlich nichts, mir geht es gut</button>
+            <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q3a2">Unsicherheit — ich weiß nicht, wohin</button>
+            <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q3a3">Angst vor den Konsequenzen</button>
+            <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q3a4">Ich fühle mich festgefahren und allein damit</button>
           </div>
         </div>
 
         <div class="quiz__step" data-step="4">
-          <p class="quiz__question">Wann hast du das letzte Mal mit jemandem offen über deine Situation gesprochen?</p>
+          <p class="quiz__question" data-i18n="coaching.quiz.q4">Wann hast du das letzte Mal mit jemandem offen über deine Situation gesprochen?</p>
           <div class="quiz__options">
-            <button class="quiz__option" data-value="1">Kürzlich — ich habe gute Gesprächspartner</button>
-            <button class="quiz__option" data-value="2">Schon eine Weile her</button>
-            <button class="quiz__option" data-value="3">Ich rede selten darüber</button>
-            <button class="quiz__option" data-value="4">Ich habe das Gefühl, niemand versteht wirklich was ich meine</button>
+            <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q4a1">Kürzlich — ich habe gute Gesprächspartner</button>
+            <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q4a2">Schon eine Weile her</button>
+            <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q4a3">Ich rede selten darüber</button>
+            <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q4a4">Ich habe das Gefühl, niemand versteht wirklich was ich meine</button>
           </div>
         </div>
 
         <!-- Results -->
         <div class="quiz__result" data-result="low">
           <div class="quiz__result-icon">&#9728;</div>
-          <h3>Du scheinst gut im Fluss zu sein</h3>
-          <p>
+          <h3 data-i18n="coaching.quiz.result_low.h3">Du scheinst gut im Fluss zu sein</h3>
+          <p data-i18n="coaching.quiz.result_low.p">
             Im Moment scheint vieles zu passen. Aber wenn du irgendwann das Gefühl hast,
             dass sich etwas verschiebt — meld dich gerne. Die Tür steht offen.
           </p>
-          <a href="#kontakt" class="btn btn--outline">Trotzdem Kontakt aufnehmen</a>
-          <br><button class="quiz__restart" onclick="resetQuiz()">Quiz wiederholen</button>
+          <a href="#kontakt" class="btn btn--outline" data-i18n="coaching.quiz.result_low.cta">Trotzdem Kontakt aufnehmen</a>
+          <br><button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
         </div>
 
         <div class="quiz__result" data-result="mid">
           <div class="quiz__result-icon">&#10036;</div>
-          <h3>Ein Gespräch könnte dir neue Perspektiven eröffnen</h3>
-          <p>
+          <h3 data-i18n="coaching.quiz.result_mid.h3">Ein Gespräch könnte dir neue Perspektiven eröffnen</h3>
+          <p data-i18n="coaching.quiz.result_mid.p">
             Du spürst, dass sich etwas bewegt. Das ist ein guter Zeitpunkt, um hinzuschauen —
             bevor der Druck noch größer wird. Manchmal reicht ein einzelnes Gespräch,
             um Klarheit zu finden.
           </p>
-          <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener">Lass uns sprechen</a>
-          <br><button class="quiz__restart" onclick="resetQuiz()">Quiz wiederholen</button>
+          <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="coaching.quiz.result_mid.cta">Lass uns sprechen</a>
+          <br><button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
         </div>
 
         <div class="quiz__result" data-result="high">
           <div class="quiz__result-icon">&#10024;</div>
-          <h3>Es klingt so, als wärst du bereit für Veränderung</h3>
-          <p>
+          <h3 data-i18n="coaching.quiz.result_high.h3">Es klingt so, als wärst du bereit für Veränderung</h3>
+          <p data-i18n="coaching.quiz.result_high.p">
             Du trägst gerade viel mit dir. Und allein damit zu bleiben macht es nicht leichter.
             Ein geschützter Raum, in dem du gehört wirst, kann der erste Schritt sein.
             Ich bin da, wenn du bereit bist.
           </p>
-          <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener">Jetzt Gespräch vereinbaren</a>
-          <br><button class="quiz__restart" onclick="resetQuiz()">Quiz wiederholen</button>
+          <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="coaching.quiz.result_high.cta">Jetzt Gespräch vereinbaren</a>
+          <br><button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
         </div>
       </div>
     </div>
@@ -174,39 +185,39 @@
   <!-- Angebot -->
   <section class="section angebot reveal" id="angebot">
     <div class="section__container">
-      <span class="section__label">Angebot</span>
-      <h2>Wie ich arbeite</h2>
+      <span class="section__label" data-i18n="coaching.angebot.label">Angebot</span>
+      <h2 data-i18n="coaching.angebot.h2">Wie ich arbeite</h2>
       <div class="angebot__grid">
         <div class="angebot__card">
           <div class="angebot__icon">&#9753;</div>
-          <h3>Aktives Zuhören</h3>
-          <p>
+          <h3 data-i18n="coaching.angebot.c1_title">Aktives Zuhören</h3>
+          <p data-i18n="coaching.angebot.c1_text">
             Ein geschützter Raum, in dem du dich gehört fühlst — ohne Bewertung,
             ohne Eile. Das ist die Basis meiner Arbeit.
           </p>
         </div>
         <div class="angebot__card">
           <div class="angebot__icon">&#10047;</div>
-          <h3>Systemischer Blick</h3>
-          <p>
+          <h3 data-i18n="coaching.angebot.c2_title">Systemischer Blick</h3>
+          <p data-i18n="coaching.angebot.c2_text">
             Wir schauen nicht nur auf dich, sondern auf das ganze System:
             Beziehungen, Muster, Zusammenhänge — und was sich daraus entwickeln kann.
           </p>
         </div>
         <div class="angebot__card">
           <div class="angebot__icon">&#10024;</div>
-          <h3>Sinn & Richtung</h3>
-          <p>
+          <h3 data-i18n="coaching.angebot.c3_title">Sinn & Richtung</h3>
+          <p data-i18n="coaching.angebot.c3_text">
             Mit Elementen der Logotherapie erforschen wir, was dir wirklich wichtig ist
             und wie du einen Weg findest, der sich stimmig anfühlt.
           </p>
         </div>
       </div>
       <div class="angebot__pricing">
-        <span class="section__label">Einzelsession</span>
+        <span class="section__label" data-i18n="coaching.angebot.price_label">Einzelsession</span>
         <div class="angebot__price">90 €</div>
-        <p class="angebot__price-detail">60 Minuten — online oder vor Ort</p>
-        <a href="https://cal.com/robin-choice-sowasx" class="btn btn--outline" target="_blank" rel="noopener">Termin anfragen</a>
+        <p class="angebot__price-detail" data-i18n="coaching.angebot.price_detail">60 Minuten — online oder vor Ort</p>
+        <a href="https://cal.com/robin-choice-sowasx" class="btn btn--outline" target="_blank" rel="noopener" data-i18n="coaching.angebot.btn">Termin anfragen</a>
       </div>
     </div>
   </section>
@@ -214,9 +225,9 @@
   <!-- Netzwerk / Matchmaking -->
   <section class="section netzwerk reveal" id="netzwerk">
     <div class="section__container netzwerk__container">
-      <span class="section__label">Ich kenne jemanden</span>
-      <h2>Wenn ich nicht die Richtige bin,<br><em>kenne ich vielleicht sie</em></h2>
-      <p class="netzwerk__intro">
+      <span class="section__label" data-i18n="coaching.netzwerk.label">Ich kenne jemanden</span>
+      <h2 data-i18n="coaching.netzwerk.h2">Wenn ich nicht die Richtige bin,<br><em>kenne ich vielleicht sie</em></h2>
+      <p class="netzwerk__intro" data-i18n="coaching.netzwerk.intro">
         Coaching ist Vertrauenssache — und manchmal passt es einfach nicht.
         Über die Jahre habe ich einen Kreis von Menschen kennengelernt, denen ich
         vertraue: Coaches, Therapeut:innen, Berater:innen mit ganz unterschiedlichen
@@ -226,33 +237,35 @@
       <div class="netzwerk__how">
         <div class="netzwerk__step">
           <div class="netzwerk__step-num">1</div>
-          <h3>Kurz erzählen</h3>
-          <p>Schreib mir in ein paar Sätzen, wo du gerade stehst und was du suchst.</p>
+          <h3 data-i18n="coaching.netzwerk.step1_title">Kurz erzählen</h3>
+          <p data-i18n="coaching.netzwerk.step1_text">Schreib mir in ein paar Sätzen, wo du gerade stehst und was du suchst.</p>
         </div>
         <div class="netzwerk__step">
           <div class="netzwerk__step-num">2</div>
-          <h3>Ich denke nach</h3>
-          <p>Ich überlege, wer aus meinem Kreis zu deinem Anliegen passen könnte.</p>
+          <h3 data-i18n="coaching.netzwerk.step2_title">Ich denke nach</h3>
+          <p data-i18n="coaching.netzwerk.step2_text">Ich überlege, wer aus meinem Kreis zu deinem Anliegen passen könnte.</p>
         </div>
         <div class="netzwerk__step">
           <div class="netzwerk__step-num">3</div>
-          <h3>Ich verbinde euch</h3>
-          <p>Du bekommst eine persönliche Empfehlung — und entscheidest selbst, was daraus wird.</p>
+          <h3 data-i18n="coaching.netzwerk.step3_title">Ich verbinde euch</h3>
+          <p data-i18n="coaching.netzwerk.step3_text">Du bekommst eine persönliche Empfehlung — und entscheidest selbst, was daraus wird.</p>
         </div>
       </div>
-      <p class="netzwerk__note">
+      <p class="netzwerk__note" data-i18n="coaching.netzwerk.note">
         Kostenlos. Unverbindlich. Vertraulich.
       </p>
-      <a href="mailto:hallo@pleasance.org?subject=Ich%20suche%20jemanden" class="btn btn--outline">Erzähl mir, was du suchst</a>
+      <a href="mailto:hallo@pleasance.org?subject=Ich%20suche%20jemanden"
+         data-i18n-href-en="mailto:hallo@pleasance.org?subject=I%27m+looking+for+someone"
+         class="btn btn--outline" data-i18n="coaching.netzwerk.btn">Erzähl mir, was du suchst</a>
     </div>
   </section>
 
   <!-- Kontakt -->
   <section class="section contact reveal" id="kontakt">
     <div class="section__container">
-      <span class="section__label">Kontakt</span>
-      <h2>Lass uns sprechen</h2>
-      <p class="contact__text">
+      <span class="section__label" data-i18n="coaching.contact.label">Kontakt</span>
+      <h2 data-i18n="coaching.contact.h2">Lass uns sprechen</h2>
+      <p class="contact__text" data-i18n="coaching.contact.text">
         Du brauchst nichts vorzubereiten. Meld dich einfach — per Mail oder Telefon.
         Wir finden gemeinsam heraus, ob und wie ich dich begleiten kann.
       </p>
@@ -270,51 +283,51 @@
   <!-- FAQ -->
   <section class="section reveal" id="faq">
     <div class="section__container">
-      <span class="section__label">Häufige Fragen</span>
-      <h2>Das werde ich oft gefragt</h2>
+      <span class="section__label" data-i18n="coaching.faq.label">Häufige Fragen</span>
+      <h2 data-i18n="coaching.faq.h2">Das werde ich oft gefragt</h2>
       <div class="faq__list">
         <details class="faq__item">
-          <summary>Was ist systemisches Coaching?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q1">Was ist systemisches Coaching?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a1">
             Systemisches Coaching betrachtet nicht nur dich als Einzelperson, sondern das gesamte
             System, in dem du dich bewegst — Beziehungen, Rollen, Muster. So entstehen oft
             überraschend neue Perspektiven und Lösungen.
           </div>
         </details>
         <details class="faq__item">
-          <summary>Was ist Logotherapie?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q2">Was ist Logotherapie?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a2">
             Logotherapie wurde von Viktor Frankl begründet und arbeitet mit der Frage nach dem Sinn.
             Es geht darum, herauszufinden was dir wirklich wichtig ist und wie du danach leben kannst —
             besonders in Zeiten des Umbruchs.
           </div>
         </details>
         <details class="faq__item">
-          <summary>Für wen ist das Coaching geeignet?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q3">Für wen ist das Coaching geeignet?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a3">
             Für Menschen, die an einem Wendepunkt stehen — beruflich, persönlich oder beides.
             Wenn du das Gefühl hast, dass sich etwas verändern will, aber der Weg noch unklar ist,
             bist du hier richtig. Vorkenntnisse brauchst du keine.
           </div>
         </details>
         <details class="faq__item">
-          <summary>Wie läuft eine Session ab?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q4">Wie läuft eine Session ab?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a4">
             Wir treffen uns für 60 Minuten — online oder vor Ort. Du bestimmst das Thema.
             Ich höre zu, stelle Fragen und begleite dich dabei, Klarheit zu finden.
             Es gibt keine Hausaufgaben und keinen Druck.
           </div>
         </details>
         <details class="faq__item">
-          <summary>Finden die Sessions online oder vor Ort statt?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q5">Finden die Sessions online oder vor Ort statt?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a5">
             Beides ist möglich. Online-Sessions laufen über einen Videocall.
             Für Vor-Ort-Sessions stimmen wir den Ort gemeinsam ab.
           </div>
         </details>
         <details class="faq__item">
-          <summary>Muss ich mich auf ein Erstgespräch vorbereiten?</summary>
-          <div class="faq__answer">
+          <summary data-i18n="coaching.faq.q6">Muss ich mich auf ein Erstgespräch vorbereiten?</summary>
+          <div class="faq__answer" data-i18n="coaching.faq.a6">
             Nein. Komm einfach so wie du bist. Wir finden gemeinsam heraus,
             ob und wie ich dich begleiten kann. Das Erstgespräch ist unverbindlich.
           </div>
@@ -326,13 +339,13 @@
   <!-- Newsletter -->
   <section class="newsletter reveal">
     <div class="newsletter__container">
-      <h2>Impulse für deinen Weg</h2>
-      <p class="newsletter__subtitle">
+      <h2 data-i18n="coaching.newsletter.h2">Impulse für deinen Weg</h2>
+      <p class="newsletter__subtitle" data-i18n="coaching.newsletter.subtitle">
         Gedanken zu Veränderung, Sinn und neuen Wegen — kostenlos in dein Postfach.
       </p>
       <form class="newsletter__form" action="https://buttondown.com/api/emails/embed-subscribe/choice" method="post" target="popupwindow">
-        <input type="email" name="email" class="newsletter__input" placeholder="Deine E-Mail-Adresse" required>
-        <button type="submit" class="btn btn--primary">Anmelden</button>
+        <input type="email" name="email" class="newsletter__input" data-i18n-placeholder="coaching.newsletter.placeholder" placeholder="Deine E-Mail-Adresse" required>
+        <button type="submit" class="btn btn--primary" data-i18n="coaching.newsletter.btn">Anmelden</button>
       </form>
     </div>
   </section>
@@ -342,64 +355,31 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
   <script>
-    // Mobile menu toggle
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    // Nav shadow on scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
     // Quiz
     const quizBox = document.getElementById('quizBox');
     const steps = quizBox.querySelectorAll('.quiz__step');

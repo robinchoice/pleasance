@@ -9,21 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="ueber">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -31,34 +42,34 @@
 
   <!-- Hero -->
   <div class="page-hero reveal">
-    <span class="page-hero__label">Über mich</span>
-    <h1>Ich glaube, dass die meisten Dinge<br>zu schnell gemacht werden.</h1>
+    <span class="page-hero__label" data-i18n="ueber.hero.label">Über mich</span>
+    <h1 data-i18n="ueber.hero.h1">Ich glaube, dass die meisten Dinge<br>zu schnell gemacht werden.</h1>
   </div>
 
   <!-- About Text -->
   <div class="about-text reveal">
-    <p>
-      Ich heiße Robin Wahl. Ich lebe im Saarland und arbeite von dort aus mit Menschen
-      aus dem ganzen deutschsprachigen Raum.
+    <p data-i18n="ueber.p1">
+      Ich heiße Robin Wahl. Ich arbeite remote — und komme vor Ort, wenn es passt
+      und der Rahmen stimmt.
     </p>
-    <p>
+    <p data-i18n="ueber.p2">
       Ich bin systemischer Coach mit einem Hintergrund in Logotherapie. Mein wichtigstes
       Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand
       wirklich gehört wird.
     </p>
-    <p>
+    <p data-i18n="ueber.p3">
       Daneben baue ich Websites, betreue Tech-Setups und richte Knowledge Bases ein.
       Nicht weil ich „auch noch was mit Computern" mache, sondern weil sich für mich
       beides aus derselben Haltung speist: erst verstehen, dann handeln. Zuhören, dann bauen.
     </p>
-    <p>
+    <p data-i18n="ueber.p4">
       Und weil Musik der Raum ist, in dem ich angefangen habe, gehören Musikproduktion
       und Booking ebenfalls zu Pleasance. Wenn ich helfe, eine Aufnahme entstehen zu lassen
       oder einen Künstler auf eine Bühne zu bringen, ist das für mich nicht weit weg vom
       Coaching — es ist nur ein anderes Medium für dieselbe Frage: was will da gerade
       entstehen, und wie räume ich den Weg dafür frei.
     </p>
-    <p>
+    <p data-i18n="ueber.p5">
       Pleasance ist mein Versuch, all das nicht zu trennen, sondern zusammen zu zeigen.
       Eine Person, drei Räume, eine Haltung.
     </p>
@@ -67,17 +78,17 @@
   <!-- Werdegang -->
   <section class="timeline reveal">
     <div class="timeline__container">
-      <span class="section__label">Werdegang</span>
-      <h2>Wie ich dahin gekommen bin.</h2>
+      <span class="section__label" data-i18n="ueber.timeline.label">Werdegang</span>
+      <h2 data-i18n="ueber.timeline.h2">Wie ich dahin gekommen bin.</h2>
       <div class="timeline__entries">
 
         <div class="timeline__entry">
           <div class="timeline__year">2015 – 2019</div>
           <div class="timeline__line"></div>
           <div class="timeline__content">
-            <div class="timeline__company">HTW Saarland & Universität des Saarlandes</div>
-            <div class="timeline__role">BA Betriebswirtschaft · MSc Marketing Science · MSc Business Informatics</div>
-            <div class="timeline__desc">Bachelorarbeit in Kooperation mit Deezer. Frühe Berührung mit Musikstreaming, Marketing und Daten.</div>
+            <div class="timeline__company" data-i18n="ueber.t1.company">HTW Saarland & Universität des Saarlandes</div>
+            <div class="timeline__role" data-i18n="ueber.t1.role">BA Betriebswirtschaft · MSc Marketing Science · MSc Business Informatics</div>
+            <div class="timeline__desc" data-i18n="ueber.t1.desc">Bachelorarbeit in Kooperation mit Deezer. Frühe Berührung mit Musikstreaming, Marketing und Daten.</div>
           </div>
         </div>
 
@@ -85,9 +96,9 @@
           <div class="timeline__year">2018 – 2019</div>
           <div class="timeline__line"></div>
           <div class="timeline__content">
-            <div class="timeline__company">Deezer</div>
-            <div class="timeline__role">Praktikant Social Media & PR Marketing — Berlin</div>
-            <div class="timeline__desc">Kampagnen, Künstlerinterviews, Konzertdokumentation. Musik nicht als Konsum, sondern als Handwerk.</div>
+            <div class="timeline__company" data-i18n="ueber.t2.company">Deezer</div>
+            <div class="timeline__role" data-i18n="ueber.t2.role">Praktikant Social Media & PR Marketing — Berlin</div>
+            <div class="timeline__desc" data-i18n="ueber.t2.desc">Kampagnen, Künstlerinterviews, Konzertdokumentation. Musik nicht als Konsum, sondern als Handwerk.</div>
           </div>
         </div>
 
@@ -95,9 +106,9 @@
           <div class="timeline__year">2019 – 2024</div>
           <div class="timeline__line"></div>
           <div class="timeline__content">
-            <div class="timeline__company">SAP</div>
-            <div class="timeline__role">Werkstudent → Business Processes Consultant — Sankt Ingbert</div>
-            <div class="timeline__desc">Scrum Master in SAFe-Projekten (Catena-X, BMW, VW, Mercedes), Co-Innovation mit dem Bundesfinanzministerium, interne Workshops zu Bitcoin und Open Source.</div>
+            <div class="timeline__company" data-i18n="ueber.t3.company">SAP</div>
+            <div class="timeline__role" data-i18n="ueber.t3.role">Werkstudent → Business Processes Consultant — Sankt Ingbert</div>
+            <div class="timeline__desc" data-i18n="ueber.t3.desc">Scrum Master in SAFe-Projekten (Catena-X, BMW, VW, Mercedes), Co-Innovation mit dem Bundesfinanzministerium, interne Workshops zu Bitcoin und Open Source.</div>
           </div>
         </div>
 
@@ -105,9 +116,9 @@
           <div class="timeline__year">2024</div>
           <div class="timeline__line"></div>
           <div class="timeline__content">
-            <div class="timeline__company">Decentraliced AG</div>
-            <div class="timeline__role">Assistent der Geschäftsleitung — Zug, Schweiz</div>
-            <div class="timeline__desc">Holding-Struktur mit 5 Gesellschaften. Prozessautomatisierung, Schnittstelle zu Banken und externen Partnern.</div>
+            <div class="timeline__company" data-i18n="ueber.t4.company">Decentraliced AG</div>
+            <div class="timeline__role" data-i18n="ueber.t4.role">Assistent der Geschäftsleitung — Zug, Schweiz</div>
+            <div class="timeline__desc" data-i18n="ueber.t4.desc">Holding-Struktur mit 5 Gesellschaften. Prozessautomatisierung, Schnittstelle zu Banken und externen Partnern.</div>
           </div>
         </div>
 
@@ -115,9 +126,9 @@
           <div class="timeline__year">2024 – heute</div>
           <div class="timeline__line"></div>
           <div class="timeline__content">
-            <div class="timeline__company">Pleasance</div>
-            <div class="timeline__role">Gründer — Coaching · Studio · Bühne</div>
-            <div class="timeline__desc">Alles zusammen unter einem Dach. Coaching, Webdesign, Musik — aus einer Haltung.</div>
+            <div class="timeline__company" data-i18n="ueber.t5.company">Pleasance</div>
+            <div class="timeline__role" data-i18n="ueber.t5.role">Gründer — Coaching · Studio · Bühne</div>
+            <div class="timeline__desc" data-i18n="ueber.t5.desc">Alles zusammen unter einem Dach. Coaching, Webdesign, Musik — aus einer Haltung.</div>
           </div>
         </div>
 
@@ -128,36 +139,36 @@
   <!-- CV CTA -->
   <div class="cv-cta reveal">
     <div class="cv-cta__inner">
-      <span class="cv-cta__label">Lebenslauf</span>
-      <h3 class="cv-cta__title">Den vollständigen Werdegang als PDF</h3>
-      <p class="cv-cta__sub">Alle Stationen, Ausbildungen und Zertifikate — zum Speichern oder Weiterleiten.</p>
-      <a href="lebenslauf.html" class="btn btn--outline" target="_blank">Lebenslauf öffnen →</a>
+      <span class="cv-cta__label" data-i18n="ueber.cvcta.label">Lebenslauf</span>
+      <h3 class="cv-cta__title" data-i18n="ueber.cvcta.title">Den vollständigen Werdegang als PDF</h3>
+      <p class="cv-cta__sub" data-i18n="ueber.cvcta.sub">Alle Stationen, Ausbildungen und Zertifikate — zum Speichern oder Weiterleiten.</p>
+      <a href="lebenslauf.html" class="btn btn--outline" target="_blank" data-i18n="ueber.cvcta.btn">Lebenslauf öffnen →</a>
     </div>
   </div>
 
   <!-- Werte -->
   <section class="values-section reveal">
     <div class="values-section__container">
-      <span class="section__label">Wofür ich stehe</span>
-      <h2>Eine Haltung, drei Prinzipien.</h2>
+      <span class="section__label" data-i18n="ueber.values.label">Wofür ich stehe</span>
+      <h2 data-i18n="ueber.values.h2">Eine Haltung, drei Prinzipien.</h2>
       <div class="values-grid">
         <div class="value-item">
-          <h3 class="value-item__title">Sorgfalt vor Tempo.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="ueber.v1.title">Sorgfalt vor Tempo.</h3>
+          <p class="value-item__text" data-i18n="ueber.v1.text">
             Ich liefere lieber etwas Gutes spät als etwas Halbes pünktlich.
             Meistens auch pünktlich.
           </p>
         </div>
         <div class="value-item">
-          <h3 class="value-item__title">Open Source zuerst.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="ueber.v2.title">Open Source zuerst.</h3>
+          <p class="value-item__text" data-i18n="ueber.v2.text">
             Wenn es eine freie Lösung gibt, nehme ich die. Du sollst nicht in zehn
             Jahren bei einem Anbieter feststecken, der seine Preise verdoppelt hat.
           </p>
         </div>
         <div class="value-item">
-          <h3 class="value-item__title">Eigentum vor Miete.</h3>
-          <p class="value-item__text">
+          <h3 class="value-item__title" data-i18n="ueber.v3.title">Eigentum vor Miete.</h3>
+          <p class="value-item__text" data-i18n="ueber.v3.text">
             Deine Inhalte, dein Server, deine Domain, dein Wissen.
             Ich helfe dir, davon möglichst viel selbst zu besitzen.
           </p>
@@ -169,9 +180,9 @@
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="cta-section__container">
-      <h2>Wenn dich eines der drei Themen interessiert.</h2>
-      <p>Melde dich gern — ich schaue, wie ich helfen kann.</p>
-      <a href="kontakt.html" class="btn btn--primary">Kontakt aufnehmen</a>
+      <h2 data-i18n="ueber.cta.h2">Wenn dich eines der drei Themen interessiert.</h2>
+      <p data-i18n="ueber.cta.text">Melde dich gern — ich schaue, wie ich helfen kann.</p>
+      <a href="kontakt.html" class="btn btn--primary" data-i18n="ueber.cta.btn">Kontakt aufnehmen</a>
     </div>
   </section>
 
@@ -180,64 +191,30 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    // Nav shadow on scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

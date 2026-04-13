@@ -244,6 +244,19 @@
       a { color: var(--color-text); text-decoration: none; }
     }
 
+    /* === Dark Mode === */
+    [data-theme="dark"] {
+      --color-primary: #C4845C;
+      --color-primary-light: #D4A07A;
+      --color-bg: #1E1A17;
+      --color-bg-alt: #2A2420;
+      --color-text: #E8E0D8;
+      --color-text-light: #A89888;
+    }
+
+    [data-theme="dark"] .cv { background: #252019; }
+    [data-theme="dark"] .print-bar { background: #252019; }
+
     /* === Mobile === */
     @media (max-width: 680px) {
       .cv {
@@ -255,13 +268,22 @@
       .cv__header, .cv__footer { grid-column: 1; }
     }
   </style>
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
 </head>
 <body>
 
   <div class="print-bar">
     <a href="ueber.html">← Zurück</a>
-    <button class="print-btn" onclick="window.print()">Als PDF speichern</button>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <button id="themeToggle" onclick="(function(){var d=document.documentElement;var dark=d.dataset.theme==='dark';d.dataset.theme=dark?'':('dark');if(!dark)d.dataset.theme='dark';else delete d.dataset.theme;localStorage.setItem('pleasance-theme',d.dataset.theme||'light');document.getElementById('themeToggle').textContent=d.dataset.theme==='dark'?'☀':'☾';})()" style="background:none;border:1px solid rgba(255,255,255,0.3);color:rgba(250,245,240,0.8);padding:0.3rem 0.65rem;cursor:pointer;font-size:0.875rem;border-radius:50px;">☾</button>
+      <button class="print-btn" onclick="window.print()">Als PDF speichern</button>
+    </div>
   </div>
+  <script>
+    (function(){var d=document.documentElement;var btn=document.getElementById('themeToggle');if(btn)btn.textContent=d.dataset.theme==='dark'?'☀':'☾';})();
+  </script>
 
   <div class="cv">
 

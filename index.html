@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pleasance — Ein Atelier für Dinge, die mit Sorgfalt gemacht sind</title>
-  <meta name="description" content="Pleasance ist das Atelier von Robin Wahl — für Coaching, Webdesign und Musik. Sorgfältig gemacht, mit Wurzeln im Saarland.">
+  <meta name="description" content="Pleasance ist das Atelier von Robin Wahl — für Coaching, Webdesign und Musik. Sorgfältig gemacht.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
+  </script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
+<body data-page="index">
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="studio.html">Studio</a></li>
-      <li><a href="buehne.html">Bühne</a></li>
-      <li><a href="projekte.html">Projekte</a></li>
-      <li><a href="ueber.html">Über</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="buehne.html" data-i18n="nav.buehne">Bühne</a></li>
+      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
+      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
+    <div class="nav__tools">
+      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
+      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
+          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
+        </svg>
+      </button>
+    </div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -31,49 +42,48 @@
 
   <!-- Hero -->
   <div class="hub-hero reveal">
-    <h1>Pleasance ist ein Atelier<br>für Dinge, die mit<br><em>Sorgfalt</em> gemacht sind.</h1>
-    <p class="hub-hero__sub">
+    <h1 data-i18n="index.hero.h1">Pleasance ist ein Atelier<br>für Dinge, die mit<br><em>Sorgfalt</em> gemacht sind.</h1>
+    <p class="hub-hero__sub" data-i18n="index.hero.subtitle">
       Coaching, das zuhört. Websites, die nicht aus dem Baukasten kommen.
-      Musik, die wirklich klingt. Geführt von Robin Wahl, mit Wurzeln im
-      Saarland und offen nach Süden.
+      Musik, die wirklich klingt. Geführt von Robin Wahl.
     </p>
   </div>
 
   <!-- Drei Türen -->
   <section class="doors reveal">
     <div class="doors__container">
-      <span class="section__label">Drei Räume</span>
-      <h2>Womit ich arbeite.</h2>
+      <span class="section__label" data-i18n="index.doors.label">Drei Räume</span>
+      <h2 data-i18n="index.doors.h2">Womit ich arbeite.</h2>
       <div class="doors__grid">
 
         <a href="coaching.html" class="door">
-          <span class="door__verb">Zuhören.</span>
-          <h3 class="door__title">Coaching</h3>
-          <p class="door__text">
+          <span class="door__verb" data-i18n="index.coaching.verb">Zuhören.</span>
+          <h3 class="door__title" data-i18n="index.coaching.title">Coaching</h3>
+          <p class="door__text" data-i18n="index.coaching.text">
             Systemisches Coaching und Logotherapie für Menschen in Veränderungsphasen.
             Ich höre zu und begleite dich dabei, Klarheit zu finden.
           </p>
-          <span class="door__link">Coaching entdecken →</span>
+          <span class="door__link" data-i18n="index.coaching.link">Coaching entdecken →</span>
         </a>
 
         <a href="studio.html" class="door door--featured">
-          <span class="door__verb">Bauen.</span>
-          <h3 class="door__title">Studio</h3>
-          <p class="door__text">
+          <span class="door__verb" data-i18n="index.studio.verb">Bauen.</span>
+          <h3 class="door__title" data-i18n="index.studio.title">Studio</h3>
+          <p class="door__text" data-i18n="index.studio.text">
             Websites, Tech-Setups und Wissensarbeit für Selbstständige und kleine
             Unternehmen. Sorgfältig gebaut, frei von Lock-in.
           </p>
-          <span class="door__link">Studio entdecken →</span>
+          <span class="door__link" data-i18n="index.studio.link">Studio entdecken →</span>
         </a>
 
         <a href="buehne.html" class="door">
-          <span class="door__verb">Klingen.</span>
-          <h3 class="door__title">Bühne</h3>
-          <p class="door__text">
+          <span class="door__verb" data-i18n="index.buehne.verb">Klingen.</span>
+          <h3 class="door__title" data-i18n="index.buehne.title">Bühne</h3>
+          <p class="door__text" data-i18n="index.buehne.text">
             Musikproduktion und Booking für Künstler, die mehr wollen als
             einen schnellen Take.
           </p>
-          <span class="door__link">Bühne entdecken →</span>
+          <span class="door__link" data-i18n="index.buehne.link">Bühne entdecken →</span>
         </a>
 
       </div>
@@ -83,18 +93,18 @@
   <!-- Robin-Teaser -->
   <div class="hub-about reveal">
     <div>
-      <span class="section__label">Hinter Pleasance</span>
-      <h2>Eine Person, drei Räume, eine Haltung.</h2>
+      <span class="section__label" data-i18n="index.about.label">Hinter Pleasance</span>
+      <h2 data-i18n="index.about.h2">Eine Person, drei Räume, eine Haltung.</h2>
     </div>
     <div>
-      <p class="hub-about__text">
+      <p class="hub-about__text" data-i18n="index.about.text">
         Ich bin Robin Wahl. Pleasance ist nicht eine Agentur, sondern mein
         Werkstatt-Name für Dinge, die ich mit Sorgfalt mache. Coaching ist meine
         älteste Säule, Webdesign meine handwerklichste, Musik mein Resonanzraum.
         Was sie verbindet, ist die Überzeugung, dass weniger und langsamer oft
         besser ist als mehr und schneller.
       </p>
-      <a href="ueber.html" class="hub-about__link">Mehr über mich →</a>
+      <a href="ueber.html" class="hub-about__link" data-i18n="index.about.link">Mehr über mich →</a>
     </div>
   </div>
 
@@ -103,61 +113,30 @@
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
       </div>
       <nav class="footer__nav">
-        <h4>Räume</h4>
-        <a href="coaching.html">Coaching</a>
-        <a href="studio.html">Studio</a>
-        <a href="buehne.html">Bühne</a>
+        <h4 data-i18n="footer.rooms">Räume</h4>
+        <a href="coaching.html" data-i18n="nav.coaching">Coaching</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="buehne.html" data-i18n="nav.buehne">Bühne</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Mehr</h4>
-        <a href="projekte.html">Projekte</a>
-        <a href="ueber.html">Über</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4 data-i18n="footer.mehr">Mehr</h4>
+        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
+        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
       </nav>
       <nav class="footer__nav">
-        <h4>Rechtliches</h4>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
       </nav>
     </div>
-    <p class="footer__legal">© 2026 Pleasance · Robin Wahl</p>
+    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
