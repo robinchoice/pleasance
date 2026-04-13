@@ -43,21 +43,22 @@ Die bestehende Coaching-Strecke (`coaching.html`) wird **inhaltlich nicht angefa
 
 <!-- Zuletzt aktualisiert: 2026-04-13 via /save -->
 
-**Sprint / Phase:** MVP-Build — fast fertig
+**Sprint / Phase:** Dark Mode + i18n — live
 
 **Zuletzt implementiert:**
-- Alle 7 Seiten gebaut: `index.html` (Hub), `coaching.html` (umbenannt + neuer Nav/Footer), `studio.html`, `buehne.html`, `ueber.html`, `kontakt.html`, `lebenslauf.html`
-- `style.css` erweitert um Footer, Timeline, Doors, Workshops, Process, Stage, Contact-Doors
-- `lebenslauf.html` aus LinkedIn-PDF gebaut — Pleasance-gebrandeter CV mit Print-Button
+- Dark Mode (`[data-theme="dark"]`, warme Palette, Flash-Prevention Head-Script)
+- DE/EN Sprachumschaltung: `data-i18n` Attribute + `i18n.js` (~280 Keys) + `main.js` Engine
+- Nav `nav__tools` mit Lang- und Theme-Toggle auf allen Seiten
+- `projekte.html` aus Nav/Footer entfernt (archiviert bis Apps Nutzerbasis haben)
 
 **Als nächstes:**
-- `projekte.html` bauen (wartet auf Projektinfos von Robin)
-- Commit + Push → Vercel deployt automatisch auf pleasance.org
-- Texte aus `02-copy.md` in Robins Stimme bringen
+- cal.com mit Google Calendar verknüpfen + Link auf coaching.html / kontakt.html testen
+- `img/robin.jpg` besorgen und in `img/` ablegen
+- `projekte.html` bleibt archiviert bis Apps Nutzerbasis haben
 
 **Offene Punkte:**
-- `img/robin.jpg` fehlt noch (wird auf `coaching.html` gebraucht)
-- Studio cal.com-Slot noch nicht angelegt (Kontaktseite nutzt vorerst mailto)
+- `img/robin.jpg` fehlt (coaching.html About-Section zeigt broken image)
+- `projekte.html` existiert noch als Datei, ist aber aus allen Navs entfernt
 
 ## Ring-Kontext
 
