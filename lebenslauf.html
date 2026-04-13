@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robin Wahl — Lebenslauf</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-primary:       #A0522D;
+      --color-primary-light: #C4845C;
+      --color-bg:            #FAF5F0;
+      --color-bg-alt:        #F0E8DF;
+      --color-text:          #3B2F2F;
+      --color-text-light:    #6B5B5B;
+      --color-accent:        #8B9A6B;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--color-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* === Print-Bar (screen only) === */
+    .print-bar {
+      background: var(--color-text);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .print-bar a {
+      color: rgba(250,245,240,0.6);
+      font-size: 0.875rem;
+    }
+
+    .print-bar a:hover { color: var(--color-bg); text-decoration: none; }
+
+    .print-btn {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+
+    .print-btn:hover { background: var(--color-primary-light); }
+
+    /* === CV Layout === */
+    .cv {
+      max-width: 940px;
+      margin: 2rem auto;
+      background: white;
+      padding: 3.5rem 3rem;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0 3rem;
+    }
+
+    /* Header spans full width */
+    .cv__header {
+      grid-column: 1 / -1;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--color-bg-alt);
+    }
+
+    .cv__name {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--color-text);
+      margin-bottom: 0.3rem;
+    }
+
+    .cv__title {
+      font-size: 0.95rem;
+      color: var(--color-primary);
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .cv__contact {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.5rem;
+      row-gap: 0.25rem;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+    }
+
+    .cv__contact a { color: var(--color-text-light); }
+    .cv__contact a:hover { color: var(--color-primary); }
+
+    /* === Shared section-title === */
+    .cv__section-title {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-primary);
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-bg-alt);
+      margin-bottom: 1.25rem;
+    }
+
+    .cv__section { margin-bottom: 2.25rem; }
+
+    /* === Sidebar === */
+    .cv__sidebar { padding-top: 0.25rem; }
+
+    .edu-item { margin-bottom: 1.1rem; }
+    .edu-item__school { font-weight: 500; font-size: 0.875rem; line-height: 1.4; }
+    .edu-item__degree { font-size: 0.825rem; color: var(--color-text-light); }
+    .edu-item__year   { font-size: 0.775rem; color: var(--color-text-light); margin-top: 0.1rem; }
+
+    .cert-list { list-style: none; }
+    .cert-list li {
+      font-size: 0.825rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--color-bg-alt);
+      line-height: 1.4;
+      color: var(--color-text);
+    }
+    .cert-list li:last-child { border-bottom: none; }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .skill-list li {
+      background: var(--color-bg-alt);
+      padding: 0.2rem 0.65rem;
+      font-size: 0.775rem;
+      color: var(--color-text);
+      border-radius: 1px;
+    }
+
+    /* === Main: Experience === */
+    .cv__main { padding-top: 0.25rem; }
+
+    .job {
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--color-bg-alt);
+    }
+    .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .job__company {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--color-text);
+    }
+    .job__role {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--color-text);
+      margin-top: 0.1rem;
+    }
+    .job__meta {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      margin-top: 0.15rem;
+    }
+
+    .job__bullets {
+      list-style: none;
+      margin-top: 0.65rem;
+    }
+    .job__bullets li {
+      font-size: 0.855rem;
+      color: var(--color-text-light);
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+    .job__bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary-light);
+    }
+
+    /* === Footer branding === */
+    .cv__footer {
+      grid-column: 1 / -1;
+      padding-top: 1.75rem;
+      margin-top: 0.5rem;
+      border-top: 1px solid var(--color-bg-alt);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cv__footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--color-primary-light);
+    }
+    .cv__footer-date {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+    }
+
+    /* === Print === */
+    @media print {
+      @page { size: A4; margin: 14mm 18mm; }
+
+      body { background: white; font-size: 10.5pt; }
+      .print-bar { display: none; }
+
+      .cv {
+        margin: 0;
+        padding: 0;
+        max-width: none;
+        box-shadow: none;
+        grid-template-columns: 190px 1fr;
+        gap: 0 2.5rem;
+      }
+
+      .job { page-break-inside: avoid; }
+      a { color: var(--color-text); text-decoration: none; }
+    }
+
+    /* === Mobile === */
+    @media (max-width: 680px) {
+      .cv {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        margin: 0;
+        gap: 0;
+      }
+      .cv__header, .cv__footer { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <a href="ueber.html">← Zurück</a>
+    <button class="print-btn" onclick="window.print()">Als PDF speichern</button>
+  </div>
+
+  <div class="cv">
+
+    <header class="cv__header">
+      <h1 class="cv__name">Robin Wahl</h1>
+      <p class="cv__title">Unternehmer · Musikproduzent · Systemischer Coach</p>
+      <div class="cv__contact">
+        <span>Saarland / Freiburg im Breisgau</span>
+        <span>hallo@pleasance.org</span>
+        <a href="https://www.linkedin.com/in/robinwahl359">linkedin.com/in/robinwahl359</a>
+        <a href="https://pleasance.org">pleasance.org</a>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="cv__sidebar">
+
+      <section class="cv__section">
+        <h2 class="cv__section-title">Ausbildung</h2>
+        <div class="edu-item">
+          <div class="edu-item__school">Universität des Saarlandes</div>
+          <div class="edu-item__degree">MSc Business Informatics</div>
+          <div class="edu-item__year">2019 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-item__school">HTW Saarland</div>
+          <div class="edu-item__degree">MSc Marketing Science</div>
+          <div class="edu-item__year">2019</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-item__school">HTW Saarland</div>
+          <div class="edu-item__degree">BA Betriebswirtschaft</div>
+          <div class="edu-item__year">2015 – 2019</div>
+        </div>
+      </section>
+
+      <section class="cv__section">
+        <h2 class="cv__section-title">Zertifikate</h2>
+        <ul class="cert-list">
+          <li>Meta-Systemischer Coach</li>
+          <li>Professional Scrum Master™ I</li>
+          <li>SAP Certified Application Associate — Analytics Cloud</li>
+          <li>CS50 Introduction to Computer Science (Harvard / edX)</li>
+        </ul>
+      </section>
+
+      <section class="cv__section">
+        <h2 class="cv__section-title">Kompetenzen</h2>
+        <ul class="skill-list">
+          <li>Systemisches Coaching</li>
+          <li>Logotherapie</li>
+          <li>Scrum / SAFe</li>
+          <li>Webentwicklung</li>
+          <li>Selfhosting</li>
+          <li>Knowledge Bases</li>
+          <li>SAP Analytics Cloud</li>
+          <li>Musikproduktion</li>
+          <li>Open Source</li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <!-- Main: Experience -->
+    <main class="cv__main">
+
+      <section class="cv__section">
+        <h2 class="cv__section-title">Berufserfahrung</h2>
+
+        <div class="job">
+          <div class="job__company">Pleasance</div>
+          <div class="job__role">Gründer — Coaching · Studio · Bühne</div>
+          <div class="job__meta">Oktober 2024 – heute · Saarland / remote</div>
+          <ul class="job__bullets">
+            <li>Systemisches Coaching und Logotherapie für Menschen in Veränderungsphasen</li>
+            <li>Webdesign, Webentwicklung und Tech-Beratung für Selbstständige und kleine Unternehmen</li>
+            <li>Musikproduktion und Booking-Vermittlung für Künstler im Saar-/Südwest-Raum</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__company">Decentraliced AG</div>
+          <div class="job__role">Assistent der Geschäftsleitung</div>
+          <div class="job__meta">März 2024 – September 2024 · Zug, Schweiz</div>
+          <ul class="job__bullets">
+            <li>Operative Betreuung einer Holding-Struktur mit 5 Gesellschaften auf Geschäftsleitungsebene</li>
+            <li>Geschäftsprozessautomatisierung und Tool-Integration (Notion, Slack, DocuSign, ActiveCampaign)</li>
+            <li>Zentrale Schnittstelle zu Banken, Steuerberatern und externen Dienstleistern</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__company">SAP</div>
+          <div class="job__role">Business Processes Consultant</div>
+          <div class="job__meta">Januar 2022 – September 2024 · Sankt Ingbert, Saarland</div>
+          <ul class="job__bullets">
+            <li>Scrum Master in SAFe-Umfeld für Catena-X — Release Management über die gesamte automobile Wertschöpfungskette (BMW, VW, Mercedes + Zulieferer)</li>
+            <li>Projektmanager im Co-Innovationsprojekt „Artificial Intelligence for Budgeting" mit dem Bundesfinanzministerium</li>
+            <li>Scrum Master in Nexus-Umfeld (3 Teams) für BIBB und Bundeszentralamt für Steuern</li>
+            <li>Quality Assurance für die staatliche Kulturpass-App</li>
+            <li>Interne Workshops zu ChatGPT, Bitcoin und Open-Source-Technologien</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__company">SAP</div>
+          <div class="job__role">Werkstudent Analytics & Insights</div>
+          <div class="job__meta">November 2019 – Dezember 2021 · St. Ingbert, Saarland</div>
+          <ul class="job__bullets">
+            <li>Aufbau von SAP Analytics Cloud Dashboards für Telekom, Vetter Pharma und BearingPoint</li>
+            <li>Abschluss der SAP Analytics Cloud Zertifizierung</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__company">kkvision GmbH</div>
+          <div class="job__role">Project Delivery Consultant</div>
+          <div class="job__meta">Mai 2021 – Oktober 2021 · Metropolregion München</div>
+          <ul class="job__bullets">
+            <li>HubSpot Marketing Automation inkl. komplexer Workflow-Logiken</li>
+            <li>Projektmanagement und operative Projektsteuerung</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__company">Deezer</div>
+          <div class="job__role">Praktikant Social Media & PR Marketing</div>
+          <div class="job__meta">Oktober 2018 – April 2019 · Berlin</div>
+          <ul class="job__bullets">
+            <li>B2C- und B2B-Marketing-Kampagnen; Mitarbeit beim Deezer × re:publica Podcast-Preis</li>
+            <li>Content Creation, Social Media und Konzertdokumentation</li>
+            <li>Bachelorarbeit in Kooperation mit Deezer: „Auswirkungen von Musikstreaming auf den Musikmarkt"</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="cv__footer">
+      <span class="cv__footer-brand">Pleasance</span>
+      <span class="cv__footer-date">Stand April 2026</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

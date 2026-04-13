@@ -761,3 +761,606 @@ p {
     flex-direction: column;
   }
 }
+
+/* ============================================================
+   NEW MULTI-PAGE COMPONENTS
+   ============================================================ */
+
+/* === Footer (multi-column, new pages) === */
+.footer__main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  text-align: left;
+}
+
+.footer__logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer__tagline {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  max-width: 28ch;
+  line-height: 1.6;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__nav h4 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.footer__nav a {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer__nav a:hover { color: var(--color-primary); }
+
+.footer__legal {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-bg-alt);
+  max-width: 100%;
+}
+
+/* === Hero (neue Seiten) === */
+.page-hero {
+  padding: 9rem 2rem 5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page-hero__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* === About Page === */
+.about-text {
+  padding: 0 2rem 5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  max-width: 65ch;
+  line-height: 1.8;
+}
+
+/* === Timeline (Werdegang) === */
+.timeline {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+}
+
+.timeline__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.timeline__entries {
+  margin-top: 2.5rem;
+}
+
+.timeline__entry {
+  display: grid;
+  grid-template-columns: 120px 1px 1fr;
+  gap: 0 2rem;
+  padding: 1.25rem 0;
+}
+
+.timeline__year {
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  padding-top: 0.25rem;
+  line-height: 1.4;
+}
+
+.timeline__line {
+  position: relative;
+  background: var(--color-bg);
+}
+
+.timeline__line::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+}
+
+.timeline__content { padding-left: 0.25rem; }
+
+.timeline__company {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.timeline__role {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: 0.1rem;
+}
+
+.timeline__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 0.3rem;
+  max-width: 55ch;
+  line-height: 1.5;
+}
+
+/* === CV-CTA (Link zu lebenslauf.html) === */
+.cv-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cv-cta__inner {
+  display: inline-block;
+  padding: 2.5rem 3rem;
+  border: 1px solid var(--color-bg-alt);
+  background: var(--color-white);
+  max-width: 480px;
+  width: 100%;
+}
+
+.cv-cta__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.cv-cta__title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cv-cta__sub {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  max-width: 35ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Values (about-Variante) === */
+.values-section {
+  padding: var(--section-padding);
+}
+
+.values-section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.value-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.value-item__text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  max-width: 32ch;
+}
+
+/* === CTA Section === */
+.cta-section {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+  text-align: center;
+}
+
+.cta-section__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: var(--color-text-light);
+  margin: 0 auto 2rem;
+  max-width: 45ch;
+}
+
+/* === Workshops (Studio) === */
+.workshops {
+  padding: var(--section-padding);
+}
+
+.workshops__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.workshops__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.workshop {
+  padding: 2rem;
+  border: 1px solid var(--color-bg-alt);
+  background: var(--color-white);
+}
+
+.workshop__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.workshop__text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  max-width: 32ch;
+}
+
+/* === Process (Studio: Discovery → Umsetzung) === */
+.process {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+}
+
+.process__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.process__intro {
+  max-width: 55ch;
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.process__step {
+  background: var(--color-white);
+  padding: 2.5rem 2rem;
+}
+
+.process__step-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-primary-light);
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.process__step-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.process__step-text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* === For Whom (Studio) === */
+.for-whom {
+  padding: var(--section-padding);
+}
+
+.for-whom__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.for-whom__text {
+  max-width: 65ch;
+  color: var(--color-text-light);
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+.for-whom__text p + p {
+  margin-top: 1rem;
+}
+
+/* === Hub Hero === */
+.hub-hero {
+  padding: 11rem 2rem 6rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hub-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.15;
+  max-width: 14ch;
+}
+
+.hub-hero h1 em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.hub-hero__sub {
+  margin-top: 1.5rem;
+  color: var(--color-text-light);
+  max-width: 52ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* === Doors (Hub Drei-Türen) === */
+.doors {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+}
+
+.doors__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.doors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.door {
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--color-bg);
+  background: var(--color-white);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.door:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59, 47, 47, 0.07);
+}
+
+.door--featured {
+  border-color: var(--color-primary-light);
+}
+
+.door__verb {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.door__title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.door__text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.door__link {
+  display: inline-block;
+  margin-top: 1.75rem;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  transition: gap 0.2s;
+}
+
+.door__link:hover {
+  text-decoration: underline;
+}
+
+/* === Hub: Robin-Teaser === */
+.hub-about {
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hub-about__text p {
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+.hub-about__link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.hub-about__link:hover { text-decoration: underline; }
+
+/* === Contact Doors === */
+.contact-doors {
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.contact-door {
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--color-bg-alt);
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-door__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+}
+
+.contact-door__title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-door__text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 1.75rem;
+}
+
+/* === Stage (Bühne) === */
+.stage {
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.stage__section {
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.stage__section:last-child {
+  margin-bottom: 0;
+}
+
+.stage__label-block {}
+
+.stage__text {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.stage__text p + p {
+  margin-top: 1rem;
+}
+
+/* === Mobile: new components === */
+@media (max-width: 768px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1.5rem;
+  }
+
+  .footer__brand { grid-column: 1 / -1; }
+
+  .timeline__entry {
+    grid-template-columns: 80px 1px 1fr;
+    gap: 0 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-cta__inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .workshops__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .stage__section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .doors__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-doors {
+    grid-template-columns: 1fr;
+  }
+}
