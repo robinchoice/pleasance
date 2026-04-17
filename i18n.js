@@ -231,21 +231,29 @@ const I18N = {
   // ── buehne.html ───────────────────────────────────────────────────────────
   buehne: {
     hero: {
-      label:    { de: 'Bühne',  en: 'Stage' },
-      h1:       { de: 'Wo Musik wirklich klingt.',  en: 'Where music truly sounds.' },
-      subtitle: { de: 'Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen, die zu ihnen passen. Beides aus derselben Überzeugung: dass es sich lohnt, langsamer zu arbeiten als der Markt es verlangt.', en: 'I produce music in my studio network and connect artists with stages that fit them. Both from the same conviction: it\'s worth working slower than the market demands.' },
+      label:     { de: 'Bühne',  en: 'Stage' },
+      h1:        { de: 'Wo Musik wirklich klingt.',  en: 'Where music truly sounds.' },
+      subtitle:  { de: 'Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen, die zu ihnen passen.', en: 'I produce music in my studio network and connect artists with stages that fit them.' },
+      cta_prod:  { de: 'Im Studio →', en: 'In the studio →' },
+      cta_book:  { de: 'Booking anfragen ↓', en: 'Inquire about booking ↓' },
     },
     prod: {
       label: { de: 'Im Studio',  en: 'In the Studio' },
       h2:    { de: 'Aufnahme, Mix und Mastering.', en: 'Recording, mix and mastering.' },
-      text1: { de: 'Ich arbeite mit einem Netzwerk von Tonstudios. Recording, Mixing, Mastering — von der einzelnen Single bis zum vollen Album. Wenn du nicht weißt, welches Studio zu deinem Projekt passt, finde ich das mit dir gemeinsam heraus.', en: 'I work with a network of recording studios. Recording, mixing, mastering — from a single track to a full album. If you\'re not sure which studio fits your project, I\'ll figure that out with you.' },
+      text1: { de: 'Ich arbeite mit einem Netzwerk von Tonstudios im Saar-/Südwest-Raum. Recording, Mixing, Mastering — von der einzelnen Single bis zum vollen Album. Wenn du nicht weißt, welches Studio zu deinem Projekt passt, finde ich das mit dir gemeinsam heraus.', en: 'I work with a network of recording studios in the Saar/Southwest region. Recording, mixing, mastering — from a single track to a full album. If you\'re not sure which studio fits your project, I\'ll figure that out with you.' },
       text2: { de: 'Meine Rolle ist je nach Projekt unterschiedlich: manchmal Producer, manchmal Vermittler, manchmal beides.', en: 'My role varies by project: sometimes producer, sometimes connector, sometimes both.' },
+      cta:   { de: 'Produktion anfragen →', en: 'Inquire about production →' },
     },
     booking: {
       label: { de: 'Auf der Bühne', en: 'On Stage' },
       h2:    { de: 'Künstler an Orte bringen, die sie verdienen.', en: 'Getting artists to the places they deserve.' },
       text1: { de: 'Ich arbeite mit Künstlern, deren Musik mehr Aufmerksamkeit verdient, als ein Algorithmus ihr gibt. Ich vermittle an Veranstalter, Festivals und Räume, die zu ihnen passen.', en: 'I work with artists whose music deserves more attention than an algorithm gives it. I connect them with promoters, festivals, and venues that fit.' },
       text2: { de: 'Kein Massengeschäft. Wenige Künstler, dafür mit Zeit.', en: 'No mass business. Few artists, but with time.' },
+      cta:   { de: 'Booking anfragen →', en: 'Inquire about booking →' },
+    },
+    brands: {
+      label: { de: 'Womit ich arbeite', en: 'What I work with' },
+      h2:    { de: 'Werkzeuge & Partner.', en: 'Tools & partners.' },
     },
     cta: {
       h2:  { de: 'Du machst Musik, oder bookst sie?', en: 'You make music, or book it?' },

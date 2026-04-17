@@ -40,26 +40,74 @@
     </button>
   </nav>
 
-  <!-- Hero -->
-  <div class="page-hero reveal">
-    <span class="page-hero__label" data-i18n="buehne.hero.label">Bühne</span>
-    <h1 data-i18n="buehne.hero.h1">Wo Musik wirklich klingt.</h1>
-    <p class="hero__subtitle" style="margin-top: 1.5rem;" data-i18n="buehne.hero.subtitle">
-      Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen,
-      die zu ihnen passen. Beides aus derselben Überzeugung: dass es sich lohnt,
-      langsamer zu arbeiten als der Markt es verlangt.
-    </p>
-  </div>
+  <!-- Neurographik Hero -->
+  <section class="neuro-hero" id="neuro-hero">
 
-  <!-- Zwei Bereiche -->
-  <div class="stage reveal">
+    <!-- SVG neurographisches Kunstwerk -->
+    <svg class="neuro-canvas" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 
-    <div class="stage__section">
-      <div class="stage__label-block">
-        <span class="section__label" data-i18n="buehne.prod.label">Im Studio</span>
-        <h2 data-i18n="buehne.prod.h2">Aufnahme, Mix und Mastering.</h2>
+      <!-- Farbfelder: erscheinen in Phase 2 -->
+      <g class="neuro-fills">
+        <ellipse class="neuro-fill" cx="130" cy="100" rx="65" ry="42" transform="rotate(25 130 100)"  fill="#FF2D78"/>
+        <ellipse class="neuro-fill" cx="440" cy="65"  rx="85" ry="38" transform="rotate(-18 440 65)"  fill="#FFD700"/>
+        <ellipse class="neuro-fill" cx="750" cy="90"  rx="72" ry="48" transform="rotate(15 750 90)"   fill="#00D4FF"/>
+        <ellipse class="neuro-fill" cx="1070" cy="140" rx="78" ry="45" transform="rotate(-22 1070 140)" fill="#FF6B35"/>
+        <ellipse class="neuro-fill" cx="65"  cy="345" rx="52" ry="78" transform="rotate(8 65 345)"    fill="#8B5CF6"/>
+        <ellipse class="neuro-fill" cx="355" cy="215" rx="88" ry="55" transform="rotate(28 355 215)"  fill="#00B4A6"/>
+        <ellipse class="neuro-fill" cx="590" cy="205" rx="65" ry="80" transform="rotate(-12 590 205)" fill="#FF2D78"/>
+        <ellipse class="neuro-fill" cx="980" cy="210" rx="80" ry="50" transform="rotate(30 980 210)"  fill="#FFD700"/>
+        <ellipse class="neuro-fill" cx="1190" cy="315" rx="48" ry="85" transform="rotate(-8 1190 315)" fill="#8B5CF6"/>
+        <ellipse class="neuro-fill" cx="200" cy="460" rx="88" ry="55" transform="rotate(18 200 460)"  fill="#00D4FF"/>
+        <ellipse class="neuro-fill" cx="570" cy="475" rx="70" ry="50" transform="rotate(-28 570 475)" fill="#FF6B35"/>
+        <ellipse class="neuro-fill" cx="825" cy="445" rx="90" ry="60" transform="rotate(22 825 445)"  fill="#00B4A6"/>
+      </g>
+
+      <!-- Neurographische Linien: zeichnen sich beim Scrollen -->
+      <g class="neuro-lines" stroke="#111111" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Horizontale Wellen -->
+        <path class="neuro-path" d="M -10 155 C 150 65, 400 240, 600 145 C 800 50, 1050 210, 1210 95"/>
+        <path class="neuro-path" d="M -10 305 C 190 365, 360 175, 550 265 C 740 355, 935 155, 1210 295"/>
+        <path class="neuro-path" d="M -10 445 C 165 490, 360 345, 565 415 C 770 485, 980 360, 1210 445"/>
+        <path class="neuro-path" d="M -10 545 C 270 525, 580 470, 905 530 C 1060 560, 1160 500, 1210 545"/>
+        <!-- Vertikale Wellen -->
+        <path class="neuro-path" d="M 95  -10 C 135 155, 60  310, 110 610"/>
+        <path class="neuro-path" d="M 315 -10 C 285 130, 365 265, 325 610"/>
+        <path class="neuro-path" d="M 575 -10 C 555 155, 640 295, 600 610"/>
+        <path class="neuro-path" d="M 845 -10 C 825 165, 905 315, 860 610"/>
+        <path class="neuro-path" d="M 1095 -10 C 1075 155, 1155 295, 1110 610"/>
+        <!-- Diagonalen -->
+        <path class="neuro-path" d="M -10 75  C 320 175, 720 385, 1210 490"/>
+        <path class="neuro-path" d="M -10 545 C 360 445, 760 215, 1210 75"/>
+      </g>
+
+    </svg>
+
+    <!-- Text-Overlay -->
+    <div class="neuro-hero__content">
+      <span class="neuro-hero__label" data-i18n="buehne.hero.label">Bühne</span>
+      <h1 class="neuro-hero__h1" data-i18n="buehne.hero.h1">Wo Musik<br>wirklich klingt.</h1>
+      <p class="neuro-hero__sub" data-i18n="buehne.hero.subtitle">
+        Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen,
+        die zu ihnen passen.
+      </p>
+      <div class="neuro-hero__ctas">
+        <a href="#produktion" class="btn btn--primary" data-i18n="buehne.hero.cta_prod">Im Studio →</a>
+        <a href="#booking" class="neuro-hero__link" data-i18n="buehne.hero.cta_book">Booking anfragen ↓</a>
       </div>
-      <div class="stage__text">
+    </div>
+
+    <div class="neuro-scroll-hint" aria-hidden="true">scroll ↓</div>
+
+  </section>
+
+  <!-- Produktion -->
+  <section class="buehne-section reveal" id="produktion">
+    <div class="buehne-section__container">
+      <div class="buehne-section__label-col">
+        <span class="section__label" data-i18n="buehne.prod.label">Im Studio</span>
+        <h2 data-i18n="buehne.prod.h2">Aufnahme, Mix<br>und Mastering.</h2>
+      </div>
+      <div class="buehne-section__text-col">
         <p data-i18n="buehne.prod.text1">
           Ich arbeite mit einem Netzwerk von Tonstudios im Saar-/Südwest-Raum.
           Recording, Mixing, Mastering — von der einzelnen Single bis zum vollen Album.
@@ -70,15 +118,19 @@
           Meine Rolle ist je nach Projekt unterschiedlich: manchmal Producer,
           manchmal Vermittler, manchmal beides.
         </p>
+        <a href="kontakt.html#buehne" class="buehne-cta-link" data-i18n="buehne.prod.cta">Produktion anfragen →</a>
       </div>
     </div>
+  </section>
 
-    <div class="stage__section">
-      <div class="stage__label-block">
+  <!-- Booking -->
+  <section class="buehne-section buehne-section--accent reveal" id="booking">
+    <div class="buehne-section__container">
+      <div class="buehne-section__label-col">
         <span class="section__label" data-i18n="buehne.booking.label">Auf der Bühne</span>
-        <h2 data-i18n="buehne.booking.h2">Künstler an Orte bringen, die sie verdienen.</h2>
+        <h2 data-i18n="buehne.booking.h2">Künstler an Orte bringen,<br>die sie verdienen.</h2>
       </div>
-      <div class="stage__text">
+      <div class="buehne-section__text-col">
         <p data-i18n="buehne.booking.text1">
           Ich arbeite mit Künstlern, deren Musik mehr Aufmerksamkeit verdient,
           als ein Algorithmus ihr gibt. Ich vermittle an Veranstalter, Festivals
@@ -87,14 +139,32 @@
         <p data-i18n="buehne.booking.text2">
           Kein Massengeschäft. Wenige Künstler, dafür mit Zeit.
         </p>
+        <a href="kontakt.html#buehne" class="buehne-cta-link" data-i18n="buehne.booking.cta">Booking anfragen →</a>
       </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Werkzeuge & Partner -->
+  <section class="buehne-brands reveal">
+    <div class="buehne-brands__container">
+      <span class="section__label" data-i18n="buehne.brands.label">Womit ich arbeite</span>
+      <h2 data-i18n="buehne.brands.h2">Werkzeuge &amp; Partner.</h2>
+      <div class="buehne-brands__grid">
+        <span class="buehne-brand buehne-brand--magenta">Logic Pro</span>
+        <span class="buehne-brand buehne-brand--cyan">Focusrite</span>
+        <span class="buehne-brand buehne-brand--orange">MOOG</span>
+        <span class="buehne-brand buehne-brand--violet">Rode</span>
+        <span class="buehne-brand buehne-brand--teal">Shure</span>
+        <span class="buehne-brand buehne-brand--yellow">Sire / Marcus Miller</span>
+        <span class="buehne-brand buehne-brand--magenta">Vintage Guitars</span>
+        <span class="buehne-brand buehne-brand--orange">Epiphone</span>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA -->
-  <section class="cta-section reveal">
-    <div class="cta-section__container">
+  <section class="buehne-cta-section reveal">
+    <div class="buehne-cta-section__inner">
       <h2 data-i18n="buehne.cta.h2">Du machst Musik, oder bookst sie?</h2>
       <p data-i18n="buehne.cta.text">Schreib mir, was du vorhast. Ich melde mich.</p>
       <a href="kontakt.html#buehne" class="btn btn--primary" data-i18n="buehne.cta.btn">Anfrage senden</a>
@@ -102,7 +172,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer buehne-footer">
     <div class="footer__main">
       <div class="footer__brand">
         <span class="footer__logo">Pleasance</span>
@@ -130,6 +200,43 @@
 
   <script src="i18n.js"></script>
   <script src="main.js"></script>
+
+  <!-- Neurographik-Animation -->
+  <script>
+  (function () {
+    var paths = Array.from(document.querySelectorAll('.neuro-path'));
+    var fills = Array.from(document.querySelectorAll('.neuro-fill'));
+    if (!paths.length) return;
+
+    var lengths = paths.map(function (p) {
+      var len = p.getTotalLength();
+      p.style.strokeDasharray = len;
+      p.style.strokeDashoffset = len;
+      return len;
+    });
+
+    function update() {
+      var y = window.scrollY;
+      // Linien: 0–500px scroll → 0–100% gezeichnet
+      var lineP = Math.min(1, y / 500);
+      paths.forEach(function (path, i) {
+        var stagger = (i / paths.length) * 0.45;
+        var p = Math.max(0, Math.min(1, (lineP - stagger) / (1 - stagger)));
+        path.style.strokeDashoffset = lengths[i] * (1 - p);
+      });
+      // Farbflächen: ab 250px scroll → 0–100% sichtbar
+      var fillP = Math.max(0, Math.min(1, (y - 250) / 400));
+      fills.forEach(function (fill, i) {
+        var stagger = (i / fills.length) * 0.5;
+        var p = Math.max(0, Math.min(1, (fillP - stagger) / (1 - stagger)));
+        fill.style.opacity = p * 0.48;
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 
 </body>
 </html>

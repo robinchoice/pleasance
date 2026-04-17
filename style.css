@@ -1920,3 +1920,281 @@ body[data-page="coaching"] .newsletter__input:focus        { border-color: #6BBF
 /* Footer */
 body[data-page="coaching"] .footer       { border-top-color: rgba(107, 191, 106, 0.08); }
 body[data-page="coaching"] .footer__nav a:hover { color: #6BBF6A; }
+
+/* ================================================================
+   BÜHNE PAGE — weiß, expressiv, neurographisch
+   ================================================================ */
+
+body[data-page="buehne"] {
+  --color-bg:            #FFFFFF;
+  --color-bg-alt:        #F5F4F2;
+  --color-text:          #111111;
+  --color-text-light:    #666666;
+  --color-primary:       #FF2D78;
+  --color-primary-light: #FF6BA0;
+  --color-accent:        #FF6B35;
+  --color-white:         #FFFFFF;
+}
+
+/* Nav: weiß */
+body[data-page="buehne"] .nav {
+  background: rgba(255, 255, 255, 0.95);
+}
+body[data-page="buehne"] .nav__logo         { color: #111111; }
+body[data-page="buehne"] .nav__links a       { color: #888888; }
+body[data-page="buehne"] .nav__links a:hover { color: #FF2D78; }
+body[data-page="buehne"] .nav__lang          { border-color: #DDDDDD; color: #888888; }
+body[data-page="buehne"] .nav__lang:hover    { border-color: #FF2D78; color: #FF2D78; }
+body[data-page="buehne"] .nav__theme         { color: #888888; }
+body[data-page="buehne"] .nav__theme:hover   { color: #FF2D78; }
+body[data-page="buehne"] .nav__toggle span   { background: #111111; }
+body[data-page="buehne"] .nav.scrolled       { box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+
+@media (max-width: 768px) {
+  body[data-page="buehne"] .nav__links { background: #FFFFFF; }
+}
+
+/* === Neurographik Hero === */
+.neuro-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 580px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.neuro-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.neuro-fill {
+  opacity: 0;
+}
+
+.neuro-hero__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.neuro-hero__content > * { pointer-events: auto; }
+
+.neuro-hero__label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #FF2D78;
+  margin-bottom: 1.5rem;
+}
+
+.neuro-hero__h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: #111111;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.neuro-hero__sub {
+  font-size: 1.05rem;
+  color: #666666;
+  max-width: 46ch;
+  margin-top: 1.5rem;
+  line-height: 1.75;
+}
+
+.neuro-hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.neuro-hero__link {
+  color: #999999;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.neuro-hero__link:hover { color: #111111; }
+
+.neuro-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #CCCCCC;
+  animation: neuroScrollBounce 2.2s ease-in-out infinite;
+}
+
+@keyframes neuroScrollBounce {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+  50%       { opacity: 1;   transform: translateX(-50%) translateY(7px); }
+}
+
+/* Button auf Bühne-Seite */
+body[data-page="buehne"] .btn--primary {
+  background: #111111;
+  color: #FFFFFF;
+}
+body[data-page="buehne"] .btn--primary:hover {
+  background: #333333;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* === Bühne Inhaltssektionen === */
+.buehne-section {
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.buehne-section--accent {
+  background: #F5F4F2;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.buehne-section--accent > .buehne-section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.buehne-section__container {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.buehne-section__label-col .section__label { color: #FF2D78; }
+
+body[data-page="buehne"] .section__label { color: #FF2D78; }
+
+.buehne-section__text-col p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.85;
+  max-width: 55ch;
+  margin-bottom: 1rem;
+}
+
+.buehne-cta-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: #FF2D78;
+  transition: opacity 0.2s;
+}
+.buehne-cta-link:hover { opacity: 0.65; }
+
+/* === Brand Logos === */
+.buehne-brands {
+  padding: 5rem 2rem;
+  background: #FFFFFF;
+}
+
+.buehne-brands__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.buehne-brands__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.buehne-brand {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.55rem 1.2rem;
+  border: 1.5px solid currentColor;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.buehne-brand--magenta { color: #FF2D78; }
+.buehne-brand--cyan    { color: #00A8CC; }
+.buehne-brand--orange  { color: #E05A00; }
+.buehne-brand--violet  { color: #7C3AED; }
+.buehne-brand--teal    { color: #007A72; }
+.buehne-brand--yellow  { color: #B8960C; }
+
+.buehne-brand:hover {
+  background: currentColor;
+  color: #FFFFFF !important;
+}
+
+/* === CTA Sektion === */
+.buehne-cta-section {
+  background: #111111;
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.buehne-cta-section__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.buehne-cta-section h2 {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.buehne-cta-section p {
+  color: #888888;
+  margin: 0 auto 2rem;
+  max-width: 42ch;
+}
+
+.buehne-cta-section .btn--primary {
+  background: #FF2D78;
+  color: #FFFFFF;
+}
+
+.buehne-cta-section .btn--primary:hover {
+  background: #FF6BA0;
+  box-shadow: 0 4px 24px rgba(255, 45, 120, 0.4);
+}
+
+/* === Footer Bühne === */
+.buehne-footer {
+  background: #111111;
+  color: #888888;
+  border-top: none !important;
+}
+
+.buehne-footer .footer__logo         { color: #FFFFFF; }
+.buehne-footer .footer__tagline      { color: #555555; }
+.buehne-footer .footer__nav h4       { color: #DDDDDD; }
+.buehne-footer .footer__nav a        { color: #666666; }
+.buehne-footer .footer__nav a:hover  { color: #FF2D78; }
+.buehne-footer .footer__legal        { color: #444444; border-top-color: #222222; }
+
+@media (max-width: 768px) {
+  .neuro-hero__content        { padding: 0 2rem; }
+  .neuro-hero__h1             { font-size: clamp(2.5rem, 8vw, 3.5rem); }
+  .buehne-section__container  { grid-template-columns: 1fr; gap: 2rem; }
+  .buehne-section--accent > .buehne-section__container { padding: 0 1.5rem; }
+}
