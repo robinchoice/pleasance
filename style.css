@@ -1773,3 +1773,150 @@ body[data-page="studio"] .process__step-num {
   color: #22D3EE;
   font-style: normal;
 }
+
+/* ================================================================
+   COACHING PAGE — dark forest green / nature identity
+   ================================================================ */
+
+body[data-page="coaching"] {
+  --color-primary:       #6BBF6A;
+  --color-primary-light: #8DD68B;
+  --color-bg:            #091509;
+  --color-bg-alt:        #0E2210;
+  --color-text:          #DCF0DC;
+  --color-text-light:    #5C8B5C;
+  --color-accent:        #8DB87A;
+  --color-white:         #101E10;
+}
+
+/* Nav */
+body[data-page="coaching"] .nav {
+  background: rgba(9, 21, 9, 0.96);
+}
+body[data-page="coaching"] .nav__logo         { color: #6BBF6A; }
+body[data-page="coaching"] .nav__links a       { color: #3D6B3D; }
+body[data-page="coaching"] .nav__links a:hover { color: #DCF0DC; }
+body[data-page="coaching"] .nav__lang          { border-color: #1A3A1A; color: #3D6B3D; }
+body[data-page="coaching"] .nav__lang:hover    { border-color: #6BBF6A; color: #6BBF6A; }
+body[data-page="coaching"] .nav__theme         { color: #3D6B3D; }
+body[data-page="coaching"] .nav__theme:hover   { color: #6BBF6A; }
+body[data-page="coaching"] .nav__toggle span   { background: #3D6B3D; }
+body[data-page="coaching"] .nav.scrolled       { box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
+
+@media (max-width: 768px) {
+  body[data-page="coaching"] .nav__links { background: #091509; }
+}
+
+/* Hero — tiefer Wald, organisches SVG-Geäst */
+body[data-page="coaching"] .hero {
+  background: linear-gradient(160deg, #091509 0%, #0C1E0C 50%, #091509 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-page="coaching"] .hero::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 700'%3E%3Cg stroke='%236BBF6A' stroke-width='1' fill='none' opacity='0.18'%3E%3Cpath d='M400 700 C390 620 370 570 350 500 C330 430 290 390 270 320'/%3E%3Cpath d='M350 500 C320 480 280 475 250 455'/%3E%3Cpath d='M370 570 C395 545 430 540 455 520'/%3E%3Cpath d='M270 320 C250 280 240 230 245 170 C248 120 260 80 270 40'/%3E%3Cpath d='M245 170 C220 160 195 155 175 140'/%3E%3Cpath d='M260 80 C285 65 310 50 330 30'/%3E%3Cpath d='M270 320 C295 300 320 295 345 275'/%3E%3Cpath d='M350 500 C370 465 380 430 375 390'/%3E%3Cpath d='M375 390 C395 375 420 365 440 345'/%3E%3Cpath d='M375 390 C355 370 340 345 345 310'/%3E%3Cpath d='M400 700 C420 660 450 640 475 610'/%3E%3Cpath d='M245 170 C260 145 265 115 258 85'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+  pointer-events: none;
+}
+
+body[data-page="coaching"] .hero__label    { color: #6BBF6A; }
+body[data-page="coaching"] .hero h1        { color: #DCF0DC; }
+body[data-page="coaching"] .hero h1 em     { color: #6BBF6A; }
+body[data-page="coaching"] .hero__subtitle { color: #3D6B3D; }
+
+body[data-page="coaching"] .btn--primary {
+  background: #6BBF6A;
+  color: #091509;
+}
+body[data-page="coaching"] .btn--primary:hover {
+  background: #8DD68B;
+  box-shadow: 0 4px 24px rgba(107, 191, 106, 0.3);
+  color: #091509;
+}
+body[data-page="coaching"] .btn--outline {
+  border-color: #6BBF6A;
+  color: #6BBF6A;
+}
+body[data-page="coaching"] .btn--outline:hover {
+  background: #6BBF6A;
+  color: #091509;
+}
+
+/* About */
+body[data-page="coaching"] .about__image {
+  background: #0E2210;
+  border: 1px solid rgba(107, 191, 106, 0.08);
+}
+
+/* Angebot cards */
+body[data-page="coaching"] .angebot__card:hover {
+  box-shadow: 0 6px 24px rgba(107, 191, 106, 0.1);
+  transform: translateY(-3px);
+}
+body[data-page="coaching"] .angebot__card h3    { color: #6BBF6A; }
+body[data-page="coaching"] .angebot__price      { color: #6BBF6A; }
+body[data-page="coaching"] .angebot__pricing {
+  border: 1px solid rgba(107, 191, 106, 0.1);
+}
+
+/* Netzwerk Schritte */
+body[data-page="coaching"] .netzwerk__step-num {
+  border-color: #6BBF6A;
+  color: #6BBF6A;
+}
+body[data-page="coaching"] .netzwerk h2 em { color: #6BBF6A; }
+
+/* Quiz */
+body[data-page="coaching"] .quiz__container {
+  background: #101E10;
+  box-shadow: none;
+  border: 1px solid rgba(107, 191, 106, 0.08);
+}
+body[data-page="coaching"] .quiz__option {
+  background: #091509;
+  border-color: rgba(107, 191, 106, 0.12);
+  color: #DCF0DC;
+}
+body[data-page="coaching"] .quiz__option:hover {
+  border-color: rgba(107, 191, 106, 0.4);
+  background: #0E2210;
+}
+body[data-page="coaching"] .quiz__option.selected {
+  border-color: #6BBF6A;
+  background: #0E2210;
+  box-shadow: 0 0 0 1px #6BBF6A;
+}
+body[data-page="coaching"] .quiz__dot         { background: #1A3A1A; }
+body[data-page="coaching"] .quiz__dot.active  { background: #6BBF6A; }
+body[data-page="coaching"] .quiz__dot.done    { background: #3D6B3D; }
+body[data-page="coaching"] .quiz__question    { color: #DCF0DC; }
+body[data-page="coaching"] .quiz__result h3   { color: #6BBF6A; }
+
+/* FAQ */
+body[data-page="coaching"] .faq__item         { border-bottom-color: rgba(107, 191, 106, 0.1); }
+body[data-page="coaching"] .faq__item summary::after { color: #6BBF6A; }
+
+/* Newsletter */
+body[data-page="coaching"] .newsletter {
+  background: #0C1D0C;
+}
+body[data-page="coaching"] .newsletter__input {
+  background: #091509;
+  border-color: rgba(107, 191, 106, 0.15);
+  color: #DCF0DC;
+}
+body[data-page="coaching"] .newsletter__input::placeholder { color: #3D6B3D; }
+body[data-page="coaching"] .newsletter__input:focus        { border-color: #6BBF6A; }
+
+/* Footer */
+body[data-page="coaching"] .footer       { border-top-color: rgba(107, 191, 106, 0.08); }
+body[data-page="coaching"] .footer__nav a:hover { color: #6BBF6A; }
