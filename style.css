@@ -1366,34 +1366,43 @@ p {
 }
 
 /* ============================================================
-   STUDIO PAGE — distinct dark/tech identity
+   STUDIO PAGE — cool dark/tech identity (cyan accent)
    ============================================================ */
 
-/* Nav: immer dunkel auf der Studio-Seite */
-.studio-nav {
-  background: rgba(19, 17, 16, 0.95) !important;
-  color: #E8E0D8;
+/* Farb-System für Studio — überschreibt globale Vars (auch Dark Mode) */
+body[data-page="studio"] {
+  --color-primary:       #22D3EE;
+  --color-primary-light: #67E8F9;
+  --color-bg:            #0A0E1A;
+  --color-bg-alt:        #0F172A;
+  --color-text:          #E2E8F0;
+  --color-text-light:    #94A3B8;
+  --color-accent:        #38BDF8;
+  --color-white:         #111827;
 }
 
-.studio-nav .nav__logo { color: #C4845C; }
-.studio-nav .nav__links a { color: #A89888; }
-.studio-nav .nav__links a:hover { color: #E8E0D8; }
-.studio-nav .nav__lang { border-color: #4A4240; color: #A89888; }
-.studio-nav .nav__lang:hover { border-color: #C4845C; color: #C4845C; }
-.studio-nav .nav__theme { color: #A89888; }
-.studio-nav .nav__theme:hover { color: #C4845C; }
-.studio-nav .nav__toggle span { background: #A89888; }
-.studio-nav.scrolled { box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5); }
+/* Nav: dunkel mit Cyan-Akzenten */
+.studio-nav {
+  background: rgba(10, 14, 26, 0.96) !important;
+}
+
+.studio-nav .nav__logo       { color: #22D3EE; }
+.studio-nav .nav__links a    { color: #64748B; }
+.studio-nav .nav__links a:hover { color: #E2E8F0; }
+.studio-nav .nav__lang       { border-color: #1E293B; color: #64748B; }
+.studio-nav .nav__lang:hover { border-color: #22D3EE; color: #22D3EE; }
+.studio-nav .nav__theme      { color: #64748B; }
+.studio-nav .nav__theme:hover { color: #22D3EE; }
+.studio-nav .nav__toggle span { background: #64748B; }
+.studio-nav.scrolled { box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
 
 @media (max-width: 768px) {
-  .studio-nav .nav__links {
-    background: #131110;
-  }
+  .studio-nav .nav__links { background: #0A0E1A; }
 }
 
-/* Hero: immer dunkel, unabhängig vom Theme */
+/* Hero — immer dunkel */
 .studio-hero {
-  background: #131110;
+  background: #0A0E1A;
   padding: 9rem 2rem 6rem;
 }
 
@@ -1407,17 +1416,17 @@ p {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #7BBF7A;
+  color: #4ADE80;
   margin-bottom: 1.75rem;
 }
 
 .studio-hero h1 {
-  color: #E8E0D8;
+  color: #E2E8F0;
   font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .studio-hero__sub {
-  color: #8A7A6A;
+  color: #64748B;
   font-size: 1.05rem;
   max-width: 55ch;
   margin-top: 1.5rem;
@@ -1433,18 +1442,18 @@ p {
 }
 
 .studio-hero__scroll {
-  color: #6A5A50;
+  color: #475569;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
-.studio-hero__scroll:hover { color: #E8E0D8; }
+.studio-hero__scroll:hover { color: #E2E8F0; }
 
 /* Tech Stack Row */
 .studio-stack {
   margin-top: 4rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .studio-stack__label {
@@ -1452,7 +1461,7 @@ p {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #4A4240;
+  color: #1E293B;
   margin-bottom: 1rem;
 }
 
@@ -1466,10 +1475,16 @@ p {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.78rem;
   padding: 0.3rem 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.15);
   border-radius: 3px;
-  color: #7A6A5A;
+  color: #475569;
   letter-spacing: 0.02em;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.studio-stack__item:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  color: #94A3B8;
 }
 
 /* Leistungen / Service Cards */
@@ -1493,14 +1508,15 @@ p {
 .studio-card {
   padding: 2.5rem 2rem;
   background: var(--color-white);
-  border: 1px solid var(--color-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .studio-card:hover {
-  box-shadow: 0 6px 24px rgba(59, 47, 47, 0.08);
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.06);
 }
 
 .studio-card__tag {
@@ -1564,9 +1580,7 @@ p {
   margin: 0 auto;
 }
 
-.studio-projects {
-  margin-top: 2.5rem;
-}
+.studio-projects { margin-top: 2.5rem; }
 
 .studio-project {
   padding: 1.75rem 0;
@@ -1616,33 +1630,15 @@ p {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
   padding: 0.2rem 0.55rem;
-  background: var(--color-bg-alt);
-  color: var(--color-text-light);
+  background: rgba(34, 211, 238, 0.07);
+  color: #475569;
   border-radius: 3px;
-}
-
-/* Dark mode overrides für Studio-Komponenten */
-[data-theme="dark"] .studio-card {
-  border-color: rgba(255, 255, 255, 0.06);
-}
-
-[data-theme="dark"] .studio-card:hover {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .studio-project__tags span {
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.12);
 }
 
 @media (max-width: 768px) {
-  .studio-services__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .studio-project__header {
-    flex-direction: column;
-    gap: 0.2rem;
-  }
+  .studio-services__grid { grid-template-columns: 1fr; }
+  .studio-project__header { flex-direction: column; gap: 0.2rem; }
 }
 
 /* === Dark Mode === */
@@ -1758,4 +1754,22 @@ p {
     margin-left: auto;
     margin-right: 0.5rem;
   }
+}
+
+/* Studio: Button-Glow und Footer */
+body[data-page="studio"] .btn--primary {
+  color: #0A0E1A;
+}
+
+body[data-page="studio"] .btn--primary:hover {
+  box-shadow: 0 4px 24px rgba(34, 211, 238, 0.3);
+}
+
+body[data-page="studio"] .footer {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+body[data-page="studio"] .process__step-num {
+  color: #22D3EE;
+  font-style: normal;
 }
