@@ -62,106 +62,48 @@
     <div class="neuro-reveal__sticky">
       <svg class="neuro-canvas" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 
-        <!-- Schritt 3: Farbzellen — benachbarte Bereiche gleiche Farbe, großflächig -->
+        <!-- Phase 3: Farbflächen — sitzen in den Bereichen zwischen den Kreisen -->
         <g class="neuro-fills">
           <path class="neuro-fill" fill="#FF2060"
-            d="M 0,150 C 70,110 182,102 282,142 C 362,172 402,242 372,312
-               C 344,374 262,402 177,377 C 97,352 42,287 17,227 C 5,200 -2,170 0,150 Z"/>
+            d="M 0,90 C 50,48 160,58 238,122 C 314,182 322,298 282,398 C 252,472 170,512 82,492 C 22,478 -8,430 0,372 C 8,312 62,278 72,218 C 82,158 -8,140 0,90 Z"/>
           <path class="neuro-fill" fill="#FFE000"
-            d="M 422,0 C 512,20 622,32 692,92 C 750,142 744,207 697,240
-               C 652,270 577,264 532,227 C 488,192 470,132 450,82 C 435,50 420,16 422,0 Z"/>
+            d="M 492,0 C 564,12 682,22 742,82 C 800,140 792,220 742,258 C 692,294 612,290 562,248 C 512,206 492,138 492,68 Z"/>
           <path class="neuro-fill" fill="#00E5FF"
-            d="M 872,0 C 962,30 1067,77 1147,150 C 1207,207 1210,274 1170,314
-               C 1130,352 1050,360 990,330 C 930,300 894,240 882,180
-               C 870,120 862,50 872,0 Z"/>
+            d="M 1098,0 C 1152,32 1210,102 1210,182 C 1210,282 1168,372 1108,412 C 1058,446 988,440 958,390 C 932,348 938,288 978,252 C 1012,222 1062,228 1092,198 C 1122,168 1088,28 1098,0 Z"/>
           <path class="neuro-fill" fill="#A020F0"
-            d="M 0,532 C 87,490 207,470 332,500 C 427,522 470,577 410,598
-               C 357,616 242,610 150,592 C 70,576 20,560 0,544 Z"/>
+            d="M 0,532 C 62,498 172,490 272,514 C 352,534 392,578 342,598 C 296,614 182,608 92,592 C 30,578 -8,562 0,540 Z"/>
           <path class="neuro-fill" fill="#FF5500"
-            d="M 512,292 C 567,260 654,264 702,308 C 744,346 736,407 687,434
-               C 640,460 560,452 522,414 C 486,378 478,320 512,292 Z"/>
+            d="M 542,278 C 584,250 652,252 692,290 C 726,322 722,382 682,412 C 642,440 578,438 550,406 C 520,374 516,304 542,278 Z"/>
           <path class="neuro-fill" fill="#00D4A0"
-            d="M 907,394 C 984,360 1084,370 1164,410 C 1216,437 1217,500 1176,530
-               C 1135,558 1054,566 984,544 C 914,522 874,474 874,434
-               C 874,410 886,398 907,394 Z"/>
+            d="M 878,442 C 932,414 1012,418 1062,454 C 1104,484 1110,542 1072,566 C 1034,588 962,590 912,568 C 864,548 852,504 870,472 C 878,456 872,458 878,442 Z"/>
         </g>
 
-        <!-- Schritt 2: Schnittpunkt-Knoten — runden die scharfen Ecken ab -->
+        <!-- Phase 2: Knoten — wo Sweep-Linien die Oval-Schleifen kreuzen -->
         <g class="neuro-nodes">
-          <circle class="neuro-node" cx="302" cy="282" r="14" fill="#111111"/>
-          <circle class="neuro-node" cx="382" cy="232" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="484" cy="302" r="14" fill="#111111"/>
-          <circle class="neuro-node" cx="520" cy="258" r="12" fill="#111111"/>
-          <circle class="neuro-node" cx="644" cy="202" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="700" cy="272" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="754" cy="304" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="904" cy="202" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="864" cy="344" r="12" fill="#111111"/>
-          <circle class="neuro-node" cx="384" cy="434" r="12" fill="#111111"/>
-          <circle class="neuro-node" cx="554" cy="404" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="704" cy="450" r="13" fill="#111111"/>
-          <circle class="neuro-node" cx="204" cy="384" r="12" fill="#111111"/>
-          <circle class="neuro-node" cx="1054" cy="284" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="152" cy="308" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="408" cy="308" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="222" cy="218" r="12" fill="#111111"/>
+          <circle class="neuro-node" cx="338" cy="218" r="12" fill="#111111"/>
+          <circle class="neuro-node" cx="522" cy="302" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="758" cy="302" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="868" cy="306" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="1092" cy="306" r="13" fill="#111111"/>
+          <circle class="neuro-node" cx="280" cy="406" r="12" fill="#111111"/>
+          <circle class="neuro-node" cx="586" cy="382" r="12" fill="#111111"/>
+          <circle class="neuro-node" cx="698" cy="388" r="12" fill="#111111"/>
+          <circle class="neuro-node" cx="950" cy="390" r="12" fill="#111111"/>
         </g>
 
-        <!-- Schritt 1: Der Stift setzt nie ab — organisch, überkreuzt sich -->
+        <!-- Phase 1: Sweep-Linien + 3 Oval-Schleifen -->
         <g class="neuro-lines" stroke="#111111" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-
-          <!-- Stroke A: beginnt unten links, schlägt eine große Schleife,
-               kreuzt sich selbst bei ~(382,232) und ~(484,302) -->
-          <path class="neuro-path"
-            d="M 0,482
-               C 82,402 202,322 302,282
-               C 390,248 452,242 484,302
-               C 516,364 524,444 442,464
-               C 380,478 300,452 270,372
-               C 242,300 292,242 382,232
-               C 462,224 564,244 644,202
-               C 724,162 804,122 904,162
-               C 964,186 1024,254 1104,222
-               C 1154,204 1184,180 1200,170"/>
-
-          <!-- Stroke B: von rechts, bildet eine Schleife und kreuzt A mehrfach -->
-          <path class="neuro-path"
-            d="M 1200,454
-               C 1102,494 962,504 884,454
-               C 814,410 804,332 854,282
-               C 900,236 974,222 1024,262
-               C 1070,300 1064,374 1004,404
-               C 952,428 884,414 834,372
-               C 784,332 764,270 704,242
-               C 644,214 564,222 504,262
-               C 450,298 434,362 464,414
-               C 490,458 554,474 614,454
-               C 670,436 704,384 684,332
-               C 666,284 614,262 564,280
-               C 518,298 494,350 524,392
-               C 548,426 604,434 654,414
-               C 700,396 724,348 704,304"/>
-
-          <!-- Stroke C: horizontaler Bogen oben -->
-          <path class="neuro-path"
-            d="M 0,160
-               C 102,120 224,130 344,110
-               C 444,94 524,50 644,60
-               C 744,68 824,120 944,100
-               C 1024,86 1104,60 1200,80"/>
-
-          <!-- Stroke D: Diagonale oben-rechts → unten-links (kreuzt A, B, C) -->
-          <path class="neuro-path"
-            d="M 1200,54
-               C 1004,104 804,204 704,282
-               C 604,360 504,454 304,482
-               C 202,498 102,514 0,542"/>
-
-          <!-- Stroke E: Untere Verbindung -->
-          <path class="neuro-path"
-            d="M 0,584
-               C 122,554 284,524 424,524
-               C 544,524 644,544 764,532
-               C 864,522 964,492 1084,502
-               C 1144,507 1184,522 1200,534"/>
-
+          <path class="neuro-path" d="M 0,128 C 200,98 400,138 600,112 C 800,88 1000,118 1200,104"/>
+          <path class="neuro-path" d="M 0,228 C 180,198 222,218 338,222 C 440,226 558,198 660,208 C 762,218 840,222 958,216 C 1058,210 1140,198 1200,194"/>
+          <path class="neuro-path" d="M 0,308 C 152,298 278,308 408,308 C 522,308 638,300 758,302 C 868,304 978,306 1092,306 C 1140,306 1172,305 1200,304"/>
+          <path class="neuro-path" d="M 0,452 C 150,430 250,418 280,406 C 312,394 380,416 520,432 C 630,444 758,430 878,420 C 962,412 1058,420 1200,428"/>
+          <path class="neuro-path" d="M 0,108 C 180,178 382,268 560,348 C 698,410 858,456 1048,494 C 1118,510 1172,524 1200,530"/>
+          <ellipse class="neuro-path" cx="280" cy="308" rx="130" ry="100"/>
+          <ellipse class="neuro-path" cx="640" cy="300" rx="120" ry="94"/>
+          <ellipse class="neuro-path" cx="980" cy="306" rx="114" ry="90"/>
         </g>
 
       </svg>
