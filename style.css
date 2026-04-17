@@ -1365,6 +1365,286 @@ p {
   }
 }
 
+/* ============================================================
+   STUDIO PAGE — distinct dark/tech identity
+   ============================================================ */
+
+/* Nav: immer dunkel auf der Studio-Seite */
+.studio-nav {
+  background: rgba(19, 17, 16, 0.95) !important;
+  color: #E8E0D8;
+}
+
+.studio-nav .nav__logo { color: #C4845C; }
+.studio-nav .nav__links a { color: #A89888; }
+.studio-nav .nav__links a:hover { color: #E8E0D8; }
+.studio-nav .nav__lang { border-color: #4A4240; color: #A89888; }
+.studio-nav .nav__lang:hover { border-color: #C4845C; color: #C4845C; }
+.studio-nav .nav__theme { color: #A89888; }
+.studio-nav .nav__theme:hover { color: #C4845C; }
+.studio-nav .nav__toggle span { background: #A89888; }
+.studio-nav.scrolled { box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5); }
+
+@media (max-width: 768px) {
+  .studio-nav .nav__links {
+    background: #131110;
+  }
+}
+
+/* Hero: immer dunkel, unabhängig vom Theme */
+.studio-hero {
+  background: #131110;
+  padding: 9rem 2rem 6rem;
+}
+
+.studio-hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.studio-hero__status {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7BBF7A;
+  margin-bottom: 1.75rem;
+}
+
+.studio-hero h1 {
+  color: #E8E0D8;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.studio-hero__sub {
+  color: #8A7A6A;
+  font-size: 1.05rem;
+  max-width: 55ch;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+.studio-hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.studio-hero__scroll {
+  color: #6A5A50;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.studio-hero__scroll:hover { color: #E8E0D8; }
+
+/* Tech Stack Row */
+.studio-stack {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.studio-stack__label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #4A4240;
+  margin-bottom: 1rem;
+}
+
+.studio-stack__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.studio-stack__item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  color: #7A6A5A;
+  letter-spacing: 0.02em;
+}
+
+/* Leistungen / Service Cards */
+.studio-services {
+  padding: var(--section-padding);
+  background: var(--color-bg-alt);
+}
+
+.studio-services__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.studio-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.studio-card {
+  padding: 2.5rem 2rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s;
+}
+
+.studio-card:hover {
+  box-shadow: 0 6px 24px rgba(59, 47, 47, 0.08);
+}
+
+.studio-card__tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.studio-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.studio-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.studio-card__list li {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.studio-card__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  top: 0.1em;
+}
+
+.studio-card__cta {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  transition: opacity 0.2s;
+  margin-top: auto;
+}
+
+.studio-card__cta:hover { opacity: 0.65; }
+
+/* Portfolio / Projekte */
+.studio-portfolio {
+  padding: var(--section-padding);
+}
+
+.studio-portfolio__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.studio-projects {
+  margin-top: 2.5rem;
+}
+
+.studio-project {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-bg-alt);
+}
+
+.studio-project:first-child {
+  border-top: 1px solid var(--color-bg-alt);
+}
+
+.studio-project__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.studio-project__name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.studio-project__year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  white-space: nowrap;
+}
+
+.studio-project__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  max-width: 60ch;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.studio-project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.studio-project__tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  border-radius: 3px;
+}
+
+/* Dark mode overrides für Studio-Komponenten */
+[data-theme="dark"] .studio-card {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .studio-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .studio-project__tags span {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 768px) {
+  .studio-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-project__header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
 /* === Dark Mode === */
 [data-theme="dark"] {
   --color-primary: #C4845C;

@@ -7,7 +7,7 @@
   <meta name="description" content="Webdesign, Tech-Beratung und Wissensarbeit für Menschen, die ihr Handwerk ernst nehmen. Sorgfältig gebaut, frei von Lock-in.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
     (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
@@ -17,7 +17,7 @@
 <body data-page="studio">
 
   <!-- Navigation -->
-  <nav class="nav" id="nav">
+  <nav class="nav studio-nav" id="nav">
     <a href="index.html" class="nav__logo">Pleasance</a>
     <ul class="nav__links" id="navLinks">
       <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
@@ -40,51 +40,76 @@
     </button>
   </nav>
 
-  <!-- Hero -->
-  <div class="page-hero reveal">
-    <span class="page-hero__label" data-i18n="studio.hero.label">Studio</span>
-    <h1 data-i18n="studio.hero.h1">Websites, die nicht aus<br>dem Baukasten kommen.</h1>
-    <p class="hero__subtitle" style="margin-top: 1.5rem;" data-i18n="studio.hero.subtitle">
-      Ich baue Websites, Tech-Setups und Wissensarbeit für Menschen, die ihr Handwerk
-      ernst nehmen — mit Sorgfalt, ohne Effekthascherei, und ohne dass dir morgen
-      jemand das Theme abschaltet.
-    </p>
-    <a href="kontakt.html#studio" class="btn btn--primary" style="margin-top: 2rem;" data-i18n="studio.hero.cta">Lass uns sprechen</a>
+  <!-- Hero — always dark -->
+  <div class="studio-hero">
+    <div class="studio-hero__inner reveal">
+      <span class="studio-hero__status" data-i18n="studio.status">● Verfügbar für neue Projekte</span>
+      <h1 data-i18n="studio.hero.h1">Websites, die nicht aus<br>dem Baukasten kommen.</h1>
+      <p class="studio-hero__sub" data-i18n="studio.hero.subtitle">
+        Ich baue Websites, Tech-Setups und Wissensarbeit für Menschen, die ihr Handwerk
+        ernst nehmen — mit Sorgfalt, ohne Effekthascherei, und ohne dass dir morgen
+        jemand das Theme abschaltet.
+      </p>
+      <div class="studio-hero__ctas">
+        <a href="kontakt.html#studio" class="btn btn--primary" data-i18n="studio.hero.cta">Projekt besprechen</a>
+        <a href="#vorgehen" class="studio-hero__scroll" data-i18n="studio.hero.cta2">Wie ich arbeite ↓</a>
+      </div>
+      <div class="studio-stack">
+        <span class="studio-stack__label" data-i18n="studio.stack.label">Womit ich baue</span>
+        <div class="studio-stack__items">
+          <span class="studio-stack__item">HTML / CSS</span>
+          <span class="studio-stack__item">Astro</span>
+          <span class="studio-stack__item">Plausible</span>
+          <span class="studio-stack__item">Coolify</span>
+          <span class="studio-stack__item">Obsidian</span>
+          <span class="studio-stack__item">n8n</span>
+          <span class="studio-stack__item">Linux</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Drei Werkstätten -->
-  <section class="workshops reveal">
-    <div class="workshops__container">
-      <span class="section__label" data-i18n="studio.workshops.label">Drei Bereiche</span>
+  <!-- Leistungen -->
+  <section class="studio-services reveal" id="leistungen">
+    <div class="studio-services__container">
+      <span class="section__label" data-i18n="studio.workshops.label">Leistungen</span>
       <h2 data-i18n="studio.workshops.h2">Drei Werkstätten unter einem Dach.</h2>
-      <div class="workshops__grid">
+      <div class="studio-services__grid">
 
-        <div class="workshop">
-          <h3 class="workshop__title" data-i18n="studio.w1.title">Webdesign &amp; Webentwicklung</h3>
-          <p class="workshop__text" data-i18n="studio.w1.text">
-            Neue Websites und Redesigns für Selbstständige, kleine Unternehmen, Coaches,
-            Studios. Ich arbeite gern auf bestehender Infrastruktur weiter, statt alles
-            abzureißen — und ich baue lieber etwas Einfaches, das hält, als etwas
-            Kompliziertes, das in zwei Jahren niemand mehr versteht.
-          </p>
+        <div class="studio-card">
+          <span class="studio-card__tag" data-i18n="studio.w1.tag">Web</span>
+          <h3 data-i18n="studio.w1.title">Webdesign &amp; Webentwicklung</h3>
+          <ul class="studio-card__list">
+            <li data-i18n="studio.w1.li1">Neue Websites &amp; Redesigns</li>
+            <li data-i18n="studio.w1.li2">Selbstständige, Coaches, kleine Marken</li>
+            <li data-i18n="studio.w1.li3">Plain HTML oder Astro — kein Page Builder</li>
+            <li data-i18n="studio.w1.li4">Du behältst den Code, ich erkläre alles</li>
+          </ul>
+          <a href="kontakt.html#studio" class="studio-card__cta" data-i18n="studio.card.cta">Anfragen →</a>
         </div>
 
-        <div class="workshop">
-          <h3 class="workshop__title" data-i18n="studio.w2.title">Tech-Beratung &amp; Selfhosting</h3>
-          <p class="workshop__text" data-i18n="studio.w2.text">
-            Wenn du raus willst aus den großen Plattformen — eigener Server, Coolify,
-            eigene E-Mail, eigene Analytics, eigene KI-Tools — helfe ich dir beim Aufbau
-            und der Betreuung. Open Source zuerst. Wenig Lock-in.
-          </p>
+        <div class="studio-card">
+          <span class="studio-card__tag" data-i18n="studio.w2.tag">Infra</span>
+          <h3 data-i18n="studio.w2.title">Tech-Beratung &amp; Selfhosting</h3>
+          <ul class="studio-card__list">
+            <li data-i18n="studio.w2.li1">Eigener Server mit Coolify</li>
+            <li data-i18n="studio.w2.li2">Selfhosted E-Mail, Analytics, KI-Tools</li>
+            <li data-i18n="studio.w2.li3">Open Source first</li>
+            <li data-i18n="studio.w2.li4">Wenig Lock-in, volle Kontrolle</li>
+          </ul>
+          <a href="kontakt.html#studio" class="studio-card__cta" data-i18n="studio.card.cta">Anfragen →</a>
         </div>
 
-        <div class="workshop">
-          <h3 class="workshop__title" data-i18n="studio.w3.title">Wissensarbeit &amp; Knowledge Bases</h3>
-          <p class="workshop__text" data-i18n="studio.w3.text">
-            Ich richte dir Notion, Obsidian oder einen Zettelkasten so ein, dass du ihn
-            auch in zwei Jahren noch benutzt. Für Solo-Wissensarbeit, kleine Teams,
-            Coaches mit komplexem Material.
-          </p>
+        <div class="studio-card">
+          <span class="studio-card__tag" data-i18n="studio.w3.tag">Wissen</span>
+          <h3 data-i18n="studio.w3.title">Wissensarbeit &amp; Knowledge Bases</h3>
+          <ul class="studio-card__list">
+            <li data-i18n="studio.w3.li1">Obsidian &amp; Zettelkasten-Setup</li>
+            <li data-i18n="studio.w3.li2">Notion für Teams &amp; Einzelpersonen</li>
+            <li data-i18n="studio.w3.li3">Für Coaches, Solo-Wissensarbeiter</li>
+            <li data-i18n="studio.w3.li4">Systeme, die man auch nutzt</li>
+          </ul>
+          <a href="kontakt.html#studio" class="studio-card__cta" data-i18n="studio.card.cta">Anfragen →</a>
         </div>
 
       </div>
@@ -92,7 +117,7 @@
   </section>
 
   <!-- Vorgehen -->
-  <section class="process reveal">
+  <section class="process reveal" id="vorgehen">
     <div class="process__container">
       <span class="section__label" data-i18n="studio.process.label">Vorgehen</span>
       <h2 data-i18n="studio.process.h2">Erst zuhören, dann anbieten.</h2>
@@ -127,17 +152,46 @@
     </div>
   </section>
 
-  <!-- Für wen -->
-  <section class="for-whom reveal">
-    <div class="for-whom__container">
-      <span class="section__label" data-i18n="studio.forwhom.label">Mit wem ich gern arbeite</span>
-      <h2 data-i18n="studio.forwhom.h2">Für Menschen, die ihr Handwerk ernst nehmen.</h2>
-      <div class="for-whom__text">
-        <p data-i18n="studio.forwhom.text">
-          Coaches, Therapeutinnen, Tonstudios, Handwerker, kleine Marken,
-          Solo-Selbstständige. Ich arbeite remote und komme vor Ort, wenn
-          es passt und der Rahmen stimmt.
-        </p>
+  <!-- Projekte -->
+  <section class="studio-portfolio reveal">
+    <div class="studio-portfolio__container">
+      <span class="section__label" data-i18n="studio.portfolio.label">Ausgewählte Projekte</span>
+      <h2 data-i18n="studio.portfolio.h2">Was ich gebaut habe.</h2>
+      <div class="studio-projects">
+
+        <div class="studio-project">
+          <div class="studio-project__header">
+            <span class="studio-project__name" data-i18n="studio.p1.name">Pleasance</span>
+            <span class="studio-project__year" data-i18n="studio.p1.year">2025 – 2026</span>
+          </div>
+          <p class="studio-project__desc" data-i18n="studio.p1.desc">Atelier-Website mit Hub-Architektur, DE/EN Umschaltung, Dark Mode und Quiz.</p>
+          <div class="studio-project__tags">
+            <span>HTML / CSS</span><span>i18n</span><span>Dark Mode</span><span>Plausible</span>
+          </div>
+        </div>
+
+        <div class="studio-project">
+          <div class="studio-project__header">
+            <span class="studio-project__name" data-i18n="studio.p2.name">mydrugismusic.com</span>
+            <span class="studio-project__year" data-i18n="studio.p2.year">2024 – lfd.</span>
+          </div>
+          <p class="studio-project__desc" data-i18n="studio.p2.desc">Musik-Plattform auf eigener Infrastruktur — Gitea, Coolify, Selfhosting auf Hetzner VPS.</p>
+          <div class="studio-project__tags">
+            <span>Coolify</span><span>Gitea</span><span>Linux</span><span>Hetzner</span>
+          </div>
+        </div>
+
+        <div class="studio-project">
+          <div class="studio-project__header">
+            <span class="studio-project__name" data-i18n="studio.p3.name">OpenClaw</span>
+            <span class="studio-project__year" data-i18n="studio.p3.year">2025</span>
+          </div>
+          <p class="studio-project__desc" data-i18n="studio.p3.desc">KI-gestütztes CLI-Tool für Wissensarbeit und Automatisierung.</p>
+          <div class="studio-project__tags">
+            <span>Bun</span><span>TypeScript</span><span>Anthropic API</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

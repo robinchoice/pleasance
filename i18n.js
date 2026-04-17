@@ -126,27 +126,47 @@ const I18N = {
 
   // ── studio.html ───────────────────────────────────────────────────────────
   studio: {
+    status: { de: '● Verfügbar für neue Projekte', en: '● Available for new projects' },
     hero: {
       label:    { de: 'Studio',  en: 'Studio' },
       h1:       { de: 'Websites, die nicht aus dem Baukasten kommen.', en: 'Websites that aren\'t cookie-cutter.' },
       subtitle: { de: 'Ich baue Websites, Tech-Setups und Wissensarbeit für Menschen, die ihr Handwerk ernst nehmen — mit Sorgfalt, ohne Effekthascherei, und ohne dass dir morgen jemand das Theme abschaltet.', en: 'I build websites, tech setups, and knowledge systems for people who take their craft seriously — with care, without gimmicks, and without someone switching off your theme tomorrow.' },
-      cta:      { de: 'Lass uns sprechen', en: 'Let\'s talk' },
+      cta:      { de: 'Projekt besprechen', en: 'Discuss a project' },
+      cta2:     { de: 'Wie ich arbeite ↓', en: 'How I work ↓' },
+    },
+    stack: {
+      label: { de: 'Womit ich baue', en: 'What I build with' },
     },
     workshops: {
-      label: { de: 'Drei Bereiche', en: 'Three Areas' },
+      label: { de: 'Leistungen', en: 'Services' },
       h2:    { de: 'Drei Werkstätten unter einem Dach.', en: 'Three workshops under one roof.' },
     },
     w1: {
       title: { de: 'Webdesign & Webentwicklung',  en: 'Web Design & Development' },
-      text:  { de: 'Neue Websites und Redesigns für Selbstständige, kleine Unternehmen, Coaches, Studios. Ich arbeite gern auf bestehender Infrastruktur weiter, statt alles abzureißen — und ich baue lieber etwas Einfaches, das hält, als etwas Kompliziertes, das in zwei Jahren niemand mehr versteht.', en: 'New websites and redesigns for solopreneurs, small businesses, coaches, studios. I prefer building on existing infrastructure rather than tearing everything down — and I\'d rather build something simple that lasts than something complex no one understands in two years.' },
+      tag:   { de: 'Web', en: 'Web' },
+      li1:   { de: 'Neue Websites & Redesigns', en: 'New websites & redesigns' },
+      li2:   { de: 'Selbstständige, Coaches, kleine Marken', en: 'Solopreneurs, coaches, small brands' },
+      li3:   { de: 'Plain HTML oder Astro — kein Page Builder', en: 'Plain HTML or Astro — no page builder' },
+      li4:   { de: 'Du behältst den Code, ich erkläre alles', en: 'You keep the code, I explain everything' },
     },
     w2: {
       title: { de: 'Tech-Beratung & Selfhosting', en: 'Tech Consulting & Self-Hosting' },
-      text:  { de: 'Wenn du raus willst aus den großen Plattformen — eigener Server, Coolify, eigene E-Mail, eigene Analytics, eigene KI-Tools — helfe ich dir beim Aufbau und der Betreuung. Open Source zuerst. Wenig Lock-in.', en: 'If you want out of the big platforms — own server, Coolify, own email, own analytics, own AI tools — I help you build and maintain it. Open Source first. Minimal lock-in.' },
+      tag:   { de: 'Infra', en: 'Infra' },
+      li1:   { de: 'Eigener Server mit Coolify', en: 'Own server with Coolify' },
+      li2:   { de: 'Selfhosted E-Mail, Analytics, KI-Tools', en: 'Self-hosted email, analytics, AI tools' },
+      li3:   { de: 'Open Source first', en: 'Open Source first' },
+      li4:   { de: 'Wenig Lock-in, volle Kontrolle', en: 'Minimal lock-in, full control' },
     },
     w3: {
       title: { de: 'Wissensarbeit & Knowledge Bases', en: 'Knowledge Work & Knowledge Bases' },
-      text:  { de: 'Ich richte dir Notion, Obsidian oder einen Zettelkasten so ein, dass du ihn auch in zwei Jahren noch benutzt. Für Solo-Wissensarbeit, kleine Teams, Coaches mit komplexem Material.', en: 'I set up Notion, Obsidian, or a Zettelkasten in a way you\'ll still be using in two years. For solo knowledge work, small teams, coaches with complex material.' },
+      tag:   { de: 'Wissen', en: 'Knowledge' },
+      li1:   { de: 'Obsidian & Zettelkasten-Setup', en: 'Obsidian & Zettelkasten setup' },
+      li2:   { de: 'Notion für Teams & Einzelpersonen', en: 'Notion for teams & individuals' },
+      li3:   { de: 'Für Coaches, Solo-Wissensarbeiter', en: 'For coaches, solo knowledge workers' },
+      li4:   { de: 'Systeme, die man auch nutzt', en: 'Systems you\'ll actually use' },
+    },
+    card: {
+      cta: { de: 'Anfragen →', en: 'Inquire →' },
     },
     process: {
       label: { de: 'Vorgehen', en: 'Process' },
@@ -160,6 +180,25 @@ const I18N = {
     step2: {
       title: { de: 'Umsetzung',      en: 'Implementation' },
       text:  { de: 'Festpreis auf Basis dessen, was wir in der Discovery gemeinsam definiert haben. Keine bösen Überraschungen, kein Stundenzettel-Spiel.', en: 'Fixed price based on what we defined together in discovery. No unpleasant surprises, no hourly billing games.' },
+    },
+    portfolio: {
+      label: { de: 'Ausgewählte Projekte', en: 'Selected Projects' },
+      h2:    { de: 'Was ich gebaut habe.', en: 'What I\'ve built.' },
+    },
+    p1: {
+      name: { de: 'Pleasance', en: 'Pleasance' },
+      year: { de: '2025 – 2026', en: '2025 – 2026' },
+      desc: { de: 'Atelier-Website mit Hub-Architektur, DE/EN Umschaltung, Dark Mode und Quiz.', en: 'Atelier website with hub architecture, DE/EN toggle, dark mode and quiz.' },
+    },
+    p2: {
+      name: { de: 'mydrugismusic.com', en: 'mydrugismusic.com' },
+      year: { de: '2024 – lfd.', en: '2024 – ongoing' },
+      desc: { de: 'Musik-Plattform auf eigener Infrastruktur — Gitea, Coolify, Selfhosting auf Hetzner VPS.', en: 'Music platform on own infrastructure — Gitea, Coolify, self-hosting on Hetzner VPS.' },
+    },
+    p3: {
+      name: { de: 'OpenClaw', en: 'OpenClaw' },
+      year: { de: '2025', en: '2025' },
+      desc: { de: 'KI-gestütztes CLI-Tool für Wissensarbeit und Automatisierung.', en: 'AI-powered CLI tool for knowledge work and automation.' },
     },
     forwhom: {
       label: { de: 'Mit wem ich gern arbeite',                          en: 'Who I work with'                      },
