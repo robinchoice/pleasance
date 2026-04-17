@@ -48,18 +48,18 @@
 
       <!-- Farbfelder: erscheinen in Phase 2 -->
       <g class="neuro-fills">
-        <ellipse class="neuro-fill" cx="130" cy="100" rx="65" ry="42" transform="rotate(25 130 100)"  fill="#FF2D78"/>
-        <ellipse class="neuro-fill" cx="440" cy="65"  rx="85" ry="38" transform="rotate(-18 440 65)"  fill="#FFD700"/>
-        <ellipse class="neuro-fill" cx="750" cy="90"  rx="72" ry="48" transform="rotate(15 750 90)"   fill="#00D4FF"/>
-        <ellipse class="neuro-fill" cx="1070" cy="140" rx="78" ry="45" transform="rotate(-22 1070 140)" fill="#FF6B35"/>
-        <ellipse class="neuro-fill" cx="65"  cy="345" rx="52" ry="78" transform="rotate(8 65 345)"    fill="#8B5CF6"/>
-        <ellipse class="neuro-fill" cx="355" cy="215" rx="88" ry="55" transform="rotate(28 355 215)"  fill="#00B4A6"/>
-        <ellipse class="neuro-fill" cx="590" cy="205" rx="65" ry="80" transform="rotate(-12 590 205)" fill="#FF2D78"/>
-        <ellipse class="neuro-fill" cx="980" cy="210" rx="80" ry="50" transform="rotate(30 980 210)"  fill="#FFD700"/>
-        <ellipse class="neuro-fill" cx="1190" cy="315" rx="48" ry="85" transform="rotate(-8 1190 315)" fill="#8B5CF6"/>
-        <ellipse class="neuro-fill" cx="200" cy="460" rx="88" ry="55" transform="rotate(18 200 460)"  fill="#00D4FF"/>
-        <ellipse class="neuro-fill" cx="570" cy="475" rx="70" ry="50" transform="rotate(-28 570 475)" fill="#FF6B35"/>
-        <ellipse class="neuro-fill" cx="825" cy="445" rx="90" ry="60" transform="rotate(22 825 445)"  fill="#00B4A6"/>
+        <ellipse class="neuro-fill" cx="130" cy="100" rx="65" ry="42" transform="rotate(25 130 100)"   fill="#FF0055"/>
+        <ellipse class="neuro-fill" cx="440" cy="65"  rx="85" ry="38" transform="rotate(-18 440 65)"   fill="#FFE000"/>
+        <ellipse class="neuro-fill" cx="750" cy="90"  rx="72" ry="48" transform="rotate(15 750 90)"    fill="#00E5FF"/>
+        <ellipse class="neuro-fill" cx="1070" cy="140" rx="78" ry="45" transform="rotate(-22 1070 140)" fill="#FF4500"/>
+        <ellipse class="neuro-fill" cx="65"  cy="345" rx="52" ry="78" transform="rotate(8 65 345)"     fill="#A020F0"/>
+        <ellipse class="neuro-fill" cx="355" cy="215" rx="88" ry="55" transform="rotate(28 355 215)"   fill="#00E4D0"/>
+        <ellipse class="neuro-fill" cx="590" cy="205" rx="65" ry="80" transform="rotate(-12 590 205)"  fill="#FF0055"/>
+        <ellipse class="neuro-fill" cx="980" cy="210" rx="80" ry="50" transform="rotate(30 980 210)"   fill="#FFE000"/>
+        <ellipse class="neuro-fill" cx="1190" cy="315" rx="48" ry="85" transform="rotate(-8 1190 315)" fill="#A020F0"/>
+        <ellipse class="neuro-fill" cx="200" cy="460" rx="88" ry="55" transform="rotate(18 200 460)"   fill="#00E5FF"/>
+        <ellipse class="neuro-fill" cx="570" cy="475" rx="70" ry="50" transform="rotate(-28 570 475)"  fill="#FF4500"/>
+        <ellipse class="neuro-fill" cx="825" cy="445" rx="90" ry="60" transform="rotate(22 825 445)"   fill="#00E4D0"/>
       </g>
 
       <!-- Neurographische Linien: zeichnen sich beim Scrollen -->
@@ -201,40 +201,41 @@
   <script src="i18n.js"></script>
   <script src="main.js"></script>
 
-  <!-- Neurographik-Animation -->
+  <!-- Neurographik-Animation: zeitbasiert, startet beim Laden -->
   <script>
   (function () {
     var paths = Array.from(document.querySelectorAll('.neuro-path'));
     var fills = Array.from(document.querySelectorAll('.neuro-fill'));
     if (!paths.length) return;
 
-    var lengths = paths.map(function (p) {
+    // Pfadlängen berechnen, Startzustand setzen
+    paths.forEach(function (p) {
       var len = p.getTotalLength();
       p.style.strokeDasharray = len;
       p.style.strokeDashoffset = len;
-      return len;
     });
 
-    function update() {
-      var y = window.scrollY;
-      // Linien: 0–500px scroll → 0–100% gezeichnet
-      var lineP = Math.min(1, y / 500);
-      paths.forEach(function (path, i) {
-        var stagger = (i / paths.length) * 0.45;
-        var p = Math.max(0, Math.min(1, (lineP - stagger) / (1 - stagger)));
-        path.style.strokeDashoffset = lengths[i] * (1 - p);
-      });
-      // Farbflächen: ab 250px scroll → 0–100% sichtbar
-      var fillP = Math.max(0, Math.min(1, (y - 250) / 400));
-      fills.forEach(function (fill, i) {
-        var stagger = (i / fills.length) * 0.5;
-        var p = Math.max(0, Math.min(1, (fillP - stagger) / (1 - stagger)));
-        fill.style.opacity = p * 0.48;
-      });
-    }
+    var LINE_DURATION  = 1600; // ms pro Linie
+    var LINE_STAGGER   = 130;  // ms Versatz zwischen Linien
+    var FILL_START     = paths.length * LINE_STAGGER + 400; // nach letzter Linie
+    var FILL_STAGGER   = 90;   // ms Versatz zwischen Farbflächen
+    var FILL_OPACITY   = 0.68;
 
-    window.addEventListener('scroll', update, { passive: true });
-    update();
+    // Linien zeichnen
+    paths.forEach(function (path, i) {
+      setTimeout(function () {
+        path.style.transition = 'stroke-dashoffset ' + LINE_DURATION + 'ms cubic-bezier(0.4,0,0.2,1)';
+        path.style.strokeDashoffset = '0';
+      }, 200 + i * LINE_STAGGER);
+    });
+
+    // Farbflächen einblenden
+    fills.forEach(function (fill, i) {
+      setTimeout(function () {
+        fill.style.transition = 'opacity 700ms ease';
+        fill.style.opacity = FILL_OPACITY;
+      }, FILL_START + i * FILL_STAGGER);
+    });
   })();
   </script>
 
