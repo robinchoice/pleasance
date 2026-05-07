@@ -24,8 +24,8 @@ const I18N_META = {
   },
   studio: {
     title: {
-      de: 'Studio — Pleasance',
-      en: 'Studio — Pleasance',
+      de: 'Bureau — Pleasance',
+      en: 'Bureau — Pleasance',
     },
     desc: {
       de: 'Webdesign, Tech-Beratung und Wissensarbeit für Menschen, die ihr Handwerk ernst nehmen.',
@@ -34,12 +34,12 @@ const I18N_META = {
   },
   buehne: {
     title: {
-      de: 'Bühne — Pleasance',
-      en: 'Stage — Pleasance',
+      de: 'Records — Pleasance',
+      en: 'Records — Pleasance',
     },
     desc: {
-      de: 'Musikproduktion und Booking für Künstler, die mehr wollen als einen schnellen Take.',
-      en: 'Music production and booking for artists who want more than a quick take.',
+      de: 'Musikproduktion im Studio-Netzwerk. Aufnahme, Mix und Mastering für Künstler, die Klanggüte ernst nehmen.',
+      en: 'Music production in the studio network. Recording, mix and mastering for artists who take sound quality seriously.',
     },
   },
   ueber: {
@@ -70,8 +70,8 @@ const I18N = {
   // ── Shared: Nav ───────────────────────────────────────────────────────────
   nav: {
     coaching:  { de: 'Coaching',  en: 'Coaching'  },
-    studio:    { de: 'Studio',    en: 'Studio'     },
-    buehne:    { de: 'Bühne',     en: 'Stage'      },
+    studio:    { de: 'Bureau',    en: 'Bureau'     },
+    buehne:    { de: 'Records',   en: 'Records'    },
     projekte:  { de: 'Projekte',  en: 'Projects'   },
     ueber:     { de: 'Über',      en: 'About'      },
     kontakt:   { de: 'Kontakt',   en: 'Contact'    },
@@ -92,7 +92,7 @@ const I18N = {
   index: {
     hero: {
       h1:       { de: 'Pleasance ist ein Atelier<br>für Dinge, die mit<br><em>Sorgfalt</em> gemacht sind.', en: 'Pleasance is a studio<br>for things made with<br><em>care</em>.' },
-      subtitle: { de: 'Coaching, das zuhört. Websites, die nicht aus dem Baukasten kommen. Musik, die wirklich klingt. Geführt von Robin Wahl.', en: 'Coaching that listens. Websites that aren\'t cookie-cutter. Music that truly sounds. Led by Robin Wahl.' },
+      subtitle: { de: 'Coaching, das zuhört. Prozesse, die aufhören Zeit zu stehlen. Musik, die wirklich klingt. Geführt von Robin Wahl.', en: 'Coaching that listens. Processes that stop stealing your time. Music that truly sounds. Led by Robin Wahl.' },
     },
     doors: {
       label: { de: 'Drei Räume',       en: 'Three Rooms'    },
@@ -105,16 +105,16 @@ const I18N = {
       link:  { de: 'Coaching entdecken →', en: 'Explore Coaching →' },
     },
     studio: {
-      verb:  { de: 'Bauen.',   en: 'Building.' },
-      title: { de: 'Studio',   en: 'Studio'    },
-      text:  { de: 'Websites, Tech-Setups und Wissensarbeit für Selbstständige und kleine Unternehmen. Sorgfältig gebaut, frei von Lock-in.', en: 'Websites, tech setups, and knowledge systems for solopreneurs and small businesses. Built with care, free from lock-in.' },
-      link:  { de: 'Studio entdecken →', en: 'Explore Studio →' },
+      verb:  { de: 'Optimieren.',   en: 'Optimising.' },
+      title: { de: 'Bureau',        en: 'Bureau'       },
+      text:  { de: 'Prozessoptimierung für Selbstständige — ich schaue wie du arbeitest, finde wo die Zeit verloren geht, und räume das weg.', en: 'Process optimisation for solopreneurs — I look at how you work, find where the time goes, and clear it out.' },
+      link:  { de: 'Bureau entdecken →', en: 'Explore Bureau →' },
     },
     buehne: {
-      verb:  { de: 'Klingen.',  en: 'Sounding.' },
-      title: { de: 'Bühne',    en: 'Stage'      },
-      text:  { de: 'Musikproduktion und Booking für Künstler, die mehr wollen als einen schnellen Take.', en: 'Music production and booking for artists who want more than a quick take.' },
-      link:  { de: 'Bühne entdecken →', en: 'Explore Stage →' },
+      verb:  { de: 'Klingen.',   en: 'Sounding.'       },
+      title: { de: 'Records',    en: 'Records'          },
+      text:  { de: 'Musikproduktion für Künstler, die Klanggüte ernst nehmen. Kein Baukasten-Sound.', en: 'Music production for artists who take sound quality seriously. No cookie-cutter sound.' },
+      link:  { de: 'Records entdecken →', en: 'Explore Records →' },
     },
     about: {
       label: { de: 'Hinter Pleasance', en: 'Behind Pleasance' },
@@ -128,58 +128,58 @@ const I18N = {
   studio: {
     status: { de: '● Verfügbar für neue Projekte', en: '● Available for new projects' },
     hero: {
-      label:    { de: 'Studio',  en: 'Studio' },
-      h1:       { de: 'Websites, die nicht aus dem Baukasten kommen.', en: 'Websites that aren\'t cookie-cutter.' },
-      subtitle: { de: 'Ich baue Websites, Tech-Setups und Wissensarbeit für Menschen, die ihr Handwerk ernst nehmen — mit Sorgfalt, ohne Effekthascherei, und ohne dass dir morgen jemand das Theme abschaltet.', en: 'I build websites, tech setups, and knowledge systems for people who take their craft seriously — with care, without gimmicks, and without someone switching off your theme tomorrow.' },
-      cta:      { de: 'Projekt besprechen', en: 'Discuss a project' },
-      cta2:     { de: 'Wie ich arbeite ↓', en: 'How I work ↓' },
+      label:    { de: 'Bureau',  en: 'Bureau' },
+      h1:       { de: 'Weniger Prozess.\nMehr von dem, was du wirklich kannst.', en: 'Less process.\nMore of what you\'re actually good at.' },
+      subtitle: { de: 'Selbstständige verbringen zu viel Zeit mit dem Falschen. Ich schaue mir an wie du arbeitest, finde wo die Zeit verloren geht — und räume das weg.', en: 'Solopreneurs spend too much time on the wrong things. I look at how you work, find where the time goes — and clear it out.' },
+      cta:      { de: 'Zeig mir wie du arbeitest', en: 'Show me how you work' },
+      cta2:     { de: 'Wie ich vorgehe ↓', en: 'How I work ↓' },
     },
     stack: {
-      label: { de: 'Womit ich baue', en: 'What I build with' },
+      label: { de: 'Womit ich arbeite', en: 'What I work with' },
     },
     workshops: {
       label: { de: 'Leistungen', en: 'Services' },
-      h2:    { de: 'Drei Werkstätten unter einem Dach.', en: 'Three workshops under one roof.' },
+      h2:    { de: 'Drei Hebel, eine Richtung.', en: 'Three levers, one direction.' },
     },
     w1: {
-      title: { de: 'Webdesign & Webentwicklung',  en: 'Web Design & Development' },
-      tag:   { de: 'Web', en: 'Web' },
-      li1:   { de: 'Neue Websites & Redesigns', en: 'New websites & redesigns' },
-      li2:   { de: 'Selbstständige, Coaches, kleine Marken', en: 'Solopreneurs, coaches, small brands' },
-      li3:   { de: 'Plain HTML oder Astro — kein Page Builder', en: 'Plain HTML or Astro — no page builder' },
-      li4:   { de: 'Du behältst den Code, ich erkläre alles', en: 'You keep the code, I explain everything' },
+      title: { de: 'Prozess-Review', en: 'Process Review' },
+      tag:   { de: 'Analyse', en: 'Analysis' },
+      li1:   { de: 'Wie arbeitest du gerade wirklich?', en: 'How do you actually work right now?' },
+      li2:   { de: 'Wo verlierst du täglich Zeit?', en: 'Where are you losing time every day?' },
+      li3:   { de: 'Welche Tools nutzt du gar nicht?', en: 'Which tools aren\'t actually being used?' },
+      li4:   { de: 'Klares Bild in ein bis zwei Wochen', en: 'Clear picture in one to two weeks' },
     },
     w2: {
-      title: { de: 'Tech-Beratung & Selfhosting', en: 'Tech Consulting & Self-Hosting' },
-      tag:   { de: 'Infra', en: 'Infra' },
-      li1:   { de: 'Eigener Server mit Coolify', en: 'Own server with Coolify' },
-      li2:   { de: 'Selfhosted E-Mail, Analytics, KI-Tools', en: 'Self-hosted email, analytics, AI tools' },
-      li3:   { de: 'Open Source first', en: 'Open Source first' },
-      li4:   { de: 'Wenig Lock-in, volle Kontrolle', en: 'Minimal lock-in, full control' },
+      title: { de: 'Vereinfachung & Entschlackung', en: 'Simplification & Streamlining' },
+      tag:   { de: 'Entschlacken', en: 'Simplify' },
+      li1:   { de: 'Fünf Tools die dasselbe tun → eines', en: 'Five tools doing the same thing → one' },
+      li2:   { de: 'Verwaltung die 3h kostet → 30 Minuten', en: 'Admin that costs 3h → 30 minutes' },
+      li3:   { de: 'Open Source first, kein Lock-in', en: 'Open Source first, no lock-in' },
+      li4:   { de: 'Struktur die du in 6 Monaten noch verstehst', en: 'Structure you\'ll still understand in 6 months' },
     },
     w3: {
-      title: { de: 'Wissensarbeit & Knowledge Bases', en: 'Knowledge Work & Knowledge Bases' },
-      tag:   { de: 'Wissen', en: 'Knowledge' },
-      li1:   { de: 'Obsidian & Zettelkasten-Setup', en: 'Obsidian & Zettelkasten setup' },
-      li2:   { de: 'Notion für Teams & Einzelpersonen', en: 'Notion for teams & individuals' },
-      li3:   { de: 'Für Coaches, Solo-Wissensarbeiter', en: 'For coaches, solo knowledge workers' },
-      li4:   { de: 'Systeme, die man auch nutzt', en: 'Systems you\'ll actually use' },
+      title: { de: 'Automatisierung', en: 'Automation' },
+      tag:   { de: 'Automatisieren', en: 'Automate' },
+      li1:   { de: 'Rechnungen, Follow-ups, Onboarding', en: 'Invoices, follow-ups, onboarding' },
+      li2:   { de: 'n8n, Make, KI-Workflows', en: 'n8n, Make, AI workflows' },
+      li3:   { de: 'Nur was wirklich Sinn macht — kein Overkill', en: 'Only what actually makes sense — no overkill' },
+      li4:   { de: 'Du behältst die Kontrolle', en: 'You stay in control' },
     },
     card: {
       cta: { de: 'Anfragen →', en: 'Inquire →' },
     },
     process: {
       label: { de: 'Vorgehen', en: 'Process' },
-      h2:    { de: 'Erst zuhören, dann anbieten.', en: 'Listen first, then propose.' },
-      intro: { de: 'Bevor ich dir ein Angebot mache, will ich verstehen, was du brauchst. Deshalb arbeite ich in zwei Stufen.', en: 'Before I make you an offer, I want to understand what you need. That\'s why I work in two stages.' },
+      h2:    { de: 'Erst verstehen, dann eingreifen.', en: 'Understand first, then act.' },
+      intro: { de: 'Bevor ich irgendetwas ändere, will ich wirklich verstehen wie du arbeitest. Deshalb beginnt alles mit einem Review.', en: 'Before I change anything, I want to genuinely understand how you work. That\'s why everything starts with a review.' },
     },
     step1: {
-      title: { de: 'Discovery & Konzept',  en: 'Discovery & Concept' },
-      text:  { de: 'Ein 90-minütiges Gespräch, ein technisches Audit deiner aktuellen Situation, eine Sitemap, ein Moodboard, Wireframes für die wichtigsten Seiten — und ein konkretes Festpreisangebot für die Umsetzung. Dauer: ein bis zwei Wochen. Festpreis. Wenn du danach bei mir bleibst, wird die Hälfte auf das Umsetzungsbudget angerechnet.', en: 'A 90-minute conversation, a technical audit of your current situation, a sitemap, a moodboard, wireframes for key pages — and a concrete fixed-price offer for implementation. Duration: one to two weeks. Fixed price. If you stay with me, half is credited toward the implementation budget.' },
+      title: { de: 'Review',  en: 'Review' },
+      text:  { de: 'Ein 60–90-minütiges Gespräch über deinen Alltag: welche Tools, welche Schritte, wo zwickt es. Danach bekommst du ein klares Bild was raus kann, was besser werden kann, was automatisiert werden soll — und ein konkretes Festpreisangebot für die Umsetzung.', en: 'A 60–90-minute conversation about your daily work: which tools, which steps, where it pinches. Afterwards you get a clear picture of what can go, what can improve, what can be automated — and a concrete fixed-price offer for implementation.' },
     },
     step2: {
-      title: { de: 'Umsetzung',      en: 'Implementation' },
-      text:  { de: 'Festpreis auf Basis dessen, was wir in der Discovery gemeinsam definiert haben. Keine bösen Überraschungen, kein Stundenzettel-Spiel.', en: 'Fixed price based on what we defined together in discovery. No unpleasant surprises, no hourly billing games.' },
+      title: { de: 'Umsetzung', en: 'Implementation' },
+      text:  { de: 'Festpreis auf Basis dessen, was wir im Review gemeinsam definiert haben. Keine bösen Überraschungen, kein Stundenzettel-Spiel.', en: 'Fixed price based on what we defined together in the review. No unpleasant surprises, no hourly billing games.' },
     },
     portfolio: {
       label: { de: 'Ausgewählte Projekte', en: 'Selected Projects' },
@@ -188,7 +188,7 @@ const I18N = {
     p1: {
       name: { de: 'Pleasance', en: 'Pleasance' },
       year: { de: '2025 – 2026', en: '2025 – 2026' },
-      desc: { de: 'Atelier-Website mit Hub-Architektur, DE/EN Umschaltung, Dark Mode und Quiz.', en: 'Atelier website with hub architecture, DE/EN toggle, dark mode and quiz.' },
+      desc: { de: 'Atelier-Website mit Hub-Architektur, DE/EN Umschaltung und Dark Mode — selbstgehostet, kein CMS, volle Kontrolle.', en: 'Atelier website with hub architecture, DE/EN toggle and dark mode — self-hosted, no CMS, full control.' },
     },
     p2: {
       name: { de: 'mydrugismusic.com', en: 'mydrugismusic.com' },
@@ -198,65 +198,58 @@ const I18N = {
     p3: {
       name: { de: 'OpenClaw', en: 'OpenClaw' },
       year: { de: '2025', en: '2025' },
-      desc: { de: 'KI-gestütztes CLI-Tool für Wissensarbeit und Automatisierung.', en: 'AI-powered CLI tool for knowledge work and automation.' },
+      desc: { de: 'Persönlicher KI-Assistent — automatisiert Wissensarbeit, ersetzt langfristig kommerzielle Subscriptions.', en: 'Personal AI assistant — automates knowledge work, long-term replacement for commercial subscriptions.' },
     },
     forwhom: {
-      label: { de: 'Mit wem ich gern arbeite',                          en: 'Who I work with'                      },
-      h2:    { de: 'Für Menschen, die ihr Handwerk ernst nehmen.',       en: 'For people who take their craft seriously.' },
-      text:  { de: 'Coaches, Therapeutinnen, Tonstudios, Handwerker, kleine Marken, Solo-Selbstständige. Ich arbeite remote und komme vor Ort, wenn es passt und der Rahmen stimmt.', en: 'Coaches, therapists, recording studios, craftspeople, small brands, solopreneurs. I work remote and come on-site when it makes sense and the conditions are right.' },
+      label: { de: 'Mit wem ich gern arbeite', en: 'Who I work with' },
+      h2:    { de: 'Für Selbstständige, die im Falschen versinken.', en: 'For solopreneurs drowning in the wrong things.' },
+      text:  { de: 'Coaches, Therapeutinnen, Berater, kleine Marken — Menschen die wissen was sie können, aber deren Prozesse ihnen im Weg stehen. Ich arbeite remote und komme vor Ort, wenn es passt.', en: 'Coaches, therapists, consultants, small brands — people who know what they\'re good at, but whose processes get in the way. I work remote and come on-site when it makes sense.' },
     },
     values: {
-      label: { de: 'Werte',         en: 'Values'          },
+      label: { de: 'Werte', en: 'Values' },
       h2:    { de: 'Wofür ich stehe.', en: 'What I stand for.' },
     },
     v1: {
-      title: { de: 'Sorgfalt vor Tempo.',    en: 'Care over speed.'        },
-      text:  { de: 'Ich liefere lieber etwas Gutes spät als etwas Halbes pünktlich. Aber meistens auch pünktlich.', en: 'I\'d rather deliver something good late than something half-finished on time. But usually on time too.' },
+      title: { de: 'Einfach vor komplex.', en: 'Simple over complex.' },
+      text:  { de: 'Das beste System ist das, das du wirklich nutzt. Ich baue nichts das beeindruckt aber im Weg steht.', en: 'The best system is the one you actually use. I build nothing that impresses but gets in the way.' },
     },
     v2: {
-      title: { de: 'Open Source zuerst.',    en: 'Open Source first.'      },
-      text:  { de: 'Wenn es eine freie Lösung gibt, die genauso gut ist, nehme ich die. Du sollst nicht in zehn Jahren bei einem Anbieter feststecken, der seine Preise verdoppelt hat.', en: 'If there\'s a free solution that works just as well, I take that one. You shouldn\'t be stuck with a vendor in ten years who doubled their prices.' },
+      title: { de: 'Open Source zuerst.', en: 'Open Source first.' },
+      text:  { de: 'Wenn es eine freie Lösung gibt, nehme ich die. Du sollst nicht in zehn Jahren bei einem Anbieter feststecken, der seine Preise verdoppelt hat.', en: 'If there\'s a free solution, I take that one. You shouldn\'t be stuck with a vendor in ten years who doubled their prices.' },
     },
     v3: {
-      title: { de: 'Eigentum vor Miete.',    en: 'Ownership over rental.'  },
-      text:  { de: 'Deine Inhalte, dein Server, deine Domain, dein Wissen. Ich helfe dir, davon möglichst viel selbst zu besitzen.', en: 'Your content, your server, your domain, your knowledge. I help you own as much of that as possible.' },
+      title: { de: 'Eigentum vor Miete.', en: 'Ownership over rental.' },
+      text:  { de: 'Deine Inhalte, dein Server, deine Daten. Ich helfe dir, davon möglichst viel selbst zu besitzen.', en: 'Your content, your server, your data. I help you own as much of that as possible.' },
     },
     cta: {
-      h2:  { de: 'Lass uns reden.', en: 'Let\'s talk.' },
-      text: { de: 'Schreib mir eine kurze Nachricht, was du vorhast. Ich melde mich innerhalb von ein paar Tagen mit konkreten nächsten Schritten zurück.', en: 'Write me a brief message about what you have in mind. I\'ll get back to you within a few days with concrete next steps.' },
-      btn:  { de: 'Anfrage senden', en: 'Send inquiry' },
+      h2:  { de: 'Zeig mir wie du arbeitest.', en: 'Show me how you work.' },
+      text: { de: 'Beschreib mir kurz deinen Alltag — womit du arbeitest, wo es hakt. Ich melde mich mit einem konkreten nächsten Schritt.', en: 'Briefly describe your daily work — what you use, where it pinches. I\'ll get back to you with a concrete next step.' },
+      btn:  { de: 'Gespräch anfragen', en: 'Request a conversation' },
     },
   },
 
   // ── buehne.html ───────────────────────────────────────────────────────────
   buehne: {
     hero: {
-      label:     { de: 'Bühne',  en: 'Stage' },
-      h1:        { de: 'Wo Musik wirklich klingt.',  en: 'Where music truly sounds.' },
-      subtitle:  { de: 'Ich produziere Musik im Studio-Netzwerk und vermittle Künstler an Bühnen, die zu ihnen passen.', en: 'I produce music in my studio network and connect artists with stages that fit them.' },
+      label:     { de: 'Records', en: 'Records' },
+      h1:        { de: 'Musik, die wirklich klingt.',  en: 'Music that truly sounds.' },
+      subtitle:  { de: 'Ich produziere Musik im Studio-Netzwerk — von der Single bis zum Album. Aufnahme, Mix, Mastering. Kein Baukasten-Sound.', en: 'I produce music in my studio network — from single to album. Recording, mix, mastering. No cookie-cutter sound.' },
       cta_prod:  { de: 'Im Studio →', en: 'In the studio →' },
-      cta_book:  { de: 'Booking anfragen ↓', en: 'Inquire about booking ↓' },
+      cta_book:  { de: 'Anfrage senden ↓', en: 'Send inquiry ↓' },
     },
     prod: {
       label: { de: 'Im Studio',  en: 'In the Studio' },
       h2:    { de: 'Aufnahme, Mix und Mastering.', en: 'Recording, mix and mastering.' },
       text1: { de: 'Ich arbeite mit einem Netzwerk von Tonstudios im Saar-/Südwest-Raum. Recording, Mixing, Mastering — von der einzelnen Single bis zum vollen Album. Wenn du nicht weißt, welches Studio zu deinem Projekt passt, finde ich das mit dir gemeinsam heraus.', en: 'I work with a network of recording studios in the Saar/Southwest region. Recording, mixing, mastering — from a single track to a full album. If you\'re not sure which studio fits your project, I\'ll figure that out with you.' },
-      text2: { de: 'Meine Rolle ist je nach Projekt unterschiedlich: manchmal Producer, manchmal Vermittler, manchmal beides.', en: 'My role varies by project: sometimes producer, sometimes connector, sometimes both.' },
+      text2: { de: 'Meine Rolle ist je nach Projekt unterschiedlich: manchmal Producer, manchmal Vermittler, manchmal beides. Kein Baukasten-Sound. Kein schneller Take.', en: 'My role varies by project: sometimes producer, sometimes connector, sometimes both. No cookie-cutter sound. No quick take.' },
       cta:   { de: 'Produktion anfragen →', en: 'Inquire about production →' },
-    },
-    booking: {
-      label: { de: 'Auf der Bühne', en: 'On Stage' },
-      h2:    { de: 'Künstler an Orte bringen, die sie verdienen.', en: 'Getting artists to the places they deserve.' },
-      text1: { de: 'Ich arbeite mit Künstlern, deren Musik mehr Aufmerksamkeit verdient, als ein Algorithmus ihr gibt. Ich vermittle an Veranstalter, Festivals und Räume, die zu ihnen passen.', en: 'I work with artists whose music deserves more attention than an algorithm gives it. I connect them with promoters, festivals, and venues that fit.' },
-      text2: { de: 'Kein Massengeschäft. Wenige Künstler, dafür mit Zeit.', en: 'No mass business. Few artists, but with time.' },
-      cta:   { de: 'Booking anfragen →', en: 'Inquire about booking →' },
     },
     brands: {
       label: { de: 'Womit ich arbeite', en: 'What I work with' },
       h2:    { de: 'Werkzeuge & Partner.', en: 'Tools & partners.' },
     },
     cta: {
-      h2:  { de: 'Du machst Musik, oder bookst sie?', en: 'You make music, or book it?' },
+      h2:  { de: 'Du machst Musik und willst, dass sie klingt?', en: 'You make music and want it to sound right?' },
       text: { de: 'Schreib mir, was du vorhast. Ich melde mich.', en: 'Tell me about your project. I\'ll get back to you.' },
       btn:  { de: 'Anfrage senden', en: 'Send inquiry' },
     },
@@ -271,7 +264,7 @@ const I18N = {
     p1: { de: 'Ich heiße Robin Wahl. Ich arbeite remote — und komme vor Ort, wenn es passt und der Rahmen stimmt.', en: 'My name is Robin Wahl. I work remotely — and come on-site when it makes sense and the conditions are right.' },
     p2: { de: 'Ich bin systemischer Coach mit einem Hintergrund in Logotherapie. Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand wirklich gehört wird.', en: 'I\'m a systemic coach with a background in logotherapy. My most important tool is active listening — because real change begins where someone is truly heard.' },
     p3: { de: 'Daneben baue ich Websites, betreue Tech-Setups und richte Knowledge Bases ein. Nicht weil ich „auch noch was mit Computern" mache, sondern weil sich für mich beides aus derselben Haltung speist: erst verstehen, dann handeln. Zuhören, dann bauen.', en: 'I also build websites, manage tech setups, and set up knowledge bases. Not because I \'also do something with computers,\' but because for me both stem from the same stance: understand first, then act. Listen, then build.' },
-    p4: { de: 'Und weil Musik der Raum ist, in dem ich angefangen habe, gehören Musikproduktion und Booking ebenfalls zu Pleasance. Wenn ich helfe, eine Aufnahme entstehen zu lassen oder einen Künstler auf eine Bühne zu bringen, ist das für mich nicht weit weg vom Coaching — es ist nur ein anderes Medium für dieselbe Frage: was will da gerade entstehen, und wie räume ich den Weg dafür frei.', en: 'And because music is the space where I started, music production and booking are also part of Pleasance. When I help a recording come to life or get an artist on stage, for me that\'s not far from coaching — it\'s just a different medium for the same question: what wants to emerge here, and how do I clear the path for it.' },
+    p4: { de: 'Und weil Musik der Raum ist, in dem ich angefangen habe, gehört Musikproduktion ebenfalls zu Pleasance. Wenn ich helfe, eine Aufnahme entstehen zu lassen, ist das für mich nicht weit weg vom Coaching — es ist nur ein anderes Medium für dieselbe Frage: was will da gerade entstehen, und wie räume ich den Weg dafür frei.', en: 'And because music is the space where I started, music production is also part of Pleasance. When I help a recording come to life, for me that\'s not far from coaching — it\'s just a different medium for the same question: what wants to emerge here, and how do I clear the path for it.' },
     p5: { de: 'Pleasance ist mein Versuch, all das nicht zu trennen, sondern zusammen zu zeigen. Eine Person, drei Räume, eine Haltung.', en: 'Pleasance is my attempt not to keep these things separate, but to show them together. One person, three rooms, one stance.' },
     timeline: {
       label: { de: 'Werdegang',          en: 'Career'       },
@@ -299,7 +292,7 @@ const I18N = {
     },
     t5: {
       company: { de: 'Pleasance', en: 'Pleasance' },
-      role:    { de: 'Gründer — Coaching · Studio · Bühne', en: 'Founder — Coaching · Studio · Stage' },
+      role:    { de: 'Gründer — Coaching · Bureau · Records', en: 'Founder — Coaching · Bureau · Records' },
       desc:    { de: 'Alles zusammen unter einem Dach. Coaching, Webdesign, Musik — aus einer Haltung.', en: 'Everything together under one roof. Coaching, web design, music — from one stance.' },
     },
     cvcta: {
@@ -345,15 +338,15 @@ const I18N = {
       btn:   { de: 'Termin buchen', en: 'Book appointment' },
     },
     studio: {
-      label: { de: 'Studio', en: 'Studio' },
+      label: { de: 'Bureau', en: 'Bureau' },
       title: { de: 'Du brauchst eine Website, ein Tech-Setup oder eine Knowledge Base.', en: 'You need a website, tech setup, or help with your knowledge system.' },
       text:  { de: 'Schreib mir kurz, was du vorhast. Kein Formular, kein Briefing-Template — ein paar Zeilen reichen.', en: 'Write me a brief message about what you have in mind. No form, no briefing template — a few lines are enough.' },
       btn:   { de: 'Anfrage schreiben', en: 'Write an inquiry' },
     },
     buehne: {
-      label: { de: 'Bühne', en: 'Stage' },
-      title: { de: 'Du machst Musik oder vertrittst Künstler.', en: 'You make music or represent artists.' },
-      text:  { de: 'Erzähl mir von deinem Projekt — Produktion, Booking oder beides. Ich schaue, ob und wie ich helfen kann.', en: 'Tell me about your project — production, booking, or both. I\'ll see if and how I can help.' },
+      label: { de: 'Records', en: 'Records' },
+      title: { de: 'Du machst Musik und willst, dass sie klingt.', en: 'You make music and want it to sound right.' },
+      text:  { de: 'Erzähl mir von deinem Projekt — Single, Album, Produktion. Ich schaue, ob und wie ich helfen kann.', en: 'Tell me about your project — single, album, production. I\'ll see if and how I can help.' },
       btn:   { de: 'Nachricht senden', en: 'Send message' },
     },
   },
