@@ -1370,7 +1370,7 @@ p {
    ============================================================ */
 
 /* Farb-System für Studio — überschreibt globale Vars (auch Dark Mode) */
-body[data-page="studio"] {
+body[data-page="bureau"] {
   --color-primary:       #22D3EE;
   --color-primary-light: #67E8F9;
   --color-bg:            #0A0E1A;
@@ -1757,19 +1757,19 @@ body[data-page="studio"] {
 }
 
 /* Studio: Button-Glow und Footer */
-body[data-page="studio"] .btn--primary {
+body[data-page="bureau"] .btn--primary {
   color: #0A0E1A;
 }
 
-body[data-page="studio"] .btn--primary:hover {
+body[data-page="bureau"] .btn--primary:hover {
   box-shadow: 0 4px 24px rgba(34, 211, 238, 0.3);
 }
 
-body[data-page="studio"] .footer {
+body[data-page="bureau"] .footer {
   border-top-color: rgba(255, 255, 255, 0.06);
 }
 
-body[data-page="studio"] .process__step-num {
+body[data-page="bureau"] .process__step-num {
   color: #22D3EE;
   font-style: normal;
 }
@@ -1784,7 +1784,7 @@ body[data-page="coaching"] {
   --color-bg:            #091509;
   --color-bg-alt:        #0E2210;
   --color-text:          #DCF0DC;
-  --color-text-light:    #5C8B5C;
+  --color-text-light:    #A8C8A8;
   --color-accent:        #8DB87A;
   --color-white:         #101E10;
 }
@@ -1794,9 +1794,9 @@ body[data-page="coaching"] .nav {
   background: rgba(9, 21, 9, 0.96);
 }
 body[data-page="coaching"] .nav__logo         { color: #6BBF6A; }
-body[data-page="coaching"] .nav__links a       { color: #3D6B3D; }
+body[data-page="coaching"] .nav__links a       { color: #7DB87D; }
 body[data-page="coaching"] .nav__links a:hover { color: #DCF0DC; }
-body[data-page="coaching"] .nav__lang          { border-color: #1A3A1A; color: #3D6B3D; }
+body[data-page="coaching"] .nav__lang          { border-color: #2A5A2A; color: #7DB87D; }
 body[data-page="coaching"] .nav__lang:hover    { border-color: #6BBF6A; color: #6BBF6A; }
 body[data-page="coaching"] .nav__theme         { color: #3D6B3D; }
 body[data-page="coaching"] .nav__theme:hover   { color: #6BBF6A; }
@@ -2000,7 +2000,9 @@ body[data-page="buehne"] .nav.scrolled       { box-shadow: 0 1px 8px rgba(0,0,0,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 6rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
   width: 100%;
 }
 
