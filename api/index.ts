@@ -18,6 +18,8 @@ const TOPIC_LABELS: Record<string, string> = {
   records:  'Records',
 }
 
+app.get('/', (c) => c.json({ ok: true }))
+
 app.use('/contact', cors({
   origin: (origin) => ALLOWED_ORIGINS.includes(origin) ? origin : null,
   allowMethods: ['POST', 'OPTIONS'],
