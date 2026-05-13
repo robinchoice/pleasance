@@ -41,24 +41,24 @@ Die bestehende Coaching-Strecke (`coaching.html`) wird **inhaltlich nicht angefa
 
 ## Aktueller Stand
 
-<!-- Zuletzt aktualisiert: 2026-04-13 via /save -->
+<!-- Zuletzt aktualisiert: 2026-05-13 via /save -->
 
-**Sprint / Phase:** Dark Mode + i18n — live
+**Sprint / Phase:** Kontaktformular + Resend API — fast fertig
 
 **Zuletzt implementiert:**
-- Dark Mode (`[data-theme="dark"]`, warme Palette, Flash-Prevention Head-Script)
-- DE/EN Sprachumschaltung: `data-i18n` Attribute + `i18n.js` (~280 Keys) + `main.js` Engine
-- Nav `nav__tools` mit Lang- und Theme-Toggle auf allen Seiten
-- `projekte.html` aus Nav/Footer entfernt (archiviert bis Apps Nutzerbasis haben)
+- `kontakt.html`: Drei Doors → einheitliches Formular (Topic-Pills, `?thema=`-Pre-Selektion, fetch + Status)
+- `coaching.html`: alle cal.com + mailto-Links → `kontakt.html?thema=coaching`
+- `api/`: Bun/Hono Endpoint `POST /contact` mit Resend, deployed via Coolify (App-UUID: `v10lvwfo0he2o3vh0gnqvddp`)
+- `style.css`: contact-doors → Form-CSS inkl. Dark Mode
 
 **Als nächstes:**
-- cal.com mit Google Calendar verknüpfen + Link auf coaching.html / kontakt.html testen
-- `img/robin.jpg` besorgen und in `img/` ablegen
-- `projekte.html` bleibt archiviert bis Apps Nutzerbasis haben
+- **Blocker:** `RESEND_API_KEY` in Coolify leer → Robin setzt Key in Coolify UI (pleasance-api → Env Vars), dann neu deployen
+- DNS A-Record `api.pleasance.org` → VPS-IP anlegen
+- `img/robin.jpg` besorgen
 
 **Offene Punkte:**
 - `img/robin.jpg` fehlt (coaching.html About-Section zeigt broken image)
-- `projekte.html` existiert noch als Datei, ist aber aus allen Navs entfernt
+- cal.com komplett raus — durch Kontaktformular ersetzt
 
 ## Ring-Kontext
 
