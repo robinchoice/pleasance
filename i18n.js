@@ -329,25 +329,17 @@ const I18N = {
     hero: {
       label:    { de: 'Kontakt',  en: 'Contact' },
       h1:       { de: 'Sprechen wir.', en: 'Let\'s talk.' },
-      subtitle: { de: 'Such dir aus, worum es geht. Ich melde mich innerhalb weniger Tage.', en: 'Choose what it\'s about. I\'ll be in touch within a few days.' },
+      subtitle: { de: 'Such dir aus, worum es geht. Ich melde mich innerhalb von zwei Werktagen.', en: 'Choose what it\'s about. I\'ll get back to you within two business days.' },
     },
-    coaching: {
-      label: { de: 'Coaching', en: 'Coaching' },
-      title: { de: 'Du suchst Begleitung in einer Veränderungsphase.', en: 'You\'re looking for support during a period of change.' },
-      text:  { de: 'Systemisches Coaching und Logotherapie. Wir beginnen mit einem kostenlosen Erstgespräch — such dir einfach einen Termin aus.', en: 'Systemic coaching and logotherapy. We start with a free initial conversation — just pick a time.' },
-      btn:   { de: 'Termin buchen', en: 'Book appointment' },
-    },
-    studio: {
-      label: { de: 'Bureau', en: 'Bureau' },
-      title: { de: 'Du brauchst eine Website, ein Tech-Setup oder eine Knowledge Base.', en: 'You need a website, tech setup, or help with your knowledge system.' },
-      text:  { de: 'Schreib mir kurz, was du vorhast. Kein Formular, kein Briefing-Template — ein paar Zeilen reichen.', en: 'Write me a brief message about what you have in mind. No form, no briefing template — a few lines are enough.' },
-      btn:   { de: 'Anfrage schreiben', en: 'Write an inquiry' },
-    },
-    buehne: {
-      label: { de: 'Records', en: 'Records' },
-      title: { de: 'Du machst Musik und willst, dass sie klingt.', en: 'You make music and want it to sound right.' },
-      text:  { de: 'Erzähl mir von deinem Projekt — Single, Album, Produktion. Ich schaue, ob und wie ich helfen kann.', en: 'Tell me about your project — single, album, production. I\'ll see if and how I can help.' },
-      btn:   { de: 'Nachricht senden', en: 'Send message' },
+    form: {
+      topic_label:    { de: 'Worum geht es?',  en: 'What is it about?' },
+      topic_coaching: { de: 'Coaching',         en: 'Coaching' },
+      topic_bureau:   { de: 'Bureau',           en: 'Bureau' },
+      topic_records:  { de: 'Records',          en: 'Records' },
+      name_label:     { de: 'Dein Name',        en: 'Your name' },
+      email_label:    { de: 'Deine E-Mail',     en: 'Your email' },
+      message_label:  { de: 'Deine Nachricht',  en: 'Your message' },
+      submit:         { de: 'Absenden',         en: 'Send' },
     },
   },
 
@@ -438,9 +430,10 @@ const I18N = {
       btn:         { de: 'Erzähl mir, was du suchst', en: 'Tell me what you\'re looking for' },
     },
     contact: {
-      label: { de: 'Kontakt',         en: 'Contact'    },
-      h2:    { de: 'Lass uns sprechen', en: 'Let\'s talk' },
-      text:  { de: 'Du brauchst nichts vorzubereiten. Meld dich einfach — per Mail oder Telefon. Wir finden gemeinsam heraus, ob und wie ich dich begleiten kann.', en: 'You don\'t need to prepare anything. Just reach out — by email or phone. Together we\'ll find out if and how I can support you.' },
+      label: { de: 'Kontakt',           en: 'Contact'      },
+      h2:    { de: 'Lass uns sprechen',  en: 'Let\'s talk'  },
+      text:  { de: 'Du brauchst nichts vorzubereiten. Schreib mir einfach — ich melde mich innerhalb von zwei Werktagen.', en: 'You don\'t need to prepare anything. Just write to me — I\'ll get back to you within two business days.' },
+      btn:   { de: 'Kontakt aufnehmen', en: 'Get in touch'  },
     },
     faq: {
       label: { de: 'Häufige Fragen',          en: 'FAQ'                         },

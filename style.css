@@ -1245,44 +1245,96 @@ p {
 .hub-about__link:hover { text-decoration: underline; }
 
 /* === Contact Doors === */
-.contact-doors {
+.contact-form {
   padding: var(--section-padding);
-  max-width: var(--max-width);
+  max-width: 640px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
 }
 
-.contact-door {
-  padding: 2.5rem 2rem;
-  border: 1px solid var(--color-bg-alt);
-  background: var(--color-white);
+.form-topics {
   display: flex;
-  flex-direction: column;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
-.contact-door__label {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-light);
-  margin-bottom: 0.75rem;
-}
-
-.contact-door__title {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-}
-
-.contact-door__text {
+.form-topic {
+  padding: 0.45rem 1.25rem;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
   font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.form-topic.is-active,
+.form-topic:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--color-text-light);
-  line-height: 1.7;
-  flex: 1;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-bg-alt);
+  border-radius: 4px;
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.18s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  display: none;
+}
+
+.form-status.is-success {
+  background: #f0f5e8;
+  color: #4a6a1c;
+  display: block;
+}
+
+.form-status.is-error {
+  background: #fdf0ed;
+  color: #8b3a2a;
+  display: block;
 }
 
 /* === Stage (Bühne) === */
@@ -1360,7 +1412,7 @@ p {
     gap: 2rem;
   }
 
-  .contact-doors {
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
@@ -1678,8 +1730,21 @@ body[data-page="bureau"] {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .contact-door {
-  border-color: rgba(255, 255, 255, 0.08);
+[data-theme="dark"] .form-field input,
+[data-theme="dark"] .form-field textarea {
+  background: var(--color-bg-alt);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .form-status.is-success {
+  background: rgba(139, 154, 107, 0.18);
+  color: #a8c46a;
+}
+
+[data-theme="dark"] .form-status.is-error {
+  background: rgba(160, 82, 45, 0.18);
+  color: var(--color-primary-light);
 }
 
 [data-theme="dark"] .workshop-card {

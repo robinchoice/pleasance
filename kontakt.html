@@ -49,43 +49,39 @@
     </p>
   </div>
 
-  <!-- Drei Eingänge -->
-  <div class="contact-doors reveal">
+  <!-- Kontaktformular -->
+  <div class="contact-form reveal">
+    <form id="contactForm" novalidate>
 
-    <div class="contact-door" id="coaching">
-      <span class="contact-door__label" data-i18n="kontakt.coaching.label">Coaching</span>
-      <h2 class="contact-door__title" data-i18n="kontakt.coaching.title">Du suchst Begleitung in einer Veränderungsphase.</h2>
-      <p class="contact-door__text" data-i18n="kontakt.coaching.text">
-        Systemisches Coaching und Logotherapie. Wir beginnen mit einem
-        kostenlosen Erstgespräch — such dir einfach einen Termin aus.
-      </p>
-      <a href="https://cal.com/robin-choice-sowasx" class="btn btn--primary" target="_blank" rel="noopener" data-i18n="kontakt.coaching.btn">Termin buchen</a>
-    </div>
+      <div class="form-field">
+        <label data-i18n="kontakt.form.topic_label">Worum geht es?</label>
+        <div class="form-topics" role="group">
+          <button type="button" class="form-topic" data-topic="coaching" data-i18n="kontakt.form.topic_coaching">Coaching</button>
+          <button type="button" class="form-topic" data-topic="bureau"   data-i18n="kontakt.form.topic_bureau">Bureau</button>
+          <button type="button" class="form-topic" data-topic="records"  data-i18n="kontakt.form.topic_records">Records</button>
+        </div>
+      </div>
 
-    <div class="contact-door" id="studio">
-      <span class="contact-door__label" data-i18n="kontakt.studio.label">Studio</span>
-      <h2 class="contact-door__title" data-i18n="kontakt.studio.title">Du brauchst eine Website, ein Tech-Setup oder eine Knowledge Base.</h2>
-      <p class="contact-door__text" data-i18n="kontakt.studio.text">
-        Schreib mir kurz, was du vorhast. Kein Formular, kein Briefing-Template —
-        ein paar Zeilen reichen.
-      </p>
-      <a href="mailto:hallo@pleasance.org?subject=Studio-Anfrage"
-         data-i18n-href-en="mailto:hallo@pleasance.org?subject=Studio+inquiry"
-         class="btn btn--primary" data-i18n="kontakt.studio.btn">Anfrage schreiben</a>
-    </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
+          <input type="text" id="contactName" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
+          <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+        </div>
+      </div>
 
-    <div class="contact-door" id="records">
-      <span class="contact-door__label" data-i18n="kontakt.buehne.label">Records</span>
-      <h2 class="contact-door__title" data-i18n="kontakt.buehne.title">Du machst Musik und willst, dass sie klingt.</h2>
-      <p class="contact-door__text" data-i18n="kontakt.buehne.text">
-        Erzähl mir von deinem Projekt — Single, Album, Produktion.
-        Ich schaue, ob und wie ich helfen kann.
-      </p>
-      <a href="mailto:hallo@pleasance.org?subject=Records-Anfrage"
-         data-i18n-href-en="mailto:hallo@pleasance.org?subject=Records+inquiry"
-         class="btn btn--primary" data-i18n="kontakt.buehne.btn">Nachricht senden</a>
-    </div>
+      <div class="form-field">
+        <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
+        <textarea id="contactMessage" name="message" rows="6" required></textarea>
+      </div>
 
+      <button type="submit" class="btn btn--primary" id="contactSubmit" data-i18n="kontakt.form.submit">Absenden</button>
+      <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+    </form>
   </div>
 
   <!-- Footer -->
@@ -117,6 +113,88 @@
 
   <script src="i18n.js"></script>
   <script src="main.js"></script>
+  <script>
+  (function () {
+    var API_URL = 'https://api.pleasance.org/contact';
+
+    var form     = document.getElementById('contactForm');
+    var submit   = document.getElementById('contactSubmit');
+    var status   = document.getElementById('formStatus');
+    var textarea = document.getElementById('contactMessage');
+
+    var placeholders = {
+      coaching: { de: 'Was bewegt dich gerade?',        en: 'What\'s on your mind?' },
+      bureau:   { de: 'Was hast du vor?',               en: 'What are you planning?' },
+      records:  { de: 'Erzähl mir von deinem Projekt.', en: 'Tell me about your project.' },
+    };
+
+    var activeTopic = 'coaching';
+    var urlTopic = new URLSearchParams(location.search).get('thema');
+    if (urlTopic && placeholders[urlTopic]) activeTopic = urlTopic;
+
+    var pills = document.querySelectorAll('.form-topic');
+
+    function setActiveTopic(topic) {
+      activeTopic = topic;
+      pills.forEach(function (btn) {
+        btn.classList.toggle('is-active', btn.dataset.topic === topic);
+      });
+      updatePlaceholder();
+    }
+
+    function updatePlaceholder() {
+      var lang = document.documentElement.lang || 'de';
+      textarea.placeholder = (placeholders[activeTopic] || {})[lang] || '';
+    }
+
+    pills.forEach(function (btn) {
+      btn.addEventListener('click', function () { setActiveTopic(btn.dataset.topic); });
+    });
+
+    setActiveTopic(activeTopic);
+
+    new MutationObserver(updatePlaceholder).observe(
+      document.documentElement, { attributes: true, attributeFilter: ['lang'] }
+    );
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var name    = document.getElementById('contactName').value.trim();
+      var email   = document.getElementById('contactEmail').value.trim();
+      var message = textarea.value.trim();
+      var lang    = document.documentElement.lang || 'de';
+      if (!name || !email || !message) return;
+
+      submit.disabled = true;
+      submit.textContent = lang === 'en' ? 'Sending…' : 'Wird gesendet…';
+      status.className = 'form-status';
+      status.textContent = '';
+
+      try {
+        var res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic: activeTopic, name: name, email: email, message: message }),
+        });
+        if (!res.ok) throw new Error(res.status);
+        status.className = 'form-status is-success';
+        status.textContent = lang === 'en'
+          ? 'Thank you — I\'ll be in touch soon.'
+          : 'Danke — ich melde mich bald.';
+        form.reset();
+        setActiveTopic('coaching');
+      } catch (_) {
+        status.className = 'form-status is-error';
+        status.textContent = lang === 'en'
+          ? 'Something went wrong. Try again or write to hallo@pleasance.org.'
+          : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hallo@pleasance.org.';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = document.documentElement.lang === 'en' ? 'Send' : 'Absenden';
+      }
+    });
+  })();
+  </script>
 
 </body>
 </html>

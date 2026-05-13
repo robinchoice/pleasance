@@ -1,0 +1,11 @@
+{
+  "name": "pleasance-api",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.0",
+    "resend": "^4.0.0"
+  }
+}
