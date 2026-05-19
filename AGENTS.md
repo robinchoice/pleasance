@@ -41,24 +41,24 @@ Die bestehende Coaching-Strecke (`coaching.html`) wird **inhaltlich nicht angefa
 
 ## Aktueller Stand
 
-<!-- Zuletzt aktualisiert: 2026-05-13 via /save -->
+<!-- Zuletzt aktualisiert: 2026-05-20 via /save -->
 
-**Sprint / Phase:** Kontaktformular + Resend API — fast fertig
+**Sprint / Phase:** Coaching-MVP live — Resend-API-Anbindung ausstehend
 
 **Zuletzt implementiert:**
-- `kontakt.html`: Drei Doors → einheitliches Formular (Topic-Pills, `?thema=`-Pre-Selektion, fetch + Status)
-- `coaching.html`: alle cal.com + mailto-Links → `kontakt.html?thema=coaching`
-- `api/`: Bun/Hono Endpoint `POST /contact` mit Resend, deployed via Coolify (App-UUID: `v10lvwfo0he2o3vh0gnqvddp`)
-- `style.css`: contact-doors → Form-CSS inkl. Dark Mode
+- `index.html` ist jetzt die Coaching-Landingpage (warm, einladend, kein Dark-by-default)
+- Alle drei Seiten (index, über, kontakt) einheitliche warme Farbpalette + konsistente Nav (Coaching/Über/Kontakt)
+- Dark-/Light-Toggle + Sprachumschalter auf allen Seiten wiederhergestellt
+- `RESEND_API_KEY` in Coolify gesetzt (App-UUID pleasance-api: `v10lvwfo0he2o3vh0gnqvddp`)
+- Formulare aktuell noch auf Formsubmit.co (Übergangslösung bis DNS ready)
 
 **Als nächstes:**
-- **Blocker:** `RESEND_API_KEY` in Coolify leer → Robin setzt Key in Coolify UI (pleasance-api → Env Vars), dann neu deployen
-- DNS A-Record `api.pleasance.org` → VPS-IP anlegen
-- `img/robin.jpg` besorgen
+- DNS A-Record `api.pleasance.org` → Hetzner-VPS-IP bei Porkbun setzen
+- Formulare auf `api.pleasance.org/contact` umschalten + `topic`-Feld ergänzen
+- Formsubmit.co Aktivierungsmail in hallo@pleasance.org bestätigen
 
 **Offene Punkte:**
-- `img/robin.jpg` fehlt (coaching.html About-Section zeigt broken image)
-- cal.com komplett raus — durch Kontaktformular ersetzt
+- `img/robin.jpg` fehlt weiterhin
 
 ## Ring-Kontext
 
