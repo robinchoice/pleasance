@@ -8,10 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script>
-    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
-  </script>
+  <link rel="stylesheet" href="style.css?v=20260520">
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
 <body data-page="ueber">
@@ -24,15 +21,7 @@
       <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
       <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
     </ul>
-    <div class="nav__tools">
-      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
-      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
-          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
-        </svg>
-      </button>
-    </div>
+    <div class="nav__tools"></div>
     <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
       <span></span><span></span><span></span>
     </button>
@@ -47,102 +36,20 @@
   <!-- About Text -->
   <div class="about-text reveal">
     <p data-i18n="ueber.p1">
-      Ich heiße Robin Wahl. Ich arbeite remote — und komme vor Ort, wenn es passt
-      und der Rahmen stimmt.
+      Ich heiße Robin Wahl. Ich arbeite online — und bin systemischer Coach mit einem
+      Hintergrund in Logotherapie.
     </p>
     <p data-i18n="ueber.p2">
-      Ich bin systemischer Coach mit einem Hintergrund in Logotherapie. Mein wichtigstes
-      Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand
-      wirklich gehört wird.
-    </p>
-    <p data-i18n="ueber.p3">
-      Daneben baue ich Websites, betreue Tech-Setups und richte Knowledge Bases ein.
-      Nicht weil ich „auch noch was mit Computern" mache, sondern weil sich für mich
-      beides aus derselben Haltung speist: erst verstehen, dann handeln. Zuhören, dann bauen.
-    </p>
-    <p data-i18n="ueber.p4">
-      Und weil Musik der Raum ist, in dem ich angefangen habe, gehören Musikproduktion
-      und Booking ebenfalls zu Pleasance. Wenn ich helfe, eine Aufnahme entstehen zu lassen
-      oder einen Künstler auf eine Bühne zu bringen, ist das für mich nicht weit weg vom
-      Coaching — es ist nur ein anderes Medium für dieselbe Frage: was will da gerade
-      entstehen, und wie räume ich den Weg dafür frei.
+      Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort
+      beginnt, wo jemand wirklich gehört wird. In meiner Arbeit geht es nicht darum,
+      Ratschläge zu geben, sondern gemeinsam hinzuschauen.
     </p>
     <p data-i18n="ueber.p5">
-      Pleasance ist mein Versuch, all das nicht zu trennen, sondern zusammen zu zeigen.
-      Eine Person, drei Räume, eine Haltung.
+      Pleasance ist der Name, unter dem ich das tue. Eine Person, eine Haltung.
     </p>
   </div>
 
-  <!-- Werdegang -->
-  <section class="timeline reveal">
-    <div class="timeline__container">
-      <span class="section__label" data-i18n="ueber.timeline.label">Werdegang</span>
-      <h2 data-i18n="ueber.timeline.h2">Wie ich dahin gekommen bin.</h2>
-      <div class="timeline__entries">
 
-        <div class="timeline__entry">
-          <div class="timeline__year">2015 – 2019</div>
-          <div class="timeline__line"></div>
-          <div class="timeline__content">
-            <div class="timeline__company" data-i18n="ueber.t1.company">HTW Saarland & Universität des Saarlandes</div>
-            <div class="timeline__role" data-i18n="ueber.t1.role">BA Betriebswirtschaft · MSc Marketing Science · MSc Business Informatics</div>
-            <div class="timeline__desc" data-i18n="ueber.t1.desc">Bachelorarbeit in Kooperation mit Deezer. Frühe Berührung mit Musikstreaming, Marketing und Daten.</div>
-          </div>
-        </div>
-
-        <div class="timeline__entry">
-          <div class="timeline__year">2018 – 2019</div>
-          <div class="timeline__line"></div>
-          <div class="timeline__content">
-            <div class="timeline__company" data-i18n="ueber.t2.company">Deezer</div>
-            <div class="timeline__role" data-i18n="ueber.t2.role">Praktikant Social Media & PR Marketing — Berlin</div>
-            <div class="timeline__desc" data-i18n="ueber.t2.desc">Kampagnen, Künstlerinterviews, Konzertdokumentation. Musik nicht als Konsum, sondern als Handwerk.</div>
-          </div>
-        </div>
-
-        <div class="timeline__entry">
-          <div class="timeline__year">2019 – 2024</div>
-          <div class="timeline__line"></div>
-          <div class="timeline__content">
-            <div class="timeline__company" data-i18n="ueber.t3.company">SAP</div>
-            <div class="timeline__role" data-i18n="ueber.t3.role">Werkstudent → Business Processes Consultant — Sankt Ingbert</div>
-            <div class="timeline__desc" data-i18n="ueber.t3.desc">Scrum Master in SAFe-Projekten (Catena-X, BMW, VW, Mercedes), Co-Innovation mit dem Bundesfinanzministerium, interne Workshops zu Bitcoin und Open Source.</div>
-          </div>
-        </div>
-
-        <div class="timeline__entry">
-          <div class="timeline__year">2024</div>
-          <div class="timeline__line"></div>
-          <div class="timeline__content">
-            <div class="timeline__company" data-i18n="ueber.t4.company">Decentraliced AG</div>
-            <div class="timeline__role" data-i18n="ueber.t4.role">Assistent der Geschäftsleitung — Zug, Schweiz</div>
-            <div class="timeline__desc" data-i18n="ueber.t4.desc">Holding-Struktur mit 5 Gesellschaften. Prozessautomatisierung, Schnittstelle zu Banken und externen Partnern.</div>
-          </div>
-        </div>
-
-        <div class="timeline__entry">
-          <div class="timeline__year">2024 – heute</div>
-          <div class="timeline__line"></div>
-          <div class="timeline__content">
-            <div class="timeline__company" data-i18n="ueber.t5.company">Pleasance</div>
-            <div class="timeline__role" data-i18n="ueber.t5.role">Gründer — Coaching · Bureau · Records</div>
-            <div class="timeline__desc" data-i18n="ueber.t5.desc">Alles zusammen unter einem Dach. Coaching, Webdesign, Musik — aus einer Haltung.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CV CTA -->
-  <div class="cv-cta reveal">
-    <div class="cv-cta__inner">
-      <span class="cv-cta__label" data-i18n="ueber.cvcta.label">Lebenslauf</span>
-      <h3 class="cv-cta__title" data-i18n="ueber.cvcta.title">Den vollständigen Werdegang als PDF</h3>
-      <p class="cv-cta__sub" data-i18n="ueber.cvcta.sub">Alle Stationen, Ausbildungen und Zertifikate — zum Speichern oder Weiterleiten.</p>
-      <a href="lebenslauf.html" class="btn btn--outline" target="_blank" data-i18n="ueber.cvcta.btn">Lebenslauf öffnen →</a>
-    </div>
-  </div>
 
   <!-- Werte -->
   <section class="values-section reveal">
@@ -178,9 +85,9 @@
   <!-- CTA -->
   <section class="cta-section reveal">
     <div class="cta-section__container">
-      <h2 data-i18n="ueber.cta.h2">Wenn dich eines der drei Themen interessiert.</h2>
-      <p data-i18n="ueber.cta.text">Melde dich gern — ich schaue, wie ich helfen kann.</p>
-      <a href="kontakt.html" class="btn btn--primary" data-i18n="ueber.cta.btn">Kontakt aufnehmen</a>
+      <h2>Klingt das nach dem, was du gerade brauchst?</h2>
+      <p>Melde dich gern — ich melde mich innerhalb von zwei Werktagen.</p>
+      <a href="index.html#kontakt" class="btn btn--primary">Gespräch vereinbaren</a>
     </div>
   </section>
 
