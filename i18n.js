@@ -418,8 +418,8 @@ const I18N = {
     },
     netzwerk: {
       label:      { de: 'Ich kenne jemanden', en: 'I know someone' },
-      h2:         { de: 'Wenn ich nicht die Richtige bin,<br><em>kenne ich vielleicht sie</em>', en: 'If I\'m not the right fit,<br><em>maybe they are</em>' },
-      intro:      { de: 'Coaching ist Vertrauenssache — und manchmal passt es einfach nicht. Über die Jahre habe ich einen Kreis von Menschen kennengelernt, denen ich vertraue: Coaches, Therapeut:innen, Berater:innen mit ganz unterschiedlichen Schwerpunkten. Wenn dein Anliegen nicht zu mir passt, vermittle ich dich gern weiter — persönlich, ohne Liste, ohne Provision.', en: 'Coaching is a matter of trust — and sometimes it just doesn\'t fit. Over the years I\'ve met a circle of people I trust: coaches, therapists, consultants with very different specialties. If your concern doesn\'t fit me, I\'m happy to connect you — personally, without a list, without commission.' },
+      h2:         { de: 'Wenn ich nicht der Richtige bin,<br><em>kenne ich vielleicht jemanden</em>', en: 'If I\'m not the right fit,<br><em>I might know someone who is</em>' },
+      intro:      { de: 'Coaching ist Vertrauenssache — und manchmal passt es einfach nicht. Über die Jahre habe ich einen Kreis von Menschen kennengelernt, denen ich vertraue: Coaches, Therapeuten, Berater mit ganz unterschiedlichen Schwerpunkten. Wenn dein Anliegen nicht zu mir passt, vermittle ich dich gern weiter — persönlich, ohne Liste, ohne Provision.', en: 'Coaching is a matter of trust — and sometimes it just doesn\'t fit. Over the years I\'ve met a circle of people I trust: coaches, therapists, consultants with very different specialties. If your concern doesn\'t fit me, I\'m happy to connect you — personally, without a list, without commission.' },
       step1_title: { de: 'Kurz erzählen',   en: 'Tell me briefly'   },
       step1_text:  { de: 'Schreib mir in ein paar Sätzen, wo du gerade stehst und was du suchst.', en: 'Write me a few sentences about where you are and what you\'re looking for.' },
       step2_title: { de: 'Ich denke nach',  en: 'I\'ll think it over' },
