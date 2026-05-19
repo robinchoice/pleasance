@@ -1979,6 +1979,69 @@ body[data-page="coaching"] .newsletter__input:focus        { border-color: #A052
 body[data-page="coaching"] .footer              { border-top-color: rgba(160, 82, 45, 0.1); }
 body[data-page="coaching"] .footer__nav a:hover { color: #A0522D; }
 
+/* FAQ heading centered, list stays left */
+body[data-page="coaching"] #faq .section__container { text-align: center; }
+body[data-page="coaching"] #faq .faq__list          { text-align: left; }
+
+/* ================================================================
+   ÜBER PAGE — same warm palette as coaching
+   ================================================================ */
+
+body[data-page="ueber"] {
+  --color-primary:       #A0522D;
+  --color-primary-light: #C4724D;
+  --color-bg:            #FAF5F0;
+  --color-bg-alt:        #F2E8DE;
+  --color-text:          #2C1810;
+  --color-text-light:    #6B5044;
+  --color-accent:        #8B9A6B;
+}
+body[data-page="ueber"] .nav               { background: rgba(250, 245, 240, 0.96); border-bottom: 1px solid rgba(160, 82, 45, 0.1); }
+body[data-page="ueber"] .nav__logo         { color: #A0522D; }
+body[data-page="ueber"] .nav__links a      { color: #4A3020; }
+body[data-page="ueber"] .nav__links a:hover { color: #A0522D; }
+body[data-page="ueber"] .nav__lang         { border-color: rgba(160, 82, 45, 0.3); color: #6B5044; }
+body[data-page="ueber"] .nav__lang:hover   { border-color: #A0522D; color: #A0522D; }
+body[data-page="ueber"] .nav__theme        { color: #8B9A6B; }
+body[data-page="ueber"] .nav__theme:hover  { color: #A0522D; }
+body[data-page="ueber"] .btn--primary      { background: #A0522D; color: #FAF5F0; }
+body[data-page="ueber"] .btn--outline      { border-color: #A0522D; color: #A0522D; }
+body[data-page="ueber"] .footer            { border-top-color: rgba(160, 82, 45, 0.1); }
+@media (max-width: 768px) {
+  body[data-page="ueber"] .nav__links { background: #FAF5F0; }
+}
+
+/* ================================================================
+   KONTAKT PAGE — same warm palette as coaching
+   ================================================================ */
+
+body[data-page="kontakt"] {
+  --color-primary:       #A0522D;
+  --color-primary-light: #C4724D;
+  --color-bg:            #FAF5F0;
+  --color-bg-alt:        #F2E8DE;
+  --color-text:          #2C1810;
+  --color-text-light:    #6B5044;
+  --color-accent:        #8B9A6B;
+}
+body[data-page="kontakt"] .nav               { background: rgba(250, 245, 240, 0.96); border-bottom: 1px solid rgba(160, 82, 45, 0.1); }
+body[data-page="kontakt"] .nav__logo         { color: #A0522D; }
+body[data-page="kontakt"] .nav__links a      { color: #4A3020; }
+body[data-page="kontakt"] .nav__links a:hover { color: #A0522D; }
+body[data-page="kontakt"] .nav__lang         { border-color: rgba(160, 82, 45, 0.3); color: #6B5044; }
+body[data-page="kontakt"] .nav__lang:hover   { border-color: #A0522D; color: #A0522D; }
+body[data-page="kontakt"] .nav__theme        { color: #8B9A6B; }
+body[data-page="kontakt"] .nav__theme:hover  { color: #A0522D; }
+body[data-page="kontakt"] .btn--primary      { background: #A0522D; color: #FAF5F0; }
+body[data-page="kontakt"] .form-field input,
+body[data-page="kontakt"] .form-field textarea { background: #FAF5F0; border-color: rgba(160, 82, 45, 0.2); color: #2C1810; }
+body[data-page="kontakt"] .form-field input:focus,
+body[data-page="kontakt"] .form-field textarea:focus { border-color: #A0522D; }
+body[data-page="kontakt"] .footer            { border-top-color: rgba(160, 82, 45, 0.1); }
+@media (max-width: 768px) {
+  body[data-page="kontakt"] .nav__links { background: #FAF5F0; }
+}
+
 /* ================================================================
    BÜHNE PAGE — weiß, expressiv, neurographisch
    ================================================================ */
