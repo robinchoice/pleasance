@@ -41,23 +41,28 @@ Die bestehende Coaching-Strecke (`coaching.html`) wird **inhaltlich nicht angefa
 
 ## Aktueller Stand
 
-<!-- Zuletzt aktualisiert: 2026-05-20 via /save -->
+<!-- Zuletzt aktualisiert: 2026-06-01 via /save -->
 
-**Sprint / Phase:** Coaching-MVP live — Resend-API-Anbindung ausstehend
+**Sprint / Phase:** Branding live (Logo + Mail) — Resend-Anbindung + Deploy-Pipeline ausstehend
 
 **Zuletzt implementiert:**
-- `index.html` ist jetzt die Coaching-Landingpage (warm, einladend, kein Dark-by-default)
-- Alle drei Seiten (index, über, kontakt) einheitliche warme Farbpalette + konsistente Nav (Coaching/Über/Kontakt)
-- Dark-/Light-Toggle + Sprachumschalter auf allen Seiten wiederhergestellt
-- `RESEND_API_KEY` in Coolify gesetzt (App-UUID pleasance-api: `v10lvwfo0he2o3vh0gnqvddp`)
-- Formulare aktuell noch auf Formsubmit.co (Übergangslösung bis DNS ready)
+- Wortmarke „Pleasance" (Fraunces-Versalien, outlined SVG) auf allen Seiten via CSS-Mask + `currentColor` (`style.css`, `img/pleasance-logo-mask.svg`); Quellen + PNG-Exports in `logo/`
+- E-Mail site-weit `hallo@` → `hello@pleasance.org` (alle 5 Seiten + Doku)
+- Commit `b6923a8` + Push; `gh` als git-Credential-Helper eingerichtet
+- **Deploy-Bug behoben:** Coolify-Auto-Deploy hatte seit ~19.5. nicht ausgelöst (Site 2 Wochen alt) → manuell über coolify.diespaetzles.lol-API deployt, Live-Stand verifiziert
+- `RESEND_API_KEY` in Coolify gesetzt; Formulare noch auf Formsubmit.co (Übergang bis DNS ready)
+- Achtung CSS-Mask: nur über HTTP sichtbar, nicht `file://` (lokal Server nutzen)
 
-**Als nächstes:**
-- DNS A-Record `api.pleasance.org` → Hetzner-VPS-IP bei Porkbun setzen
-- Formulare auf `api.pleasance.org/contact` umschalten + `topic`-Feld ergänzen
-- Formsubmit.co Aktivierungsmail in hello@pleasance.org bestätigen (Alias muss existieren)
+**Morgen (2026-06-02) — Kontaktformular von Formsubmit.co auf Resend umstellen:**
+1. `hello@pleasance.org` als Alias/Postfach anlegen
+2. DNS A-Record `api.pleasance.org` → Hetzner-VPS-IP bei Porkbun setzen
+3. `pleasance-api`-App (UUID `v10lvwfo0he2o3vh0gnqvddp`) prüfen: `/contact`-Endpoint live? (nutzt `RESEND_API_KEY`)
+4. Die zwei `fetch`-Stellen (`index.html:448`, `kontakt.html:107`) von Formsubmit auf `api.pleasance.org/contact` umschalten + `topic`-Feld ergänzen
+5. Fallback, falls DNS morgen noch nicht ready: Formsubmit.co-Aktivierungsmail in hello@ bestätigen, dann bleibt Formsubmit übergangsweise aktiv
 
 **Offene Punkte:**
+- Coolify Auto-Deploy-Webhook für pleasance.org defekt — sonst muss jeder Push manuell deployt werden (im Kanban-Board)
+- DNS bei Porkbun: `api.` + `kanban.pleasance.org` lösen nicht auf
 - `img/robin.jpg` fehlt weiterhin
 
 ## Ring-Kontext
