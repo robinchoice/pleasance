@@ -55,7 +55,7 @@ Die bestehende Coaching-Strecke (`coaching.html`) wird **inhaltlich nicht angefa
 **Als nächstes:**
 - DNS A-Record `api.pleasance.org` → Hetzner-VPS-IP bei Porkbun setzen
 - Formulare auf `api.pleasance.org/contact` umschalten + `topic`-Feld ergänzen
-- Formsubmit.co Aktivierungsmail in hallo@pleasance.org bestätigen
+- Formsubmit.co Aktivierungsmail in hello@pleasance.org bestätigen (Alias muss existieren)
 
 **Offene Punkte:**
 - `img/robin.jpg` fehlt weiterhin

@@ -104,7 +104,7 @@
   <script src="main.js"></script>
   <script>
   (function () {
-    var API_URL = 'https://formsubmit.co/ajax/hallo@pleasance.org';
+    var API_URL = 'https://formsubmit.co/ajax/hello@pleasance.org';
 
     var form     = document.getElementById('contactForm');
     var submit   = document.getElementById('contactSubmit');
@@ -175,8 +175,8 @@
       } catch (_) {
         status.className = 'form-status is-error';
         status.textContent = lang === 'en'
-          ? 'Something went wrong. Try again or write to hallo@pleasance.org.'
-          : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hallo@pleasance.org.';
+          ? 'Something went wrong. Try again or write to hello@pleasance.org.'
+          : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.';
       } finally {
         submit.disabled = false;
         submit.textContent = document.documentElement.lang === 'en' ? 'Send' : 'Absenden';

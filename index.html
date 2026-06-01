@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260520b">
+  <link rel="stylesheet" href="style.css?v=20260520c">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();</script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
@@ -205,9 +205,16 @@
         </div>
       </div>
       <div class="angebot__pricing">
-        <span class="section__label" data-i18n="coaching.angebot.price_label">Einzelsession</span>
-        <p class="angebot__price-detail" data-i18n="coaching.angebot.price_detail">60 Minuten — online</p>
-        <a href="#kontakt" class="btn btn--outline" data-i18n="coaching.angebot.btn">Termin anfragen</a>
+        <div class="angebot__pricing-entry angebot__pricing-entry--primary">
+          <span class="section__label" data-i18n="coaching.angebot.discovery_label">Einstieg</span>
+          <p class="angebot__price-detail" data-i18n="coaching.angebot.discovery_detail">Discovery Call — 20 Min · kostenlos</p>
+          <a href="#kontakt" class="btn btn--primary" data-i18n="coaching.angebot.discovery_btn">Discovery Call vereinbaren</a>
+        </div>
+        <div class="angebot__pricing-entry">
+          <span class="section__label" data-i18n="coaching.angebot.price_label">Einzelsession</span>
+          <p class="angebot__price-detail" data-i18n="coaching.angebot.price_detail">60 Minuten — online oder vor Ort</p>
+          <a href="#kontakt" class="btn btn--outline" data-i18n="coaching.angebot.btn">Session anfragen</a>
+        </div>
       </div>
     </div>
   </section>
@@ -272,7 +279,7 @@
             <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
             <textarea id="contactMessage" name="message" rows="5" placeholder="Was bewegt dich gerade?" required></textarea>
           </div>
-          <button type="submit" class="btn btn--primary" id="contactSubmit" data-i18n="coaching.hero.cta">Gespräch vereinbaren</button>
+          <button type="submit" class="btn btn--primary" id="contactSubmit" data-i18n="coaching.hero.cta">Discovery Call vereinbaren</button>
           <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
         </form>
       </div>
@@ -438,7 +445,7 @@
       status.textContent = '';
 
       try {
-        var res = await fetch('https://formsubmit.co/ajax/hallo@pleasance.org', {
+        var res = await fetch('https://formsubmit.co/ajax/hello@pleasance.org', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
@@ -455,7 +462,7 @@
         form.reset();
       } catch (_) {
         status.className = 'form-status is-error';
-        status.textContent = 'Etwas hat nicht geklappt. Schreib direkt an hallo@pleasance.org.';
+        status.textContent = 'Etwas hat nicht geklappt. Schreib direkt an hello@pleasance.org.';
       } finally {
         submit.disabled = false;
         submit.textContent = 'Gespräch vereinbaren';

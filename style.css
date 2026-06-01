@@ -79,10 +79,17 @@ p {
 }
 
 .nav__logo {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
+  display: inline-block;
+  height: 1.4rem;
+  aspect-ratio: 827 / 160;
   color: var(--color-primary);
-  letter-spacing: 0.02em;
+  background-color: currentColor;
+  -webkit-mask: url("img/pleasance-logo-mask.svg") left center / contain no-repeat;
+          mask: url("img/pleasance-logo-mask.svg") left center / contain no-repeat;
+  vertical-align: middle;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .nav__links {
@@ -288,11 +295,28 @@ p {
 }
 
 .angebot__pricing {
-  text-align: center;
+  display: flex;
+  gap: 2rem;
   margin-top: 3rem;
+}
+
+.angebot__pricing-entry {
+  flex: 1;
+  text-align: center;
   padding: 2.5rem;
   background: var(--color-white);
   border-radius: 12px;
+}
+
+.angebot__pricing-entry--primary {
+  background: var(--color-bg, #FAF5F0);
+  border: 2px solid var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .angebot__pricing {
+    flex-direction: column;
+  }
 }
 
 .angebot__price {
@@ -778,9 +802,15 @@ p {
 }
 
 .footer__logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
   display: block;
+  height: 1.5rem;
+  aspect-ratio: 827 / 160;
+  background-color: currentColor;
+  -webkit-mask: url("img/pleasance-logo-mask.svg") left center / contain no-repeat;
+          mask: url("img/pleasance-logo-mask.svg") left center / contain no-repeat;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
   margin-bottom: 0.5rem;
 }
 

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pleasance — finales Logo</title>
+<style>
+  /* bewusst KEINE Web-Fonts: das Logo ist outlined und braucht keine */
+  :root { --offwhite:#FAF5F0; --espresso:#2b231d; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,sans-serif; color:var(--espresso);
+         background:var(--offwhite); padding:48px 24px 96px; line-height:1.55; }
+  .wrap { max-width:760px; margin:0 auto; }
+  h1 { font-size:24px; font-weight:600; margin:0 0 6px; }
+  .lede { color:#6b5d52; margin:0 0 40px; max-width:60ch; }
+  .block { border:1px solid #e7ddd2; border-radius:16px; overflow:hidden; margin-bottom:28px; background:#fff; }
+  .cap { padding:12px 20px; font-size:13px; color:#8a7c70; border-bottom:1px solid #efe7dd; }
+  .light { background:var(--offwhite); padding:60px 32px; display:flex; justify-content:center; }
+  .dark  { background:#221c17; padding:60px 32px; display:flex; justify-content:center; }
+  .light img, .dark img { width:100%; max-width:440px; height:auto; }
+  /* Skalierungs-Check */
+  .scale { padding:28px 32px; }
+  .scale .row { display:flex; align-items:center; gap:14px; padding:10px 0; border-bottom:1px solid #f1eae1; }
+  .scale .row:last-child { border-bottom:0; }
+  .scale .row span { font-size:12px; color:#8a7c70; width:74px; }
+  .scale img.s1 { height:46px; } .scale img.s2 { height:30px; } .scale img.s3 { height:20px; } .scale img.s4 { height:14px; }
+  footer { color:#8a7c70; font-size:13px; margin-top:8px; }
+  code { font-size:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Pleasance — finales Logo (1C, outlined)</h1>
+  <p class="lede">Fraunces-Versalien, weit gesperrt. Die Schrift ist in Pfade konvertiert —
+     diese Seite lädt <strong>keine</strong> Web-Fonts, und das Logo sieht überall identisch aus.</p>
+
+  <div class="block">
+    <div class="cap">Auf Off-White (Standard)</div>
+    <div class="light"><img src="pleasance-logo.svg" alt="Pleasance"></div>
+  </div>
+
+  <div class="block">
+    <div class="cap">Auf Dunkel (Dark-Mode / Footer)</div>
+    <div class="dark"><img src="pleasance-logo-light.svg" alt="Pleasance"></div>
+  </div>
+
+  <div class="block">
+    <div class="cap">Skalierung — von Briefkopf bis Nav-Leiste</div>
+    <div class="scale">
+      <div class="row"><span>~Header</span><img class="s1" src="pleasance-logo.svg" alt="Pleasance"></div>
+      <div class="row"><span>Nav</span><img class="s2" src="pleasance-logo.svg" alt="Pleasance"></div>
+      <div class="row"><span>klein</span><img class="s3" src="pleasance-logo.svg" alt="Pleasance"></div>
+      <div class="row"><span>winzig</span><img class="s4" src="pleasance-logo.svg" alt="Pleasance"></div>
+    </div>
+  </div>
+
+  <footer>
+    Dateien: <code>logo/pleasance-logo.svg</code> (Espresso, heller Grund) ·
+    <code>logo/pleasance-logo-light.svg</code> (Off-White, dunkler Grund).
+    Quelle/Regenerator: <code>outline.py</code> + <code>fraunces-var.ttf</code> (nicht im Repo).
+  </footer>
+</div>
+</body>
+</html>
