@@ -1,0 +1,1 @@
+- Deploy: Coolify deployt automatisch bei jedem Push auf `main`, ein Push geht also direkt live.
