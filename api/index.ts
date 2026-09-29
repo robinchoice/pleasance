@@ -8,9 +8,12 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const ALLOWED_ORIGINS = [
   'https://pleasance.org',
   'https://www.pleasance.org',
-  'http://localhost',
-  'http://127.0.0.1',
 ]
+const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/
+
+const MAX_REQUESTS = 5
+const requestsPerIp = new Map<string, number>()
+setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
 
 const TOPIC_LABELS: Record<string, string> = {
   coaching: 'Coaching',
@@ -21,12 +24,19 @@ const TOPIC_LABELS: Record<string, string> = {
 app.get('/', (c) => c.json({ ok: true }))
 
 app.use('/contact', cors({
-  origin: (origin) => ALLOWED_ORIGINS.includes(origin) ? origin : null,
+  origin: (origin) => ALLOWED_ORIGINS.includes(origin) || LOCAL_ORIGIN.test(origin) ? origin : null,
   allowMethods: ['POST', 'OPTIONS'],
   allowHeaders: ['Content-Type'],
 }))
 
 app.post('/contact', async (c) => {
+  const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+  const count = (requestsPerIp.get(ip) ?? 0) + 1
+  requestsPerIp.set(ip, count)
+  if (count > MAX_REQUESTS) {
+    return c.json({ error: 'Too many requests' }, 429)
+  }
+
   let body: { topic?: string; name?: string; email?: string; message?: string }
 
   try {
@@ -52,8 +62,8 @@ app.post('/contact', async (c) => {
   const topicLabel = TOPIC_LABELS[topic] ?? topic
 
   const { error } = await resend.emails.send({
-    from:    'Pleasance Kontakt <hallo@pleasance.org>',
-    to:      'hallo@pleasance.org',
+    from:    'Pleasance Kontakt <hello@pleasance.org>',
+    to:      'hello@pleasance.org',
     replyTo: email,
     subject: `[${topicLabel}] Anfrage von ${name}`,
     text:    `Thema: ${topicLabel}\nName: ${name}\nE-Mail: ${email}\n\n${message}`,

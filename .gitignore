@@ -1,3 +1,6 @@
 .vercel
 .notes/
 .DS_Store
+.env
+.enjoy/
+.enjoy-logs/

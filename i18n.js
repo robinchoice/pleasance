@@ -48,8 +48,8 @@ const I18N_META = {
       en: 'About — Pleasance',
     },
     desc: {
-      de: 'Robin Wahl — systemischer Coach, Webdesigner und Musikproduzent. Hinter Pleasance steht eine Person mit einer Haltung.',
-      en: 'Robin Wahl — systemic coach, web designer and music producer. Behind Pleasance is one person with a clear stance.',
+      de: 'Robin Wahl — systemischer Coach mit einem Hintergrund in Logotherapie. Hinter Pleasance steht eine Person mit einer Haltung.',
+      en: 'Robin Wahl — systemic coach with a background in logotherapy. Behind Pleasance is one person with a clear stance.',
     },
   },
   kontakt: {
@@ -58,8 +58,8 @@ const I18N_META = {
       en: 'Contact — Pleasance',
     },
     desc: {
-      de: 'Coaching, Webdesign oder Musik — such dir aus, worum es geht.',
-      en: 'Coaching, web design or music — choose what it\'s about.',
+      de: 'Schreib mir, worum es geht. Robin Wahl meldet sich innerhalb von zwei Werktagen.',
+      en: 'Tell me what it\'s about. Robin Wahl will get back to you within two business days.',
     },
   },
 };
@@ -259,13 +259,13 @@ const I18N = {
   ueber: {
     hero: {
       label: { de: 'Über mich', en: 'About me' },
-      h1:    { de: 'Ich glaube, dass die meisten Dinge zu schnell gemacht werden.', en: 'I believe most things are made too fast.' },
+      h1:    { de: 'Ich glaube, dass die meisten Dinge<br>zu schnell gemacht werden.', en: 'I believe most things are made too fast.' },
     },
-    p1: { de: 'Ich heiße Robin Wahl. Ich arbeite remote — und komme vor Ort, wenn es passt und der Rahmen stimmt.', en: 'My name is Robin Wahl. I work remotely — and come on-site when it makes sense and the conditions are right.' },
-    p2: { de: 'Ich bin systemischer Coach mit einem Hintergrund in Logotherapie. Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand wirklich gehört wird.', en: 'I\'m a systemic coach with a background in logotherapy. My most important tool is active listening — because real change begins where someone is truly heard.' },
+    p1: { de: 'Ich heiße Robin Wahl. Ich arbeite online — und bin systemischer Coach mit einem Hintergrund in Logotherapie.', en: 'My name is Robin Wahl. I work online — and I\'m a systemic coach with a background in logotherapy.' },
+    p2: { de: 'Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand wirklich gehört wird. In meiner Arbeit geht es nicht darum, Ratschläge zu geben, sondern gemeinsam hinzuschauen.', en: 'My most important tool is active listening — because real change begins where someone is truly heard. My work isn\'t about giving advice, but about looking together.' },
     p3: { de: 'Daneben baue ich Websites, betreue Tech-Setups und richte Knowledge Bases ein. Nicht weil ich „auch noch was mit Computern" mache, sondern weil sich für mich beides aus derselben Haltung speist: erst verstehen, dann handeln. Zuhören, dann bauen.', en: 'I also build websites, manage tech setups, and set up knowledge bases. Not because I \'also do something with computers,\' but because for me both stem from the same stance: understand first, then act. Listen, then build.' },
     p4: { de: 'Und weil Musik der Raum ist, in dem ich angefangen habe, gehört Musikproduktion ebenfalls zu Pleasance. Wenn ich helfe, eine Aufnahme entstehen zu lassen, ist das für mich nicht weit weg vom Coaching — es ist nur ein anderes Medium für dieselbe Frage: was will da gerade entstehen, und wie räume ich den Weg dafür frei.', en: 'And because music is the space where I started, music production is also part of Pleasance. When I help a recording come to life, for me that\'s not far from coaching — it\'s just a different medium for the same question: what wants to emerge here, and how do I clear the path for it.' },
-    p5: { de: 'Pleasance ist mein Versuch, all das nicht zu trennen, sondern zusammen zu zeigen. Eine Person, drei Räume, eine Haltung.', en: 'Pleasance is my attempt not to keep these things separate, but to show them together. One person, three rooms, one stance.' },
+    p5: { de: 'Pleasance ist der Name, unter dem ich das tue. Eine Person, eine Haltung.', en: 'Pleasance is the name I work under. One person, one stance.' },
     timeline: {
       label: { de: 'Werdegang',          en: 'Career'       },
       h2:    { de: 'Wie ich dahin gekommen bin.', en: 'How I got here.' },
@@ -318,9 +318,9 @@ const I18N = {
       text:  { de: 'Deine Inhalte, dein Server, deine Domain, dein Wissen. Ich helfe dir, davon möglichst viel selbst zu besitzen.', en: 'Your content, your server, your domain, your knowledge. I help you own as much of that as possible.' },
     },
     cta: {
-      h2:  { de: 'Wenn dich eines der drei Themen interessiert.', en: 'If one of the three topics interests you.' },
-      text: { de: 'Melde dich gern — ich schaue, wie ich helfen kann.', en: 'Feel free to get in touch — I\'ll see how I can help.' },
-      btn:  { de: 'Kontakt aufnehmen', en: 'Get in touch' },
+      h2:  { de: 'Klingt das nach dem, was du gerade brauchst?', en: 'Does this sound like what you need right now?' },
+      text: { de: 'Melde dich gern — ich melde mich innerhalb von zwei Werktagen.', en: 'Feel free to get in touch — I\'ll get back to you within two business days.' },
+      btn:  { de: 'Gespräch vereinbaren', en: 'Book a conversation' },
     },
   },
 
@@ -416,7 +416,7 @@ const I18N = {
       discovery_detail: { de: 'Discovery Call — 20 Min · kostenlos', en: 'Discovery call — 20 min · free' },
       discovery_btn:    { de: 'Discovery Call vereinbaren',           en: 'Book a discovery call'    },
       price_label:      { de: 'Einzelsession',                        en: 'Single session'           },
-      price_detail:     { de: '60 Minuten — online oder vor Ort',     en: '60 minutes — online or in person' },
+      price_detail:     { de: '60 Minuten — online',                  en: '60 minutes — online' },
       btn:              { de: 'Session anfragen',                      en: 'Request session'          },
     },
     netzwerk: {
@@ -437,6 +437,7 @@ const I18N = {
       h2:    { de: 'Lass uns sprechen',  en: 'Let\'s talk'  },
       text:  { de: 'Du brauchst nichts vorzubereiten. Schreib mir einfach — ich melde mich innerhalb von zwei Werktagen.', en: 'You don\'t need to prepare anything. Just write to me — I\'ll get back to you within two business days.' },
       btn:   { de: 'Kontakt aufnehmen', en: 'Get in touch'  },
+      placeholder: { de: 'Was bewegt dich gerade?', en: 'What\'s on your mind?' },
     },
     faq: {
       label: { de: 'Häufige Fragen',          en: 'FAQ'                         },
@@ -448,9 +449,9 @@ const I18N = {
       q3:    { de: 'Für wen ist das Coaching geeignet?', en: 'Who is coaching suitable for?' },
       a3:    { de: 'Für Menschen, die an einem Wendepunkt stehen — beruflich, persönlich oder beides. Wenn du das Gefühl hast, dass sich etwas verändern will, aber der Weg noch unklar ist, bist du hier richtig. Vorkenntnisse brauchst du keine.', en: 'For people who are at a turning point — professionally, personally, or both. If you feel something wants to change but the path is still unclear, you\'re in the right place. No prior knowledge needed.' },
       q4:    { de: 'Wie läuft eine Session ab?',         en: 'How does a session work?'      },
-      a4:    { de: 'Wir treffen uns für 60 Minuten — online oder vor Ort. Du bestimmst das Thema. Ich höre zu, stelle Fragen und begleite dich dabei, Klarheit zu finden. Es gibt keine Hausaufgaben und keinen Druck.', en: 'We meet for 60 minutes — online or in person. You choose the topic. I listen, ask questions, and guide you toward clarity. No homework, no pressure.' },
-      q5:    { de: 'Finden die Sessions online oder vor Ort statt?', en: 'Are sessions online or in person?' },
-      a5:    { de: 'Beides ist möglich. Online-Sessions laufen über einen Videocall. Für Vor-Ort-Sessions stimmen wir den Ort gemeinsam ab.', en: 'Both are possible. Online sessions run via video call. For in-person sessions, we agree on the location together.' },
+      a4:    { de: 'Wir treffen uns für 60 Minuten online. Du bestimmst das Thema. Ich höre zu, stelle Fragen und begleite dich dabei, Klarheit zu finden. Es gibt keine Hausaufgaben und keinen Druck.', en: 'We meet online for 60 minutes. You choose the topic. I listen, ask questions, and guide you toward clarity. No homework, no pressure.' },
+      q5:    { de: 'Wie finden die Sessions statt?', en: 'How do sessions take place?' },
+      a5:    { de: 'Sessions finden online statt — über einen Videocall. Du brauchst nichts Besonderes, nur eine stabile Verbindung und einen ruhigen Moment.', en: 'Sessions take place online — via video call. You don\'t need anything special, just a stable connection and a quiet moment.' },
       q6:    { de: 'Muss ich mich auf ein Erstgespräch vorbereiten?',  en: 'Do I need to prepare for the initial consultation?' },
       a6:    { de: 'Nein. Komm einfach so wie du bist. Wir finden gemeinsam heraus, ob und wie ich dich begleiten kann. Das Erstgespräch ist unverbindlich.', en: 'No. Come as you are. Together we\'ll find out if and how I can support you. The initial consultation is non-binding.' },
     },
