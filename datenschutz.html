@@ -4,120 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutz — Pleasance</title>
-  <link rel="stylesheet" href="style.css?v=20260929">
-  <script>
-    (function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();
-  </script>
+  <link rel="stylesheet" href="style.css?v=20260929b">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body>
 
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">Pleasance</a>
-    <div class="nav__tools">
-      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
-          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
-        </svg>
-      </button>
-    </div>
-  </nav>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
-  <section class="section legal">
-    <div class="section__container">
-      <span class="section__label">Rechtliches</span>
-      <h1>Datenschutzerklärung</h1>
-
-      <h3>1. Verantwortlicher</h3>
-      <p>
-        Robin Wahl<br>
-        Blasenbergstraße 12<br>
-        66359 Bous<br>
-        E-Mail: <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>
-      </p>
-
-      <h3>2. Allgemeines zur Datenverarbeitung</h3>
-      <p>
-        Diese Website erhebt und verarbeitet personenbezogene Daten nur im
-        technisch notwendigen Umfang. Eine Weitergabe an Dritte erfolgt nur,
-        wenn dies zur Vertragserfüllung erforderlich ist oder eine gesetzliche
-        Verpflichtung besteht.
-      </p>
-
-      <h3>3. Hosting</h3>
-      <p>
-        Diese Website wird auf einem eigenen Server bei der Hetzner Online GmbH
-        (Industriestr. 25, 91710 Gunzenhausen) gehostet, Serverstandort ist Deutschland.
-        Beim Aufruf der Website werden automatisch Informationen
-        (z.B. IP-Adresse, Zeitpunkt des Zugriffs, Browser-Typ) an den Server
-        übermittelt und in sogenannten Server-Logfiles gespeichert.
-        Auch die Schriftarten werden von diesem Server geladen, es besteht keine
-        Verbindung zu Google.
-        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
-        an einem zuverlässigen Betrieb der Website).
-      </p>
-
-      <h3>4. Kontaktformular und E-Mail</h3>
-      <p>
-        Wenn du mir über das Kontaktformular schreibst, werden deine Angaben
-        (Name, E-Mail-Adresse, Nachricht) über den Dienst FormSubmit
-        (formsubmit.co, Devro LABS) an mein E-Mail-Postfach weitergeleitet.
-        Dabei wird technisch bedingt auch deine IP-Adresse an FormSubmit übermittelt.
-        FormSubmit verarbeitet die Daten nach eigener Angabe nur, um den Dienst zu
-        betreiben, und gibt sie nicht an Dritte weiter, außer wenn das gesetzlich
-        vorgeschrieben ist. Firmensitz und Serverstandort nennt der Anbieter nicht,
-        eine Verarbeitung außerhalb der EU ist daher möglich. Wenn du das nicht
-        möchtest, schreib mir direkt an
-        <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>.
-      </p>
-      <p>
-        Deine Angaben aus Formular oder E-Mail speichere ich zur Bearbeitung der
-        Anfrage und für mögliche Anschlussfragen.
-        Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen)
-        bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
-      </p>
-
-      <h3>5. Reichweitenmessung (Plausible Analytics)</h3>
-      <p>
-        Zur Reichweitenmessung nutze ich Plausible Analytics, selbst gehostet auf
-        meinem eigenen Server in Deutschland. Plausible setzt keine Cookies und
-        speichert keine IP-Adressen. Aus IP-Adresse und Browser-Kennung wird ein
-        täglich wechselnder, anonymer Wert gebildet, sodass Besuche nicht über
-        mehrere Tage hinweg verknüpft werden können. Erfasst werden nur
-        zusammengefasste Daten wie aufgerufene Seiten, Verweisquelle, Land, Browser
-        und Gerätetyp. Eine Weitergabe an Dritte findet nicht statt.
-        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
-        einer datensparsamen Reichweitenmessung).
-      </p>
-
-      <h3>6. Newsletter (Buttondown)</h3>
-      <p>
-        Für den Newsletter-Versand wird der Dienst Buttondown (Buttondown, LLC, USA)
-        verwendet. Wenn du dich anmeldest, wird deine E-Mail-Adresse an Buttondown
-        übermittelt und dort gespeichert. Rechtsgrundlage ist deine Einwilligung
-        nach Art. 6 Abs. 1 lit. a DSGVO. Du kannst dich jederzeit über den
-        Abmeldelink in jedem Newsletter abmelden.
-      </p>
-
-      <h3>7. Deine Rechte</h3>
-      <p>
-        Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
-        der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wende dich dazu
-        an die oben genannte Kontaktadresse. Außerdem hast du das Recht, dich bei
-        einer Datenschutz-Aufsichtsbehörde zu beschweren.
-      </p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2026 Pleasance. Alle Rechte vorbehalten.</p>
-    <nav class="footer__links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#werkzeuge" data-i18n="nav.software">Software</a></li>
+        <li><a href="index.html#wissen" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
     </nav>
-  </footer>
+  </div>
 
-  <script src="main.js"></script>
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title">Datenschutz&shy;erklärung</h1>
+      </header>
+
+      <div class="legal">
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Robin Wahl<br>
+          Blasenbergstraße 12<br>
+          66359 Bous<br>
+          E-Mail: <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>
+        </p>
+
+        <h2>2. Allgemeines zur Datenverarbeitung</h2>
+        <p>
+          Diese Website erhebt und verarbeitet personenbezogene Daten nur im
+          technisch notwendigen Umfang. Eine Weitergabe an Dritte erfolgt nur,
+          wenn dies zur Vertragserfüllung erforderlich ist oder eine gesetzliche
+          Verpflichtung besteht.
+        </p>
+
+        <h2>3. Hosting</h2>
+        <p>
+          Diese Website wird auf einem eigenen Server bei der Hetzner Online GmbH
+          (Industriestr. 25, 91710 Gunzenhausen) gehostet, Serverstandort ist Deutschland.
+          Beim Aufruf der Website werden automatisch Informationen
+          (z.B. IP-Adresse, Zeitpunkt des Zugriffs, Browser-Typ) an den Server
+          übermittelt und in sogenannten Server-Logfiles gespeichert.
+          Auch die Schriftarten werden von diesem Server geladen, es besteht keine
+          Verbindung zu Google.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+          an einem zuverlässigen Betrieb der Website).
+        </p>
+
+        <h2>4. Kontaktformular und E-Mail</h2>
+        <p>
+          Wenn du mir über das Kontaktformular schreibst, werden deine Angaben
+          (Name, E-Mail-Adresse, Nachricht) über den Dienst FormSubmit
+          (formsubmit.co, Devro LABS) an mein E-Mail-Postfach weitergeleitet.
+          Dabei wird technisch bedingt auch deine IP-Adresse an FormSubmit übermittelt.
+          FormSubmit verarbeitet die Daten nach eigener Angabe nur, um den Dienst zu
+          betreiben, und gibt sie nicht an Dritte weiter, außer wenn das gesetzlich
+          vorgeschrieben ist. Firmensitz und Serverstandort nennt der Anbieter nicht,
+          eine Verarbeitung außerhalb der EU ist daher möglich. Wenn du das nicht
+          möchtest, schreib mir direkt an
+          <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>.
+        </p>
+        <p>
+          Deine Angaben aus Formular oder E-Mail speichere ich zur Bearbeitung der
+          Anfrage und für mögliche Anschlussfragen.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen)
+          bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+        </p>
+
+        <h2>5. Reichweitenmessung (Plausible Analytics)</h2>
+        <p>
+          Zur Reichweitenmessung nutze ich Plausible Analytics, selbst gehostet auf
+          meinem eigenen Server in Deutschland. Plausible setzt keine Cookies und
+          speichert keine IP-Adressen. Aus IP-Adresse und Browser-Kennung wird ein
+          täglich wechselnder, anonymer Wert gebildet, sodass Besuche nicht über
+          mehrere Tage hinweg verknüpft werden können. Erfasst werden nur
+          zusammengefasste Daten wie aufgerufene Seiten, Verweisquelle, Land, Browser
+          und Gerätetyp. Eine Weitergabe an Dritte findet nicht statt.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
+          einer datensparsamen Reichweitenmessung).
+        </p>
+
+        <h2>6. Newsletter (Buttondown)</h2>
+        <p>
+          Für den Newsletter-Versand wird der Dienst Buttondown (Buttondown, LLC, USA)
+          verwendet. Wenn du dich anmeldest, wird deine E-Mail-Adresse an Buttondown
+          übermittelt und dort gespeichert. Rechtsgrundlage ist deine Einwilligung
+          nach Art. 6 Abs. 1 lit. a DSGVO. Du kannst dich jederzeit über den
+          Abmeldelink in jedem Newsletter abmelden.
+        </p>
+
+        <h2>7. Deine Rechte</h2>
+        <p>
+          Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
+          der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wende dich dazu
+          an die oben genannte Kontaktadresse. Außerdem hast du das Recht, dich bei
+          einer Datenschutz-Aufsichtsbehörde zu beschweren.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" aria-current="page" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="i18n.js?v=20260929b"></script>
+  <script src="main.js?v=20260929b"></script>
 
 </body>
 </html>

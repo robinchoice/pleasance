@@ -16,9 +16,9 @@ const requestsPerIp = new Map<string, number>()
 setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
 
 const TOPIC_LABELS: Record<string, string> = {
+  software: 'Software',
+  lehre:    'Lehre',
   coaching: 'Coaching',
-  bureau:   'Bureau',
-  records:  'Records',
 }
 
 app.get('/', (c) => c.json({ ok: true }))

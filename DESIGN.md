@@ -1,130 +1,104 @@
 ---
 name: Pleasance
 colors:
-  primary: "#A0522D"
-  primary-light: "#C4845C"
-  bg: "#FAF5F0"
-  bg-alt: "#F0E8DF"
-  text: "#3B2F2F"
-  text-light: "#6B5B5B"
-  accent: "#8B9A6B"
-  white: "#FFFDF9"
-colors-dark:
-  primary: "#C4845C"
-  primary-light: "#D4A07A"
-  bg: "#1E1A17"
-  bg-alt: "#2A2420"
-  text: "#E8E0D8"
-  text-light: "#A89888"
-  accent: "#A0B080"
-  white: "#252019"
+  paper: "#F4F4EE"
+  white: "#FFFFFF"
+  ink: "#0E2218"
+  muted: "#4E5F55"
+  fir: "#1D4A34"
+  deep: "#0F2C1F"
+  sprout: "#C8E39F"
+  error: "#9B2C2C"
 typography:
-  h1:
-    fontFamily: Playfair Display
-    fontSize: clamp(2.5rem, 5vw, 4rem)
-    fontWeight: 400
-    lineHeight: 1.2
+  family: Bricolage Grotesque (variable, opsz 12–96, wdth 75–100, wght 200–800)
+  statement:
+    fontSize: clamp(3.4rem, 8.8vw, 8.75rem)
+    fontWeight: 800
+    fontStretch: 75%
+    lineHeight: 0.92
+    letterSpacing: -0.025em
+  page-title:
+    fontSize: clamp(3rem, 7vw, 6.5rem)
+    fontWeight: 800
+    fontStretch: 75%
+  word:
+    fontSize: clamp(3rem, 6vw, 5.5rem)
+    fontWeight: 750
+    fontStretch: 80%
+  heading:
+    fontSize: clamp(2rem, 3.6vw, 3.25rem)
+    fontWeight: 750
+    fontStretch: 80%
   h2:
-    fontFamily: Playfair Display
-    fontSize: clamp(1.8rem, 3.5vw, 2.8rem)
-    fontWeight: 400
-    lineHeight: 1.2
-  h3:
-    fontFamily: Playfair Display
-    fontSize: 1.3rem
-    fontWeight: 400
+    fontSize: 1.5rem
+    fontWeight: 650
   body:
-    fontFamily: Inter
-    fontSize: 1rem
-    lineHeight: 1.7
-  label:
-    fontFamily: Inter
-    fontSize: 0.85rem
-    letterSpacing: 0.15em
-    textTransform: uppercase
-  nav:
-    fontFamily: Inter
-    fontSize: 0.9rem
-    letterSpacing: 0.03em
-    textTransform: uppercase
-spacing:
-  section-v: 6rem
-  section-h: 2rem
-  max-width: 1100px
-  gap-grid: 4rem
-  gap-cards: 2rem
+    fontSize: 1.125rem
+    lineHeight: 1.55
+  lead:
+    fontSize: 1.3125rem
+    lineHeight: 1.45
+layout:
+  max-width: 80rem
+  gutter: 2rem (mobile 1.25rem)
+  grid: 5fr / 7fr
+rules:
+  thin: 1.5px ink
+  thick: 4px ink
+  hairline: rgba(14, 34, 24, 0.18)
 rounded:
-  card: 12px
-  card-lg: 16px
-  btn: 50px
-  avatar: 50%
-transitions:
-  default: 0.3s ease
-  fade: 0.8s ease
-shadows:
-  card: "0 4px 24px rgba(59, 47, 47, 0.06)"
-  card-hover: "0 8px 30px rgba(59, 47, 47, 0.08)"
-  btn-primary: "0 4px 20px rgba(160, 82, 45, 0.25)"
-  nav: "0 1px 10px rgba(59, 47, 47, 0.08)"
+  default: 3px
 ---
 
 ## Überblick
 
-Pleasance ist ein Atelier — ein persönliches Dach für drei Ausdrucksformen: Coaching, Webdesign/Tech (Studio) und Musikproduktion/Booking (Bühne). Das Gefühl ist **Concierge, nicht Plattform**: warm, handgemacht, direkt. Keine Skalierungsversprechen, keine Dashboards — sondern eine Tür, hinter der eine echte Person steht.
+Pleasance ist das Dach für Robin Wahls freie Arbeit: Software-Entwicklung, Lehre und 1:1-Coaching. Roter Faden: **„Werkzeuge, Wissen und Wege, die dir gehören.“** Software = Werkzeuge, Lehre = Wissen, Coaching = Wege. Der Satz ist gleichzeitig die Startseiten-Überschrift und das Inhaltsverzeichnis.
 
-Die Site richtet sich an Menschen, die eine persönliche Empfehlung suchen, keine Buchungsmaschine.
+Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften und Hosting auf eigenem Server. Der „Beipackzettel“ auf der Startseite zählt das auf. Er muss immer stimmen.
 
 ## Farben
 
-Die Palette ist organisch — Erde, Moos, warmes Licht. Kein Primärblau, kein Startup-Türkis.
+Tannengrün auf hellem, leicht grünstichigem Papier. Kein Creme, kein Terrakotta.
 
-- **Primary (#A0522D) — Rost:** Hauptakzent für Headlines, Links, CTAs. Warm, nicht aggressiv. Im Dark Mode aufgehellt auf #C4845C, damit der Kontrast stimmt.
-- **Accent (#8B9A6B) — Moos:** Zweiter Akzent für Labels, Eyebrows, dekorative Elemente. Gibt Tiefe ohne zu konkurrieren.
-- **Background (#FAF5F0) — Off-White:** Kein reines Weiß — das Papier hat Wärme. Alt-Variante (#F0E8DF) für abgehobene Sections.
-- **Text (#3B2F2F) — Dunkelbraun:** Kein Schwarz. Soft, aber lesbar. Light-Variante (#6B5B5B) für Fließtext und Metainfo.
-- **White (#FFFDF9):** Für Karten-Hintergründe — minimal wärmer als rein weiß.
-
-Dark Mode verwendet dieselben Rollen, nur wärmer abgedunkelt. Kein kühles Dark-Theme — das Atelier-Feeling bleibt.
+- **Paper (#F4F4EE):** Seitengrund.
+- **Ink (#0E2218):** Text, Linien, Buttons. Sehr dunkles Grün statt Schwarz.
+- **Muted (#4E5F55):** Nebentexte.
+- **Fir (#1D4A34):** Links, Unterstreichungen, Hover.
+- **Deep (#0F2C1F) + Sprout (#C8E39F):** nur für dunkle Blöcke (Beipackzettel). Sprout ist Text- und Linkfarbe auf Deep, nie auf hellem Grund.
 
 ## Typografie
 
-Zwei Fonts, klare Aufgabenteilung.
+Eine Familie: Bricolage Grotesque, selbst gehostet (OFL). Charakter entsteht über die Achsen:
 
-**Playfair Display (Serif):** Für alle Überschriften (h1–h3), das Logo, Pull Quotes. Weight 400 — keine fetten Überschriften. Der editoriale, handwerkliche Charakter ist gewollt. Kein Bold, kein Italic als Default.
+- Große Aussagen schmal (wdth 75–80 %) und fett (750–800), eng gesetzt.
+- Fließtext normal breit, 400, optische Größe klein (opsz 14).
+- Keine Versalien-Labels über Überschriften, keine einzelnen hervorgehobenen Wörter in Überschriften. Ausnahme: Die drei W-Wörter der Startseiten-Aussage sind Links und deshalb unterstrichen.
 
-**Inter (Sans-serif):** Für Body, Nav, Labels, Buttons. Klar, neutral, skaliert gut. Labels und Nav-Links immer uppercase mit großzügigem Letter-Spacing — gibt Struktur ohne Strenge.
+Die Wortmarke (PLEASANCE, Fraunces-Versalien als Pfad) bleibt unverändert und wird per CSS-Mask in Ink eingefärbt.
 
-Die Kombination: Serif für Charakter, Sans für Lesbarkeit. Niemals zwei Serifenschriften mischen.
+## Layout
 
-## Spacing & Layout
+Linksbündig, Raster 5fr/7fr: links das große Wort oder die Überschrift, rechts der Inhalt. Struktur kommt aus Linien, nicht aus Karten:
 
-Max-Width 1100px — kein breites Dashboard-Layout. Abschnitte atmen: 6rem vertikal, 2rem horizontal. Grid-Gaps 4rem zwischen Inhaltsspalten.
+- 4px-Linie trennt Kopf und Inhalt.
+- 1,5px-Linien trennen Zeilen und Abschnitte.
+- Haarlinien trennen Listeneinträge.
 
-Kein enges Packen — Whitespace ist Teil des Designs.
+Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. die drei Schritte im Coaching-Netzwerk).
 
-## Buttons
+## Komponenten
 
-Zwei Varianten:
-- **Primary:** Rostfarben, pill-shape (border-radius: 50px), uppercase. Hover: aufgehellt + leichtes translateY(-2px).
-- **Outline:** Transparent mit Rostrand. Hover: füllt sich mit Primary.
+- **Button:** Ink-Fläche, Paper-Text, 3px Radius. Sekundär: `btn--ghost` mit 1,5px-Kontur.
+- **Links:** Fir, 2px unterstrichen.
+- **Formulare:** weiße Felder mit 1,5px Ink-Rand; Themenwahl als Radio-Buttons im Button-Look.
+- **FAQ:** `details` mit Linien und +/−.
 
-Buttons wirken wie Siegel, nicht wie UI-Elemente.
+## Bewegung
 
-## Karten & Elevation
-
-Karten haben `border-radius: 12px`, keinen scharfen Schatten — nur ein weiches Aufhellen beim Hover. Im Dark Mode: keine Schatten, stattdessen subtile Border `rgba(255,255,255,0.06)`.
-
-Elevation kommuniziert Interaktivität, nicht Hierarchie.
-
-## Animationen
-
-Sparsam. Scroll-triggered fade-ins (opacity + translateY) für Content-Sections. Transition `0.3s ease` als Default für alle interaktiven Elemente. Die Neurographic-SVG-Animation auf buehne.html ist die einzige komplexe Animation — bewusst einmalig.
-
-Keine Parallax, keine Loader, kein Auto-Play.
+Keine Einblend-Animationen. Nur Reaktionen auf Nutzeraktionen (Hover, Menü, FAQ öffnen). `prefers-reduced-motion` schaltet weiches Scrollen ab.
 
 ## Was dieses Design nicht ist
 
-- Kein Tech-Startup (kein Blau, kein Gradient-Mesh)
-- Kein Corporate (keine serifenlose Headline-Schrift, kein Grid aus 12 gleichen Karten)
-- Kein Hipster-Minimal (kein reines Weiß, keine 9px Schrift, keine erzwungene Reduktion)
-- Keine Plattform (kein Onboarding-Flow, keine Feature-Liste, keine Pricing-Table als Primärelement)
+- Kein Creme-mit-Serifen-und-Terrakotta-Look
+- Keine Karten-Raster mit Schatten und Icons
+- Keine Tracker, keine eingebetteten Dienste von Dritten beim Seitenaufruf

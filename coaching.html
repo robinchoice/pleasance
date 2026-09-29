@@ -2,10 +2,373 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=index.html">
-  <title>Pleasance — Systemisches Coaching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systemisches Coaching — Pleasance</title>
+  <meta name="description" content="Systemisches Coaching für Menschen in Veränderung. Aktives Zuhören, Logotherapie und Raum für neue Wege.">
+  <link rel="stylesheet" href="style.css?v=20260929b">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+  <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
-<body>
-  <a href="index.html">→ pleasance.org</a>
+<body data-page="coaching">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#werkzeuge" data-i18n="nav.software">Software</a></li>
+        <li><a href="index.html#wissen" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="coaching.html" aria-current="page" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title" data-i18n="coaching.hero.h1">Raum für Veränderung.</h1>
+        <p class="lead" data-i18n="coaching.hero.subtitle">Du spürst, dass sich etwas verändern will — aber der Weg ist noch unklar. Ich höre zu und begleite dich dabei, Klarheit zu finden.</p>
+        <a class="btn" href="#kontakt" data-i18n="coaching.hero.cta">Discovery Call vereinbaren</a>
+      </header>
+
+      <section class="section" aria-labelledby="h-about">
+        <h2 class="heading" id="h-about" data-i18n="coaching.about.h2">Zuhören ist der Anfang</h2>
+        <div class="prose">
+          <p data-i18n="coaching.about.p1">Ich bin systemischer Coach mit einem Hintergrund in Logotherapie. Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort beginnt, wo jemand wirklich gehört wird.</p>
+          <p data-i18n="coaching.about.p2">In meiner Arbeit geht es nicht darum, dir Ratschläge zu geben. Es geht darum, gemeinsam hinzuschauen: Was bewegt dich? Was hält dich? Und was will sich verändern?</p>
+          <p data-i18n="coaching.about.p3">Ich arbeite mit Menschen, die an einem Wendepunkt stehen — beruflich, persönlich oder beides. Wenn du das Gefühl hast, dass es Zeit ist für einen neuen Weg, bist du hier richtig.</p>
+        </div>
+      </section>
+
+      <section class="section" id="quiz" aria-labelledby="h-quiz">
+        <h2 class="heading" id="h-quiz" data-i18n="coaching.quiz.h2">Wo stehst du gerade?</h2>
+        <div class="quiz" id="quizBox">
+          <div class="quiz__progress" id="quizProgress"></div>
+
+          <div class="quiz__step active" data-step="0">
+            <p class="quiz__question" data-i18n="coaching.quiz.q0">Wie zufrieden bist du gerade mit deiner beruflichen Situation?</p>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q0a1">Sehr zufrieden — es passt gut so</button>
+              <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q0a2">Ganz okay, aber da ist ein leises Grummeln</button>
+              <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q0a3">Eher unzufrieden — ich merke, dass etwas nicht stimmt</button>
+              <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q0a4">Ich halte es kaum noch aus</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="1">
+            <p class="quiz__question" data-i18n="coaching.quiz.q1">Wie oft denkst du darüber nach, etwas Grundlegendes zu verändern?</p>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q1a1">Selten bis nie</button>
+              <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q1a2">Ab und zu, aber ich schiebe es weg</button>
+              <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q1a3">Regelmäßig — der Gedanke lässt mich nicht los</button>
+              <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q1a4">Ständig, es ist das Erste woran ich morgens denke</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="2">
+            <p class="quiz__question" data-i18n="coaching.quiz.q2">Hast du das Gefühl, dass dein Leben gerade einen tieferen Sinn hat?</p>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q2a1">Ja, ich weiß wofür ich aufstehe</button>
+              <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q2a2">Meistens schon, aber manchmal zweifle ich</button>
+              <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q2a3">Ich bin mir nicht sicher — die Frage beschäftigt mich</button>
+              <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q2a4">Nein, mir fehlt gerade die Richtung</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="3">
+            <p class="quiz__question" data-i18n="coaching.quiz.q3">Wenn du an eine Veränderung denkst — was hält dich zurück?</p>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q3a1">Eigentlich nichts, mir geht es gut</button>
+              <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q3a2">Unsicherheit — ich weiß nicht, wohin</button>
+              <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q3a3">Angst vor den Konsequenzen</button>
+              <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q3a4">Ich fühle mich festgefahren und allein damit</button>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-step="4">
+            <p class="quiz__question" data-i18n="coaching.quiz.q4">Wann hast du das letzte Mal mit jemandem offen über deine Situation gesprochen?</p>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1" data-i18n="coaching.quiz.q4a1">Kürzlich — ich habe gute Gesprächspartner</button>
+              <button class="quiz__option" data-value="2" data-i18n="coaching.quiz.q4a2">Schon eine Weile her</button>
+              <button class="quiz__option" data-value="3" data-i18n="coaching.quiz.q4a3">Ich rede selten darüber</button>
+              <button class="quiz__option" data-value="4" data-i18n="coaching.quiz.q4a4">Ich habe das Gefühl, niemand versteht wirklich was ich meine</button>
+            </div>
+          </div>
+
+          <div class="quiz__result" data-result="low">
+            <h3 data-i18n="coaching.quiz.result_low.h3">Du scheinst gut im Fluss zu sein</h3>
+            <p data-i18n="coaching.quiz.result_low.p">Im Moment scheint vieles zu passen. Aber wenn du irgendwann das Gefühl hast, dass sich etwas verschiebt — meld dich gerne. Die Tür steht offen.</p>
+            <a href="#kontakt" class="btn btn--ghost" data-i18n="coaching.quiz.result_low.cta">Trotzdem Kontakt aufnehmen</a>
+            <button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
+          </div>
+
+          <div class="quiz__result" data-result="mid">
+            <h3 data-i18n="coaching.quiz.result_mid.h3">Ein Gespräch könnte dir neue Perspektiven eröffnen</h3>
+            <p data-i18n="coaching.quiz.result_mid.p">Du spürst, dass sich etwas bewegt. Das ist ein guter Zeitpunkt, um hinzuschauen — bevor der Druck noch größer wird. Manchmal reicht ein einzelnes Gespräch, um Klarheit zu finden.</p>
+            <a href="#kontakt" class="btn" data-i18n="coaching.quiz.result_mid.cta">Discovery Call vereinbaren</a>
+            <button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
+          </div>
+
+          <div class="quiz__result" data-result="high">
+            <h3 data-i18n="coaching.quiz.result_high.h3">Es klingt so, als wärst du bereit für Veränderung</h3>
+            <p data-i18n="coaching.quiz.result_high.p">Du trägst gerade viel mit dir. Und allein damit zu bleiben macht es nicht leichter. Ein geschützter Raum, in dem du gehört wirst, kann der erste Schritt sein. Ich bin da, wenn du bereit bist.</p>
+            <a href="#kontakt" class="btn" data-i18n="coaching.quiz.result_high.cta">Jetzt Discovery Call vereinbaren</a>
+            <button class="quiz__restart" onclick="resetQuiz()" data-i18n="coaching.quiz.restart">Quiz wiederholen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="angebot" aria-labelledby="h-angebot">
+        <h2 class="heading" id="h-angebot" data-i18n="coaching.angebot.h2">Wie ich arbeite</h2>
+        <div>
+          <ul class="approach">
+            <li>
+              <h3 data-i18n="coaching.angebot.c1_title">Aktives Zuhören</h3>
+              <p data-i18n="coaching.angebot.c1_text">Ein geschützter Raum, in dem du dich gehört fühlst — ohne Bewertung, ohne Eile. Das ist die Basis meiner Arbeit.</p>
+            </li>
+            <li>
+              <h3 data-i18n="coaching.angebot.c2_title">Systemischer Blick</h3>
+              <p data-i18n="coaching.angebot.c2_text">Wir schauen nicht nur auf dich, sondern auf das ganze System: Beziehungen, Muster, Zusammenhänge — und was sich daraus entwickeln kann.</p>
+            </li>
+            <li>
+              <h3 data-i18n="coaching.angebot.c3_title">Sinn und Richtung</h3>
+              <p data-i18n="coaching.angebot.c3_text">Mit Elementen der Logotherapie erforschen wir, was dir wirklich wichtig ist und wie du einen Weg findest, der sich stimmig anfühlt.</p>
+            </li>
+          </ul>
+          <div class="offers">
+            <div class="offer">
+              <h3 data-i18n="coaching.angebot.discovery_label">Einstieg</h3>
+              <p class="offer__detail" data-i18n="coaching.angebot.discovery_detail">Discovery Call</p>
+              <p class="offer__note" data-i18n="coaching.angebot.discovery_note">20 Minuten, kostenlos und unverbindlich</p>
+              <a class="btn" href="#kontakt" data-i18n="coaching.angebot.discovery_btn">Discovery Call vereinbaren</a>
+            </div>
+            <div class="offer">
+              <h3 data-i18n="coaching.angebot.price_label">Einzelsession</h3>
+              <p class="offer__detail" data-i18n="coaching.angebot.price_detail">60 Minuten</p>
+              <p class="offer__note" data-i18n="coaching.angebot.price_note">online per Videocall</p>
+              <a class="btn btn--ghost" href="#kontakt" data-i18n="coaching.angebot.btn">Session anfragen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="netzwerk" aria-labelledby="h-netzwerk">
+        <h2 class="heading" id="h-netzwerk" data-i18n="coaching.netzwerk.h2">Wenn ich nicht der Richtige bin, kenne ich vielleicht jemanden</h2>
+        <div>
+          <div class="prose"><p data-i18n="coaching.netzwerk.intro">Coaching ist Vertrauenssache — und manchmal passt es einfach nicht. Über die Jahre habe ich einen Kreis von Menschen kennengelernt, denen ich vertraue: Coaches, Therapeuten, Berater mit ganz unterschiedlichen Schwerpunkten. Wenn dein Anliegen nicht zu mir passt, vermittle ich dich gern weiter — persönlich, ohne Liste, ohne Provision.</p></div>
+          <ol class="steps">
+            <li>
+              <h3 data-i18n="coaching.netzwerk.step1_title">Kurz erzählen</h3>
+              <p data-i18n="coaching.netzwerk.step1_text">Schreib mir in ein paar Sätzen, wo du gerade stehst und was du suchst.</p>
+            </li>
+            <li>
+              <h3 data-i18n="coaching.netzwerk.step2_title">Ich denke nach</h3>
+              <p data-i18n="coaching.netzwerk.step2_text">Ich überlege, wer aus meinem Kreis zu deinem Anliegen passen könnte.</p>
+            </li>
+            <li>
+              <h3 data-i18n="coaching.netzwerk.step3_title">Ich verbinde euch</h3>
+              <p data-i18n="coaching.netzwerk.step3_text">Du bekommst eine persönliche Empfehlung — und entscheidest selbst, was daraus wird.</p>
+            </li>
+          </ol>
+          <p class="note" data-i18n="coaching.netzwerk.note">Kostenlos. Unverbindlich. Vertraulich.</p>
+          <div class="links"><a href="#kontakt" data-i18n="coaching.netzwerk.btn">Erzähl mir, was du suchst</a></div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt" aria-labelledby="h-kontakt">
+        <div class="stack">
+          <h2 class="heading" id="h-kontakt" data-i18n="coaching.contact.h2">Lass uns sprechen</h2>
+          <p data-i18n="coaching.contact.text">Du brauchst nichts vorzubereiten. Schreib mir einfach — ich melde mich innerhalb von zwei Werktagen.</p>
+        </div>
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
+              <input type="text" id="contactName" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
+              <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
+            <textarea id="contactMessage" name="message" rows="5" data-i18n-placeholder="coaching.contact.placeholder" placeholder="Was bewegt dich gerade?" required></textarea>
+          </div>
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+          <div><button type="submit" class="btn" id="contactSubmit" data-i18n="coaching.hero.cta">Discovery Call vereinbaren</button></div>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="h-faq">
+        <h2 class="heading" id="h-faq" data-i18n="coaching.faq.h2">Das werde ich oft gefragt</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="coaching.faq.q1">Was ist systemisches Coaching?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a1">Systemisches Coaching betrachtet nicht nur dich als Einzelperson, sondern das gesamte System, in dem du dich bewegst — Beziehungen, Rollen, Muster. So entstehen oft überraschend neue Perspektiven und Lösungen.</div>
+          </details>
+          <details>
+            <summary data-i18n="coaching.faq.q2">Was ist Logotherapie?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a2">Logotherapie wurde von Viktor Frankl begründet und arbeitet mit der Frage nach dem Sinn. Es geht darum, herauszufinden was dir wirklich wichtig ist und wie du danach leben kannst — besonders in Zeiten des Umbruchs.</div>
+          </details>
+          <details>
+            <summary data-i18n="coaching.faq.q3">Für wen ist das Coaching geeignet?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a3">Für Menschen, die an einem Wendepunkt stehen — beruflich, persönlich oder beides. Wenn du das Gefühl hast, dass sich etwas verändern will, aber der Weg noch unklar ist, bist du hier richtig. Vorkenntnisse brauchst du keine.</div>
+          </details>
+          <details>
+            <summary data-i18n="coaching.faq.q4">Wie läuft eine Session ab?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a4">Wir treffen uns für 60 Minuten online. Du bestimmst das Thema. Ich höre zu, stelle Fragen und begleite dich dabei, Klarheit zu finden. Es gibt keine Hausaufgaben und keinen Druck.</div>
+          </details>
+          <details>
+            <summary data-i18n="coaching.faq.q5">Wie finden die Sessions statt?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a5">Sessions finden online statt — über einen Videocall. Du brauchst nichts Besonderes, nur eine stabile Verbindung und einen ruhigen Moment.</div>
+          </details>
+          <details>
+            <summary data-i18n="coaching.faq.q6">Muss ich mich auf ein Erstgespräch vorbereiten?</summary>
+            <div class="faq__answer" data-i18n="coaching.faq.a6">Nein. Komm einfach so wie du bist. Wir finden gemeinsam heraus, ob und wie ich dich begleiten kann. Das Erstgespräch ist unverbindlich.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-news">
+        <h2 class="heading" id="h-news" data-i18n="coaching.newsletter.h2">Impulse für deinen Weg</h2>
+        <div>
+          <p data-i18n="coaching.newsletter.subtitle">Gedanken zu Veränderung, Sinn und neuen Wegen — kostenlos in dein Postfach.</p>
+          <form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/choice" method="post" target="popupwindow">
+            <input type="email" name="email" aria-labelledby="h-news" data-i18n-placeholder="coaching.newsletter.placeholder" placeholder="Deine E-Mail-Adresse" required>
+            <button type="submit" class="btn" data-i18n="coaching.newsletter.btn">Anmelden</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="i18n.js?v=20260929b"></script>
+  <script src="main.js?v=20260929b"></script>
+  <script>
+    const quizBox = document.getElementById('quizBox');
+    const steps = quizBox.querySelectorAll('.quiz__step');
+    const progressBar = document.getElementById('quizProgress');
+    let currentStep = 0;
+    let score = 0;
+
+    steps.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'quiz__dot' + (i === 0 ? ' active' : '');
+      progressBar.appendChild(dot);
+    });
+
+    quizBox.querySelectorAll('.quiz__option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        score += parseInt(btn.dataset.value);
+        steps[currentStep].classList.remove('active');
+        const dots = progressBar.querySelectorAll('.quiz__dot');
+        dots[currentStep].classList.remove('active');
+        dots[currentStep].classList.add('done');
+        currentStep++;
+        if (currentStep < steps.length) {
+          steps[currentStep].classList.add('active');
+          dots[currentStep].classList.add('active');
+        } else {
+          progressBar.style.display = 'none';
+          let level;
+          if (score <= 8) level = 'low';
+          else if (score <= 14) level = 'mid';
+          else level = 'high';
+          quizBox.querySelector(`.quiz__result[data-result="${level}"]`).classList.add('active');
+        }
+      });
+    });
+
+    function resetQuiz() {
+      score = 0;
+      currentStep = 0;
+      quizBox.querySelectorAll('.quiz__result').forEach(r => r.classList.remove('active'));
+      steps.forEach((s, i) => s.classList.toggle('active', i === 0));
+      const dots = progressBar.querySelectorAll('.quiz__dot');
+      dots.forEach((d, i) => {
+        d.classList.remove('done');
+        d.classList.toggle('active', i === 0);
+      });
+      progressBar.style.display = 'flex';
+    }
+  </script>
+  <script>
+  (function () {
+    var form   = document.getElementById('contactForm');
+    var submit = document.getElementById('contactSubmit');
+    var status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var name    = document.getElementById('contactName').value.trim();
+      var email   = document.getElementById('contactEmail').value.trim();
+      var message = document.getElementById('contactMessage').value.trim();
+      var lang    = document.documentElement.lang || 'de';
+      if (!name || !email || !message) return;
+
+      var label = submit.textContent;
+      submit.disabled = true;
+      submit.textContent = lang === 'en' ? 'Sending…' : 'Wird gesendet…';
+      status.className = 'form-status';
+      status.textContent = '';
+
+      try {
+        var res = await fetch('https://formsubmit.co/ajax/hello@pleasance.org', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+            _subject: 'Coaching-Anfrage via pleasance.org',
+            _captcha: 'false',
+            _honey: form.elements._honey.value,
+          }),
+        });
+        if (!res.ok) throw new Error();
+        status.className = 'form-status is-success';
+        status.textContent = lang === 'en'
+          ? 'Thank you — I\'ll be in touch soon.'
+          : 'Danke — ich melde mich bald.';
+        form.reset();
+      } catch (_) {
+        status.className = 'form-status is-error';
+        status.textContent = lang === 'en'
+          ? 'Something went wrong. Write directly to hello@pleasance.org.'
+          : 'Etwas hat nicht geklappt. Schreib direkt an hello@pleasance.org.';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
+  })();
+  </script>
+
 </body>
 </html>

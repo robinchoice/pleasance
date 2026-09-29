@@ -4,102 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt — Pleasance</title>
-  <meta name="description" content="Schreib mir, worum es geht. Robin Wahl meldet sich innerhalb von zwei Werktagen.">
-  <link rel="stylesheet" href="style.css?v=20260929">
-  <script>(function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();</script>
+  <meta name="description" content="Schreib mir, worum es geht: Software, Lehre oder Coaching. Robin Wahl meldet sich innerhalb von zwei Werktagen.">
+  <link rel="stylesheet" href="style.css?v=20260929b">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
 <body data-page="kontakt">
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">Pleasance</a>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="index.html" data-i18n="nav.coaching">Coaching</a></li>
-      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
-      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
-    </ul>
-    <div class="nav__tools">
-      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
-      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
-          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
-        </svg>
-      </button>
-    </div>
-    <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
-  <!-- Hero -->
-  <div class="page-hero reveal">
-    <span class="page-hero__label" data-i18n="kontakt.hero.label">Kontakt</span>
-    <h1 data-i18n="kontakt.hero.h1">Sprechen wir.</h1>
-    <p class="hero__subtitle" style="margin-top: 1rem;" data-i18n="kontakt.hero.subtitle">
-      Such dir aus, worum es geht. Ich melde mich innerhalb von zwei Werktagen.
-    </p>
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#werkzeuge" data-i18n="nav.software">Software</a></li>
+        <li><a href="index.html#wissen" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" aria-current="page" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <!-- Kontaktformular -->
-  <div class="contact-form reveal">
-    <form id="contactForm" novalidate>
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title" data-i18n="kontakt.h1">Sprechen wir.</h1>
+        <p class="lead" data-i18n="kontakt.lead">Wähle, worum es geht. Ich melde mich innerhalb von zwei Werktagen.</p>
+      </header>
 
-      <div class="form-field">
-        <label data-i18n="kontakt.form.topic_label">Worum geht es?</label>
-        <div class="form-topics" role="group">
-          <button type="button" class="form-topic is-active" data-topic="coaching" data-i18n="kontakt.form.topic_coaching">Coaching</button>
+      <section class="section" aria-labelledby="h-alt">
+        <div class="stack">
+          <h2 id="h-alt" data-i18n="kontakt.alt.h2">Lieber per E-Mail?</h2>
+          <p data-i18n="kontakt.alt.text">Schreib direkt an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>.</p>
         </div>
-      </div>
+        <form class="form" id="contactForm" novalidate>
+          <fieldset class="field">
+            <legend data-i18n="kontakt.form.topic_label">Worum geht es?</legend>
+            <div class="topics">
+              <label class="topic"><input type="radio" name="topic" value="software"><span data-i18n="kontakt.form.topic_software">Software</span></label>
+              <label class="topic"><input type="radio" name="topic" value="lehre"><span data-i18n="kontakt.form.topic_lehre">Lehre</span></label>
+              <label class="topic"><input type="radio" name="topic" value="coaching"><span data-i18n="kontakt.form.topic_coaching">Coaching</span></label>
+            </div>
+          </fieldset>
+          <div class="form__row">
+            <div class="field">
+              <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
+              <input type="text" id="contactName" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
+              <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
+            <textarea id="contactMessage" name="message" rows="6" required></textarea>
+          </div>
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+          <div><button type="submit" class="btn" id="contactSubmit" data-i18n="kontakt.form.submit">Absenden</button></div>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </section>
+    </div>
+  </main>
 
-      <div class="form-row">
-        <div class="form-field">
-          <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
-          <input type="text" id="contactName" name="name" autocomplete="name" required>
-        </div>
-        <div class="form-field">
-          <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
-          <input type="email" id="contactEmail" name="email" autocomplete="email" required>
-        </div>
-      </div>
-
-      <div class="form-field">
-        <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
-        <textarea id="contactMessage" name="message" rows="6" required></textarea>
-      </div>
-
-      <input type="text" name="_honey" style="display:none">
-      <button type="submit" class="btn btn--primary" id="contactSubmit" data-i18n="kontakt.form.submit">Absenden</button>
-      <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
-
-    </form>
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
-      </div>
-      <nav class="footer__nav">
-        <h4 data-i18n="footer.mehr">Mehr</h4>
-        <a href="index.html" data-i18n="nav.coaching">Coaching</a>
-        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
-        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
-      </nav>
-      <nav class="footer__nav">
-        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
-        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
-        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
-      </nav>
-    </div>
-    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
-  </footer>
-
-  <script src="i18n.js?v=20260929"></script>
-  <script src="main.js"></script>
+  <script src="i18n.js?v=20260929b"></script>
+  <script src="main.js?v=20260929b"></script>
   <script>
   (function () {
     var API_URL = 'https://formsubmit.co/ajax/hello@pleasance.org';
@@ -109,37 +101,28 @@
     var status   = document.getElementById('formStatus');
     var textarea = document.getElementById('contactMessage');
 
-    var placeholders = {
-      coaching: { de: 'Was bewegt dich gerade?',        en: 'What\'s on your mind?' },
-      bureau:   { de: 'Was hast du vor?',               en: 'What are you planning?' },
-      records:  { de: 'Erzähl mir von deinem Projekt.', en: 'Tell me about your project.' },
+    var topics = {
+      software: { label: 'Software', de: 'Was soll entstehen? Erzähl mir kurz von deinem Vorhaben.', en: 'What should we build? Tell me briefly about your project.' },
+      lehre:    { label: 'Lehre',    de: 'Welcher Kurs, für wen und wann?',                          en: 'Which course, for whom and when?' },
+      coaching: { label: 'Coaching', de: 'Was bewegt dich gerade?',                                  en: 'What\'s on your mind?' },
     };
 
-    var activeTopic = 'coaching';
-    var urlTopic = new URLSearchParams(location.search).get('thema');
-    if (urlTopic && placeholders[urlTopic]) activeTopic = urlTopic;
-
-    var pills = document.querySelectorAll('.form-topic');
-
-    function setActiveTopic(topic) {
-      activeTopic = topic;
-      pills.forEach(function (btn) {
-        btn.classList.toggle('is-active', btn.dataset.topic === topic);
-      });
-      updatePlaceholder();
+    function currentTopic() {
+      var checked = form.querySelector('input[name="topic"]:checked');
+      return checked ? topics[checked.value] : null;
     }
 
     function updatePlaceholder() {
-      var lang = document.documentElement.lang || 'de';
-      textarea.placeholder = (placeholders[activeTopic] || {})[lang] || '';
+      var topic = currentTopic();
+      textarea.placeholder = topic ? topic[document.documentElement.lang || 'de'] : '';
     }
 
-    pills.forEach(function (btn) {
-      btn.addEventListener('click', function () { setActiveTopic(btn.dataset.topic); });
-    });
+    var urlTopic = new URLSearchParams(location.search).get('thema');
+    var preselect = urlTopic && form.querySelector('input[name="topic"][value="' + CSS.escape(urlTopic) + '"]');
+    if (preselect) preselect.checked = true;
+    updatePlaceholder();
 
-    setActiveTopic(activeTopic);
-
+    form.addEventListener('change', updatePlaceholder);
     new MutationObserver(updatePlaceholder).observe(
       document.documentElement, { attributes: true, attributeFilter: ['lang'] }
     );
@@ -150,8 +133,10 @@
       var email   = document.getElementById('contactEmail').value.trim();
       var message = textarea.value.trim();
       var lang    = document.documentElement.lang || 'de';
+      var topic   = currentTopic();
       if (!name || !email || !message) return;
 
+      var label = submit.textContent;
       submit.disabled = true;
       submit.textContent = lang === 'en' ? 'Sending…' : 'Wird gesendet…';
       status.className = 'form-status';
@@ -161,7 +146,14 @@
         var res = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({ name: name, email: email, message: message, _subject: 'Coaching-Anfrage via pleasance.org', _captcha: 'false', _honey: form.elements._honey.value }),
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+            _subject: 'Anfrage via pleasance.org' + (topic ? ': ' + topic.label : ''),
+            _captcha: 'false',
+            _honey: form.elements._honey.value,
+          }),
         });
         if (!res.ok) throw new Error(res.status);
         status.className = 'form-status is-success';
@@ -169,7 +161,7 @@
           ? 'Thank you — I\'ll be in touch soon.'
           : 'Danke — ich melde mich bald.';
         form.reset();
-        setActiveTopic('coaching');
+        updatePlaceholder();
       } catch (_) {
         status.className = 'form-status is-error';
         status.textContent = lang === 'en'
@@ -177,7 +169,7 @@
           : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.';
       } finally {
         submit.disabled = false;
-        submit.textContent = document.documentElement.lang === 'en' ? 'Send' : 'Absenden';
+        submit.textContent = label;
       }
     });
   })();

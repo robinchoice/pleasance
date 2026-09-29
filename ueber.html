@@ -4,123 +4,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Über mich — Pleasance</title>
-  <meta name="description" content="Robin Wahl — systemischer Coach mit einem Hintergrund in Logotherapie. Hinter Pleasance steht eine Person mit einer Haltung.">
-  <link rel="stylesheet" href="style.css?v=20260929">
-  <script>(function(){var t=localStorage.getItem('pleasance-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p))document.documentElement.dataset.theme='dark';})();</script>
+  <meta name="description" content="Robin Wahl: freier Software-Entwickler, Dozent und systemischer Coach. Hinter Pleasance steht eine Person mit einer Haltung.">
+  <link rel="stylesheet" href="style.css?v=20260929b">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script defer data-domain="pleasance.org" src="https://plausible.diespaetzles.lol/js/script.js"></script>
 </head>
 <body data-page="ueber">
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">Pleasance</a>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="index.html" data-i18n="nav.coaching">Coaching</a></li>
-      <li><a href="ueber.html" data-i18n="nav.ueber">Über</a></li>
-      <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
-    </ul>
-    <div class="nav__tools">
-      <button class="nav__lang" id="langToggle" aria-label="Switch language">EN</button>
-      <button class="nav__theme" id="themeToggle" aria-label="Farbschema wechseln">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <g class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></g>
-          <g class="icon-sun" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g>
-        </svg>
-      </button>
-    </div>
-    <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
-  <!-- Hero -->
-  <div class="page-hero reveal">
-    <span class="page-hero__label" data-i18n="ueber.hero.label">Über mich</span>
-    <h1 data-i18n="ueber.hero.h1">Ich glaube, dass die meisten Dinge<br>zu schnell gemacht werden.</h1>
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#werkzeuge" data-i18n="nav.software">Software</a></li>
+        <li><a href="index.html#wissen" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="ueber.html" aria-current="page" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <!-- About Text -->
-  <div class="about-text reveal">
-    <p data-i18n="ueber.p1">
-      Ich heiße Robin Wahl. Ich arbeite online — und bin systemischer Coach mit einem
-      Hintergrund in Logotherapie.
-    </p>
-    <p data-i18n="ueber.p2">
-      Mein wichtigstes Werkzeug ist das aktive Zuhören — weil echte Veränderung dort
-      beginnt, wo jemand wirklich gehört wird. In meiner Arbeit geht es nicht darum,
-      Ratschläge zu geben, sondern gemeinsam hinzuschauen.
-    </p>
-    <p data-i18n="ueber.p5">
-      Pleasance ist der Name, unter dem ich das tue. Eine Person, eine Haltung.
-    </p>
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title page-title--long" data-i18n="ueber.h1">Ich glaube, dass die meisten Dinge zu schnell gemacht werden.</h1>
+      </header>
+
+      <section class="section" aria-labelledby="h-who">
+        <h2 class="heading" id="h-who" data-i18n="ueber.who">Wer ich bin</h2>
+        <div class="prose">
+          <p class="lead" data-i18n="ueber.p1">Ich heiße Robin Wahl. Ich baue Software, unterrichte und begleite Menschen im 1:1-Coaching, freiberuflich und unter dem Namen Pleasance.</p>
+          <p data-i18n="ueber.p2">Vorher war ich Business Process Consultant und Scrum Master bei SAP, unter anderem im Catena-X-Netzwerk der Autoindustrie und in einem KI-Projekt mit dem Bundesfinanzministerium. Danach habe ich in einer Schweizer Holding Abläufe automatisiert.</p>
+          <p data-i18n="ueber.p3">Ich bin selbst als Professional Scrum Master (PSM I) zertifiziert und arbeite als Coach systemisch, mit Elementen der Logotherapie. Studiert habe ich Betriebswirtschaft, Marketing Science und Wirtschaftsinformatik in Saarbrücken.</p>
+          <p data-i18n="ueber.p4">Pleasance ist der Name, unter dem ich das alles tue. Eine Person, eine Haltung: erst verstehen, dann handeln.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-values">
+        <h2 class="heading" id="h-values" data-i18n="ueber.values">Wofür ich stehe</h2>
+        <ul class="values">
+          <li><b data-i18n="ueber.v1.title">Sorgfalt vor Tempo.</b><span data-i18n="ueber.v1.text">Ich liefere lieber etwas Gutes spät als etwas Halbes pünktlich. Meistens auch pünktlich.</span></li>
+          <li><b data-i18n="ueber.v2.title">Open Source zuerst.</b><span data-i18n="ueber.v2.text">Wenn es eine freie Lösung gibt, nehme ich die. Du sollst nicht in zehn Jahren bei einem Anbieter feststecken, der seine Preise verdoppelt hat.</span></li>
+          <li><b data-i18n="ueber.v3.title">Eigentum vor Miete.</b><span data-i18n="ueber.v3.text">Deine Inhalte, dein Server, deine Domain, dein Wissen. Ich helfe dir, davon möglichst viel selbst zu besitzen.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="h-cv">
+        <h2 class="heading" id="h-cv" data-i18n="ueber.cv.h2">Lebenslauf</h2>
+        <div>
+          <p data-i18n="ueber.cv.text">Alle Stationen, Abschlüsse und Zertifikate auf einer Seite, zum Lesen oder als PDF.</p>
+          <div class="links"><a href="lebenslauf.html" data-i18n="ueber.cv.link">Lebenslauf ansehen</a></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-cta">
+        <h2 class="heading" id="h-cta" data-i18n="ueber.cta.h2">Klingt das nach dem, was du gerade brauchst?</h2>
+        <div class="stack">
+          <p data-i18n="ueber.cta.text">Schreib mir, worum es geht. Ich melde mich innerhalb von zwei Werktagen.</p>
+          <div><a class="btn" href="kontakt.html" data-i18n="ueber.cta.btn">Kontakt aufnehmen</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
   </div>
 
-
-
-  <!-- Werte -->
-  <section class="values-section reveal">
-    <div class="values-section__container">
-      <span class="section__label" data-i18n="ueber.values.label">Wofür ich stehe</span>
-      <h2 data-i18n="ueber.values.h2">Eine Haltung, drei Prinzipien.</h2>
-      <div class="values-grid">
-        <div class="value-item">
-          <h3 class="value-item__title" data-i18n="ueber.v1.title">Sorgfalt vor Tempo.</h3>
-          <p class="value-item__text" data-i18n="ueber.v1.text">
-            Ich liefere lieber etwas Gutes spät als etwas Halbes pünktlich.
-            Meistens auch pünktlich.
-          </p>
-        </div>
-        <div class="value-item">
-          <h3 class="value-item__title" data-i18n="ueber.v2.title">Open Source zuerst.</h3>
-          <p class="value-item__text" data-i18n="ueber.v2.text">
-            Wenn es eine freie Lösung gibt, nehme ich die. Du sollst nicht in zehn
-            Jahren bei einem Anbieter feststecken, der seine Preise verdoppelt hat.
-          </p>
-        </div>
-        <div class="value-item">
-          <h3 class="value-item__title" data-i18n="ueber.v3.title">Eigentum vor Miete.</h3>
-          <p class="value-item__text" data-i18n="ueber.v3.text">
-            Deine Inhalte, dein Server, deine Domain, dein Wissen.
-            Ich helfe dir, davon möglichst viel selbst zu besitzen.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section reveal">
-    <div class="cta-section__container">
-      <h2 data-i18n="ueber.cta.h2">Klingt das nach dem, was du gerade brauchst?</h2>
-      <p data-i18n="ueber.cta.text">Melde dich gern — ich melde mich innerhalb von zwei Werktagen.</p>
-      <a href="index.html#kontakt" class="btn btn--primary" data-i18n="ueber.cta.btn">Gespräch vereinbaren</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <span class="footer__logo">Pleasance</span>
-        <p class="footer__tagline" data-i18n="footer.tagline">Ein Atelier für Dinge, die mit Sorgfalt gemacht sind.</p>
-      </div>
-      <nav class="footer__nav">
-        <h4 data-i18n="footer.mehr">Mehr</h4>
-        <a href="index.html" data-i18n="nav.coaching">Coaching</a>
-        <a href="ueber.html" data-i18n="nav.ueber">Über</a>
-        <a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
-      </nav>
-      <nav class="footer__nav">
-        <h4 data-i18n="footer.legal_heading">Rechtliches</h4>
-        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
-        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
-      </nav>
-    </div>
-    <p class="footer__legal" data-i18n="footer.legal_line">© 2026 Pleasance · Robin Wahl</p>
-  </footer>
-
-  <script src="i18n.js?v=20260929"></script>
-  <script src="main.js"></script>
+  <script src="i18n.js?v=20260929b"></script>
+  <script src="main.js?v=20260929b"></script>
 
 </body>
 </html>
