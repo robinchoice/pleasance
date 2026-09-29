@@ -74,6 +74,11 @@ const I18N = {
       h2:   { de: 'Software-Entwicklung', en: 'Software development' },
       p1:   { de: 'Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, selbst gehostet, sauber dokumentiert. Vom ersten Prototyp bis zum Betrieb auf deinem eigenen Server.', en: 'Web apps, websites and automations for freelancers, small businesses and teams. Open source, self-hosted, properly documented. From the first prototype to running on your own server.' },
       p2:   { de: 'Diese Website ist ein Beispiel: ohne CMS, ohne Cookies, auf meinem eigenen Server.', en: 'This website is an example: no CMS, no cookies, on my own server.' },
+      tools:  { de: 'Womit ich arbeite', en: 'What I work with' },
+      t_dev:  { de: 'Entwicklung', en: 'Development' },
+      t_ops:  { de: 'Betrieb', en: 'Operations' },
+      t_auto: { de: 'Automatisierung und KI', en: 'Automation and AI' },
+      t_know: { de: 'Wissen', en: 'Knowledge' },
       cta:  { de: 'Projekt besprechen', en: 'Discuss a project' },
     },
     lehre: {

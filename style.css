@@ -166,7 +166,29 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .row { display: grid; grid-template-columns: 5fr 7fr; gap: 3rem; padding: 3rem 0 3.5rem; border-bottom: var(--rule); scroll-margin-top: 1rem; }
 .row p { margin-top: 0.75rem; max-width: 34em; }
 .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.75rem; }
-.groups h3 { font-size: 0.9375rem; color: var(--muted); }
+.groups h3, .groups h4 { font-size: 0.9375rem; font-weight: 650; color: var(--muted); }
+.tools-title { margin-top: 1.75rem; }
+.tools-title + .groups { margin-top: 0.75rem; row-gap: 1.25rem; }
+.toollist { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 0.5rem; list-style: none; }
+.toollist li { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 1rem; font-weight: 600; }
+.tool-logo { flex: none; width: 1.125rem; height: 1.125rem; background: currentColor; -webkit-mask: var(--logo) center / contain no-repeat; mask: var(--logo) center / contain no-repeat; }
+.logo-html5 { --logo: url('img/tools/html5.svg'); }
+.logo-css { --logo: url('img/tools/css.svg'); }
+.logo-javascript { --logo: url('img/tools/javascript.svg'); }
+.logo-typescript { --logo: url('img/tools/typescript.svg'); }
+.logo-bun { --logo: url('img/tools/bun.svg'); }
+.logo-hono { --logo: url('img/tools/hono.svg'); }
+.logo-flutter { --logo: url('img/tools/flutter.svg'); }
+.logo-linux { --logo: url('img/tools/linux.svg'); }
+.logo-docker { --logo: url('img/tools/docker.svg'); }
+.logo-coolify { --logo: url('img/tools/coolify.svg'); }
+.logo-gitea { --logo: url('img/tools/gitea.svg'); }
+.logo-n8n { --logo: url('img/tools/n8n.svg'); }
+.logo-make { --logo: url('img/tools/make.svg'); }
+.logo-claude { --logo: url('img/tools/claude.svg'); }
+.logo-terminal { --logo: url('img/tools/terminal.svg'); }
+.logo-obsidian { --logo: url('img/tools/obsidian.svg'); }
+.logo-notion { --logo: url('img/tools/notion.svg'); }
 .list { list-style: none; margin-top: 0.5rem; }
 .list li { padding: 0.45rem 0; border-top: 1px solid var(--hairline); font-size: 1rem; }
 .list b { display: block; font-weight: 650; }
