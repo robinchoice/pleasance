@@ -94,7 +94,7 @@
   <script src="main.js?v=20260929c"></script>
   <script>
   (function () {
-    var API_URL = 'https://formsubmit.co/ajax/hello@pleasance.org';
+    var API_URL = 'https://api.pleasance.org/contact';
 
     var form     = document.getElementById('contactForm');
     var submit   = document.getElementById('contactSubmit');
@@ -102,9 +102,9 @@
     var textarea = document.getElementById('contactMessage');
 
     var topics = {
-      software: { label: 'Software', de: 'Was soll entstehen? Erzähl mir kurz von deinem Vorhaben.', en: 'What should we build? Tell me briefly about your project.' },
-      lehre:    { label: 'Lehre',    de: 'Welcher Kurs, für wen und wann?',                          en: 'Which course, for whom and when?' },
-      coaching: { label: 'Coaching', de: 'Was bewegt dich gerade?',                                  en: 'What\'s on your mind?' },
+      software: { de: 'Was soll entstehen? Erzähl mir kurz von deinem Vorhaben.', en: 'What should we build? Tell me briefly about your project.' },
+      lehre:    { de: 'Welcher Kurs, für wen und wann?',                          en: 'Which course, for whom and when?' },
+      coaching: { de: 'Was bewegt dich gerade?',                                  en: 'What\'s on your mind?' },
     };
 
     function currentTopic() {
@@ -133,8 +133,13 @@
       var email   = document.getElementById('contactEmail').value.trim();
       var message = textarea.value.trim();
       var lang    = document.documentElement.lang || 'de';
-      var topic   = currentTopic();
+      var topic   = form.elements.topic.value;
       if (!name || !email || !message) return;
+      if (!topic) {
+        status.className = 'form-status is-error';
+        status.textContent = lang === 'en' ? 'Please choose a topic.' : 'Bitte wähle ein Thema.';
+        return;
+      }
 
       var label = submit.textContent;
       submit.disabled = true;
@@ -145,13 +150,12 @@
       try {
         var res = await fetch(API_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            topic: topic,
             name: name,
             email: email,
             message: message,
-            _subject: 'Anfrage via pleasance.org' + (topic ? ': ' + topic.label : ''),
-            _captcha: 'false',
             _honey: form.elements._honey.value,
           }),
         });

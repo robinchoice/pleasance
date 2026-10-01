@@ -339,15 +339,14 @@
       status.textContent = '';
 
       try {
-        var res = await fetch('https://formsubmit.co/ajax/hello@pleasance.org', {
+        var res = await fetch('https://api.pleasance.org/contact', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            topic: 'coaching',
             name: name,
             email: email,
             message: message,
-            _subject: 'Coaching-Anfrage via pleasance.org',
-            _captcha: 'false',
             _honey: form.elements._honey.value,
           }),
         });
