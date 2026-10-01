@@ -37,7 +37,7 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Too many requests' }, 429)
   }
 
-  let body: { topic?: string; name?: string; email?: string; message?: string }
+  let body: { topic?: string; name?: string; email?: string; message?: string; _honey?: string }
 
   try {
     body = await c.req.json()
@@ -45,7 +45,11 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Invalid JSON' }, 400)
   }
 
-  const { topic, name, email, message } = body
+  const { topic, name, email, message, _honey } = body
+
+  if (_honey) {
+    return c.json({ ok: true })
+  }
 
   if (!topic || !name || !email || !message) {
     return c.json({ error: 'Missing fields' }, 400)
