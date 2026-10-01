@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "hono": "^4.7.0",
-    "resend": "^4.0.0"
+    "nodemailer": "^10.0.13"
   }
 }

@@ -1,9 +1,14 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
-import { Resend } from 'resend'
+import { createTransport } from 'nodemailer'
 
 const app = new Hono()
-const resend = new Resend(process.env.RESEND_API_KEY)
+const mailer = createTransport({
+  host:       'smtp.protonmail.ch',
+  port:       587,
+  requireTLS: true,
+  auth:       { user: 'noreply@pleasance.org', pass: process.env.SMTP_TOKEN },
+})
 
 const ALLOWED_ORIGINS = [
   'https://pleasance.org',
@@ -65,16 +70,16 @@ app.post('/contact', async (c) => {
 
   const topicLabel = TOPIC_LABELS[topic] ?? topic
 
-  const { error } = await resend.emails.send({
-    from:    'Pleasance Kontakt <hello@pleasance.org>',
-    to:      'hello@pleasance.org',
-    replyTo: email,
-    subject: `[${topicLabel}] Anfrage von ${name}`,
-    text:    `Thema: ${topicLabel}\nName: ${name}\nE-Mail: ${email}\n\n${message}`,
-  })
-
-  if (error) {
-    console.error('Resend error:', error)
+  try {
+    await mailer.sendMail({
+      from:    'Pleasance Kontakt <noreply@pleasance.org>',
+      to:      'hello@pleasance.org',
+      replyTo: email,
+      subject: `[${topicLabel}] Anfrage von ${name}`,
+      text:    `Thema: ${topicLabel}\nName: ${name}\nE-Mail: ${email}\n\n${message}`,
+    })
+  } catch (error) {
+    console.error('SMTP error:', error)
     return c.json({ error: 'Send failed' }, 500)
   }
 
