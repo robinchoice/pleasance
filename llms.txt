@@ -1,0 +1,18 @@
+# Pleasance
+
+> Pleasance ist Robin Wahl, freier Software-Entwickler, Dozent und systemischer Coach aus Freiburg im Breisgau. Software, Kurse und Coaching für Selbstständige, kleine Firmen, Teams und Einzelne in Deutschland, Österreich und der Schweiz. Haltung: Open Source zuerst, Eigentum vor Miete, Sorgfalt vor Tempo.
+
+## Leistungen
+
+- [Software-Entwicklung](https://pleasance.org/#werkzeuge): Web-Apps, Websites und Automatisierungen (n8n, Make, KI) für Selbstständige, kleine Firmen und Teams. Open Source, selbst gehostet, sauber dokumentiert, vom ersten Prototyp bis zum Betrieb auf dem eigenen Server.
+- [Lehre](https://pleasance.org/#wissen): Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I. Eigene Kurse zu Prototyping, Lernen und Schreiben mit KI sowie Geldgeschichte, Bitcoin und Österreichischer Schule. Für Teams, Hochschulen und Einzelne.
+- [1:1-Coaching](https://pleasance.org/coaching.html): Systemisches Coaching mit Elementen der Logotherapie für Menschen an einem beruflichen oder persönlichen Wendepunkt. Sessions dauern 60 Minuten und finden online per Videocall statt. Das Erstgespräch (20 Minuten) ist kostenlos.
+
+## Über Robin Wahl
+
+- [Über mich](https://pleasance.org/ueber.html): Vorher Business Process Consultant und Scrum Master bei SAP, unter anderem im Catena-X-Netzwerk und in einem KI-Projekt mit dem Bundesfinanzministerium, danach Prozessautomatisierung in einer Schweizer Holding. Zertifizierter Professional Scrum Master (PSM I). Studium der Betriebswirtschaft, Marketing Science und Wirtschaftsinformatik in Saarbrücken.
+
+## Kontakt
+
+- [Kontaktformular](https://pleasance.org/kontakt.html) oder E-Mail an hello@pleasance.org, Antwort innerhalb von zwei Werktagen
+- Standort: Freiburg im Breisgau, Baden-Württemberg, Deutschland

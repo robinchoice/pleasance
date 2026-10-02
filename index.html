@@ -3,10 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pleasance — Software-Entwicklung, Lehre und Coaching</title>
-  <meta name="description" content="Robin Wahl: freier Software-Entwickler, Dozent und Coach. Werkzeuge, Wissen und Wege, die dir gehören.">
-  <link rel="stylesheet" href="style.css?v=20261002">
+  <title>Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance</title>
+  <meta name="description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching, online im ganzen DACH-Raum.">
+  <link rel="canonical" href="https://pleasance.org/">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/">
+  <meta property="og:title" content="Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance">
+  <meta property="og:description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching, online im ganzen DACH-Raum.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Lehre und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261002b">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://pleasance.org/#website",
+        "url": "https://pleasance.org/",
+        "name": "Pleasance",
+        "inLanguage": "de",
+        "publisher": { "@id": "https://pleasance.org/#business" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://pleasance.org/#business",
+        "name": "Pleasance",
+        "description": "Software-Entwicklung, Kurse und systemisches Coaching von Robin Wahl aus Freiburg im Breisgau.",
+        "url": "https://pleasance.org/",
+        "image": "https://pleasance.org/img/og.png",
+        "email": "hello@pleasance.org",
+        "founder": { "@id": "https://pleasance.org/#robin" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bugginger Straße 37",
+          "postalCode": "79114",
+          "addressLocality": "Freiburg im Breisgau",
+          "addressRegion": "Baden-Württemberg",
+          "addressCountry": "DE"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Freiburg im Breisgau" },
+          { "@type": "Country", "name": "Deutschland" },
+          { "@type": "Country", "name": "Österreich" },
+          { "@type": "Country", "name": "Schweiz" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Leistungen",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software-Entwicklung", "description": "Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source und selbst gehostet." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Workshops", "description": "Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemisches 1:1-Coaching", "description": "Systemisches Coaching mit Elementen der Logotherapie, online per Videocall.", "url": "https://pleasance.org/coaching.html" } }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://pleasance.org/#robin",
+        "name": "Robin Wahl",
+        "jobTitle": "Software-Entwickler, Dozent und Coach",
+        "url": "https://pleasance.org/ueber.html",
+        "worksFor": { "@id": "https://pleasance.org/#business" },
+        "sameAs": ["https://www.linkedin.com/in/robinwahl359", "https://github.com/robinchoice"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-page="home">
 
@@ -41,7 +110,7 @@
       </section>
 
       <div class="intro">
-        <p class="lead" data-i18n="home.intro">Pleasance ist Robin Wahl: freier Software-Entwickler, Dozent und Coach. Ich baue Software, die du selbst betreiben kannst, erkläre, wie Dinge funktionieren, und begleite dich auf deinem eigenen Weg.</p>
+        <p class="lead" data-i18n="home.intro">Pleasance ist Robin Wahl: freier Software-Entwickler, Dozent und Coach aus Freiburg im Breisgau. Ich baue Software, die du selbst betreiben kannst, erkläre, wie Dinge funktionieren, und begleite dich auf deinem eigenen Weg. Für Menschen und Firmen in Deutschland, Österreich und der Schweiz.</p>
         <a class="btn" href="kontakt.html" data-i18n="home.cta">Schreib mir</a>
       </div>
 
@@ -169,7 +238,7 @@
 
   <div class="wrap">
     <footer class="footer">
-      <p>Pleasance, Robin Wahl. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
       <ul class="footer__links">
         <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
         <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
@@ -179,8 +248,8 @@
     </footer>
   </div>
 
-  <script src="i18n.js?v=20261002"></script>
-  <script src="main.js?v=20261002"></script>
+  <script src="i18n.js?v=20261002b"></script>
+  <script src="main.js?v=20261002b"></script>
 
 </body>
 </html>

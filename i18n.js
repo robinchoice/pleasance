@@ -4,42 +4,42 @@
 const I18N_META = {
   home: {
     title: {
-      de: 'Pleasance — Software-Entwicklung, Lehre und Coaching',
-      en: 'Pleasance — Software development, teaching and coaching',
+      de: 'Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance',
+      en: 'Software development, courses and coaching in Freiburg — Pleasance',
     },
     desc: {
-      de: 'Robin Wahl: freier Software-Entwickler, Dozent und Coach. Werkzeuge, Wissen und Wege, die dir gehören.',
-      en: 'Robin Wahl: freelance software developer, lecturer and coach. Tools, knowledge and paths that belong to you.',
+      de: 'Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching, online im ganzen DACH-Raum.',
+      en: 'Robin Wahl from Freiburg, Germany: websites, web apps and automations you own. Courses on Scrum and AI. Systemic coaching, online across Germany, Austria and Switzerland.',
     },
   },
   coaching: {
     title: {
-      de: 'Systemisches Coaching — Pleasance',
-      en: 'Systemic coaching — Pleasance',
+      de: 'Systemisches Coaching online aus Freiburg — Pleasance',
+      en: 'Systemic coaching online from Freiburg — Pleasance',
     },
     desc: {
-      de: 'Systemisches Coaching für Menschen in Veränderung. Aktives Zuhören, Logotherapie und Raum für neue Wege.',
-      en: 'Systemic coaching for people in transition. Active listening, logotherapy, and space for new paths.',
+      de: 'Systemisches Coaching mit Elementen der Logotherapie für Menschen an einem Wendepunkt. Online per Videocall, aus Freiburg im Breisgau. Erstgespräch kostenlos.',
+      en: 'Systemic coaching with elements of logotherapy for people at a turning point. Online via video call, from Freiburg, Germany. First conversation free.',
     },
   },
   ueber: {
     title: {
-      de: 'Über mich — Pleasance',
-      en: 'About — Pleasance',
+      de: 'Über mich: Robin Wahl aus Freiburg — Pleasance',
+      en: 'About Robin Wahl from Freiburg — Pleasance',
     },
     desc: {
-      de: 'Robin Wahl: freier Software-Entwickler, Dozent und systemischer Coach. Hinter Pleasance steht eine Person mit einer Haltung.',
-      en: 'Robin Wahl: freelance software developer, lecturer and systemic coach. Behind Pleasance is one person with a clear stance.',
+      de: 'Robin Wahl aus Freiburg im Breisgau: freier Software-Entwickler, Dozent und systemischer Coach. Vorher Scrum Master und Berater bei SAP.',
+      en: 'Robin Wahl from Freiburg, Germany: freelance software developer, lecturer and systemic coach. Previously Scrum Master and consultant at SAP.',
     },
   },
   kontakt: {
     title: {
-      de: 'Kontakt — Pleasance',
-      en: 'Contact — Pleasance',
+      de: 'Kontakt — Pleasance, Freiburg im Breisgau',
+      en: 'Contact — Pleasance, Freiburg im Breisgau',
     },
     desc: {
-      de: 'Schreib mir, worum es geht: Software, Lehre oder Coaching. Robin Wahl meldet sich innerhalb von zwei Werktagen.',
-      en: 'Tell me what it\'s about: software, teaching or coaching. Robin Wahl will get back to you within two business days.',
+      de: 'Schreib mir, worum es geht: Software, Kurse oder Coaching. Robin Wahl aus Freiburg meldet sich innerhalb von zwei Werktagen.',
+      en: 'Tell me what it\'s about: software, courses or coaching. Robin Wahl from Freiburg will get back to you within two business days.',
     },
   },
 };
@@ -67,7 +67,7 @@ const I18N = {
   // ── index.html ────────────────────────────────────────────────────────────
   home: {
     statement: { de: '<a href="#werkzeuge">Werkzeuge</a>, <a href="#wissen">Wissen</a> und <a href="#wege">Wege</a>, die dir gehören.', en: '<a href="#werkzeuge">Tools</a>, <a href="#wissen">knowledge</a> and <a href="#wege">paths</a> that belong to you.' },
-    intro:     { de: 'Pleasance ist Robin Wahl: freier Software-Entwickler, Dozent und Coach. Ich baue Software, die du selbst betreiben kannst, erkläre, wie Dinge funktionieren, und begleite dich auf deinem eigenen Weg.', en: 'Pleasance is Robin Wahl: freelance software developer, lecturer and coach. I build software you can run yourself, explain how things work, and support you on your own path.' },
+    intro:     { de: 'Pleasance ist Robin Wahl: freier Software-Entwickler, Dozent und Coach aus Freiburg im Breisgau. Ich baue Software, die du selbst betreiben kannst, erkläre, wie Dinge funktionieren, und begleite dich auf deinem eigenen Weg. Für Menschen und Firmen in Deutschland, Österreich und der Schweiz.', en: 'Pleasance is Robin Wahl: freelance software developer, lecturer and coach based in Freiburg im Breisgau, Germany. I build software you can run yourself, explain how things work, and support you on your own path. For people and companies in Germany, Austria and Switzerland.' },
     cta:       { de: 'Schreib mir', en: 'Write to me' },
     software: {
       word: { de: 'Werkzeuge', en: 'Tools' },
@@ -224,6 +224,8 @@ const I18N = {
       a5: { de: 'Sessions finden online statt — über einen Videocall. Du brauchst nichts Besonderes, nur eine stabile Verbindung und einen ruhigen Moment.', en: 'Sessions take place online — via video call. You don\'t need anything special, just a stable connection and a quiet moment.' },
       q6: { de: 'Muss ich mich auf ein Erstgespräch vorbereiten?', en: 'Do I need to prepare for the initial consultation?' },
       a6: { de: 'Nein. Komm einfach so wie du bist. Wir finden gemeinsam heraus, ob und wie ich dich begleiten kann. Das Erstgespräch ist unverbindlich.', en: 'No. Come as you are. Together we\'ll find out if and how I can support you. The initial consultation is non-binding.' },
+      q7: { de: 'Wo sitzt du, und von wo aus kann ich teilnehmen?', en: 'Where are you based, and where can I join from?' },
+      a7: { de: 'Ich lebe und arbeite in Freiburg im Breisgau. Weil die Sessions online stattfinden, kannst du von überall teilnehmen, ob aus Deutschland, Österreich oder der Schweiz.', en: 'I live and work in Freiburg im Breisgau, Germany. Because sessions take place online, you can join from anywhere, whether from Germany, Austria or Switzerland.' },
     },
     newsletter: {
       h2:          { de: 'Impulse für deinen Weg', en: 'Impulses for your path' },
@@ -237,7 +239,7 @@ const I18N = {
   ueber: {
     h1:    { de: 'Ich glaube, dass die meisten Dinge zu schnell gemacht werden.', en: 'I believe most things are made too fast.' },
     who:   { de: 'Wer ich bin', en: 'Who I am' },
-    p1:    { de: 'Ich heiße Robin Wahl. Ich baue Software, unterrichte und begleite Menschen im 1:1-Coaching, freiberuflich und unter dem Namen Pleasance.', en: 'My name is Robin Wahl. I build software, teach, and coach people one-to-one, as a freelancer under the name Pleasance.' },
+    p1:    { de: 'Ich heiße Robin Wahl und lebe in Freiburg im Breisgau. Ich baue Software, unterrichte und begleite Menschen im 1:1-Coaching, freiberuflich und unter dem Namen Pleasance.', en: 'My name is Robin Wahl and I live in Freiburg im Breisgau, Germany. I build software, teach, and coach people one-to-one, as a freelancer under the name Pleasance.' },
     p2:    { de: 'Vorher war ich Business Process Consultant und Scrum Master bei SAP, unter anderem im Catena-X-Netzwerk der Autoindustrie und in einem KI-Projekt mit dem Bundesfinanzministerium. Danach habe ich in einer Schweizer Holding Abläufe automatisiert.', en: 'Before that I was a business process consultant and Scrum Master at SAP, among other things in the automotive industry\'s Catena-X network and in an AI project with the German Federal Ministry of Finance. After that I automated processes at a Swiss holding company.' },
     p3:    { de: 'Ich bin selbst als Professional Scrum Master (PSM I) zertifiziert und arbeite als Coach systemisch, mit Elementen der Logotherapie. Studiert habe ich Betriebswirtschaft, Marketing Science und Wirtschaftsinformatik in Saarbrücken.', en: 'I\'m a certified Professional Scrum Master (PSM I) myself, and as a coach I work systemically, with elements of logotherapy. I studied business administration, marketing science and business informatics in Saarbrücken.' },
     p4:    { de: 'Pleasance ist der Name, unter dem ich das alles tue. Eine Person, eine Haltung: erst verstehen, dann handeln.', en: 'Pleasance is the name I do all of this under. One person, one stance: understand first, then act.' },
