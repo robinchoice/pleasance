@@ -4,9 +4,9 @@
 
 ## Leistungen
 
-- [Software-Entwicklung](https://pleasance.org/#werkzeuge): Web-Apps, Websites und Automatisierungen (n8n, Make, KI) für Selbstständige, kleine Firmen und Teams. Open Source, selbst gehostet, sauber dokumentiert, vom ersten Prototyp bis zum Betrieb auf dem eigenen Server.
-- [Lehre](https://pleasance.org/#wissen): Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I. Eigene Kurse zu Prototyping, Lernen und Schreiben mit KI sowie Geldgeschichte, Bitcoin und Österreichischer Schule. Für Teams, Hochschulen und Einzelne.
-- [1:1-Coaching](https://pleasance.org/coaching.html): Systemisches Coaching mit Elementen der Logotherapie für Menschen an einem beruflichen oder persönlichen Wendepunkt. Sessions dauern 60 Minuten und finden online per Videocall statt. Das Erstgespräch (20 Minuten) ist kostenlos.
+- [Software-Entwicklung](https://pleasance.org/software.html): Websites, Web-Apps und Automatisierungen (bevorzugt n8n auf dem eigenen Server, auch Make, mit KI) für Selbstständige, kleine Firmen und Teams. Open Source zuerst, selbst gehostet, ohne Tracker und Cookie-Banner, sauber dokumentiert, vom ersten Prototyp bis zum Betrieb auf dem eigenen Server. Remote im ganzen DACH-Raum, in Freiburg auch persönlich.
+- [Lehre](https://pleasance.org/lehre.html): Unabhängige Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I, mit Praxis aus Scrum-Teams bei SAP. Eigene Kurse zu Prototyping, Lernen und Schreiben mit KI sowie Geldgeschichte, Bitcoin und Österreichischer Schule. Für Teams, Hochschulen und Einzelne, in Freiburg, vor Ort bei Teams im DACH-Raum oder online.
+- [1:1-Coaching](https://pleasance.org/coaching.html): Systemisches Coaching mit Elementen der Logotherapie für Menschen an einem beruflichen oder persönlichen Wendepunkt. Sessions dauern 60 Minuten und finden persönlich in Freiburg oder online per Videocall statt. Das Erstgespräch (20 Minuten) ist kostenlos.
 
 ## Über Robin Wahl
 

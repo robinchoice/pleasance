@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance</title>
-  <meta name="description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching, online im ganzen DACH-Raum.">
+  <meta name="description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching in Freiburg und online.">
   <link rel="canonical" href="https://pleasance.org/">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -13,11 +13,11 @@
   <meta property="og:locale" content="de_DE">
   <meta property="og:url" content="https://pleasance.org/">
   <meta property="og:title" content="Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance">
-  <meta property="og:description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching, online im ganzen DACH-Raum.">
+  <meta property="og:description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching in Freiburg und online.">
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Lehre und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261002b">
+  <link rel="stylesheet" href="style.css?v=20261002c">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -58,9 +58,9 @@
           "@type": "OfferCatalog",
           "name": "Leistungen",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software-Entwicklung", "description": "Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source und selbst gehostet." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Workshops", "description": "Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemisches 1:1-Coaching", "description": "Systemisches Coaching mit Elementen der Logotherapie, online per Videocall.", "url": "https://pleasance.org/coaching.html" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software-Entwicklung", "description": "Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source und selbst gehostet.", "url": "https://pleasance.org/software.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Workshops", "description": "Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI. In Freiburg, vor Ort bei Teams im DACH-Raum oder online.", "url": "https://pleasance.org/lehre.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemisches 1:1-Coaching", "description": "Systemisches Coaching mit Elementen der Logotherapie, persönlich in Freiburg oder online per Videocall.", "url": "https://pleasance.org/coaching.html" } }
           ]
         }
       },
@@ -86,8 +86,8 @@
       <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
       <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="index.html#werkzeuge" data-i18n="nav.software">Software</a></li>
-        <li><a href="index.html#wissen" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Lehre</a></li>
         <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
         <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
         <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
@@ -161,7 +161,10 @@
                 </ul>
               </div>
             </div>
-            <div class="links"><a href="kontakt.html?thema=software" data-i18n="home.software.cta">Projekt besprechen</a></div>
+            <div class="links">
+              <a href="software.html" data-i18n="home.software.more">Mehr zur Software-Entwicklung</a>
+              <a href="kontakt.html?thema=software" data-i18n="home.software.cta">Projekt besprechen</a>
+            </div>
           </div>
         </section>
 
@@ -169,7 +172,7 @@
           <p class="word" aria-hidden="true" data-i18n="home.lehre.word">Wissen</p>
           <div>
             <h2 id="h-lehre" data-i18n="home.lehre.h2">Lehre</h2>
-            <p data-i18n="home.lehre.p1">Kurse und Workshops für Teams, Hochschulen und Einzelne. Praxisnah, mit Übungen aus echten Projekten.</p>
+            <p data-i18n="home.lehre.p1">Kurse und Workshops für Teams, Hochschulen und Einzelne, in Freiburg, bei euch vor Ort oder online. Praxisnah, mit Übungen aus echten Projekten.</p>
             <div class="groups">
               <div>
                 <h3 data-i18n="home.lehre.scrum">Vorbereitung auf Scrum.org-Zertifizierungen</h3>
@@ -188,7 +191,10 @@
                 </ul>
               </div>
             </div>
-            <div class="links"><a href="kontakt.html?thema=lehre" data-i18n="home.lehre.cta">Kurs anfragen</a></div>
+            <div class="links">
+              <a href="lehre.html" data-i18n="home.lehre.more">Mehr zu den Kursen</a>
+              <a href="kontakt.html?thema=lehre" data-i18n="home.lehre.cta">Kurs anfragen</a>
+            </div>
           </div>
         </section>
 
@@ -196,7 +202,7 @@
           <p class="word" aria-hidden="true" data-i18n="home.coaching.word">Wege</p>
           <div>
             <h2 id="h-coaching" data-i18n="home.coaching.h2">1:1-Coaching</h2>
-            <p data-i18n="home.coaching.p1">Für Menschen an einem Wendepunkt, beruflich oder persönlich. Systemisch, mit Elementen der Logotherapie, online. Das erste Gespräch dauert 20 Minuten und kostet nichts.</p>
+            <p data-i18n="home.coaching.p1">Für Menschen an einem Wendepunkt, beruflich oder persönlich. Systemisch, mit Elementen der Logotherapie, in Freiburg oder online. Das erste Gespräch dauert 20 Minuten und kostet nichts.</p>
             <div class="links">
               <a href="coaching.html" data-i18n="home.coaching.more">Mehr zum Coaching</a>
               <a href="coaching.html#kontakt" data-i18n="home.coaching.cta">Discovery Call vereinbaren</a>
@@ -248,8 +254,8 @@
     </footer>
   </div>
 
-  <script src="i18n.js?v=20261002b"></script>
-  <script src="main.js?v=20261002b"></script>
+  <script src="i18n.js?v=20261002c"></script>
+  <script src="main.js?v=20261002c"></script>
 
 </body>
 </html>
