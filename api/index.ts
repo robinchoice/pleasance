@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { bodyLimit } from 'hono/body-limit'
 import { cors } from 'hono/cors'
 import { createTransport } from 'nodemailer'
 
@@ -15,10 +16,15 @@ const ALLOWED_ORIGINS = [
   'https://www.pleasance.org',
 ]
 const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/
+const isAllowedOrigin = (origin: string) => ALLOWED_ORIGINS.includes(origin) || LOCAL_ORIGIN.test(origin)
 
 const MAX_REQUESTS = 5
 const requestsPerIp = new Map<string, number>()
 setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
+
+const MAX_MAILS_PER_HOUR = 20
+let mailsThisHour = 0
+setInterval(() => { mailsThisHour = 0 }, 60 * 60 * 1000)
 
 const TOPIC_LABELS: Record<string, string> = {
   software: 'Software',
@@ -29,12 +35,17 @@ const TOPIC_LABELS: Record<string, string> = {
 app.get('/', (c) => c.json({ ok: true }))
 
 app.use('/contact', cors({
-  origin: (origin) => ALLOWED_ORIGINS.includes(origin) || LOCAL_ORIGIN.test(origin) ? origin : null,
+  origin: (origin) => isAllowedOrigin(origin) ? origin : null,
   allowMethods: ['POST', 'OPTIONS'],
   allowHeaders: ['Content-Type'],
 }))
+app.use('/contact', bodyLimit({ maxSize: 32 * 1024 }))
 
 app.post('/contact', async (c) => {
+  if (!isAllowedOrigin(c.req.header('origin') ?? '')) {
+    return c.json({ error: 'Forbidden' }, 403)
+  }
+
   const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
   const count = (requestsPerIp.get(ip) ?? 0) + 1
   requestsPerIp.set(ip, count)
@@ -42,7 +53,7 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Too many requests' }, 429)
   }
 
-  let body: { topic?: string; name?: string; email?: string; message?: string; _honey?: string }
+  let body: Record<string, unknown>
 
   try {
     body = await c.req.json()
@@ -60,6 +71,14 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Missing fields' }, 400)
   }
 
+  if (typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
+    return c.json({ error: 'Invalid fields' }, 400)
+  }
+
+  if (typeof topic !== 'string' || !Object.hasOwn(TOPIC_LABELS, topic)) {
+    return c.json({ error: 'Invalid topic' }, 400)
+  }
+
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return c.json({ error: 'Invalid email' }, 400)
   }
@@ -68,7 +87,12 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Input too long' }, 400)
   }
 
-  const topicLabel = TOPIC_LABELS[topic] ?? topic
+  if (mailsThisHour >= MAX_MAILS_PER_HOUR) {
+    return c.json({ error: 'Too many requests' }, 429)
+  }
+  mailsThisHour++
+
+  const topicLabel = TOPIC_LABELS[topic]
 
   try {
     await mailer.sendMail({
