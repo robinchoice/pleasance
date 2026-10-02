@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Systemisches Coaching — Pleasance</title>
   <meta name="description" content="Systemisches Coaching für Menschen in Veränderung. Aktives Zuhören, Logotherapie und Raum für neue Wege.">
-  <link rel="stylesheet" href="style.css?v=20260929c">
+  <link rel="stylesheet" href="style.css?v=20261002">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="coaching">
@@ -191,20 +191,20 @@
           <h2 class="heading" id="h-kontakt" data-i18n="coaching.contact.h2">Lass uns sprechen</h2>
           <p data-i18n="coaching.contact.text">Du brauchst nichts vorzubereiten. Schreib mir einfach — ich melde mich innerhalb von zwei Werktagen.</p>
         </div>
-        <form class="form" id="contactForm" novalidate>
+        <form class="form" id="contactForm">
           <div class="form__row">
             <div class="field">
               <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
-              <input type="text" id="contactName" name="name" autocomplete="name" required>
+              <input type="text" id="contactName" name="name" autocomplete="name" maxlength="200" required>
             </div>
             <div class="field">
               <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
-              <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+              <input type="email" id="contactEmail" name="email" autocomplete="email" maxlength="200" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
             </div>
           </div>
           <div class="field">
             <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
-            <textarea id="contactMessage" name="message" rows="5" data-i18n-placeholder="coaching.contact.placeholder" placeholder="Was bewegt dich gerade?" required></textarea>
+            <textarea id="contactMessage" name="message" rows="5" maxlength="5000" data-i18n-placeholder="coaching.contact.placeholder" placeholder="Was bewegt dich gerade?" required></textarea>
           </div>
           <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
           <div><button type="submit" class="btn" id="contactSubmit" data-i18n="coaching.hero.cta">Discovery Call vereinbaren</button></div>
@@ -267,8 +267,8 @@
     </footer>
   </div>
 
-  <script src="i18n.js?v=20260929c"></script>
-  <script src="main.js?v=20260929c"></script>
+  <script src="i18n.js?v=20261002"></script>
+  <script src="main.js?v=20261002"></script>
   <script>
     const quizBox = document.getElementById('quizBox');
     const steps = quizBox.querySelectorAll('.quiz__step');
@@ -329,7 +329,6 @@
       var email   = document.getElementById('contactEmail').value.trim();
       var message = document.getElementById('contactMessage').value.trim();
       var lang    = document.documentElement.lang || 'de';
-      if (!name || !email || !message) return;
 
       var label = submit.textContent;
       submit.disabled = true;

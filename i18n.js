@@ -105,7 +105,7 @@ const I18N = {
       cookies_t: { de: 'Cookies', en: 'Cookies' },
       cookies_d: { de: 'Keine.', en: 'None.' },
       tracker_t: { de: 'Tracker von Dritten', en: 'Third-party trackers' },
-      tracker_d: { de: 'Keine. Die Besucherstatistik läuft auf meinem Server und speichert keine IP-Adressen.', en: 'None. Visitor statistics run on my own server and store no IP addresses.' },
+      tracker_d: { de: 'Keine. Es gibt auch keine Besucherstatistik.', en: 'None. There are no visitor statistics either.' },
       fonts_t:   { de: 'Schriften', en: 'Fonts' },
       fonts_d:   { de: 'Vom eigenen Server, nicht von Google.', en: 'Served from my own server, not from Google.' },
       server_t:  { de: 'Server', en: 'Server' },

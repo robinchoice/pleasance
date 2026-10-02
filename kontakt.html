@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt — Pleasance</title>
   <meta name="description" content="Schreib mir, worum es geht: Software, Lehre oder Coaching. Robin Wahl meldet sich innerhalb von zwei Werktagen.">
-  <link rel="stylesheet" href="style.css?v=20260929c">
+  <link rel="stylesheet" href="style.css?v=20261002">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="kontakt">
@@ -46,28 +46,28 @@
           <h2 id="h-alt" data-i18n="kontakt.alt.h2">Lieber per E-Mail?</h2>
           <p data-i18n="kontakt.alt.text">Schreib direkt an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a>.</p>
         </div>
-        <form class="form" id="contactForm" novalidate>
+        <form class="form" id="contactForm">
           <fieldset class="field">
             <legend data-i18n="kontakt.form.topic_label">Worum geht es?</legend>
             <div class="topics">
-              <label class="topic"><input type="radio" name="topic" value="software"><span data-i18n="kontakt.form.topic_software">Software</span></label>
-              <label class="topic"><input type="radio" name="topic" value="lehre"><span data-i18n="kontakt.form.topic_lehre">Lehre</span></label>
-              <label class="topic"><input type="radio" name="topic" value="coaching"><span data-i18n="kontakt.form.topic_coaching">Coaching</span></label>
+              <label class="topic"><input type="radio" name="topic" value="software" required><span data-i18n="kontakt.form.topic_software">Software</span></label>
+              <label class="topic"><input type="radio" name="topic" value="lehre" required><span data-i18n="kontakt.form.topic_lehre">Lehre</span></label>
+              <label class="topic"><input type="radio" name="topic" value="coaching" required><span data-i18n="kontakt.form.topic_coaching">Coaching</span></label>
             </div>
           </fieldset>
           <div class="form__row">
             <div class="field">
               <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
-              <input type="text" id="contactName" name="name" autocomplete="name" required>
+              <input type="text" id="contactName" name="name" autocomplete="name" maxlength="200" required>
             </div>
             <div class="field">
               <label for="contactEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
-              <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+              <input type="email" id="contactEmail" name="email" autocomplete="email" maxlength="200" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
             </div>
           </div>
           <div class="field">
             <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
-            <textarea id="contactMessage" name="message" rows="6" required></textarea>
+            <textarea id="contactMessage" name="message" rows="6" maxlength="5000" required></textarea>
           </div>
           <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
           <div><button type="submit" class="btn" id="contactSubmit" data-i18n="kontakt.form.submit">Absenden</button></div>
@@ -89,8 +89,8 @@
     </footer>
   </div>
 
-  <script src="i18n.js?v=20260929c"></script>
-  <script src="main.js?v=20260929c"></script>
+  <script src="i18n.js?v=20261002"></script>
+  <script src="main.js?v=20261002"></script>
   <script>
   (function () {
     var API_URL = 'https://api.pleasance.org/contact';
@@ -133,12 +133,6 @@
       var message = textarea.value.trim();
       var lang    = document.documentElement.lang || 'de';
       var topic   = form.elements.topic.value;
-      if (!name || !email || !message) return;
-      if (!topic) {
-        status.className = 'form-status is-error';
-        status.textContent = lang === 'en' ? 'Please choose a topic.' : 'Bitte wähle ein Thema.';
-        return;
-      }
 
       var label = submit.textContent;
       submit.disabled = true;
