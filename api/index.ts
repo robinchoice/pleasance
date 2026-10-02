@@ -1,9 +1,43 @@
+import * as Sentry from '@sentry/bun'
 import { Hono } from 'hono'
 import { bodyLimit } from 'hono/body-limit'
 import { cors } from 'hono/cors'
 import { createTransport } from 'nodemailer'
 
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.SENTRY_ENVIRONMENT || process.env.NODE_ENV || 'development',
+  release: process.env.SENTRY_RELEASE,
+  dataCollection: {
+    userInfo: false,
+    cookies: false,
+    httpHeaders: false,
+    httpBodies: [],
+    urlQueryParams: false,
+    graphQL: { document: false, variables: false },
+    genAI: { inputs: false, outputs: false },
+    databaseQueryData: false,
+    queues: false,
+    stackFrameVariables: false,
+    frameContextLines: 0,
+  },
+  maxBreadcrumbs: 0,
+  tracesSampleRate: 0,
+  defaultIntegrations: false,
+  integrations: [Sentry.onUncaughtExceptionIntegration(), Sentry.onUnhandledRejectionIntegration({ mode: 'strict' })],
+  beforeSend(event) {
+    delete event.request
+    delete event.user
+    return event
+  },
+})
+
 const app = new Hono()
+app.onError((error, c) => {
+  Sentry.captureException(error)
+  console.error(error)
+  return c.json({ error: 'Internal server error' }, 500)
+})
 const mailer = createTransport({
   host:       'smtp.protonmail.ch',
   port:       587,
@@ -104,6 +138,7 @@ app.post('/contact', async (c) => {
     })
   } catch (error) {
     console.error('SMTP error:', error)
+    Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 500)
   }
 

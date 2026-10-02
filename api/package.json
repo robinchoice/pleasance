@@ -5,6 +5,7 @@
     "start": "bun run index.ts"
   },
   "dependencies": {
+    "@sentry/bun": "^11.4.0",
     "hono": "^4.13.12",
     "nodemailer": "^10.0.13"
   }
