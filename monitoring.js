@@ -1,5 +1,5 @@
 Sentry.init({
-  dsn: "https://4681a517a4914ed6b38a0a20aace8142@glitchtip.diespaetzles.lol/7",
+  dsn: "https://4681a517a4914ed6b38a0a20aace8142@glitchtip.pleasance.org/7",
   environment: 'production',
   dataCollection: {
     userInfo: false,
