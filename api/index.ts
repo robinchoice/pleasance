@@ -62,7 +62,7 @@ setInterval(() => { mailsThisHour = 0 }, 60 * 60 * 1000)
 
 const TOPIC_LABELS: Record<string, string> = {
   software: 'Software',
-  lehre:    'Lehre',
+  lehre:    'Training',
   coaching: 'Coaching',
 }
 

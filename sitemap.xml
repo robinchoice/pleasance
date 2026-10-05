@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pleasance.org/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://pleasance.org/software.html</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://pleasance.org/lehre.html</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://pleasance.org/coaching.html</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://pleasance.org/ueber.html</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://pleasance.org/kontakt.html</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://pleasance.org/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/software.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/lehre.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/kurs-agenten.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/coaching.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/werkstatt.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/ueber.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://pleasance.org/kontakt.html</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>

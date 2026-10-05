@@ -248,6 +248,50 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .values b { display: block; font-size: 1.25rem; font-weight: 650; }
 .values span { display: block; margin-top: 0.25rem; max-width: 34em; color: var(--muted); }
 
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: 1rem; font-weight: 600; }
+.keyfacts { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-top: 1.5rem; list-style: none; font-weight: 650; }
+.keyfacts li + li::before { content: '·'; margin-right: 1.5rem; color: var(--muted); }
+.head-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.page-head .head-actions .btn { margin-top: 0; }
+.badge { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.4rem; font-size: 0.75rem; font-style: normal; font-weight: 700; color: var(--paper); background: var(--fir); border-radius: 3px; vertical-align: 0.15em; }
+.teaser { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--hairline); }
+
+/* === Werkstatt === */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.stat { padding-top: 0.9rem; border-top: var(--rule-thick); }
+.stat b { display: block; font-weight: 800; font-stretch: 75%; font-size: clamp(2.5rem, 4.5vw, 3.75rem); line-height: 1; letter-spacing: -0.02em; font-variation-settings: 'opsz' 96; }
+.stat span { display: block; margin-top: 0.4rem; font-size: 0.9375rem; color: var(--muted); }
+.source { margin-top: 1.25rem; font-size: 0.9375rem; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; margin-bottom: 1rem; font-size: 0.9375rem; color: var(--muted); }
+.projects { border-top: var(--rule); }
+.projects details { border-bottom: 1px solid var(--hairline); }
+.projects summary { display: grid; grid-template-columns: minmax(0, 1fr) 7.5rem 12rem 1.5rem; gap: 1rem; align-items: center; padding: 0.9rem 0; list-style: none; cursor: pointer; }
+.projects summary::-webkit-details-marker { display: none; }
+.projects summary::after { content: '+'; font-size: 1.4rem; line-height: 1; text-align: right; }
+.projects details[open] summary::after { content: '\2212'; }
+.projects summary:hover .project__name { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+.project__name { display: block; font-weight: 650; }
+.project__desc { display: block; font-size: 0.9375rem; color: var(--muted); }
+.project__more { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; padding: 0 2.5rem 1.25rem 0; font-size: 1rem; }
+.project__more dt { font-weight: 650; }
+.project__more dd { color: var(--muted); }
+.project__more dd + dt { margin-top: 0.5rem; }
+.status { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.9375rem; font-weight: 600; }
+.status::before { content: ''; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--fir); }
+.status--work::before { background: transparent; box-shadow: inset 0 0 0 2px var(--fir); }
+.status--test::before { background: linear-gradient(90deg, var(--fir) 50%, transparent 50%); box-shadow: inset 0 0 0 2px var(--fir); }
+.status--quiet { color: var(--muted); }
+.status--quiet::before { background: var(--hairline); }
+.commits { font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+.commits i { display: block; min-width: 3px; height: 4px; margin-top: 0.3rem; background: var(--ink); }
+
+.log { list-style: none; border-top: var(--rule); }
+.log li { display: grid; grid-template-columns: 4.5rem 9.5rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hairline); }
+.log time { font-variant-numeric: tabular-nums; color: var(--muted); }
+.log b { font-weight: 650; }
+.log--plain li { grid-template-columns: 4.5rem 1fr; }
+
 /* === Quiz === */
 .quiz { max-width: 44rem; padding: 2rem; border: var(--rule); border-radius: 3px; background: var(--surface); }
 .quiz__progress { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; }
@@ -288,6 +332,16 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .field label, .field legend { display: block; margin-bottom: 0.4rem; font-size: 1rem; font-weight: 650; }
 .field input, .field textarea, .newsletter input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  font-size: 1.0625rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: var(--rule);
+  border-radius: 3px;
+}
+.field select {
   width: 100%;
   padding: 0.8rem 1rem;
   font: inherit;
@@ -350,6 +404,13 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .facts dd { padding-top: 0; border-top: 0; }
   .quiz { padding: 1.25rem; }
   .btn { white-space: normal; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .projects summary { grid-template-columns: minmax(0, 1fr) 1.5rem; row-gap: 0.4rem; }
+  .projects summary > span { grid-column: 1; }
+  .projects summary::after { grid-column: 2; grid-row: 1; }
+  .project__more { grid-template-columns: 1fr; padding-right: 0; }
+  .log li, .log--plain li { grid-template-columns: 4rem 1fr; }
+  .log li > :nth-child(n+3) { grid-column: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {

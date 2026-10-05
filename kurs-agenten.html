@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurs: Mit KI-Agenten bauen, online — Pleasance</title>
+  <meta name="description" content="In vier Abenden ein eigenes Setup mit Claude Code oder Codex: Regeln, Vorlage, eigener Server und Review. Online, höchstens 8 Personen, von Robin Wahl aus Freiburg.">
+  <link rel="canonical" href="https://pleasance.org/kurs-agenten.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/kurs-agenten.html">
+  <meta property="og:title" content="Kurs: Mit KI-Agenten bauen, online — Pleasance">
+  <meta property="og:description" content="In vier Abenden ein eigenes Setup mit Claude Code oder Codex: Regeln, Vorlage, eigener Server und Review. Online, höchstens 8 Personen, von Robin Wahl aus Freiburg.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261005a">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": "https://pleasance.org/kurs-agenten.html#course",
+    "name": "Mit KI-Agenten bauen",
+    "description": "In vier Abenden ein eigenes Arbeits-Setup mit Claude Code oder Codex: Regeln und Skills, Vorlage für Prototypen, Betrieb auf dem eigenen Server mit Coolify, Tests und Review.",
+    "url": "https://pleasance.org/kurs-agenten.html",
+    "inLanguage": "de",
+    "provider": { "@type": "Organization", "@id": "https://pleasance.org/#business", "name": "Pleasance", "url": "https://pleasance.org/" },
+    "offers": { "@type": "Offer", "category": "Paid", "price": "490", "priceCurrency": "EUR", "url": "https://pleasance.org/kurs-agenten.html#termine" },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "startDate": "2026-11-03",
+      "endDate": "2026-11-24",
+      "courseWorkload": "PT10H",
+      "instructor": { "@type": "Person", "@id": "https://pleasance.org/#robin", "name": "Robin Wahl" }
+    }
+  }
+  </script>
+</head>
+<body data-page="kurs">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" aria-current="page" data-i18n="nav.lehre">Training</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <a class="back" href="lehre.html" data-i18n="kurs.back">← Alle Kurse</a>
+        <h1 class="display page-title page-title--long" data-i18n="kurs.h1">Mit KI-Agenten bauen, ohne die Kontrolle abzugeben.</h1>
+        <p class="lead" data-i18n="kurs.lead">In vier Abenden richtest du dir ein Arbeits-Setup mit Claude Code oder Codex ein, mit dem du eigene Werkzeuge baust und selbst betreibst. Du lernst es an dem Setup, mit dem ich meine eigenen Projekte allein entwickle.</p>
+        <ul class="keyfacts">
+          <li data-i18n="kurs.facts.f1">4 Abende à 2,5 Stunden</li>
+          <li data-i18n="kurs.facts.f2">Online</li>
+          <li data-i18n="kurs.facts.f3">Höchstens 8 Personen</li>
+          <li>490&nbsp;€</li>
+        </ul>
+        <div class="head-actions">
+          <a class="btn" href="kontakt.html?thema=lehre&amp;kurs=agenten" data-i18n="kurs.cta">Platz anfragen</a>
+          <a class="btn btn--ghost" href="#termine" data-i18n="kurs.cta2">Termine ansehen</a>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="h-problem">
+        <h2 class="heading" id="h-problem" data-i18n="kurs.problem.h2">Schnell gebaut, schnell verloren</h2>
+        <ul class="values">
+          <li><b data-i18n="kurs.problem.t1">Der Agent vergisst alles.</b><span data-i18n="kurs.problem.d1">Jede Sitzung beginnt bei null, solange deine Arbeitsweise nur in deinem Kopf steht. Du erklärst dieselben Dinge immer wieder.</span></li>
+          <li><b data-i18n="kurs.problem.t2">Es läuft nur auf deinem Laptop.</b><span data-i18n="kurs.problem.d2">Zwischen Prototyp und Betrieb liegen Server, Backups, Updates und Fehlermeldungen. Dort bleiben die meisten Projekte stecken.</span></li>
+          <li><b data-i18n="kurs.problem.t3">Niemand prüft das Ergebnis.</b><span data-i18n="kurs.problem.d3">Agenten bauen schnell, auch Fehler. Ohne Tests und Review merkst du es erst, wenn jemand anderes es merkt.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="h-ablauf">
+        <h2 class="heading" id="h-ablauf" data-i18n="kurs.ablauf.h2">Vier Abende, ein Setup</h2>
+        <div>
+          <div class="prose"><p data-i18n="kurs.ablauf.intro">Jeder Abend baut auf dem vorigen auf. Zwischen den Abenden arbeitest du an deinem eigenen Vorhaben weiter, etwa zwei Stunden pro Woche.</p></div>
+          <ol class="steps">
+            <li>
+              <h3 data-i18n="kurs.ablauf.t1">Werkzeug einrichten</h3>
+              <p data-i18n="kurs.ablauf.d1">Claude Code oder Codex im Terminal, ein erstes Projekt, und wie du Aufgaben so formulierst, dass der Agent sie versteht.</p>
+            </li>
+            <li>
+              <h3 data-i18n="kurs.ablauf.t2">Dem Agenten ein Gedächtnis geben</h3>
+              <p data-i18n="kurs.ablauf.d2">Regeln, Projektdateien und Skills: Deine Arbeitsweise steht in Dateien, die jeder Agent zuerst liest.</p>
+            </li>
+            <li>
+              <h3 data-i18n="kurs.ablauf.t3">Vom Entwurf zum Prototyp</h3>
+              <p data-i18n="kurs.ablauf.d3">Erst klickbare Entwürfe, dann bauen aus einer Vorlage mit Bun, Hono, SvelteKit und Postgres. Du entscheidest, der Agent tippt.</p>
+            </li>
+            <li>
+              <h3 data-i18n="kurs.ablauf.t4">Betreiben und prüfen</h3>
+              <p data-i18n="kurs.ablauf.d4">Eigener Server mit Coolify, Backups, Fehlerberichte. Dazu Tests und die Zweitmeinung eines zweiten Agenten vor jedem Commit.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-danach">
+        <h2 class="heading" id="h-danach" data-i18n="kurs.danach.h2">Was du danach hast</h2>
+        <ul class="values">
+          <li><b data-i18n="kurs.danach.t1">Dein Setup als eigenes Repository.</b><span data-i18n="kurs.danach.d1">Regeln, Skills und Vorlage, angepasst an deine Arbeit. Es gehört dir und läuft mit jedem Agenten, der Dateien lesen kann.</span></li>
+          <li><b data-i18n="kurs.danach.t2">Einen Prototyp deines Vorhabens, online.</b><span data-i18n="kurs.danach.d2">Auf einem Server, den du kontrollierst, mit Backup und Fehlermeldungen.</span></li>
+          <li><b data-i18n="kurs.danach.t3">Checklisten für den Alltag.</b><span data-i18n="kurs.danach.d3">Was vor jedem Commit, jedem Deploy und jedem Update zu prüfen ist.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="h-belege">
+        <h2 class="heading" id="h-belege" data-i18n="kurs.belege.h2">Belege statt Versprechen</h2>
+        <div>
+          <div class="stats">
+            <div class="stat"><b data-gh="projects">10</b><span data-i18n="kurs.belege.projects">Projekte, die ich gerade allein entwickle</span></div>
+            <div class="stat"><b data-gh="commits">226</b><span data-i18n="kurs.belege.commits">Commits in den letzten 30 Tagen</span></div>
+            <div class="stat"><b data-gh="agent">92&nbsp;%</b><span data-i18n="kurs.belege.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
+          </div>
+          <p class="source" data-i18n="kurs.belege.source">Jede Nacht aktualisiert. Alle Projekte, das Logbuch und was nicht geklappt hat: <a href="werkstatt.html">in der Werkstatt</a>.</p>
+        </div>
+      </section>
+
+      <section class="section" id="termine" aria-labelledby="h-termine">
+        <h2 class="heading" id="h-termine" data-i18n="kurs.termine.h2">Termine und Preis</h2>
+        <div class="offers" style="margin-top: 0">
+          <div class="offer">
+            <h3 data-i18n="kurs.termine.group">Gruppenkurs online</h3>
+            <p class="offer__detail">490&nbsp;€</p>
+            <p class="offer__note" data-i18n="kurs.termine.group_note">Dienstags 3., 10., 17. und 24. November 2026, 18:00 bis 20:30 Uhr. Höchstens 8 Personen.</p>
+            <a class="btn" href="kontakt.html?thema=lehre&amp;kurs=agenten" data-i18n="kurs.cta">Platz anfragen</a>
+          </div>
+          <div class="offer">
+            <h3 data-i18n="kurs.termine.single">1:1 an deinem Projekt</h3>
+            <p class="offer__detail">690&nbsp;€</p>
+            <p class="offer__note" data-i18n="kurs.termine.single_note">Drei Sitzungen à 2 Stunden, online oder in Freiburg. Start nach Absprache, das Vorgespräch ist kostenlos.</p>
+            <a class="btn btn--ghost" href="kontakt.html?thema=lehre&amp;kurs=einzel" data-i18n="kurs.termine.single_cta">Vorgespräch anfragen</a>
+          </div>
+          <div class="offer">
+            <h3 data-i18n="kurs.termine.team">Für Teams</h3>
+            <p class="offer__detail" data-i18n="kurs.termine.team_price">Auf Anfrage</p>
+            <p class="offer__note" data-i18n="kurs.termine.team_note">Vor Ort im DACH-Raum oder online, angepasst an euren Stack und eure Regeln.</p>
+            <a class="btn btn--ghost" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="kurs.termine.team_cta">Team-Kurs anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-fuer">
+        <h2 class="heading" id="h-fuer" data-i18n="kurs.fuer.h2">Für wen</h2>
+        <div class="groups" style="margin-top: 0">
+          <div>
+            <h3 data-i18n="kurs.fuer.yes">Passt, wenn du</h3>
+            <ul class="list">
+              <li data-i18n="kurs.fuer.y1">selbstständig bist oder in einer kleinen Firma arbeitest und eigene Werkzeuge willst</li>
+              <li data-i18n="kurs.fuer.y2">keine Angst vor dem Terminal hast, auch ohne Programmiererfahrung</li>
+              <li data-i18n="kurs.fuer.y3">wissen willst, was der Agent tut, statt ihm blind zu vertrauen</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="kurs.fuer.no">Passt nicht, wenn du</h3>
+            <ul class="list">
+              <li data-i18n="kurs.fuer.n1">ein Baukasten-Tool suchst, bei dem du nie Code siehst</li>
+              <li data-i18n="kurs.fuer.n2">an einem Wochenende ein fertiges Produkt erwartest</li>
+              <li data-i18n="kurs.fuer.n3">keine zwei Stunden pro Woche zwischen den Abenden hast</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="h-faq">
+        <h2 class="heading" id="h-faq" data-i18n="kurs.faq.h2">Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="kurs.faq.q1">Muss ich programmieren können?</summary>
+            <div class="faq__answer" data-i18n="kurs.faq.a1">Nein. Du solltest ein Terminal öffnen und Dateien finden können. Code lesen lernst du nebenbei, weil du jede Änderung prüfst, bevor sie übernommen wird.</div>
+          </details>
+          <details>
+            <summary data-i18n="kurs.faq.q2">Welche Kosten kommen dazu?</summary>
+            <div class="faq__answer" data-i18n="kurs.faq.a2">Ein Abo für Claude Pro oder ChatGPT Plus, rund 20&nbsp;€ im Monat. Für den eigenen Server rechne mit etwa 5&nbsp;€ im Monat bei Hetzner. Alles andere ist Open Source.</div>
+          </details>
+          <details>
+            <summary data-i18n="kurs.faq.q3">Warum nicht Lovable, Bolt oder ein anderer Baukasten?</summary>
+            <div class="faq__answer" data-i18n="kurs.faq.a3">Weil dir dort weder der Code noch der Betrieb gehört. In diesem Kurs liegt beides bei dir, und du kannst jederzeit den Agenten oder den Anbieter wechseln.</div>
+          </details>
+          <details>
+            <summary data-i18n="kurs.faq.q4">Was passiert mit meinem Code?</summary>
+            <div class="faq__answer" data-i18n="kurs.faq.a4">Der Agent schickt die Dateien, an denen er arbeitet, an seinen Anbieter, also Anthropic oder OpenAI. Für vertrauliche Projekte zeige ich am zweiten Abend, wie du offene Modelle einsetzt und was sie heute können.</div>
+          </details>
+          <details>
+            <summary data-i18n="kurs.faq.q5">Was, wenn ich einen Abend verpasse?</summary>
+            <div class="faq__answer" data-i18n="kurs.faq.a5">Du bekommst die Unterlagen und eine halbe Stunde mit mir, um aufzuholen. Aufzeichnungen gibt es nicht, damit alle offen über ihre Projekte sprechen können.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-cta">
+        <h2 class="heading" id="h-cta" data-i18n="kurs.final.h2">Was willst du bauen?</h2>
+        <div class="stack">
+          <p data-i18n="kurs.final.text">Erzähl mir kurz von deinem Vorhaben. Ich melde mich innerhalb von zwei Werktagen und sage dir ehrlich, ob der Kurs passt.</p>
+          <div><a class="btn" href="kontakt.html?thema=lehre&amp;kurs=agenten" data-i18n="kurs.cta">Platz anfragen</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="vendor/sentry-11.4.0.min.js"></script>
+  <script src="monitoring.js"></script>
+  <script src="i18n.js?v=20261005a"></script>
+  <script src="main.js?v=20261005a"></script>
+
+</body>
+</html>

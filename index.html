@@ -15,9 +15,9 @@
   <meta property="og:title" content="Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance">
   <meta property="og:description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching in Freiburg und online.">
   <meta property="og:image" content="https://pleasance.org/img/og.png">
-  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Lehre und Coaching aus Freiburg.">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261002c">
+  <link rel="stylesheet" href="style.css?v=20261005a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -59,7 +59,7 @@
           "name": "Leistungen",
           "itemListElement": [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software-Entwicklung", "description": "Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source und selbst gehostet.", "url": "https://pleasance.org/software.html" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Workshops", "description": "Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI. In Freiburg, vor Ort bei Teams im DACH-Raum oder online.", "url": "https://pleasance.org/lehre.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kurse und Workshops", "description": "Kurse zum Bauen mit KI-Agenten, Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI. In Freiburg, vor Ort bei Teams im DACH-Raum oder online.", "url": "https://pleasance.org/lehre.html" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemisches 1:1-Coaching", "description": "Systemisches Coaching mit Elementen der Logotherapie, persönlich in Freiburg oder online per Videocall.", "url": "https://pleasance.org/coaching.html" } }
           ]
         }
@@ -87,8 +87,9 @@
       <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
       <ul class="nav__links" id="navLinks">
         <li><a href="software.html" data-i18n="nav.software">Software</a></li>
-        <li><a href="lehre.html" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
         <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
         <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
         <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
         <li class="nav__tools">
@@ -121,6 +122,7 @@
             <h2 id="h-software" data-i18n="home.software.h2">Software-Entwicklung</h2>
             <p data-i18n="home.software.p1">Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, selbst gehostet, sauber dokumentiert. Vom ersten Prototyp bis zum Betrieb auf deinem eigenen Server.</p>
             <p class="muted" data-i18n="home.software.p2">Diese Website ist ein Beispiel: ohne CMS, ohne Cookies, auf meinem eigenen Server.</p>
+            <p class="teaser" data-i18n="home.software.teaser">Woran ich gerade baue, steht jede Nacht aktualisiert in der <a href="werkstatt.html">Werkstatt</a>.</p>
             <h3 class="tools-title" data-i18n="home.software.tools">Womit ich arbeite</h3>
             <div class="groups">
               <div>
@@ -171,7 +173,7 @@
         <section class="row" id="wissen" aria-labelledby="h-lehre">
           <p class="word" aria-hidden="true" data-i18n="home.lehre.word">Wissen</p>
           <div>
-            <h2 id="h-lehre" data-i18n="home.lehre.h2">Lehre</h2>
+            <h2 id="h-lehre" data-i18n="home.lehre.h2">Training</h2>
             <p data-i18n="home.lehre.p1">Kurse und Workshops für Teams, Hochschulen und Einzelne, in Freiburg, bei euch vor Ort oder online. Praxisnah, mit Übungen aus echten Projekten.</p>
             <div class="groups">
               <div>
@@ -185,6 +187,7 @@
               <div>
                 <h3 data-i18n="home.lehre.own">Eigene Kurse</h3>
                 <ul class="list">
+                  <li><b><a href="kurs-agenten.html" data-i18n="home.lehre.agenten">Mit KI-Agenten bauen</a><em class="badge" data-i18n="home.lehre.new">neu</em></b></li>
                   <li><b data-i18n="home.lehre.proto">Prototyping</b></li>
                   <li><b data-i18n="home.lehre.ki">Lernen und Texte schreiben mit KI</b></li>
                   <li><b data-i18n="home.lehre.geld">Geldgeschichte, Bitcoin und Österreichische Schule</b></li>
@@ -256,8 +259,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261002c"></script>
-  <script src="main.js?v=20261002c"></script>
+  <script src="i18n.js?v=20261005a"></script>
+  <script src="main.js?v=20261005a"></script>
 
 </body>
 </html>

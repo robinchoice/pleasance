@@ -15,9 +15,9 @@
   <meta property="og:title" content="Kontakt — Pleasance, Freiburg im Breisgau">
   <meta property="og:description" content="Schreib mir, worum es geht: Software, Kurse oder Coaching. Robin Wahl aus Freiburg meldet sich innerhalb von zwei Werktagen.">
   <meta property="og:image" content="https://pleasance.org/img/og.png">
-  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Lehre und Coaching aus Freiburg.">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261002c">
+  <link rel="stylesheet" href="style.css?v=20261005a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="kontakt">
@@ -30,8 +30,9 @@
       <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
       <ul class="nav__links" id="navLinks">
         <li><a href="software.html" data-i18n="nav.software">Software</a></li>
-        <li><a href="lehre.html" data-i18n="nav.lehre">Lehre</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
         <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
         <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
         <li><a href="kontakt.html" aria-current="page" data-i18n="nav.kontakt">Kontakt</a></li>
         <li class="nav__tools">
@@ -63,10 +64,21 @@
             <legend data-i18n="kontakt.form.topic_label">Worum geht es?</legend>
             <div class="topics">
               <label class="topic"><input type="radio" name="topic" value="software" required><span data-i18n="kontakt.form.topic_software">Software</span></label>
-              <label class="topic"><input type="radio" name="topic" value="lehre" required><span data-i18n="kontakt.form.topic_lehre">Lehre</span></label>
+              <label class="topic"><input type="radio" name="topic" value="lehre" required><span data-i18n="kontakt.form.topic_lehre">Training</span></label>
               <label class="topic"><input type="radio" name="topic" value="coaching" required><span data-i18n="kontakt.form.topic_coaching">Coaching</span></label>
             </div>
           </fieldset>
+          <div class="field" id="courseField" hidden>
+            <label for="contactCourse" data-i18n="kontakt.form.course_label">Welcher Kurs?</label>
+            <select id="contactCourse" name="course">
+              <option value="" data-i18n="kontakt.form.course_open">Weiß ich noch nicht</option>
+              <option value="agenten" data-i18n="kontakt.form.course_agenten">Mit KI-Agenten bauen: Gruppenkurs ab 3. November</option>
+              <option value="einzel" data-i18n="kontakt.form.course_einzel">Mit KI-Agenten bauen: 1:1 an meinem Projekt</option>
+              <option value="team" data-i18n="kontakt.form.course_team">Mit KI-Agenten bauen: für unser Team</option>
+              <option value="scrum" data-i18n="kontakt.form.course_scrum">Scrum-Vorbereitung: PSM I, PSPO I oder PSK I</option>
+              <option value="other" data-i18n="kontakt.form.course_other">Ein anderer Kurs</option>
+            </select>
+          </div>
           <div class="form__row">
             <div class="field">
               <label for="contactName" data-i18n="kontakt.form.name_label">Dein Name</label>
@@ -79,7 +91,7 @@
           </div>
           <div class="field">
             <label for="contactMessage" data-i18n="kontakt.form.message_label">Deine Nachricht</label>
-            <textarea id="contactMessage" name="message" rows="6" maxlength="5000" required></textarea>
+            <textarea id="contactMessage" name="message" rows="6" maxlength="4900" required></textarea>
           </div>
           <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
           <div><button type="submit" class="btn" id="contactSubmit" data-i18n="kontakt.form.submit">Absenden</button></div>
@@ -103,8 +115,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261002c"></script>
-  <script src="main.js?v=20261002c"></script>
+  <script src="i18n.js?v=20261005a"></script>
+  <script src="main.js?v=20261005a"></script>
   <script>
   (function () {
     var API_URL = 'https://api.pleasance.org/contact';
@@ -113,10 +125,12 @@
     var submit   = document.getElementById('contactSubmit');
     var status   = document.getElementById('formStatus');
     var textarea = document.getElementById('contactMessage');
+    var courseField = document.getElementById('courseField');
+    var course   = document.getElementById('contactCourse');
 
     var topics = {
       software: { de: 'Was soll entstehen? Erzähl mir kurz von deinem Vorhaben.', en: 'What should we build? Tell me briefly about your project.' },
-      lehre:    { de: 'Welcher Kurs, für wen und wann?',                          en: 'Which course, for whom and when?' },
+      lehre:    { de: 'Was willst du lernen oder bauen, und bis wann?',           en: 'What do you want to learn or build, and by when?' },
       coaching: { de: 'Was bewegt dich gerade?',                                  en: 'What\'s on your mind?' },
     };
 
@@ -130,12 +144,20 @@
       textarea.placeholder = topic ? topic[document.documentElement.lang || 'de'] : '';
     }
 
+    function updateCourse() {
+      courseField.hidden = form.elements.topic.value !== 'lehre';
+    }
+
     var urlTopic = new URLSearchParams(location.search).get('thema');
     var preselect = urlTopic && form.querySelector('input[name="topic"][value="' + CSS.escape(urlTopic) + '"]');
     if (preselect) preselect.checked = true;
+    var urlCourse = new URLSearchParams(location.search).get('kurs');
+    if (urlCourse && course.querySelector('option[value="' + CSS.escape(urlCourse) + '"]')) course.value = urlCourse;
     updatePlaceholder();
+    updateCourse();
 
     form.addEventListener('change', updatePlaceholder);
+    form.addEventListener('change', updateCourse);
     new MutationObserver(updatePlaceholder).observe(
       document.documentElement, { attributes: true, attributeFilter: ['lang'] }
     );
@@ -147,6 +169,7 @@
       var message = textarea.value.trim();
       var lang    = document.documentElement.lang || 'de';
       var topic   = form.elements.topic.value;
+      if (topic === 'lehre' && course.value) message = course.options[course.selectedIndex].text + '\n\n' + message;
 
       var label = submit.textContent;
       submit.disabled = true;
@@ -173,6 +196,7 @@
           : 'Danke — ich melde mich bald.';
         form.reset();
         updatePlaceholder();
+        updateCourse();
       } catch (_) {
         status.className = 'form-status is-error';
         status.textContent = lang === 'en'

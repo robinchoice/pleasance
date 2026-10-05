@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werkstatt: Woran ich gerade baue — Pleasance</title>
+  <meta name="description" content="Alle Projekte, an denen Robin Wahl gerade baut, mit Zahlen aus GitHub, einem Logbuch und dem, was nicht geklappt hat. Jede Nacht aktualisiert.">
+  <link rel="canonical" href="https://pleasance.org/werkstatt.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/werkstatt.html">
+  <meta property="og:title" content="Werkstatt: Woran ich gerade baue — Pleasance">
+  <meta property="og:description" content="Alle Projekte, an denen Robin Wahl gerade baut, mit Zahlen aus GitHub, einem Logbuch und dem, was nicht geklappt hat. Jede Nacht aktualisiert.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261005a">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+</head>
+<body data-page="werkstatt">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" aria-current="page" data-i18n="nav.werkstatt">Werkstatt</a></li>
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title" data-i18n="werkstatt.h1">Woran ich gerade baue.</h1>
+        <p class="lead" data-i18n="werkstatt.lead">Ich baue allein, mit KI-Agenten als Werkzeug. Die Zahlen hier kommen direkt aus meinen Repositories, jede Nacht neu. Dazu ein Logbuch, auch mit dem, was nicht geklappt hat.</p>
+      </header>
+
+      <section class="section" aria-labelledby="h-zahlen">
+        <h2 class="heading" id="h-zahlen" data-i18n="werkstatt.zahlen.h2">Die letzten 30 Tage</h2>
+        <div>
+          <div class="stats">
+            <div class="stat"><b data-gh="projects">10</b><span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></div>
+            <div class="stat"><b data-gh="commits">226</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
+            <div class="stat"><b data-gh="agent">92&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
+          </div>
+          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-05T14:35:01.837Z">05.10.2026, 16:35</time></p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-projekte">
+        <h2 class="heading" id="h-projekte" data-i18n="werkstatt.projekte.h2">Projekte</h2>
+        <div>
+          <p class="legend">
+            <span class="status" data-i18n="werkstatt.status.live">Live</span>
+            <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
+            <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
+          </p>
+          <div class="projects">
+            <details>
+              <summary>
+                <span><span class="project__name">Music Hub</span><span class="project__desc" data-i18n="werkstatt.projekte.musichub">Versionen für Musik, ohne Chaos</span></span>
+                <span class="status" data-i18n="werkstatt.status.live">Live</span>
+                <span class="commits"><b data-gh="music-hub.commits">71</b> Commits, <b data-gh="music-hub.agent">70</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="music-hub" style="width: 100%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="music-hub.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Postgres, S3</dd></div>
+                <div><dt>Links</dt><dd><a href="https://hub.pleasance.org">hub.pleasance.org</a> · <a href="https://github.com/robinchoice/music-hub" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">fahrbar</span><span class="project__desc" data-i18n="werkstatt.projekte.fahrbar">Offenes Protokoll für Carsharing und Fahrdienste</span></span>
+                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+                <span class="commits"><b data-gh="fahrbar.commits">35</b> Commits, <b data-gh="fahrbar.agent">34</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="fahrbar" style="width: 49.3%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="fahrbar.last" datetime="2026-10-02">02.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Supabase, OpenStreetMap</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/fahrbar" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">Savor</span><span class="project__desc" data-i18n="werkstatt.projekte.savor">Lokaler Arbeitsplatz für Coding-Agents</span></span>
+                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+                <span class="commits"><b data-gh="savor.commits">39</b> Commits, <b data-gh="savor.agent">37</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="savor" style="width: 54.9%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="savor.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, Vite, Node</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/savor" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">Döner App</span><span class="project__desc" data-i18n="werkstatt.projekte.doener">Der beste Döner, bewertet von Leuten in der Nähe</span></span>
+                <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
+                <span class="commits"><b data-gh="DoenerApp.commits">28</b> Commits, <b data-gh="DoenerApp.agent">22</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="DoenerApp" style="width: 39.4%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="DoenerApp.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Dart, Postgres</dd></div>
+                <div><dt>Links</dt><dd data-i18n="werkstatt.projekte.doener_links">Repository privat, Testphase mit Einladung</dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">pleasance.org</span><span class="project__desc" data-i18n="werkstatt.projekte.pleasance">Diese Website</span></span>
+                <span class="status" data-i18n="werkstatt.status.live">Live</span>
+                <span class="commits"><b data-gh="pleasance.commits">18</b> Commits, <b data-gh="pleasance.agent">17</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="pleasance" style="width: 25.4%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="pleasance.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>HTML, CSS, Bun, Hono</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/pleasance" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name" data-i18n="werkstatt.projekte.starter_name">Starter-Vorlage</span><span class="project__desc" data-i18n="werkstatt.projekte.starter">Vorlage für neue Prototypen</span></span>
+                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+                <span class="commits"><b data-gh="starter.commits">12</b> Commits, <b data-gh="starter.agent">11</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="starter" style="width: 16.9%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="starter.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Bun, Hono, SvelteKit, Drizzle, Postgres, Flutter</dd></div>
+                <div><dt>Links</dt><dd data-i18n="werkstatt.projekte.starter_links">Repository privat, Grundlage im Kurs <a href="kurs-agenten.html">Mit KI-Agenten bauen</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">Music Hub Plugin</span><span class="project__desc" data-i18n="werkstatt.projekte.plugin">A/B-Vergleich von Versionen in der DAW</span></span>
+                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+                <span class="commits"><b data-gh="musichub-plugin.commits">7</b> Commits, <b data-gh="musichub-plugin.agent">7</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musichub-plugin" style="width: 9.9%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musichub-plugin.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>C++, JUCE (VST3, AU, AAX)</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/musichub-plugin" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">robin-wahl.de</span><span class="project__desc" data-i18n="werkstatt.projekte.cv">Lebenslauf</span></span>
+                <span class="status" data-i18n="werkstatt.status.live">Live</span>
+                <span class="commits"><b data-gh="robin-wahl.de.commits">7</b> Commits, <b data-gh="robin-wahl.de.agent">7</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="robin-wahl.de" style="width: 9.9%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="robin-wahl.de.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>HTML, CSS, GitHub Pages</dd></div>
+                <div><dt>Links</dt><dd><a href="https://robin-wahl.de">robin-wahl.de</a> · <a href="https://github.com/robinchoice/robin-wahl.de" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">MusicLink</span><span class="project__desc" data-i18n="werkstatt.projekte.musiclink">Musik über Streamingdienste hinweg teilen</span></span>
+                <span class="status" data-i18n="werkstatt.status.live">Live</span>
+                <span class="commits"><b data-gh="musicstreaming-connector.commits">6</b> Commits, <b data-gh="musicstreaming-connector.agent">1</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musicstreaming-connector" style="width: 8.5%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musicstreaming-connector.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Flutter</dd></div>
+                <div><dt>Links</dt><dd><a href="https://musiclink.pleasance.org">musiclink.pleasance.org</a> · <a href="https://github.com/robinchoice/musicstreaming-connector" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
+                <span><span class="project__name">docpilot</span><span class="project__desc" data-i18n="werkstatt.projekte.docpilot">Dokumentation, die bei jedem Push mitwächst</span></span>
+                <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
+                <span class="commits"><b data-gh="docpilot.commits">3</b> Commits, <b data-gh="docpilot.agent">3</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="docpilot" style="width: 4.2%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="docpilot.last" datetime="2026-10-01">01.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, GitHub Action</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/docpilot" data-i18n="werkstatt.projekte.code">Quellcode</a></dd></div>
+              </dl>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-log">
+        <h2 class="heading" id="h-log" data-i18n="werkstatt.log.h2">Logbuch</h2>
+        <div>
+          <ul class="log">
+            <li><time datetime="2026-10-05">05.10.</time><b>Music Hub</b><span data-i18n="werkstatt.log.e1">Neuer Mixer: Er spielt alle Versionen eines Tracks gleichzeitig ab. Gelöschtes landet jetzt im Papierkorb des Projekts.</span></li>
+            <li><time datetime="2026-10-05">05.10.</time><b>Music Hub</b><span data-i18n="werkstatt.log.e2">Die Images baut jetzt GitHub Actions, der Server lädt sie nur noch. Der kleine ARM-Server baut nichts mehr selbst.</span></li>
+            <li><time datetime="2026-10-04">04.10.</time><b>Savor</b><span data-i18n="werkstatt.log.e3">Version 0.6.0: neuer Look, und im Browser-Modus bekommt die Vorschau die ganze Bühne.</span></li>
+            <li><time datetime="2026-10-04">04.10.</time><b>Döner App</b><span data-i18n="werkstatt.log.e4">Testerinnen und Tester melden Fehler mit Screenshot von jedem Bildschirm aus. Einladungslinks öffnen die installierte App.</span></li>
+            <li><time datetime="2026-10-04">04.10.</time><b>pleasance.org</b><span data-i18n="werkstatt.log.e5">Fehler im Browser landen in meinem eigenen GlitchTip statt bei einem US-Dienst. Die Datenschutzerklärung sagt das jetzt auch.</span></li>
+            <li><time datetime="2026-10-02">02.10.</time><b>fahrbar</b><span data-i18n="werkstatt.log.e6">Stripe ist raus, Buchungen sind vorerst Anfragen. Die Entscheidung zum Geschäftsmodell steht als ADR im Repository.</span></li>
+          </ul>
+          <h3 class="tools-title" data-i18n="werkstatt.log.misses">Was nicht geklappt hat</h3>
+          <ul class="log log--plain">
+            <li><time datetime="2026-10-04">04.10.</time><span data-i18n="werkstatt.log.m1">Coolify ließ sich weder per Oberfläche noch per API auf einen Deploy-Key umstellen. Gelöst direkt in der Datenbank, sauber ist anders.</span></li>
+            <li><time datetime="2026-10-01">01.10.</time><span data-i18n="werkstatt.log.m2">Bei fahrbar hatten sich ungenutzte Abhängigkeiten und toter Code angesammelt. Aufgeräumt, bevor es weitergeht.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-wie">
+        <h2 class="heading" id="h-wie" data-i18n="werkstatt.wie.h2">Wie ich mit Agenten arbeite</h2>
+        <div>
+          <ul class="values">
+            <li><b data-i18n="werkstatt.wie.t1">Die Agenten schreiben, ich entscheide.</b><span data-i18n="werkstatt.wie.d1">Was gebaut wird, wie es aussieht und was live geht, lege ich fest. Vor jedem Bau gibt es klickbare Entwürfe.</span></li>
+            <li><b data-i18n="werkstatt.wie.t2">Regeln statt Wiederholung.</b><span data-i18n="werkstatt.wie.d2">Arbeitsweise, Technik und Grenzen stehen in Dateien, die jeder Agent zuerst liest. So beginnt keine Sitzung bei null.</span></li>
+            <li><b data-i18n="werkstatt.wie.t3">Nichts geht ungeprüft raus.</b><span data-i18n="werkstatt.wie.d3">Tests, Typprüfung und eine Zweitmeinung von einem zweiten Agenten laufen vor jedem Commit.</span></li>
+          </ul>
+          <div class="links">
+            <a href="kurs-agenten.html" data-i18n="werkstatt.wie.kurs">Das lernst du im Kurs „Mit KI-Agenten bauen“</a>
+            <a href="kontakt.html?thema=software" data-i18n="home.software.cta">Projekt besprechen</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="facts" aria-labelledby="h-facts">
+      <div class="wrap">
+        <div>
+          <h2 class="heading" id="h-facts" data-i18n="werkstatt.facts.h2">Beipackzettel dieser Seite</h2>
+          <p class="facts__lead" data-i18n="werkstatt.facts.lead">Woher die Zahlen kommen.</p>
+        </div>
+        <dl>
+          <dt>Commits</dt>
+          <dd data-i18n="werkstatt.facts.commits_d">Aus der GitHub-API, jede Nacht. Gezählt wird, was in den letzten 30 Tagen auf dem Hauptzweig gelandet ist.</dd>
+          <dt data-i18n="werkstatt.facts.agent_t">„Mit Agent“</dt>
+          <dd data-i18n="werkstatt.facts.agent_d">Commits mit einer Co-Authored-By-Zeile von Claude oder Codex.</dd>
+          <dt data-i18n="werkstatt.facts.log_t">Logbuch</dt>
+          <dd data-i18n="werkstatt.facts.log_d">Von mir geschrieben, aus den Commits der Woche.</dd>
+          <dt data-i18n="werkstatt.facts.call_t">Beim Aufruf</dt>
+          <dd data-i18n="werkstatt.facts.call_d">Keine Anfrage an GitHub oder andere Dienste. Die Zahlen liegen fertig auf meinem Server.</dd>
+          <dt data-i18n="home.facts.code_t">Quellcode</dt>
+          <dd data-i18n="werkstatt.facts.code_d">Das Skript dazu liegt <a href="https://github.com/robinchoice/pleasance/blob/main/scripts/werkstatt.mjs">auf GitHub</a>.</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="vendor/sentry-11.4.0.min.js"></script>
+  <script src="monitoring.js"></script>
+  <script src="i18n.js?v=20261005a"></script>
+  <script src="main.js?v=20261005a"></script>
+  <script>
+  (function () {
+    var times = document.querySelectorAll('time[datetime]');
+
+    function formatDates() {
+      var locale = document.documentElement.lang === 'en' ? 'en-GB' : 'de-DE';
+      times.forEach(function (t) {
+        var value = t.getAttribute('datetime');
+        var options = value.includes('T')
+          ? { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }
+          : { day: locale === 'de-DE' ? '2-digit' : 'numeric', month: locale === 'de-DE' ? '2-digit' : 'short', timeZone: 'Europe/Berlin' };
+        t.textContent = new Date(value).toLocaleString(locale, options);
+      });
+    }
+
+    formatDates();
+    new MutationObserver(formatDates).observe(
+      document.documentElement, { attributes: true, attributeFilter: ['lang'] }
+    );
+  })();
+  </script>
+
+</body>
+</html>
