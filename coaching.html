@@ -288,7 +288,9 @@
         <h2 class="heading" id="h-news" data-i18n="coaching.newsletter.h2">Impulse für deinen Weg</h2>
         <div>
           <p data-i18n="coaching.newsletter.subtitle">Gedanken zu Veränderung, Sinn und neuen Wegen — kostenlos in dein Postfach.</p>
-          <form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/choice" method="post" target="popupwindow">
+          <form class="newsletter" action="https://listmonk.pleasance.org/subscription/form" method="post">
+            <input type="hidden" name="l" value="2f9bf73e-c62c-4af0-998f-88b636816112">
+            <input type="hidden" name="nonce">
             <input type="email" name="email" aria-labelledby="h-news" data-i18n-placeholder="coaching.newsletter.placeholder" placeholder="Deine E-Mail-Adresse" required>
             <button type="submit" class="btn" data-i18n="coaching.newsletter.btn">Anmelden</button>
           </form>
