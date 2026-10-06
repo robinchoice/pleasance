@@ -331,17 +331,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .form { display: grid; gap: 1.25rem; max-width: 44rem; }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .field label, .field legend { display: block; margin-bottom: 0.4rem; font-size: 1rem; font-weight: 650; }
-.field input, .field textarea, .newsletter input {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  font: inherit;
-  font-size: 1.0625rem;
-  color: var(--ink);
-  background: var(--surface);
-  border: var(--rule);
-  border-radius: 3px;
-}
-.field select {
+.field input, .field textarea, .field select, .newsletter input {
   width: 100%;
   padding: 0.8rem 1rem;
   font: inherit;
@@ -352,7 +342,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   border-radius: 3px;
 }
 .field textarea { min-height: 9rem; resize: vertical; }
-.field input:focus-visible, .field textarea:focus-visible, .newsletter input:focus-visible { outline: 3px solid var(--fir); outline-offset: 1px; }
+.field input:focus-visible, .field textarea:focus-visible, .field select:focus-visible, .newsletter input:focus-visible { outline: 3px solid var(--fir); outline-offset: 1px; }
 .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; border: 0; }
 .topic { position: relative; }
 .topic input { position: absolute; opacity: 0; }

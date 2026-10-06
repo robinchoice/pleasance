@@ -148,10 +148,11 @@
       courseField.hidden = form.elements.topic.value !== 'lehre';
     }
 
-    var urlTopic = new URLSearchParams(location.search).get('thema');
+    var params = new URLSearchParams(location.search);
+    var urlTopic = params.get('thema');
     var preselect = urlTopic && form.querySelector('input[name="topic"][value="' + CSS.escape(urlTopic) + '"]');
     if (preselect) preselect.checked = true;
-    var urlCourse = new URLSearchParams(location.search).get('kurs');
+    var urlCourse = params.get('kurs');
     if (urlCourse && course.querySelector('option[value="' + CSS.escape(urlCourse) + '"]')) course.value = urlCourse;
     updatePlaceholder();
     updateCourse();

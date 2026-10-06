@@ -477,7 +477,6 @@ const I18N = {
       h2:       { de: 'Belege statt Versprechen', en: 'Evidence, not promises' },
       projects: { de: 'Projekte, die ich gerade allein entwickle', en: 'projects I\'m currently building on my own' },
       commits:  { de: 'Commits in den letzten 30 Tagen', en: 'commits in the last 30 days' },
-      agent:    { de: 'davon mit einem KI-Agenten als Co-Autor', en: 'of them co-authored by an AI agent' },
       source:   { de: 'Jede Nacht aktualisiert. Alle Projekte, das Logbuch und was nicht geklappt hat: <a href="werkstatt.html">in der Werkstatt</a>.', en: 'Updated every night. All projects, the logbook and what didn\'t work: <a href="werkstatt.html">on my workbench</a>.' },
     },
     termine: {
@@ -544,7 +543,6 @@ const I18N = {
       agent:        { de: 'mit Agent', en: 'with an agent' },
       last:         { de: 'Zuletzt geändert', en: 'Last change' },
       stack:        { de: 'Technik', en: 'Stack' },
-      code:         { de: 'Quellcode', en: 'Source code' },
       musichub:     { de: 'Versionen für Musik, ohne Chaos', en: 'Versions for music, without the chaos' },
       fahrbar:      { de: 'Offenes Protokoll für Carsharing und Fahrdienste', en: 'Open protocol for car sharing and ride services' },
       savor:        { de: 'Lokaler Arbeitsplatz für Coding-Agents', en: 'Local workspace for coding agents' },
@@ -587,7 +585,6 @@ const I18N = {
       commits_d: { de: 'Aus der GitHub-API, jede Nacht. Gezählt wird, was in den letzten 30 Tagen auf dem Hauptzweig gelandet ist.', en: 'From the GitHub API, every night. It counts what landed on the main branch in the last 30 days.' },
       agent_t:   { de: '„Mit Agent“', en: '“With an agent”' },
       agent_d:   { de: 'Commits mit einer Co-Authored-By-Zeile von Claude oder Codex.', en: 'Commits with a Co-Authored-By line from Claude or Codex.' },
-      log_t:     { de: 'Logbuch', en: 'Logbook' },
       log_d:     { de: 'Von mir geschrieben, aus den Commits der Woche.', en: 'Written by me, from the week\'s commits.' },
       call_t:    { de: 'Beim Aufruf', en: 'When you visit' },
       call_d:    { de: 'Keine Anfrage an GitHub oder andere Dienste. Die Zahlen liegen fertig auf meinem Server.', en: 'No requests to GitHub or any other service. The numbers are already on my server.' },
