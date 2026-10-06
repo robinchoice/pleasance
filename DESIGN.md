@@ -84,7 +84,7 @@ Linksbündig, Raster 5fr/7fr: links das große Wort oder die Überschrift, recht
 - 1,5px-Linien trennen Zeilen und Abschnitte.
 - Haarlinien trennen Listeneinträge.
 
-Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. die drei Schritte im Coaching-Netzwerk).
+Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. der Ablauf eines Coachings).
 
 ## Komponenten
 

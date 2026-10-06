@@ -240,7 +240,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .steps li { counter-increment: step; display: grid; grid-template-columns: 3rem 1fr; gap: 0 1rem; padding: 1.1rem 0; border-top: 1px solid var(--hairline); }
 .steps li::before { content: counter(step); grid-row: span 2; font-weight: 800; font-stretch: 75%; font-size: 2.5rem; line-height: 1; }
 .steps p { color: var(--muted); }
-.note { margin-top: 1.5rem; font-weight: 650; }
+.crisis { max-width: 36em; margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--hairline); font-size: 1rem; color: var(--muted); }
 
 .values { list-style: none; }
 .values li { padding: 1.1rem 0; border-top: 1px solid var(--hairline); }
@@ -292,32 +292,6 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .log b { font-weight: 650; }
 .log--plain li { grid-template-columns: 4.5rem 1fr; }
 
-/* === Quiz === */
-.quiz { max-width: 44rem; padding: 2rem; border: var(--rule); border-radius: 3px; background: var(--surface); }
-.quiz__progress { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; }
-.quiz__dot { flex: 1; height: 4px; background: var(--hairline); }
-.quiz__dot.active, .quiz__dot.done { background: var(--ink); }
-.quiz__step, .quiz__result { display: none; }
-.quiz__step.active, .quiz__result.active { display: block; }
-.quiz__question { margin-bottom: 1.25rem; font-size: 1.3125rem; font-weight: 650; line-height: 1.35; }
-.quiz__options { display: grid; gap: 0.6rem; }
-.quiz__option {
-  padding: 0.9rem 1.1rem;
-  font: inherit;
-  font-size: 1rem;
-  text-align: left;
-  color: var(--ink);
-  background: transparent;
-  border: var(--rule);
-  border-radius: 3px;
-  cursor: pointer;
-}
-.quiz__option:hover { color: var(--paper); background: var(--ink); }
-.quiz__result h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
-.quiz__result p { margin-top: 0.75rem; }
-.quiz__result .btn { margin-top: 1.5rem; }
-.quiz__restart { display: block; margin-top: 1rem; font: inherit; font-size: 0.9375rem; color: var(--muted); background: none; border: 0; text-decoration: underline; cursor: pointer; }
-
 /* === FAQ === */
 .faq details { border-top: var(--rule); }
 .faq details:last-child { border-bottom: var(--rule); }
@@ -331,7 +305,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .form { display: grid; gap: 1.25rem; max-width: 44rem; }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .field label, .field legend { display: block; margin-bottom: 0.4rem; font-size: 1rem; font-weight: 650; }
-.field input, .field textarea, .field select, .newsletter input {
+.field input, .field textarea, .field select {
   width: 100%;
   padding: 0.8rem 1rem;
   font: inherit;
@@ -342,7 +316,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   border-radius: 3px;
 }
 .field textarea { min-height: 9rem; resize: vertical; }
-.field input:focus-visible, .field textarea:focus-visible, .field select:focus-visible, .newsletter input:focus-visible { outline: 3px solid var(--fir); outline-offset: 1px; }
+.field input:focus-visible, .field textarea:focus-visible, .field select:focus-visible { outline: 3px solid var(--fir); outline-offset: 1px; }
 .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; border: 0; }
 .topic { position: relative; }
 .topic input { position: absolute; opacity: 0; }
@@ -353,8 +327,6 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .form-status { min-height: 1.5rem; font-weight: 650; }
 .form-status.is-success { color: var(--fir); }
 .form-status.is-error { color: var(--error); }
-.newsletter { display: flex; flex-wrap: wrap; gap: 0.75rem; max-width: 36rem; margin-top: 1.5rem; }
-.newsletter input { flex: 1 1 16rem; width: auto; }
 
 /* === Legal === */
 .legal { max-width: 46rem; padding: 3rem 0 4rem; }
@@ -392,7 +364,6 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .groups, .offers, .form__row { grid-template-columns: 1fr; }
   .facts dl { grid-template-columns: 1fr; }
   .facts dd { padding-top: 0; border-top: 0; }
-  .quiz { padding: 1.25rem; }
   .btn { white-space: normal; }
   .stats { grid-template-columns: 1fr 1fr; }
   .projects summary { grid-template-columns: minmax(0, 1fr) 1.5rem; row-gap: 0.4rem; }
