@@ -7,6 +7,7 @@ const OWNER = 'robinchoice'
 const DAYS = 30
 const FILES = ['werkstatt.html', 'kurs-agenten.html']
 const AGENT = /^Co-Authored-By:.*(Claude|Codex|noreply@anthropic\.com|noreply@openai\.com)/im
+const isWerkstattCommit = (c) => c.author?.login === 'github-actions[bot]' || c.commit.message === 'chore: update werkstatt numbers'
 
 const since = new Date(Date.now() - DAYS * 24 * 60 * 60 * 1000).toISOString()
 const headers = {
@@ -24,8 +25,17 @@ async function commitsSince(repo) {
   const commits = []
   for (let page = 1; ; page++) {
     const batch = await get(`${repo}/commits?since=${since}&per_page=100&page=${page}`)
-    commits.push(...batch)
+    commits.push(...batch.filter((c) => !isWerkstattCommit(c)))
     if (batch.length < 100) return commits
+  }
+}
+
+async function latestCommit(repo) {
+  for (let page = 1; ; page++) {
+    const batch = await get(`${repo}/commits?per_page=100&page=${page}`)
+    const latest = batch.find((c) => !isWerkstattCommit(c))
+    if (latest) return latest
+    if (batch.length < 100) throw new Error(`${repo}: no non-bot commits`)
   }
 }
 
@@ -45,7 +55,7 @@ const repos = [...werkstatt.matchAll(/data-gh-bar="([^"]+)"/g)].map((m) => m[1])
 const stats = []
 for (const repo of repos) {
   const commits = await commitsSince(repo)
-  const latest = commits[0] ?? (await get(`${repo}/commits?per_page=1`))[0]
+  const latest = commits[0] ?? await latestCommit(repo)
   stats.push({
     repo,
     commits: commits.length,
@@ -63,15 +73,15 @@ for (const file of FILES) {
   let html = await readFile(file, 'utf8')
   html = setText(html, 'projects', String(stats.filter((s) => s.commits > 0).length))
   html = setText(html, 'commits', String(total))
-  html = setText(html, 'agent', `${Math.round((agent / total) * 100)}&nbsp;%`)
+  html = setText(html, 'agent', `${total ? Math.round((agent / total) * 100) : 0}&nbsp;%`)
   html = setText(html, 'updated', new Date(now).toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }), now)
   for (const s of stats) {
     html = setText(html, `${s.repo}.commits`, String(s.commits))
     html = setText(html, `${s.repo}.agent`, String(s.agent))
     html = setText(html, `${s.repo}.last`, day(s.last), s.last)
     html = html.replace(
-      new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )[\\d.]+%`),
-      `$1${Math.round((s.commits / max) * 1000) / 10}%`)
+      new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )(?:[\\d.]+|NaN)%`),
+      `$1${max ? Math.round((s.commits / max) * 1000) / 10 : 0}%`)
   }
   await writeFile(file, html)
 }
