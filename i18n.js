@@ -204,8 +204,8 @@ const I18N = {
       first_detail:   { de: 'Kostenlos', en: 'Free' },
       first_note:     { de: '20 Minuten, unverbindlich', en: '20 minutes, no obligation' },
       session_label:  { de: 'Einzelsession', en: 'Single session' },
-      session_detail: { de: '60 Minuten', en: '60 minutes' },
-      session_note:   { de: 'in Freiburg oder online per Videocall', en: 'in Freiburg or online via video call' },
+      session_detail: { de: '90 €', en: '€90' },
+      session_note:   { de: '60 Minuten, in Freiburg oder online per Videocall', en: '60 minutes, in Freiburg or online via video call' },
       session_btn:    { de: 'Session anfragen', en: 'Request a session' },
     },
     wer: {
