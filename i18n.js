@@ -143,7 +143,6 @@ const I18N = {
       h2:   { de: '1:1-Coaching', en: '1:1 coaching' },
       p1:   { de: 'Für Menschen an einem Wendepunkt, beruflich oder persönlich. Systemisch, mit Elementen der Logotherapie, in Freiburg oder online. Das erste Gespräch dauert 20 Minuten und kostet nichts.', en: 'For people at a turning point, professionally or personally. Systemic, with elements of logotherapy, in Freiburg or online. The first conversation takes 20 minutes and is free.' },
       more: { de: 'Mehr zum Coaching', en: 'More about coaching' },
-      cta:  { de: 'Erstgespräch anfragen', en: 'Request a first conversation' },
     },
     facts: {
       h2:        { de: 'Beipackzettel dieser Website', en: 'The fine print of this website' },
@@ -200,7 +199,6 @@ const I18N = {
       d2:             { de: 'Je 60 Minuten, in Freiburg oder online per Videocall. Du bestimmst das Thema, Hausaufgaben gibt es keine.', en: '60 minutes each, in Freiburg or online via video call. You choose the topic, and there\'s no homework.' },
       t3:             { de: 'Abschluss', en: 'Finishing' },
       d3:             { de: 'Wir hören auf, wenn du deinen nächsten Schritt kennst. Das Ziel ist, dass du mich nicht mehr brauchst.', en: 'We stop when you know your next step. The goal is that you no longer need me.' },
-      first_label:    { de: 'Erstgespräch', en: 'First conversation' },
       first_detail:   { de: 'Kostenlos', en: 'Free' },
       first_note:     { de: '20 Minuten, unverbindlich', en: '20 minutes, no obligation' },
       session_label:  { de: 'Einzelsession', en: 'Single session' },

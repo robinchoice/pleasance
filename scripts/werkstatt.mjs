@@ -35,8 +35,7 @@ async function latestCommit(repo) {
   for (let page = 1; ; page++) {
     const batch = await get(`${repo}/commits?per_page=100&page=${page}`)
     const latest = batch.find((c) => !isWerkstattCommit(c))
-    if (latest) return latest
-    if (batch.length < 100) return null
+    if (latest || batch.length < 100) return latest
   }
 }
 
@@ -86,7 +85,7 @@ for (const file of FILES) {
     html = setText(html, `${s.repo}.agent`, String(s.agent))
     html = setText(html, `${s.repo}.last`, s.last ? day(s.last) : '—', s.last)
     html = html.replace(
-      new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )(?:[\\d.]+|NaN)%`),
+      new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )[\\d.]+%`),
       `$1${max ? Math.round((s.commits / max) * 1000) / 10 : 0}%`)
   }
   await writeFile(file, html)
