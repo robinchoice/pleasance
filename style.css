@@ -286,6 +286,30 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .commits { font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
 .commits i { display: block; min-width: 3px; height: 4px; margin-top: 0.3rem; background: var(--ink); }
 
+/* Tool wall: tiles and signs follow the product family in the starter's DESIGN.md */
+.wall-side { margin-top: 1rem; max-width: 22em; font-size: 1rem; color: var(--muted); }
+.wall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.25rem 1.5rem; padding-top: 2rem; border-top: var(--rule); }
+.tool { display: flex; flex-direction: column; align-items: flex-start; gap: 0.2rem; padding: 0; font: inherit; text-align: left; color: var(--ink); background: none; border: 0; cursor: pointer; }
+.tool img, .tool-panel__head img, .tool-row img { display: block; border-radius: 24%; }
+[data-theme="dark"] .tool img, [data-theme="dark"] .tool-panel__head img, [data-theme="dark"] .tool-row img { box-shadow: 0 0 0 1px var(--hairline); }
+.tool img { width: 100%; max-width: 7rem; height: auto; margin-bottom: 0.7rem; transition: transform 0.15s; }
+.tool:hover img, .tool[aria-expanded="true"] img { transform: translateY(-3px); }
+.tool__name { font-size: 1.35rem; font-weight: 750; font-stretch: 80%; line-height: 1.1; }
+.tool:hover .tool__name, .tool[aria-expanded="true"] .tool__name { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+.tool__desc { margin-bottom: 0.3rem; font-size: 0.9375rem; line-height: 1.4; color: var(--muted); }
+.tool .status { font-size: 0.875rem; }
+.tool-panel { grid-column: 1 / -1; padding: 1.5rem 0 1.75rem; border-top: 4px solid; border-image: var(--line, linear-gradient(90deg, #F2545B, #FB8C45, #F2C14E, #6CCF8E, #46BFE0, #8E92F8, #C39BF2)) 1; border-bottom: 1px solid var(--hairline); }
+.tool-panel__head { display: flex; gap: 1.25rem; align-items: flex-start; }
+.tool-panel__head h3 { font-size: 1.6rem; font-weight: 750; font-stretch: 80%; line-height: 1.1; }
+.tool-panel__head p { margin-top: 0.4rem; max-width: 34em; font-size: 1rem; color: var(--muted); }
+.tool-panel .project__more { margin-top: 1.25rem; padding: 0; }
+.tool-form { max-width: none; margin-top: 1.5rem; }
+.tool-form__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; font-size: 0.9375rem; color: var(--muted); }
+.wall-others { margin: 3rem 0 0.5rem; font-size: 1rem; }
+.tool-row { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; margin-top: 0.75rem; list-style: none; }
+.tool-row a { display: flex; flex-direction: column; gap: 0.4rem; width: 4.75rem; font-size: 0.875rem; font-weight: 600; line-height: 1.25; color: var(--ink); text-decoration: none; }
+.tool-row a:hover span { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+
 .log { list-style: none; border-top: var(--rule); }
 .log li { display: grid; grid-template-columns: 4.5rem 9.5rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hairline); }
 .log time { font-variant-numeric: tabular-nums; color: var(--muted); }
@@ -370,6 +394,9 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .projects summary > span { grid-column: 1; }
   .projects summary::after { grid-column: 2; grid-row: 1; }
   .project__more { grid-template-columns: 1fr; padding-right: 0; }
+  .wall { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem 1rem; }
+  .tool__desc, .tool-panel__head img { display: none; }
+  .tool__name { font-size: 1.1rem; }
   .log li, .log--plain li { grid-template-columns: 4rem 1fr; }
   .log li > :nth-child(n+3) { grid-column: 2; }
 }

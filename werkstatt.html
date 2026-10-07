@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261006b">
+  <link rel="stylesheet" href="style.css?v=20261007a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="werkstatt">
@@ -52,6 +52,7 @@
       <header class="page-head">
         <h1 class="display page-title" data-i18n="werkstatt.h1">Woran ich gerade baue.</h1>
         <p class="lead" data-i18n="werkstatt.lead">Ich baue allein, mit KI-Agenten als Werkzeug. Die Zahlen hier kommen direkt aus meinen Repositories, jede Nacht neu. Dazu ein Logbuch, auch mit dem, was nicht geklappt hat.</p>
+        <a class="btn" href="#neu" data-i18n="werkstatt.wall.cta">Neuen Prototyp anfragen</a>
       </header>
 
       <section class="section" aria-labelledby="h-zahlen">
@@ -66,60 +67,146 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="h-projekte">
-        <h2 class="heading" id="h-projekte" data-i18n="werkstatt.projekte.h2">Projekte</h2>
+      <section class="section" aria-labelledby="h-werkzeuge">
         <div>
-          <p class="legend">
-            <span class="status" data-i18n="werkstatt.status.live">Live</span>
-            <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
-            <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-            <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
-          </p>
-          <div class="projects">
-            <details>
-              <summary>
-                <span><span class="project__name">Music Hub</span><span class="project__desc" data-i18n="werkstatt.projekte.musichub">Versionen für Musik, ohne Chaos</span></span>
-                <span class="status" data-i18n="werkstatt.status.live">Live</span>
-                <span class="commits"><b data-gh="music-hub.commits">71</b> Commits, <b data-gh="music-hub.agent">70</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="music-hub" style="width: 100%"></i></span>
-              </summary>
-              <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="music-hub.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Postgres, S3</dd></div>
-                <div><dt>Links</dt><dd><a href="https://hub.pleasance.org">hub.pleasance.org</a> · <a href="https://github.com/robinchoice/music-hub" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
-              </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">fahrbar</span><span class="project__desc" data-i18n="werkstatt.projekte.fahrbar">Offenes Protokoll für Carsharing und Fahrdienste</span></span>
-                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="fahrbar.commits">35</b> Commits, <b data-gh="fahrbar.agent">34</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="fahrbar" style="width: 49.3%"></i></span>
-              </summary>
+          <h2 class="heading" id="h-werkzeuge" data-i18n="werkstatt.wall.h2">Werkzeuge</h2>
+          <p class="wall-side" data-i18n="werkstatt.wall.side">Jedes hat sein eigenes Zeichen. Tipp eins an für Details, oder das Plus für deins.</p>
+        </div>
+        <div>
+          <div class="wall" id="wall">
+            <button type="button" class="tool" id="fahrbar" aria-expanded="false" aria-controls="tool-fahrbar">
+              <img src="img/werkzeuge/fahrbar.svg" alt="" width="112" height="112">
+              <span class="tool__name">fahrbar</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.fahrbar">Offenes Protokoll für Carsharing und Fahrdienste</span>
+              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            </button>
+            <button type="button" class="tool" id="musichub" aria-expanded="false" aria-controls="tool-musichub">
+              <img src="img/werkzeuge/musichub.svg" alt="" width="112" height="112">
+              <span class="tool__name">Music Hub</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.musichub">Versionen für Musik, ohne Chaos</span>
+              <span class="status" data-i18n="werkstatt.status.live">Live</span>
+            </button>
+            <button type="button" class="tool" id="doener" aria-expanded="false" aria-controls="tool-doener">
+              <img src="img/werkzeuge/doener.svg" alt="" width="112" height="112">
+              <span class="tool__name">Döner App</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.doener">Der beste Döner, bewertet von Leuten in der Nähe</span>
+              <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
+            </button>
+            <button type="button" class="tool" id="musiclink" aria-expanded="false" aria-controls="tool-musiclink">
+              <img src="img/werkzeuge/musiclink.svg" alt="" width="112" height="112">
+              <span class="tool__name">MusicLink</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.musiclink">Musik über Streamingdienste hinweg teilen</span>
+              <span class="status" data-i18n="werkstatt.status.live">Live</span>
+            </button>
+            <button type="button" class="tool" id="docpilot" aria-expanded="false" aria-controls="tool-docpilot">
+              <img src="img/werkzeuge/docpilot.svg" alt="" width="112" height="112">
+              <span class="tool__name">docpilot</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.docpilot">Dokumentation, die bei jedem Push mitwächst</span>
+              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
+            </button>
+            <button type="button" class="tool" id="savor" aria-expanded="false" aria-controls="tool-savor">
+              <img src="img/werkzeuge/savor.svg" alt="" width="112" height="112">
+              <span class="tool__name">Savor</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.savor">Lokaler Arbeitsplatz für Coding-Agents</span>
+              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            </button>
+            <button type="button" class="tool tool--new" id="neu" aria-expanded="false" aria-controls="tool-neu">
+              <img src="img/werkzeuge/new.svg" alt="" width="112" height="112">
+              <span class="tool__name" data-i18n="werkstatt.wall.new_name">Neuer Prototyp</span>
+              <span class="tool__desc" data-i18n="werkstatt.wall.new_desc">Dein Werkzeug als nächstes</span>
+              <span class="status status--work" data-i18n="werkstatt.wall.free">Frei</span>
+            </button>
+            <div class="tool-panel" id="tool-fahrbar" style="--line: linear-gradient(90deg, #F2545B, #F45E57, #F56853)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/fahrbar.svg" alt="" width="56" height="56">
+                <div><h3>fahrbar</h3><p data-i18n="werkstatt.wall.fahrbar">Eine geprüfte Fahrerin oder ein geprüfter Fahrer kommt zu dir und fährt dich in deinem eigenen Auto nach Hause. Eine offene Plattform für Fahrdienste.</p></div>
+              </div>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="fahrbar.last" datetime="2026-10-02">02.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Supabase, OpenStreetMap</dd></div>
-                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/fahrbar" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="fahrbar.commits">35</b> Commits, <b data-gh="fahrbar.agent">34</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="fahrbar" style="width: 49.3%"></i></span></dd><dt>Links</dt><dd><a href="https://github.com/robinchoice/fahrbar" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
               </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">Savor</span><span class="project__desc" data-i18n="werkstatt.projekte.savor">Lokaler Arbeitsplatz für Coding-Agents</span></span>
-                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="savor.commits">39</b> Commits, <b data-gh="savor.agent">37</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="savor" style="width: 54.9%"></i></span>
-              </summary>
+            </div>
+            <div class="tool-panel" id="tool-musichub" style="--line: linear-gradient(90deg, #F56853, #F97F4A, #F99747)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/musichub.svg" alt="" width="56" height="56">
+                <div><h3>Music Hub</h3><p data-i18n="werkstatt.wall.musichub">Versionsverwaltung für Musikproduktionen. Jede Fassung eines Tracks an einem Ort, kein final_v2_WIRKLICH_FINAL.wav mehr.</p></div>
+              </div>
               <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="savor.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, Vite, Node</dd></div>
-                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/savor" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="music-hub.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Postgres, S3</dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="music-hub.commits">71</b> Commits, <b data-gh="music-hub.agent">70</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="music-hub" style="width: 100%"></i></span></dd><dt>Links</dt><dd><a href="https://hub.pleasance.org">hub.pleasance.org</a> · <a href="https://github.com/robinchoice/music-hub" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
               </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">Döner App</span><span class="project__desc" data-i18n="werkstatt.projekte.doener">Der beste Döner, bewertet von Leuten in der Nähe</span></span>
-                <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
-                <span class="commits"><b data-gh="DoenerApp.commits">28</b> Commits, <b data-gh="DoenerApp.agent">22</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="DoenerApp" style="width: 39.4%"></i></span>
-              </summary>
+            </div>
+            <div class="tool-panel" id="tool-doener" style="--line: linear-gradient(90deg, #F6A94A, #F3BA4D, #D7C45B)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/doener.svg" alt="" width="56" height="56">
+                <div><h3>Döner App</h3><p data-i18n="werkstatt.wall.doener">Wer in der Nähe Döner isst, bewertet Soße, Fleisch und Brot. Daraus entsteht das Ranking der Stadt. Freunde verbinden sich per QR-Code.</p></div>
+              </div>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="DoenerApp.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Dart, Postgres</dd></div>
-                <div><dt>Links</dt><dd data-i18n="werkstatt.projekte.doener_links">Repository privat, Testphase mit Einladung</dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="DoenerApp.commits">28</b> Commits, <b data-gh="DoenerApp.agent">22</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="DoenerApp" style="width: 39.4%"></i></span></dd><dt>Links</dt><dd data-i18n="werkstatt.projekte.doener_links">Repository privat, Testphase mit Einladung</dd></div>
               </dl>
-            </details>
+            </div>
+            <div class="tool-panel" id="tool-musiclink" style="--line: linear-gradient(90deg, #80CD84, #64CC9E, #57C6BB)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/musiclink.svg" alt="" width="56" height="56">
+                <div><h3>MusicLink</h3><p data-i18n="werkstatt.wall.musiclink">Ein Link für einen Song, der bei allen im eigenen Streamingdienst aufgeht.</p></div>
+              </div>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musicstreaming-connector.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Flutter</dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="musicstreaming-connector.commits">6</b> Commits, <b data-gh="musicstreaming-connector.agent">1</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musicstreaming-connector" style="width: 8.5%"></i></span></dd><dt>Links</dt><dd><a href="https://musiclink.pleasance.org">musiclink.pleasance.org</a> · <a href="https://github.com/robinchoice/musicstreaming-connector" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+              </dl>
+            </div>
+            <div class="tool-panel" id="tool-docpilot" style="--line: linear-gradient(90deg, #50C3CC, #4DBBE2, #66ABEB)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/docpilot.svg" alt="" width="56" height="56">
+                <div><h3>docpilot</h3><p data-i18n="werkstatt.wall.docpilot">Bei jedem Push liest docpilot die Änderungen und schlägt per Pull Request die passende Aktualisierung der README vor.</p></div>
+              </div>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="docpilot.last" datetime="2026-10-01">01.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, GitHub Action</dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="docpilot.commits">3</b> Commits, <b data-gh="docpilot.agent">3</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="docpilot" style="width: 4.2%"></i></span></dd><dt>Links</dt><dd><a href="https://github.com/robinchoice/docpilot" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+              </dl>
+            </div>
+            <div class="tool-panel" id="tool-savor" style="--line: linear-gradient(90deg, #6AA9EC, #8C93F7, #A696F5)" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/savor.svg" alt="" width="56" height="56">
+                <div><h3>Savor</h3><p data-i18n="werkstatt.wall.savor">Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort.</p></div>
+              </div>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="savor.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, Vite, Node</dd></div>
+                <div><dt data-i18n="werkstatt.wall.commits">Letzte 30 Tage</dt><dd><span class="commits"><b data-gh="savor.commits">39</b> Commits, <b data-gh="savor.agent">37</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="savor" style="width: 54.9%"></i></span></dd><dt>Links</dt><dd><a href="https://github.com/robinchoice/savor" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+              </dl>
+            </div>
+            <div class="tool-panel" id="tool-neu" hidden>
+              <div class="tool-panel__head">
+                <img src="img/werkzeuge/new.svg" alt="" width="56" height="56">
+                <div><h3 data-i18n="werkstatt.wall.new_h3">Dein Werkzeug als nächstes?</h3><p data-i18n="werkstatt.wall.new_text">Erzähl in ein paar Sätzen, was es können soll und für wen. Daraus wird zuerst ein klickbarer Prototyp, damit wir früh sehen, ob die Richtung stimmt.</p></div>
+              </div>
+              <form class="form tool-form" id="newForm">
+                <div class="field">
+                  <label for="newMessage" data-i18n="werkstatt.wall.message_label">Was soll dein Werkzeug können?</label>
+                  <textarea id="newMessage" name="message" rows="4" maxlength="4800" required data-i18n-placeholder="werkstatt.wall.message_placeholder" placeholder="Zum Beispiel: Unsere Kundinnen buchen Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten."></textarea>
+                </div>
+                <div class="form__row">
+                  <div class="field">
+                    <label for="newName" data-i18n="kontakt.form.name_label">Dein Name</label>
+                    <input type="text" id="newName" name="name" autocomplete="name" maxlength="200" required>
+                  </div>
+                  <div class="field">
+                    <label for="newEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
+                    <input type="email" id="newEmail" name="email" autocomplete="email" maxlength="200" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+                  </div>
+                </div>
+                <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+                <div class="tool-form__foot">
+                  <button type="submit" class="btn" id="newSubmit" data-i18n="werkstatt.wall.submit">Anfrage senden</button>
+                  <span data-i18n="werkstatt.wall.note">Antwort innerhalb von zwei Werktagen, das erste Gespräch ist unverbindlich.</span>
+                </div>
+                <div class="form-status" id="newStatus" role="status"></div>
+              </form>
+            </div>
+          </div>
+          <h3 class="wall-others" data-i18n="werkstatt.wall.others">Außerdem in Arbeit</h3>
+          <div class="projects">
             <details>
               <summary>
                 <span><span class="project__name">pleasance.org</span><span class="project__desc" data-i18n="werkstatt.projekte.pleasance">Diese Website</span></span>
@@ -162,28 +249,6 @@
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="robin-wahl.de.last" datetime="2026-10-05">05.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>HTML, CSS, GitHub Pages</dd></div>
                 <div><dt>Links</dt><dd><a href="https://robin-wahl.de">robin-wahl.de</a> · <a href="https://github.com/robinchoice/robin-wahl.de" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
-              </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">MusicLink</span><span class="project__desc" data-i18n="werkstatt.projekte.musiclink">Musik über Streamingdienste hinweg teilen</span></span>
-                <span class="status" data-i18n="werkstatt.status.live">Live</span>
-                <span class="commits"><b data-gh="musicstreaming-connector.commits">6</b> Commits, <b data-gh="musicstreaming-connector.agent">1</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musicstreaming-connector" style="width: 8.5%"></i></span>
-              </summary>
-              <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musicstreaming-connector.last" datetime="2026-10-04">04.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Flutter</dd></div>
-                <div><dt>Links</dt><dd><a href="https://musiclink.pleasance.org">musiclink.pleasance.org</a> · <a href="https://github.com/robinchoice/musicstreaming-connector" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
-              </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">docpilot</span><span class="project__desc" data-i18n="werkstatt.projekte.docpilot">Dokumentation, die bei jedem Push mitwächst</span></span>
-                <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
-                <span class="commits"><b data-gh="docpilot.commits">3</b> Commits, <b data-gh="docpilot.agent">3</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="docpilot" style="width: 4.2%"></i></span>
-              </summary>
-              <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="docpilot.last" datetime="2026-10-01">01.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>TypeScript, GitHub Action</dd></div>
-                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/docpilot" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
               </dl>
             </details>
           </div>
@@ -261,8 +326,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261006b"></script>
-  <script src="main.js?v=20261006b"></script>
+  <script src="i18n.js?v=20261007a"></script>
+  <script src="main.js?v=20261007a"></script>
   <script>
   (function () {
     var times = document.querySelectorAll('time[datetime]');
@@ -282,6 +347,94 @@
     new MutationObserver(formatDates).observe(
       document.documentElement, { attributes: true, attributeFilter: ['lang'] }
     );
+  })();
+  </script>
+  <script>
+  (function () {
+    var API_URL = 'https://api.pleasance.org/contact';
+    var wall = document.getElementById('wall');
+    var tools = Array.prototype.slice.call(wall.querySelectorAll('.tool'));
+
+    // Opens the panel of a tool right below the row of its tile.
+    function toggle(tool, scroll) {
+      var panel = document.getElementById(tool.getAttribute('aria-controls'));
+      var open = panel.hidden;
+      tools.forEach(function (t) {
+        t.setAttribute('aria-expanded', 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = true;
+      });
+      if (!open) return;
+      var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
+      var index = tools.indexOf(tool);
+      tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)].after(panel);
+      panel.hidden = false;
+      tool.setAttribute('aria-expanded', 'true');
+      if (scroll) panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      if (tool.id === 'neu') document.getElementById('newMessage').focus({ preventScroll: true });
+    }
+
+    tools.forEach(function (tool) {
+      tool.addEventListener('click', function () { toggle(tool, true); });
+    });
+    document.querySelector('.page-head a[href="#neu"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      var neu = document.getElementById('neu');
+      if (neu.getAttribute('aria-expanded') !== 'true') toggle(neu);
+      neu.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+    var linked = location.hash && document.getElementById(location.hash.slice(1));
+    if (linked && tools.indexOf(linked) !== -1) {
+      toggle(linked);
+      linked.scrollIntoView({ block: 'start' });
+    }
+
+    var form   = document.getElementById('newForm');
+    var submit = document.getElementById('newSubmit');
+    var status = document.getElementById('newStatus');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var lang  = document.documentElement.lang || 'de';
+      var label = submit.textContent;
+      submit.disabled = true;
+      submit.textContent = lang === 'en' ? 'Sending…' : 'Wird gesendet…';
+      status.className = 'form-status';
+      status.textContent = '';
+
+      try {
+        var res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topic: 'software',
+            name: form.elements.name.value.trim(),
+            email: form.elements.email.value.trim(),
+            message: 'Neuer Prototyp:\n\n' + form.elements.message.value.trim(),
+            _honey: form.elements._honey.value,
+          }),
+        });
+        if (!res.ok) throw new Error(res.status);
+        status.className = 'form-status is-success';
+        status.textContent = lang === 'en'
+          ? 'Thank you — I\'ll be in touch within two business days.'
+          : 'Danke — ich melde mich innerhalb von zwei Werktagen.';
+        form.reset();
+        var neu = document.getElementById('neu');
+        neu.querySelector('img').src = 'img/werkzeuge/seed.svg';
+        neu.querySelector('.tool__name').dataset.i18n = 'werkstatt.wall.sent_name';
+        neu.querySelector('.tool__desc').dataset.i18n = 'werkstatt.wall.sent_desc';
+        neu.querySelector('.tool__name').textContent = I18N.werkstatt.wall.sent_name[lang];
+        neu.querySelector('.tool__desc').textContent = I18N.werkstatt.wall.sent_desc[lang];
+      } catch (_) {
+        status.className = 'form-status is-error';
+        status.textContent = lang === 'en'
+          ? 'Something went wrong. Try again or write to hello@pleasance.org.'
+          : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = label;
+      }
+    });
   })();
   </script>
 

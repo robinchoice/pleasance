@@ -92,6 +92,7 @@ Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. der Ablau
 - **Links:** Fir, 2px unterstrichen.
 - **Formulare:** weiße Felder mit 1,5px Ink-Rand; Themenwahl als Radio-Buttons im Button-Look.
 - **FAQ:** `details` mit Linien und +/−.
+- **Werkzeug-Wand (Werkstatt, Reihe auf Software):** Die einzige Stelle mit Kacheln. Jedes Werkzeug zeigt seine dunkle Kachel mit Zeichen aus der Produktfamilie (`img/werkzeuge`, Regeln in der DESIGN.md im Starter), Name und Status stehen auf Papier darunter, ohne Kasten und ohne Schatten. Reihenfolge nach Farbband. Die letzte Kachel „Neuer Prototyp“ öffnet das Anfrageformular in der Wand.
 
 ## Bewegung
 
@@ -100,5 +101,5 @@ Keine Einblend-Animationen. Nur Reaktionen auf Nutzeraktionen (Hover, Menü, FAQ
 ## Was dieses Design nicht ist
 
 - Kein Creme-mit-Serifen-und-Terrakotta-Look
-- Keine Karten-Raster mit Schatten und Icons
+- Keine Karten-Raster mit Schatten und Icons (die Werkzeug-Wand ist die Ausnahme, siehe Komponenten)
 - Keine Tracker, keine eingebetteten Dienste von Dritten beim Seitenaufruf
