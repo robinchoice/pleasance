@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261007b">
+  <link rel="stylesheet" href="style.css?v=20261008a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="werkstatt">
@@ -342,8 +342,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261007b"></script>
-  <script src="main.js?v=20261007b"></script>
+  <script src="i18n.js?v=20261008a"></script>
+  <script src="main.js?v=20261008a"></script>
   <script>
   (function () {
     var times = document.querySelectorAll('time[datetime]');
@@ -371,6 +371,13 @@
     var wall = document.getElementById('wall');
     var tools = Array.prototype.slice.call(wall.querySelectorAll('.tool'));
 
+    function positionPanel(tool) {
+      var panel = document.getElementById(tool.getAttribute('aria-controls'));
+      var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
+      var index = tools.indexOf(tool);
+      tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)].after(panel);
+    }
+
     // Opens the panel of a tool right below the row of its tile.
     function toggle(tool, scroll) {
       var panel = document.getElementById(tool.getAttribute('aria-controls'));
@@ -380,9 +387,7 @@
         document.getElementById(t.getAttribute('aria-controls')).hidden = true;
       });
       if (!open) return;
-      var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
-      var index = tools.indexOf(tool);
-      tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)].after(panel);
+      positionPanel(tool);
       panel.hidden = false;
       tool.setAttribute('aria-expanded', 'true');
       if (scroll) panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -391,6 +396,10 @@
 
     tools.forEach(function (tool) {
       tool.addEventListener('click', function () { toggle(tool, true); });
+    });
+    window.addEventListener('resize', function () {
+      var openTool = tools.find(function (tool) { return tool.getAttribute('aria-expanded') === 'true'; });
+      if (openTool) positionPanel(openTool);
     });
     document.querySelector('.page-head a[href="#neu"]').addEventListener('click', function (e) {
       e.preventDefault();
@@ -408,13 +417,19 @@
     var submit = document.getElementById('newSubmit');
     var status = document.getElementById('newStatus');
 
+    function setTranslation(element, key) {
+      element.dataset.i18n = key;
+      element.textContent = getI18nValue(key)[document.documentElement.lang || 'de'];
+    }
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var lang  = document.documentElement.lang || 'de';
-      var label = submit.textContent;
+      form.elements.message.value = form.elements.message.value.trim();
+      if (!form.reportValidity()) return;
       submit.disabled = true;
-      submit.textContent = lang === 'en' ? 'Sending…' : 'Wird gesendet…';
+      setTranslation(submit, 'werkstatt.wall.sending');
       status.className = 'form-status';
+      status.removeAttribute('data-i18n');
       status.textContent = '';
 
       try {
@@ -431,24 +446,18 @@
         });
         if (!res.ok) throw new Error(res.status);
         status.className = 'form-status is-success';
-        status.textContent = lang === 'en'
-          ? 'Thank you — I\'ll be in touch within two business days.'
-          : 'Danke — ich melde mich innerhalb von zwei Werktagen.';
+        setTranslation(status, 'werkstatt.wall.success');
         form.reset();
         var neu = document.getElementById('neu');
         neu.querySelector('img').src = 'img/werkzeuge/seed.svg';
-        neu.querySelector('.tool__name').dataset.i18n = 'werkstatt.wall.sent_name';
-        neu.querySelector('.tool__desc').dataset.i18n = 'werkstatt.wall.sent_desc';
-        neu.querySelector('.tool__name').textContent = I18N.werkstatt.wall.sent_name[lang];
-        neu.querySelector('.tool__desc').textContent = I18N.werkstatt.wall.sent_desc[lang];
+        setTranslation(neu.querySelector('.tool__name'), 'werkstatt.wall.sent_name');
+        setTranslation(neu.querySelector('.tool__desc'), 'werkstatt.wall.sent_desc');
       } catch (_) {
         status.className = 'form-status is-error';
-        status.textContent = lang === 'en'
-          ? 'Something went wrong. Try again or write to hello@pleasance.org.'
-          : 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.';
+        setTranslation(status, 'werkstatt.wall.error');
       } finally {
         submit.disabled = false;
-        submit.textContent = label;
+        setTranslation(submit, 'werkstatt.wall.submit');
       }
     });
   })();
