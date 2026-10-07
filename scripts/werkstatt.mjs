@@ -17,6 +17,7 @@ const headers = {
 
 async function get(path) {
   const res = await fetch(`https://api.github.com/repos/${OWNER}/${path}`, { headers })
+  if (res.status === 409 && path.includes('/commits?')) return []
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`)
   return res.json()
 }
@@ -35,7 +36,7 @@ async function latestCommit(repo) {
     const batch = await get(`${repo}/commits?per_page=100&page=${page}`)
     const latest = batch.find((c) => !isWerkstattCommit(c))
     if (latest) return latest
-    if (batch.length < 100) throw new Error(`${repo}: no non-bot commits`)
+    if (batch.length < 100) return null
   }
 }
 
@@ -43,8 +44,13 @@ const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
 function setText(html, key, text, datetime) {
   const re = new RegExp(`(<(\\w+)[^>]*\\sdata-gh="${escape(key)}"[^>]*>)[^<]*(</\\2>)`, 'g')
-  return html.replace(re, (_, open, _tag, close) =>
-    (datetime ? open.replace(/datetime="[^"]*"/, `datetime="${datetime}"`) : open) + text + close)
+  return html.replace(re, (_, open, _tag, close) => {
+    if (datetime === null) open = open.replace(/ datetime="[^"]*"/, '')
+    else if (datetime) open = open.includes(' datetime=')
+      ? open.replace(/datetime="[^"]*"/, `datetime="${datetime}"`)
+      : open.replace(/>$/, ` datetime="${datetime}">`)
+    return open + text + close
+  })
 }
 
 const day = (iso) => new Date(iso).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', timeZone: 'Europe/Berlin' })
@@ -60,7 +66,7 @@ for (const repo of repos) {
     repo,
     commits: commits.length,
     agent: commits.filter((c) => AGENT.test(c.commit.message)).length,
-    last: latest.commit.committer.date.slice(0, 10),
+    last: latest?.commit.committer.date.slice(0, 10) ?? null,
   })
 }
 
@@ -78,7 +84,7 @@ for (const file of FILES) {
   for (const s of stats) {
     html = setText(html, `${s.repo}.commits`, String(s.commits))
     html = setText(html, `${s.repo}.agent`, String(s.agent))
-    html = setText(html, `${s.repo}.last`, day(s.last), s.last)
+    html = setText(html, `${s.repo}.last`, s.last ? day(s.last) : '—', s.last)
     html = html.replace(
       new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )(?:[\\d.]+|NaN)%`),
       `$1${max ? Math.round((s.commits / max) * 1000) / 10 : 0}%`)
