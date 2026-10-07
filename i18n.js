@@ -511,6 +511,8 @@ const I18N = {
       cv:           { de: 'Lebenslauf', en: 'CV' },
       musiclink:    { de: 'Musik über Streamingdienste hinweg teilen', en: 'Share music across streaming services' },
       docpilot:     { de: 'Dokumentation, die bei jedem Push mitwächst', en: 'Documentation that grows with every push' },
+      fieldtest:    { de: 'Tester für Prototypen, belohnt in Sats', en: 'Testers for prototypes, rewarded in sats' },
+      fieldtest_links: { de: 'Repository privat, noch nicht öffentlich', en: 'Private repository, not public yet' },
     },
     wall: {
       h2:          { de: 'Werkzeuge', en: 'Tools' },
@@ -523,6 +525,7 @@ const I18N = {
       doener:      { de: 'Wer in der Nähe Döner isst, bewertet Soße, Fleisch und Brot. Daraus entsteht das Ranking der Stadt. Freunde verbinden sich per QR-Code.', en: 'People who eat döner nearby rate the sauce, meat and bread. That makes the city\'s ranking. Friends connect via QR code.' },
       musiclink:   { de: 'Ein Link für einen Song, der bei allen im eigenen Streamingdienst aufgeht.', en: 'One link for a song that opens in everyone\'s own streaming service.' },
       docpilot:    { de: 'Bei jedem Push liest docpilot die Änderungen und schlägt per Pull Request die passende Aktualisierung der README vor.', en: 'On every push, docpilot reads the changes and suggests the matching README update as a pull request.' },
+      fieldtest:   { de: 'Eingeladene Tester sehen im Prototyp ein Overlay, bekommen für aktive Zeit und erreichte Ziele sofort Sats und hinterlassen Feedback genau an der Stelle in der App.', en: 'Invited testers see an overlay in the prototype, get sats right away for active time and reached goals, and leave feedback right at the spot in the app.' },
       savor:       { de: 'Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort.', en: 'Several coding agents side by side on your own computer, with conversations, preview and decisions in one place.' },
       new_name:    { de: 'Neuer Prototyp', en: 'New prototype' },
       new_desc:    { de: 'Dein Werkzeug als nächstes', en: 'Your tool, next' },
