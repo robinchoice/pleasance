@@ -17,7 +17,7 @@ const headers = {
 
 async function get(path) {
   const res = await fetch(`https://api.github.com/repos/${OWNER}/${path}`, { headers })
-  if (res.status === 409 && path.includes('/commits?')) return []
+  if (res.status === 409) return []
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`)
   return res.json()
 }
@@ -44,10 +44,10 @@ const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 function setText(html, key, text, datetime) {
   const re = new RegExp(`(<(\\w+)[^>]*\\sdata-gh="${escape(key)}"[^>]*>)[^<]*(</\\2>)`, 'g')
   return html.replace(re, (_, open, _tag, close) => {
-    if (datetime === null) open = open.replace(/ datetime="[^"]*"/, '')
-    else if (datetime) open = open.includes(' datetime=')
-      ? open.replace(/datetime="[^"]*"/, `datetime="${datetime}"`)
-      : open.replace(/>$/, ` datetime="${datetime}">`)
+    if (datetime !== undefined) {
+      open = open.replace(/ datetime="[^"]*"/, '')
+      if (datetime) open = open.replace(/>$/, ` datetime="${datetime}">`)
+    }
     return open + text + close
   })
 }

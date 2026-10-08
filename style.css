@@ -269,7 +269,9 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .projects summary::-webkit-details-marker { display: none; }
 .projects summary::after { content: '+'; font-size: 1.4rem; line-height: 1; text-align: right; }
 .projects details[open] summary::after { content: '\2212'; }
-.projects summary:hover .project__name { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+.projects summary:hover .project__name,
+.tool:hover .tool__name, .tool[aria-expanded="true"] .tool__name,
+.tool-row a:hover span { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 .project__name { display: block; font-weight: 650; }
 .project__desc { display: block; font-size: 0.9375rem; color: var(--muted); }
 .project__more { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; padding: 0 2.5rem 1.25rem 0; font-size: 1rem; }
@@ -294,7 +296,6 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .tool img { width: 100%; max-width: 7rem; height: auto; margin-bottom: 0.7rem; transition: transform 0.15s; }
 .tool:hover img, .tool[aria-expanded="true"] img { transform: translateY(-3px); }
 .tool__name { font-size: 1.35rem; font-weight: 750; font-stretch: 80%; line-height: 1.1; }
-.tool:hover .tool__name, .tool[aria-expanded="true"] .tool__name { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 .tool__desc { margin-bottom: 0.3rem; font-size: 0.9375rem; line-height: 1.4; color: var(--muted); }
 .tool .status { font-size: 0.875rem; }
 .tool-panel { grid-column: 1 / -1; padding: 1.5rem 0 1.75rem; border-top: 4px solid; border-image: var(--line, linear-gradient(90deg, #F2545B, #FB8C45, #F2C14E, #6CCF8E, #46BFE0, #8E92F8, #C39BF2)) 1; border-bottom: 1px solid var(--hairline); }
@@ -307,7 +308,6 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .wall-others { margin: 3rem 0 0.5rem; font-size: 1rem; }
 .tool-row { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; margin-top: 0.75rem; list-style: none; }
 .tool-row a { display: flex; flex-direction: column; gap: 0.4rem; width: 4.75rem; font-size: 0.875rem; font-weight: 600; line-height: 1.25; color: var(--ink); text-decoration: none; }
-.tool-row a:hover span { text-decoration: underline; text-decoration-color: var(--fir); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 
 .log { list-style: none; border-top: var(--rule); }
 .log li { display: grid; grid-template-columns: 4.5rem 9.5rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hairline); }
