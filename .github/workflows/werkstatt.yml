@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '17 1 * * *'
   workflow_dispatch:
+  repository_dispatch:
+    types: [prototype-deployed]
+
+concurrency:
+  group: werkstatt
 
 permissions:
   contents: write
@@ -21,4 +26,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -am 'chore: update werkstatt numbers'
+          git pull --rebase
           git push

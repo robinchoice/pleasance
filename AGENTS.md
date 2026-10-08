@@ -13,10 +13,11 @@
 
 ## Deploy
 
-- Coolify deployt per Repo-Webhook bei jedem Push auf `main`, ein Push geht also direkt live. Watch Paths: die Website bei allem außer `api/**`, die API nur bei `api/**`.
+- Coolify deployt per Repo-Webhook bei jedem Push auf `main`, ein Push geht also direkt live. Watch Paths: die Website bei allem außer `api/**`, die API nur bei `api/**`. Das gilt auch für die Commits der Werkstatt-Action.
 - Prüfen: `curl -sI https://pleasance.org` und für die API `curl -s https://api.pleasance.org` (antwortet `{"ok":true}`).
 
 ## Fallen
 
 - Jeder Text steht auf Deutsch und Englisch: im HTML mit `data-i18n`, die Übersetzungen und Seiten-Metadaten in `i18n.js`.
-- Die GitHub Action `werkstatt.yml` committet jede Nacht um 01:17 UTC die GitHub-Zahlen in `werkstatt.html` und `kurs-agenten.html`. Vor dem Push also immer `git fetch`.
+- Die GitHub Action `werkstatt.yml` committet die GitHub-Zahlen in `werkstatt.html` und `kurs-agenten.html`: nach jedem Prototyp-Deploy (`repository_dispatch` `prototype-deployed` aus den starter-Repos) und jede Nacht um 01:17 UTC. Vor dem Push also immer `git fetch`.
+- Der Commit der Action läuft mit dem `GITHUB_TOKEN`. Das startet keine weiteren Workflows, der Repo-Webhook an Coolify feuert aber trotzdem, die neuen Zahlen gehen also live. Die Action braucht das Secret `WERKSTATT_TOKEN` (liest die privaten Repos), ohne es scheitert sie mit 401.
