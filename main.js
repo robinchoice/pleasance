@@ -8,21 +8,24 @@ function getI18nValue(key) {
   return key.split('.').reduce((obj, part) => (obj == null ? obj : obj[part]), I18N);
 }
 
+function translate(el, key) {
+  el.dataset.i18n = key;
+  const val = getI18nValue(key);
+  if (!val || !val[currentLang]) return;
+  if (/<[a-z][\s\S]*>/i.test(val[currentLang])) {
+    el.innerHTML = val[currentLang];
+  } else {
+    el.textContent = val[currentLang];
+  }
+}
+
 function applyLanguage(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
   localStorage.setItem('pleasance-lang', lang);
 
   // Translate all [data-i18n] elements
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const val = getI18nValue(el.dataset.i18n);
-    if (!val || !val[lang]) return;
-    if (/<[a-z][\s\S]*>/i.test(val[lang])) {
-      el.innerHTML = val[lang];
-    } else {
-      el.textContent = val[lang];
-    }
-  });
+  document.querySelectorAll('[data-i18n]').forEach(el => translate(el, el.dataset.i18n));
 
   // Translate placeholder attributes
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {

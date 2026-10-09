@@ -535,9 +535,7 @@ const I18N = {
       message_label: { de: 'Was soll dein Werkzeug können?', en: 'What should your tool do?' },
       message_placeholder: { de: 'Zum Beispiel: Unsere Kundinnen buchen Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten.', en: 'For example: our clients book appointments by email and phone. That should get easier, without renting a subscription.' },
       submit:      { de: 'Anfrage senden', en: 'Send request' },
-      sending:     { de: 'Wird gesendet…', en: 'Sending…' },
       success:     { de: 'Danke — ich melde mich innerhalb von zwei Werktagen.', en: 'Thank you — I\'ll be in touch within two business days.' },
-      error:       { de: 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.', en: 'Something went wrong. Try again or write to hello@pleasance.org.' },
       note:        { de: 'Antwort innerhalb von zwei Werktagen, das erste Gespräch ist unverbindlich.', en: 'Reply within two business days, the first conversation is free and non-binding.' },
       sent_name:   { de: 'Deins, bald', en: 'Yours, soon' },
       sent_desc:   { de: 'Anfrage ist unterwegs', en: 'Request on its way' },
@@ -610,6 +608,11 @@ const I18N = {
     },
   },
 
+  form: {
+    sending: { de: 'Wird gesendet…', en: 'Sending…' },
+    error:   { de: 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.', en: 'Something went wrong. Try again or write to hello@pleasance.org.' },
+  },
+
   // ── kontakt.html ──────────────────────────────────────────────────────────
   kontakt: {
     h1:   { de: 'Sprechen wir.', en: 'Let\'s talk.' },
@@ -630,6 +633,7 @@ const I18N = {
       email_label:    { de: 'Deine E-Mail', en: 'Your email' },
       message_label:  { de: 'Deine Nachricht', en: 'Your message' },
       submit:         { de: 'Absenden', en: 'Send' },
+      success:        { de: 'Danke — ich melde mich bald.', en: 'Thank you — I\'ll be in touch soon.' },
     },
     alt: {
       h2:   { de: 'Lieber per E-Mail?', en: 'Prefer email?' },
