@@ -75,11 +75,11 @@ const max = Math.max(...stats.map((s) => s.commits))
 const now = new Date().toISOString()
 
 for (const file of FILES) {
-  let html = await readFile(file, 'utf8')
+  const original = await readFile(file, 'utf8')
+  let html = original
   html = setText(html, 'projects', String(stats.filter((s) => s.commits > 0).length))
   html = setText(html, 'commits', String(total))
   html = setText(html, 'agent', `${total ? Math.round((agent / total) * 100) : 0}&nbsp;%`)
-  html = setText(html, 'updated', new Date(now).toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }), now)
   for (const s of stats) {
     html = setText(html, `${s.repo}.commits`, String(s.commits))
     html = setText(html, `${s.repo}.agent`, String(s.agent))
@@ -88,7 +88,10 @@ for (const file of FILES) {
       new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )[\\d.]+%`),
       `$1${max ? Math.round((s.commits / max) * 1000) / 10 : 0}%`)
   }
-  await writeFile(file, html)
+  if (html !== original) {
+    html = setText(html, 'updated', new Date(now).toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }), now)
+    await writeFile(file, html)
+  }
 }
 
 console.log(`${repos.length} repositories, ${total} commits, ${agent} with an agent`)

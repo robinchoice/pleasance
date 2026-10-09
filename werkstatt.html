@@ -375,7 +375,8 @@
       var panel = document.getElementById(tool.getAttribute('aria-controls'));
       var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
       var index = tools.indexOf(tool);
-      tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)].after(panel);
+      var target = tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)];
+      if (target.nextElementSibling !== panel) target.after(panel);
     }
 
     // Opens the panel of a tool right below the row of its tile.
