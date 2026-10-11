@@ -5,6 +5,7 @@
 - Website von Pleasance (https://pleasance.org und `www.`): statisches HTML, CSS und JS ohne Build, dazu eine kleine Bun-API in `api/` (https://api.pleasance.org).
 - Coolify auf VPS 1, Projekt `pleasance-website`, Anwendungen `pleasance-site` und `pleasance-api`.
 - Gestaltung: DESIGN.md.
+- `POST /savor/feedback`: Der Bug-Käfer in Savor schickt Meldungen über den lokalen Savor-Daemon hierher, die API legt daraus ein Issue im privaten Repo `robinchoice/savor-feedback` an (Screenshot unter `screenshots/`). Nichts wird gespeichert.
 
 ## Checks
 
@@ -21,3 +22,4 @@
 - Jeder Text steht auf Deutsch und Englisch: im HTML mit `data-i18n`, die Übersetzungen und Seiten-Metadaten in `i18n.js`.
 - Die GitHub Action `werkstatt.yml` committet die GitHub-Zahlen in `werkstatt.html` und `kurs-agenten.html`: nach jedem Prototyp-Deploy (`repository_dispatch` `prototype-deployed` aus den starter-Repos) und jede Nacht um 01:17 UTC. Vor dem Push also immer `git fetch`.
 - Der Commit der Action läuft mit dem `GITHUB_TOKEN`. Das startet keine weiteren Workflows, der Repo-Webhook an Coolify feuert aber trotzdem, die neuen Zahlen gehen also live. Die Action braucht das Secret `WERKSTATT_TOKEN` (liest die privaten Repos), ohne es scheitert sie mit 401.
+- `/savor/feedback` braucht in Coolify `GITHUB_SAVOR_FEEDBACK_TOKEN` (Fine-grained PAT nur für `robinchoice/savor-feedback`, Contents und Issues read/write), ohne ihn antwortet der Endpunkt auf gültige Meldungen 503. Lokal testen: `GITHUB_API_URL` auf einen nachgebauten GitHub-Server zeigen lassen.

@@ -145,6 +145,128 @@ app.post('/contact', async (c) => {
   return c.json({ ok: true })
 })
 
+const FEEDBACK_REPO = 'robinchoice/savor-feedback'
+const GITHUB_API_URL = process.env.GITHUB_API_URL || 'https://api.github.com'
+const SCREENSHOT = /^data:image\/(jpeg|png);base64,([A-Za-z0-9+/]+={0,2})$/
+
+const MAX_FEEDBACK_PER_IP = 5
+const MAX_FEEDBACK_PER_HOUR = 30
+const feedbackPerIp = new Map<string, number>()
+let feedbackThisHour = 0
+setInterval(() => {
+  feedbackPerIp.clear()
+  feedbackThisHour = 0
+}, 60 * 60 * 1000)
+
+const tableCell = (value: string) => value.replace(/\|/g, '\\|').replace(/\r?\n/g, ' ')
+
+const isContext = (value: unknown): value is [string, string][] =>
+  Array.isArray(value) && value.length <= 12 && value.every((row) =>
+    Array.isArray(row) && row.length === 2 &&
+    typeof row[0] === 'string' && row[0].length <= 40 &&
+    typeof row[1] === 'string' && row[1].length <= 500)
+
+async function github(path: string, method: string, token: string, body: unknown) {
+  const response = await fetch(`${GITHUB_API_URL}/repos/${FEEDBACK_REPO}${path}`, {
+    method,
+    headers: {
+      Authorization:          `Bearer ${token}`,
+      Accept:                 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Content-Type':         'application/json',
+      'User-Agent':           'pleasance-api',
+    },
+    body: JSON.stringify(body),
+  })
+  if (!response.ok) {
+    throw new Error(`GitHub ${method} ${path}: ${response.status} ${await response.text()}`)
+  }
+}
+
+app.use('/savor/feedback', bodyLimit({ maxSize: 5 * 1024 * 1024 }))
+
+app.post('/savor/feedback', async (c) => {
+  const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+  const count = (feedbackPerIp.get(ip) ?? 0) + 1
+  feedbackPerIp.set(ip, count)
+  if (count > MAX_FEEDBACK_PER_IP) {
+    return c.json({ error: 'Too many requests' }, 429)
+  }
+
+  let body: Record<string, unknown>
+
+  try {
+    body = await c.req.json()
+  } catch {
+    return c.json({ error: 'Invalid JSON' }, 400)
+  }
+
+  const { text, context, screenshot } = body
+
+  if (typeof text !== 'string' || !text.trim() || text.length > 4000) {
+    return c.json({ error: 'Invalid text' }, 400)
+  }
+
+  if (!isContext(context)) {
+    return c.json({ error: 'Invalid context' }, 400)
+  }
+
+  let image: { extension: string, content: string } | null = null
+  if (screenshot !== null) {
+    const match = typeof screenshot === 'string' ? SCREENSHOT.exec(screenshot) : null
+    if (!match || Buffer.byteLength(match[2], 'base64') > 3 * 1024 * 1024) {
+      return c.json({ error: 'Invalid screenshot' }, 400)
+    }
+    image = { extension: match[1] === 'jpeg' ? 'jpg' : 'png', content: match[2] }
+  }
+
+  const token = process.env.GITHUB_SAVOR_FEEDBACK_TOKEN
+  if (!token) {
+    return c.json({ error: 'Feedback not configured' }, 503)
+  }
+
+  if (feedbackThisHour >= MAX_FEEDBACK_PER_HOUR) {
+    return c.json({ error: 'Too many requests' }, 429)
+  }
+  feedbackThisHour++
+
+  const firstLine = text.trim().split('\n')[0].trim()
+  const title = firstLine.length > 70 ? `${firstLine.slice(0, 69)}…` : firstLine
+  const sections = [text.trim()]
+
+  try {
+    if (image) {
+      const path = `screenshots/${crypto.randomUUID()}.${image.extension}`
+      await github(`/contents/${path}`, 'PUT', token, {
+        message: `Add ${path}`,
+        content: image.content,
+        branch:  'main',
+      })
+      sections.push(`![Screenshot](https://github.com/${FEEDBACK_REPO}/blob/main/${path}?raw=true)`)
+    }
+
+    if (context.length) {
+      sections.push([
+        '| Context | Value |',
+        '| --- | --- |',
+        ...context.map(([label, value]) => `| ${tableCell(label)} | ${tableCell(value)} |`),
+      ].join('\n'))
+    }
+
+    await github('/issues', 'POST', token, {
+      title,
+      body:   sections.join('\n\n'),
+      labels: ['bug', 'feedback'],
+    })
+  } catch (error) {
+    console.error('GitHub error:', error)
+    Sentry.captureException(error)
+    return c.json({ error: 'Send failed' }, 502)
+  }
+
+  return c.json({ ok: true })
+})
+
 export default {
   port: Number(process.env.PORT) || 3000,
   fetch: app.fetch,
