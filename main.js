@@ -9,7 +9,7 @@ function getI18nValue(key) {
 }
 
 function translate(el, key) {
-  if (el.dataset.i18n !== key) el.dataset.i18n = key;
+  el.dataset.i18n = key;
   const val = getI18nValue(key);
   if (!val || !val[currentLang]) return;
   if (/<[a-z][\s\S]*>/i.test(val[currentLang])) {
