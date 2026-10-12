@@ -207,7 +207,8 @@ app.post('/savor/feedback', async (c) => {
 
   const { text, context, screenshot } = body
 
-  if (typeof text !== 'string' || !text.trim() || text.length > 4000) {
+  const message = typeof text === 'string' ? text.trim() : ''
+  if (typeof text !== 'string' || !message || text.length > 4000) {
     return c.json({ error: 'Invalid text' }, 400)
   }
 
@@ -234,10 +235,10 @@ app.post('/savor/feedback', async (c) => {
   }
   feedbackThisHour++
 
-  const firstLine = text.trim().split('\n')[0].trim()
+  const firstLine = message.split('\n')[0].trim()
   const titleChars = Array.from(firstLine)
   const title = titleChars.length > 70 ? `${titleChars.slice(0, 69).join('')}…` : firstLine
-  const sections = [text.trim()]
+  const sections = [message]
 
   try {
     if (image) {

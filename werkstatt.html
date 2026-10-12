@@ -371,7 +371,8 @@
     var wall = document.getElementById('wall');
     var tools = Array.prototype.slice.call(wall.querySelectorAll('.tool'));
 
-    function positionPanel(tool, panel) {
+    function positionPanel(tool) {
+      var panel = document.getElementById(tool.getAttribute('aria-controls'));
       var cols = getComputedStyle(wall).gridTemplateColumns.split(' ').length;
       var index = tools.indexOf(tool);
       var target = tools[Math.min(tools.length - 1, Math.floor(index / cols) * cols + cols - 1)];
@@ -387,7 +388,7 @@
         document.getElementById(t.getAttribute('aria-controls')).hidden = true;
       });
       if (!open) return;
-      positionPanel(tool, panel);
+      positionPanel(tool);
       panel.hidden = false;
       tool.setAttribute('aria-expanded', 'true');
       if (scroll) panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -399,7 +400,7 @@
     });
     window.addEventListener('resize', function () {
       var openTool = tools.find(function (tool) { return tool.getAttribute('aria-expanded') === 'true'; });
-      if (openTool) positionPanel(openTool, document.getElementById(openTool.getAttribute('aria-controls')));
+      if (openTool) positionPanel(openTool);
     });
     document.querySelector('.page-head a[href="#neu"]').addEventListener('click', function (e) {
       e.preventDefault();
