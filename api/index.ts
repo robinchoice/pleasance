@@ -201,6 +201,10 @@ app.post('/savor/feedback', async (c) => {
     return c.json({ error: 'Invalid JSON' }, 400)
   }
 
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    return c.json({ error: 'Invalid body' }, 400)
+  }
+
   const { text, context, screenshot } = body
 
   if (typeof text !== 'string' || !text.trim() || text.length > 4000) {
@@ -212,7 +216,7 @@ app.post('/savor/feedback', async (c) => {
   }
 
   let image: { extension: string, content: string } | null = null
-  if (screenshot !== null) {
+  if (screenshot != null) {
     const match = typeof screenshot === 'string' ? SCREENSHOT.exec(screenshot) : null
     if (!match || Buffer.byteLength(match[2], 'base64') > 3 * 1024 * 1024) {
       return c.json({ error: 'Invalid screenshot' }, 400)
@@ -231,7 +235,8 @@ app.post('/savor/feedback', async (c) => {
   feedbackThisHour++
 
   const firstLine = text.trim().split('\n')[0].trim()
-  const title = firstLine.length > 70 ? `${firstLine.slice(0, 69)}…` : firstLine
+  const titleChars = Array.from(firstLine)
+  const title = titleChars.length > 70 ? `${titleChars.slice(0, 69).join('')}…` : firstLine
   const sections = [text.trim()]
 
   try {
