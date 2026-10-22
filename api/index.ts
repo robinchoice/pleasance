@@ -186,6 +186,12 @@ async function github(path: string, method: string, token: string, body: unknown
 app.use('/savor/feedback', bodyLimit({ maxSize: 5 * 1024 * 1024 }))
 
 app.post('/savor/feedback', async (c) => {
+  // The Savor daemon sends JSON. Requiring it keeps browsers out: a cross-origin
+  // JSON request needs a CORS preflight, which this route never answers.
+  if (!c.req.header('content-type')?.startsWith('application/json')) {
+    return c.json({ error: 'Unsupported content type' }, 415)
+  }
+
   const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
   const count = (feedbackPerIp.get(ip) ?? 0) + 1
   feedbackPerIp.set(ip, count)
