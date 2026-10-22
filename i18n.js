@@ -222,10 +222,8 @@ const I18N = {
 
   // ── nachtschicht.html ─────────────────────────────────────────────────────
   nacht: {
-    h1:     { de: 'Nachts arbeitet die Firma. Tagsüber entscheide ich.', en: 'At night the company runs. By day, I decide.' },
     lead:   { de: 'Pleasance ist Robin Wahl aus Freiburg und ein Team aus KI-Agenten, das nach offenen Regeln baut, prüft und aufräumt. Tagsüber gebe ich die Richtung vor. Nachts hält sich das Setup selbst in Ordnung.', en: 'Pleasance is Robin Wahl from Freiburg, Germany, and a team of AI agents that builds, checks and tidies up by open rules. By day I set the direction. At night the setup keeps itself in order.' },
     cta:    { de: 'Projekt anfragen', en: 'Start a project' },
-    cta_hb: { de: 'Zum Handbuch', en: 'Read the handbook' },
     track: {
       h2:   { de: 'Die Nacht von 22 bis 8 Uhr', en: 'The night from 10 pm to 8 am' },
       now:  { de: 'jetzt', en: 'now' },

@@ -26,7 +26,8 @@
   --ink: #0E2218;
   --muted: #4E5F55;
   --fir: #1D4A34;
-  --deep: #0F2C1F;
+  --night: #0F2C1F;
+  --deep: var(--night);
   --sprout: #C8E39F;
   --error: #9B2C2C;
   --hairline: rgba(14, 34, 24, 0.18);
@@ -176,8 +177,8 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 
 /* Dark band: the night shift on the start page and on nachtschicht.html */
 .night {
-  --paper: #0F2C1F;
-  --ink: #F4F4EE;
+  --paper: var(--night);
+  --ink: var(--on-deep);
   --muted: rgba(244, 244, 238, 0.74);
   --fir: var(--sprout);
   --hairline: rgba(244, 244, 238, 0.18);
@@ -248,13 +249,9 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .night-hero .page-title { max-width: none; }
 .timeline { position: relative; padding-bottom: 4rem; }
 .timeline__scale { position: relative; height: 2rem; border-bottom: 1.5px solid var(--hairline); font-size: 0.875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.timeline__scale span { position: absolute; top: 0; transform: translateX(-50%); }
-.timeline__scale span:nth-child(1) { left: 0; transform: none; }
-.timeline__scale span:nth-child(2) { left: 20%; }
-.timeline__scale span:nth-child(3) { left: 40%; }
-.timeline__scale span:nth-child(4) { left: 60%; }
-.timeline__scale span:nth-child(5) { left: 80%; }
-.timeline__scale span:nth-child(6) { right: 0; transform: none; }
+.timeline__scale span { position: absolute; top: 0; left: var(--at); transform: translateX(-50%); }
+.timeline__scale span:first-child { transform: none; }
+.timeline__scale span:last-child { transform: translateX(-100%); }
 .timeline__chain { position: absolute; top: 2.6rem; left: 20%; width: 26%; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--sprout), rgba(200, 227, 159, 0.12)); }
 .timeline__now { position: absolute; top: 1.9rem; height: 1.4rem; border-left: 2px dashed var(--ink); }
 .timeline__now span { position: absolute; top: -1.9rem; left: -1.4rem; padding: 0 0.4rem; font-size: 0.8125rem; font-weight: 700; color: var(--paper); background: var(--ink); border-radius: 3px; white-space: nowrap; }
@@ -272,15 +269,15 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 
 /* === Handbuch === */
 .handbook { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 4rem; padding-bottom: 2rem; }
-.chapters { position: sticky; top: 1.5rem; align-self: start; margin-top: 4rem; padding: 1.25rem 1.25rem 1.5rem; color: #0F2C1F; background: var(--sprout); border-radius: 3px; }
+.chapters { position: sticky; top: 1.5rem; align-self: start; margin-top: 4rem; padding: 1.25rem 1.25rem 1.5rem; color: var(--night); background: var(--sprout); border-radius: 3px; }
 .chapters ol { list-style: none; counter-reset: chapter-nav; }
 .chapters li { counter-increment: chapter-nav; border-top: 1px solid rgba(15, 44, 31, 0.2); }
 .chapters li:first-child { border-top: 0; }
-.chapters ol a { display: grid; grid-template-columns: 1.75rem 1fr; padding: 0.5rem 0; font-weight: 600; color: #0F2C1F; text-decoration: none; }
+.chapters ol a { display: grid; grid-template-columns: 1.75rem 1fr; padding: 0.5rem 0; font-weight: 600; color: var(--night); text-decoration: none; }
 .chapters ol a::before { content: counter(chapter-nav); font-weight: 800; font-stretch: 75%; }
-.chapters ol a:hover { color: #0F2C1F; text-decoration: underline; }
-.chapters .btn { display: block; margin-top: 1rem; text-align: center; color: var(--sprout); background: #0F2C1F; }
-.chapters .btn:hover { color: #F4F4EE; background: #1D4A34; }
+.chapters ol a:hover { color: var(--night); text-decoration: underline; }
+.chapters .btn { display: block; margin-top: 1rem; text-align: center; color: var(--sprout); background: var(--night); }
+.chapters .btn:hover { color: var(--on-deep); background: #1D4A34; }
 .handbook__body { counter-reset: chapter; }
 .handbook__cover { padding: 4rem 0; border-bottom: var(--rule-thick); }
 .handbook__cover .lead { margin-top: 2rem; }

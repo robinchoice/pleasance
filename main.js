@@ -57,12 +57,13 @@ function applyLanguage(lang) {
 // ── Dates ──────────────────────────────────────────────────────────────────
 // Dates written by the werkstatt action, shown in the page language
 function formatDates() {
-  const locale = currentLang === 'en' ? 'en-GB' : 'de-DE';
+  const en = currentLang === 'en';
+  const locale = en ? 'en-GB' : 'de-DE';
   document.querySelectorAll('time[datetime]').forEach(t => {
     const value = t.getAttribute('datetime');
     const options = value.includes('T')
       ? { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }
-      : { day: locale === 'de-DE' ? '2-digit' : 'numeric', month: locale === 'de-DE' ? '2-digit' : 'short', timeZone: 'Europe/Berlin' };
+      : { day: en ? 'numeric' : '2-digit', month: en ? 'short' : '2-digit', timeZone: 'Europe/Berlin' };
     t.textContent = new Date(value).toLocaleString(locale, options);
   });
 }
@@ -105,7 +106,6 @@ function initNav() {
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('pleasance-lang') || 'de';
   if (savedLang !== 'de') applyLanguage(savedLang);
-  else formatDates();
   document.getElementById('langToggle').addEventListener('click', () => {
     applyLanguage(currentLang === 'de' ? 'en' : 'de');
   });

@@ -77,32 +77,33 @@ const dayCommits = stats.reduce((sum, s) => sum + s.day, 0)
 const max = Math.max(...stats.map((s) => s.commits))
 const now = new Date().toISOString()
 
-const known = new Set(['projects', 'commits', 'agent', 'day.commits', 'day.projects', 'updated',
-  ...stats.flatMap((s) => [`${s.repo}.commits`, `${s.repo}.agent`, `${s.repo}.last`])])
+const values = {
+  projects: [String(stats.filter((s) => s.commits > 0).length)],
+  commits: [String(total)],
+  agent: [`${total ? Math.round((agent / total) * 100) : 0}&nbsp;%`],
+  'day.commits': [String(dayCommits)],
+  'day.projects': [String(stats.filter((s) => s.day > 0).length)],
+}
+for (const s of stats) {
+  values[`${s.repo}.commits`] = [String(s.commits)]
+  values[`${s.repo}.agent`] = [String(s.agent)]
+  values[`${s.repo}.last`] = [s.last ? day(s.last) : '—', s.last]
+}
 
 for (const file of FILES) {
   const original = await readFile(file, 'utf8')
   // Fail loudly: a key the script does not know, or a bar the regex below cannot
   // reach, would otherwise keep showing stale numbers forever.
   for (const [, key] of original.matchAll(/data-gh="([^"]+)"/g)) {
-    if (!known.has(key)) throw new Error(`${file}: unknown data-gh key "${key}"`)
+    if (!Object.hasOwn(values, key) && key !== 'updated') throw new Error(`${file}: unknown data-gh key "${key}"`)
   }
-  for (const [, repo] of original.matchAll(/data-gh-bar="([^"]+)"(?! style="width: )/g)) {
-    throw new Error(`${file}: data-gh-bar="${repo}" needs style="width: …" right after it`)
-  }
-  for (const [, repo] of original.matchAll(/data-gh-bar="([^"]+)"/g)) {
+  for (const [, repo, style] of original.matchAll(/data-gh-bar="([^"]+)"( style="width: )?/g)) {
+    if (!style) throw new Error(`${file}: data-gh-bar="${repo}" needs style="width: …" right after it`)
     if (!stats.some((s) => s.repo === repo)) throw new Error(`${file}: data-gh-bar "${repo}" is not in werkstatt.html`)
   }
   let html = original
-  html = setText(html, 'projects', String(stats.filter((s) => s.commits > 0).length))
-  html = setText(html, 'commits', String(total))
-  html = setText(html, 'agent', `${total ? Math.round((agent / total) * 100) : 0}&nbsp;%`)
-  html = setText(html, 'day.commits', String(dayCommits))
-  html = setText(html, 'day.projects', String(stats.filter((s) => s.day > 0).length))
+  for (const [key, value] of Object.entries(values)) html = setText(html, key, ...value)
   for (const s of stats) {
-    html = setText(html, `${s.repo}.commits`, String(s.commits))
-    html = setText(html, `${s.repo}.agent`, String(s.agent))
-    html = setText(html, `${s.repo}.last`, s.last ? day(s.last) : '—', s.last)
     html = html.replace(
       new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )[\\d.]+%`),
       `$1${max ? Math.round((s.commits / max) * 1000) / 10 : 0}%`)
