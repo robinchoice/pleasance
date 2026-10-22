@@ -77,8 +77,22 @@ const dayCommits = stats.reduce((sum, s) => sum + s.day, 0)
 const max = Math.max(...stats.map((s) => s.commits))
 const now = new Date().toISOString()
 
+const known = new Set(['projects', 'commits', 'agent', 'day.commits', 'day.projects', 'updated',
+  ...stats.flatMap((s) => [`${s.repo}.commits`, `${s.repo}.agent`, `${s.repo}.last`])])
+
 for (const file of FILES) {
   const original = await readFile(file, 'utf8')
+  // Fail loudly: a key the script does not know, or a bar the regex below cannot
+  // reach, would otherwise keep showing stale numbers forever.
+  for (const [, key] of original.matchAll(/data-gh="([^"]+)"/g)) {
+    if (!known.has(key)) throw new Error(`${file}: unknown data-gh key "${key}"`)
+  }
+  for (const [, repo] of original.matchAll(/data-gh-bar="([^"]+)"(?! style="width: )/g)) {
+    throw new Error(`${file}: data-gh-bar="${repo}" needs style="width: …" right after it`)
+  }
+  for (const [, repo] of original.matchAll(/data-gh-bar="([^"]+)"/g)) {
+    if (!stats.some((s) => s.repo === repo)) throw new Error(`${file}: data-gh-bar "${repo}" is not in werkstatt.html`)
+  }
   let html = original
   html = setText(html, 'projects', String(stats.filter((s) => s.commits > 0).length))
   html = setText(html, 'commits', String(total))
