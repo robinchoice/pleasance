@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handbuch: Wie eine Firma mit KI-Agenten arbeitet — Pleasance</title>
+  <meta name="description" content="Grundsätze, Prototyp-Fabrik, Nachtschicht und was schiefging: das offene Handbuch von Pleasance, einem Ein-Personen-Unternehmen aus Freiburg, das von KI-Agenten betrieben wird.">
+  <link rel="canonical" href="https://pleasance.org/handbuch.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/handbuch.html">
+  <meta property="og:title" content="Handbuch: Wie eine Firma mit KI-Agenten arbeitet — Pleasance">
+  <meta property="og:description" content="Grundsätze, Prototyp-Fabrik, Nachtschicht und was schiefging: das offene Handbuch von Pleasance, einem Ein-Personen-Unternehmen aus Freiburg, das von KI-Agenten betrieben wird.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261022a">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+</head>
+<body data-page="handbuch">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
+        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
+        <li><a href="handbuch.html" aria-current="page" data-i18n="nav.handbuch">Handbuch</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="handbook">
+        <nav class="chapters" aria-label="Kapitel" data-i18n-aria-label="hb.chapters">
+          <ol>
+            <li><a href="#grundsaetze" data-i18n="hb.p.h2">Grundsätze</a></li>
+            <li><a href="#fabrik" data-i18n="hb.f.h2">Die Fabrik</a></li>
+            <li><a href="#nacht" data-i18n="hb.n.h2">Die Nacht</a></li>
+            <li><a href="#fehler" data-i18n="hb.l.h2">Was schiefging</a></li>
+            <li><a href="#arbeiten" data-i18n="hb.w.h2">Mit mir arbeiten</a></li>
+          </ol>
+          <a class="btn" href="#arbeiten" data-i18n="hb.ask">Anfragen</a>
+        </nav>
+
+        <div class="handbook__body">
+          <header class="handbook__cover">
+            <h1 class="display page-title" data-i18n="hb.h1">Handbuch einer Firma, die Agenten betreiben.</h1>
+            <p class="lead" data-i18n="hb.lead">Pleasance ist ein Ein-Personen-Unternehmen aus Freiburg. Die Arbeit machen KI-Agenten nach offenen Regeln, die Richtung gebe ich vor. Hier steht, wie das läuft, was schiefging und was du davon für dich oder dein Team übernehmen kannst.</p>
+            <div class="head-actions">
+              <a class="btn" href="#arbeiten" data-i18n="hb.cta_learn">Workshop für dein Team</a>
+              <a class="btn btn--ghost" href="index.html#anfrage" data-i18n="hb.cta_build">Software bauen lassen</a>
+            </div>
+          </header>
+
+          <section class="chapter" id="grundsaetze" aria-labelledby="h-hb-p">
+            <h2 class="heading" id="h-hb-p" data-i18n="hb.p.h2">Grundsätze</h2>
+            <p data-i18n="hb.p.intro">Jeder Agent liest dieselben neun Grundsätze, bevor er etwas tut. Der erste geht allen anderen vor.</p>
+            <ul class="values">
+              <li><b data-i18n="hb.p.t1">Sicherheit zuerst.</b><span data-i18n="hb.p.d1">Agenten sehen keine Zugangsdaten und keine Kundendaten. Sperrt ein Hook einen Befehl, gibt es keinen Umweg.</span></li>
+              <li><b data-i18n="hb.p.t2">Ein Mensch muss es jederzeit verstehen.</b><span data-i18n="hb.p.d2">Regeln sind Textdateien, jede Änderung ist ein Commit. Keine Magie.</span></li>
+              <li><b data-i18n="hb.p.t3">Agenten handeln selbst, Robin gibt die Richtung vor.</b><span data-i18n="hb.p.d3">Was sich zurücknehmen lässt, erledigen sie. Geld, Veröffentlichungen und Unumkehrbares entscheide ich.</span></li>
+              <li><b data-i18n="hb.p.t4">Das Rad nicht neu erfinden.</b><span data-i18n="hb.p.d4">Erst nach guten Open-Source-Projekten suchen, sie nutzen und verbessern. Selbst gebaut wird, was es so nicht gibt.</span></li>
+              <li><b data-i18n="hb.p.t5">Unabhängig bleiben.</b><span data-i18n="hb.p.d5">Open Source, selbst gehostet, Bitcoin. Im Zweifel das Werkzeug, das wir selbst betreiben und wieder verlassen können.</span></li>
+            </ul>
+          </section>
+
+          <section class="chapter" id="fabrik" aria-labelledby="h-hb-f">
+            <h2 class="heading" id="h-hb-f" data-i18n="hb.f.h2">Die Fabrik</h2>
+            <p data-i18n="hb.f.p1">Neue Apps entstehen aus einer Vorlage, die Login, Deutsch und Englisch, Tests und Deploy schon mitbringt. Vor dem Bau prüfen Agenten, ob es die Idee schon gibt, dann entstehen 2–3 klickbare Mockups. Gebaut wird nur die Richtung, die ich freigebe. Ein Push auf den Hauptzweig geht live, und ein Deploy zählt erst, wenn die App selbst den neuen Stand meldet.</p>
+            <p><span data-i18n="hb.f.n1">In den letzten 30 Tagen:</span> <b data-gh="commits">1037</b> <span data-i18n="hb.f.n2">Commits in</span> <b data-gh="projects">11</b> <span data-i18n="hb.f.n3">Projekten,</span> <b data-gh="agent">79&nbsp;%</b> <span data-i18n="hb.f.n4">davon mit einem Agenten als Co-Autor. MusicLink lief 1&nbsp;Stunde 14&nbsp;Minuten nach dem ersten Commit.</span></p>
+            <p class="teaser"><a href="werkstatt.html" data-i18n="nacht.factory.more">Alle Projekte in der Werkstatt</a></p>
+          </section>
+
+          <section class="chapter" id="nacht" aria-labelledby="h-hb-n">
+            <h2 class="heading" id="h-hb-n" data-i18n="hb.n.h2">Die Nacht</h2>
+            <p data-i18n="hb.n.p1">Nachts hält sich das Setup selbst in Ordnung. Zwei Modelle verschiedener Hersteller prüfen sich gegenseitig, keins bewertet seine eigene Arbeit.</p>
+            <ul class="log log--named">
+              <li><b>00:00</b><span data-i18n="hb.n.e1">Feierabend: Liegengebliebenes wird geprüft, committet und veröffentlicht.</span></li>
+              <li><b data-i18n="nacht.track.then">danach</b><span data-i18n="hb.n.e2">Nacht-Review: Claude findet, Codex prüft gegen und schreibt Korrekturen. Ausrollen trägt neue Standards in alle Apps.</span></li>
+              <li><b>03:00</b><span data-i18n="hb.n.e3">Nachtwache: Fehlt ein Schritt, sucht sie die Ursache und startet ihn neu.</span></li>
+              <li><b>07:00</b><span data-i18n="hb.n.e4">Morgenbericht für mich. Korrekturen gehen erst nach meinem Klick live.</span></li>
+              <li><b data-i18n="hb.n.mon">Mo 10:00</b><span data-i18n="hb.n.e5">Werkstatt: höchstens fünf Vorschläge, wie die Regeln besser werden. Löschen geht vor Ergänzen.</span></li>
+            </ul>
+            <p class="teaser"><a href="nachtschicht.html" data-i18n="home.company.nacht_link">Die Nachtschicht ansehen</a></p>
+          </section>
+
+          <section class="chapter" id="fehler" aria-labelledby="h-hb-l">
+            <h2 class="heading" id="h-hb-l" data-i18n="hb.l.h2">Was schiefging</h2>
+            <p data-i18n="hb.l.intro">Jede Regel hat eine Geschichte. Drei davon:</p>
+            <ul class="values">
+              <li><b data-i18n="hb.l.t1">Ein grüner Deploy hieß nicht live.</b><span data-i18n="hb.l.d1">Ohne Zugang übersprang die CI den Deploy und meldete trotzdem Erfolg. Seitdem zählt ein Deploy erst, wenn die App selbst den neuen Stand meldet.</span></li>
+              <li><b data-i18n="hb.l.t2">Melden reichte nicht.</b><span data-i18n="hb.l.d2">Das Nacht-Review meldete Abweichungen vom Standard, eingebaut hat sie niemand. Seit Oktober baut sie ein eigener Nachtlauf ein, in der ersten Nacht gingen fünf Aufträge raus.</span></li>
+              <li><b data-i18n="hb.l.t3">Der Name kam zu spät.</b><span data-i18n="hb.l.d3">Ein Repository heißt bis heute anders als seine App. Seitdem steht der Name fest, bevor das Repository entsteht: Marken, ähnliche Produkte und Domain werden vorher geprüft.</span></li>
+            </ul>
+            <p class="teaser" data-i18n="hb.l.more">Mehr davon im <a href="werkstatt.html#h-log">Logbuch der Werkstatt</a>.</p>
+          </section>
+
+          <section class="chapter" id="arbeiten" aria-labelledby="h-hb-w">
+            <h2 class="heading" id="h-hb-w" data-i18n="hb.w.h2">Mit mir arbeiten</h2>
+            <div class="offers offers--3">
+              <div class="offer">
+                <h3 data-i18n="hb.w.learn_h3">Lernen</h3>
+                <p data-i18n="hb.w.learn">Kurs oder Workshop „Mit KI-Agenten bauen“: Du oder dein Team richtet dieses Setup an euren eigenen Projekten ein. Dazu Vorbereitung auf die Scrum.org-Zertifizierungen.</p>
+                <div class="links">
+                  <a href="kurs-agenten.html" data-i18n="nacht.offer.kurs_cta">Zum Kurs</a>
+                  <a href="kontakt.html?thema=lehre" data-i18n="hb.w.learn_cta">Workshop anfragen</a>
+                </div>
+              </div>
+              <div class="offer">
+                <h3 data-i18n="hb.w.build_h3">Bauen lassen</h3>
+                <p data-i18n="hb.w.build">Prototyp, Web-App oder Automatisierung aus dieser Fabrik. Open Source, auf deinem eigenen Server.</p>
+                <div class="links">
+                  <a href="index.html#anfrage" data-i18n="nacht.offer.sw_cta">Prototyp anfragen</a>
+                </div>
+              </div>
+              <div class="offer">
+                <h3 data-i18n="nav.coaching">Coaching</h3>
+                <p data-i18n="hb.w.coach">Systemisches 1:1-Coaching, wenn sich deine Arbeit verändert. In Freiburg oder online, das Erstgespräch dauert 20 Minuten und kostet nichts.</p>
+                <div class="links">
+                  <a href="kontakt.html?thema=coaching" data-i18n="coaching.cta">Erstgespräch anfragen</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="vendor/sentry-11.4.0.min.js"></script>
+  <script src="monitoring.js"></script>
+  <script src="i18n.js?v=20261022a"></script>
+  <script src="main.js?v=20261022a"></script>
+
+</body>
+</html>

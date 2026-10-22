@@ -1,15 +1,16 @@
-// Writes the GitHub numbers of the last 30 days into werkstatt.html and kurs-agenten.html.
+// Writes the GitHub numbers of the last 30 days and the last 24 hours into the pages in FILES.
 // The repositories are the data-gh-bar attributes in werkstatt.html.
 // Usage: GITHUB_TOKEN=… node scripts/werkstatt.mjs
 import { readFile, writeFile } from 'node:fs/promises'
 
 const OWNER = 'robinchoice'
 const DAYS = 30
-const FILES = ['werkstatt.html', 'kurs-agenten.html']
+const FILES = ['werkstatt.html', 'kurs-agenten.html', 'index.html', 'nachtschicht.html', 'handbuch.html']
 const AGENT = /^Co-Authored-By:.*(Claude|Codex|noreply@anthropic\.com|noreply@openai\.com)/im
 const isWerkstattCommit = (c) => c.author?.login === 'github-actions[bot]' || c.commit.message === 'chore: update werkstatt numbers'
 
 const since = new Date(Date.now() - DAYS * 24 * 60 * 60 * 1000).toISOString()
+const daySince = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
 const headers = {
   Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
   Accept: 'application/vnd.github+json',
@@ -65,12 +66,14 @@ for (const repo of repos) {
     repo,
     commits: commits.length,
     agent: commits.filter((c) => AGENT.test(c.commit.message)).length,
+    day: commits.filter((c) => c.commit.committer.date >= daySince).length,
     last: latest?.commit.committer.date.slice(0, 10) ?? null,
   })
 }
 
 const total = stats.reduce((sum, s) => sum + s.commits, 0)
 const agent = stats.reduce((sum, s) => sum + s.agent, 0)
+const dayCommits = stats.reduce((sum, s) => sum + s.day, 0)
 const max = Math.max(...stats.map((s) => s.commits))
 const now = new Date().toISOString()
 
@@ -80,6 +83,8 @@ for (const file of FILES) {
   html = setText(html, 'projects', String(stats.filter((s) => s.commits > 0).length))
   html = setText(html, 'commits', String(total))
   html = setText(html, 'agent', `${total ? Math.round((agent / total) * 100) : 0}&nbsp;%`)
+  html = setText(html, 'day.commits', String(dayCommits))
+  html = setText(html, 'day.projects', String(stats.filter((s) => s.day > 0).length))
   for (const s of stats) {
     html = setText(html, `${s.repo}.commits`, String(s.commits))
     html = setText(html, `${s.repo}.agent`, String(s.agent))

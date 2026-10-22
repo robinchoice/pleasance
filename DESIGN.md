@@ -52,9 +52,13 @@ rounded:
 
 ## Überblick
 
-Pleasance ist das Dach für Robin Wahls freie Arbeit: Software-Entwicklung, Lehre und 1:1-Coaching. Roter Faden: **„Werkzeuge, Wissen und Wege, die dir gehören.“** Software = Werkzeuge, Lehre = Wissen, Coaching = Wege. Der Satz ist gleichzeitig die Startseiten-Überschrift und das Inhaltsverzeichnis.
+Pleasance ist das Dach für Robin Wahls freie Arbeit: Software-Entwicklung, Lehre und 1:1-Coaching, gebaut und betrieben mit KI-Agenten. Die Seite zeigt Belege statt Adjektive: echte Werkzeuge, echte Zahlen aus GitHub, echte Abläufe und Lehren.
 
-Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften und Hosting auf eigenem Server. Der „Beipackzettel“ auf der Startseite zählt das auf. Er muss immer stimmen.
+- **Startseite (Schaufenster):** „Software aus einer Werkstatt voller Agenten.“ Daneben die Werkzeug-Wand mit den 30-Tage-Zahlen, darunter der Weg von der Idee bis live, der Nacht-Band mit Links zu Nachtschicht und Handbuch, die drei Angebote und das Anfrageformular. Führt zu Anfragen.
+- **Nachtschicht:** „Nachts arbeitet die Firma. Tagsüber entscheide ich.“ Die Nacht als Zeitleiste, ein Tag in der Fabrik, die Angebote unter den Wörtern Werkzeuge, Wissen und Wege.
+- **Handbuch:** Die Arbeitsweise als offene Kapitel: Grundsätze, Fabrik, Nacht, was schiefging, mit mir arbeiten.
+
+Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften auf eigenem Server. Der „Beipackzettel“ auf der Startseite zählt das auf. Er muss immer stimmen. Keine Infrastruktur-Details (Hosts, Anbieter, Server) auf die Seite.
 
 ## Farben
 
@@ -64,7 +68,7 @@ Tannengrün auf hellem, leicht grünstichigem Papier. Kein Creme, kein Terrakott
 - **Ink (#0E2218):** Text, Linien, Buttons. Sehr dunkles Grün statt Schwarz.
 - **Muted (#4E5F55):** Nebentexte.
 - **Fir (#1D4A34):** Links, Unterstreichungen, Hover.
-- **Deep (#0F2C1F) + Sprout (#C8E39F):** nur für dunkle Blöcke (Beipackzettel). Sprout ist Text- und Linkfarbe auf Deep, nie auf hellem Grund.
+- **Deep (#0F2C1F) + Sprout (#C8E39F):** für dunkle Blöcke: Beipackzettel und die Nacht (`.night`: Band auf der Startseite, Kopf der Nachtschicht). Sprout ist Text-, Link- und Knopffarbe auf Deep, nie Textfarbe auf hellem Grund. Einzige helle Ausnahme: die Kapitelleiste im Handbuch, eine Sprout-Fläche mit Deep-Text.
 
 ## Typografie
 
@@ -72,7 +76,7 @@ Eine Familie: Bricolage Grotesque, selbst gehostet (OFL). Charakter entsteht üb
 
 - Große Aussagen schmal (wdth 75–80 %) und fett (750–800), eng gesetzt.
 - Fließtext normal breit, 400, optische Größe klein (opsz 14).
-- Keine Versalien-Labels über Überschriften, keine einzelnen hervorgehobenen Wörter in Überschriften. Ausnahme: Die drei W-Wörter der Startseiten-Aussage sind Links und deshalb unterstrichen.
+- Keine Versalien-Labels über Überschriften, keine einzelnen hervorgehobenen Wörter in Überschriften.
 
 Die Wortmarke (PLEASANCE, Fraunces-Versalien als Pfad) bleibt unverändert und wird per CSS-Mask in Ink eingefärbt.
 
@@ -84,7 +88,7 @@ Linksbündig, Raster 5fr/7fr: links das große Wort oder die Überschrift, recht
 - 1,5px-Linien trennen Zeilen und Abschnitte.
 - Haarlinien trennen Listeneinträge.
 
-Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. der Ablauf eines Coachings).
+Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Ablauf eines Coachings, Weg von der Idee bis live, Kapitel des Handbuchs).
 
 ## Komponenten
 
@@ -92,7 +96,10 @@ Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (z. B. der Ablau
 - **Links:** Fir, 2px unterstrichen.
 - **Formulare:** weiße Felder mit 1,5px Ink-Rand; Themenwahl als Radio-Buttons im Button-Look.
 - **FAQ:** `details` mit Linien und +/−.
-- **Werkzeug-Wand (Werkstatt, Reihe auf Software):** Die einzige Stelle mit Kacheln. Jedes Werkzeug zeigt seine dunkle Kachel mit Zeichen aus der Produktfamilie (`img/werkzeuge`, Regeln in der DESIGN.md im Starter), Name und Status stehen auf Papier darunter, ohne Kasten und ohne Schatten. Reihenfolge nach Farbband. Die letzte Kachel „Neuer Prototyp“ öffnet das Anfrageformular in der Wand.
+- **Werkzeug-Wand (Werkstatt, Startseite, Reihe auf Software):** Die einzige Stelle mit Kacheln. Auf der Startseite verlinken die Kacheln auf ihr Feld in der Werkstatt, das Plus springt zum Anfrageformular. Jedes Werkzeug zeigt seine dunkle Kachel mit Zeichen aus der Produktfamilie (`img/werkzeuge`, Regeln in der DESIGN.md im Starter), Name und Status stehen auf Papier darunter, ohne Kasten und ohne Schatten. Reihenfolge nach Farbband. Die letzte Kachel „Neuer Prototyp“ öffnet das Anfrageformular in der Wand.
+
+- **Zeitleiste der Nacht (Nachtschicht):** 22 bis 8 Uhr, die Nachtschritte mit ihren echten Uhrzeiten. Nachts zeigt eine Marke „jetzt“ die aktuelle Uhrzeit. Auf dem Handy wird sie zur Liste.
+- **Kapitelleiste (Handbuch):** links, klebt beim Scrollen, auf dem Handy eine waagrechte Zeile oben.
 
 ## Bewegung
 

@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261008a">
+  <link rel="stylesheet" href="style.css?v=20261022a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -90,7 +90,8 @@
         <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
         <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
         <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
-        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
+        <li><a href="handbuch.html" data-i18n="nav.handbuch">Handbuch</a></li>
         <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
         <li class="nav__tools">
           <button class="nav__theme" id="themeToggle" aria-pressed="false">
@@ -106,113 +107,151 @@
 
   <main id="main">
     <div class="wrap">
-      <section class="hero">
-        <h1 class="display statement" data-i18n="home.statement"><a href="#werkzeuge">Werkzeuge</a>, <a href="#wissen">Wissen</a> und <a href="#wege">Wege</a>, die dir gehören.</h1>
+      <section class="home-hero">
+        <div>
+          <h1 class="display home-title" data-i18n="home.h1">Software aus einer Werkstatt voller Agenten.</h1>
+          <p class="lead" data-i18n="home.lead">Ich bin Robin Wahl, Software-Entwickler, Dozent und Coach aus Freiburg im Breisgau. Mit KI-Agenten baue ich Werkzeuge, die dir gehören: erst ein klickbarer Prototyp, dann die App auf deinem eigenen Server. Alles, was du hier siehst, ist so entstanden.</p>
+          <a class="btn" href="#anfrage" data-i18n="home.cta">Dein Werkzeug anfragen</a>
+        </div>
+        <div>
+          <div class="wall wall--home">
+            <a class="tool" href="werkstatt.html#fahrbar">
+              <img src="img/werkzeuge/fahrbar.svg" alt="" width="112" height="112">
+              <span class="tool__name">fahrbar</span>
+              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            </a>
+            <a class="tool" href="werkstatt.html#musichub">
+              <img src="img/werkzeuge/musichub.svg" alt="" width="112" height="112">
+              <span class="tool__name">Music Hub</span>
+              <span class="status" data-i18n="werkstatt.status.live">Live</span>
+            </a>
+            <a class="tool" href="werkstatt.html#doener">
+              <img src="img/werkzeuge/doener.svg" alt="" width="112" height="112">
+              <span class="tool__name">Döner App</span>
+              <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
+            </a>
+            <a class="tool" href="werkstatt.html#fieldtest">
+              <img src="img/werkzeuge/fieldtest.svg" alt="" width="112" height="112">
+              <span class="tool__name">Fieldtest</span>
+              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            </a>
+            <a class="tool" href="werkstatt.html#musiclink">
+              <img src="img/werkzeuge/musiclink.svg" alt="" width="112" height="112">
+              <span class="tool__name">MusicLink</span>
+              <span class="status" data-i18n="werkstatt.status.live">Live</span>
+            </a>
+            <a class="tool" href="werkstatt.html#docpilot">
+              <img src="img/werkzeuge/docpilot.svg" alt="" width="112" height="112">
+              <span class="tool__name">docpilot</span>
+              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
+            </a>
+            <a class="tool" href="werkstatt.html#savor">
+              <img src="img/werkzeuge/savor.svg" alt="" width="112" height="112">
+              <span class="tool__name">Savor</span>
+              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+            </a>
+            <a class="tool" href="#anfrage">
+              <img src="img/werkzeuge/new.svg" alt="" width="112" height="112">
+              <span class="tool__name" data-i18n="home.wall.new">Deins?</span>
+              <span class="status status--work" data-i18n="werkstatt.wall.free">Frei</span>
+            </a>
+          </div>
+          <div class="pulse">
+            <p><b data-gh="projects">11</b> <span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></p>
+            <p><b data-gh="commits">1037</b> <span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></p>
+            <p><b data-gh="agent">79&nbsp;%</b> <span data-i18n="home.pulse.agent">davon mit Agent</span></p>
+            <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-22T12:26:16.079Z">22.10.2026, 14:26</time>, <a href="werkstatt.html" data-i18n="home.pulse.source">alle Projekte in der Werkstatt</a></p>
+          </div>
+        </div>
       </section>
 
-      <div class="intro">
-        <p class="lead" data-i18n="home.intro">Pleasance ist Robin Wahl: freier Software-Entwickler, Dozent und Coach aus Freiburg im Breisgau. Ich baue Software, die du selbst betreiben kannst, erkläre, wie Dinge funktionieren, und begleite dich auf deinem eigenen Weg. Für Menschen und Firmen in Deutschland, Österreich und der Schweiz.</p>
-        <a class="btn" href="kontakt.html" data-i18n="home.cta">Schreib mir</a>
-      </div>
+      <section class="flow-block" aria-labelledby="h-flow">
+        <h2 class="heading" id="h-flow" data-i18n="home.flow.h2">Von der Idee bis live</h2>
+        <p class="lead" data-i18n="home.flow.lead">Jeder Prototyp läuft durch dieselben Schritte. Die Agenten bauen, ich entscheide an jeder Schwelle, ob es weitergeht.</p>
+        <ol class="flow">
+          <li><b data-i18n="home.flow.s1">Gespräch</b><p data-i18n="home.flow.d1">20 Minuten, kostenlos. Was soll es können, und für wen?</p></li>
+          <li><b data-i18n="home.flow.s2">Gibt es das schon?</b><p data-i18n="home.flow.d2">Suche im Web, in den App Stores und auf GitHub. Wenn ja, sage ich es dir.</p></li>
+          <li><b data-i18n="home.flow.s3">Mockups</b><p data-i18n="home.flow.d3">2–3 klickbare Richtungen für Handy und Desktop. Du wählst.</p></li>
+          <li><b data-i18n="home.flow.s4">Bau aus der Vorlage</b><p data-i18n="home.flow.d4">Login, Deutsch und Englisch, Tests und Deploy sind schon drin.</p></li>
+          <li><b data-i18n="home.flow.s5">Live</b><p data-i18n="home.flow.d5">Auf deiner Domain und deinem Server. Jeder Push geht live.</p></li>
+          <li><b data-i18n="home.flow.s6">Nachts gepflegt</b><p data-i18n="home.flow.d6">Review durch einen zweiten Agenten, Sicherheitsupdates, neue Standards.</p></li>
+        </ol>
+        <p class="flow-example" data-i18n="home.flow.example">Wie schnell das gehen kann: MusicLink lief 1&nbsp;Stunde 14&nbsp;Minuten nach dem ersten Commit.</p>
+      </section>
+    </div>
 
-      <div class="index">
-        <section class="row" id="werkzeuge" aria-labelledby="h-software">
-          <p class="word" aria-hidden="true" data-i18n="home.software.word">Werkzeuge</p>
+    <section class="night company" aria-labelledby="h-company">
+      <div class="wrap">
+        <div>
+          <h2 class="heading" id="h-company" data-i18n="home.company.h2">Nachts arbeitet die Firma. Tagsüber entscheide ich.</h2>
+          <p data-i18n="home.company.nacht">Um Mitternacht beginnt die Nachtschicht: Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in alle Apps. Um 7 Uhr liegt ein Bericht für mich bereit.</p>
+          <a class="btn" href="nachtschicht.html" data-i18n="home.company.nacht_link">Die Nachtschicht ansehen</a>
+        </div>
+        <div>
+          <h3 data-i18n="home.company.hb_h3">Das Handbuch</h3>
+          <p data-i18n="home.company.hb">Wie eine Firma mit Agenten arbeitet: die Grundsätze, die Fabrik, die Nacht und was schiefging. Offen, zum Nachlesen und Übernehmen.</p>
+          <a href="handbuch.html" data-i18n="home.company.hb_link">Zum Handbuch</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" aria-labelledby="h-ways">
+        <h2 class="heading" id="h-ways" data-i18n="home.ways.h2">Drei Wege zusammenzuarbeiten</h2>
+        <dl class="ways">
           <div>
-            <h2 id="h-software" data-i18n="home.software.h2">Software-Entwicklung</h2>
-            <p data-i18n="home.software.p1">Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, selbst gehostet, sauber dokumentiert. Vom ersten Prototyp bis zum Betrieb auf deinem eigenen Server.</p>
-            <p class="muted" data-i18n="home.software.p2">Diese Website ist ein Beispiel: ohne CMS, ohne Cookies, auf meinem eigenen Server.</p>
-            <p class="teaser" data-i18n="home.software.teaser">Woran ich gerade baue, steht jede Nacht aktualisiert in der <a href="werkstatt.html">Werkstatt</a>.</p>
-            <h3 class="tools-title" data-i18n="home.software.tools">Womit ich arbeite</h3>
-            <div class="groups">
-              <div>
-                <h4 data-i18n="home.software.t_dev">Entwicklung</h4>
-                <ul class="toollist">
-                  <li><span class="tool-logo logo-html5" aria-hidden="true"></span>HTML</li>
-                  <li><span class="tool-logo logo-css" aria-hidden="true"></span>CSS</li>
-                  <li><span class="tool-logo logo-javascript" aria-hidden="true"></span>JavaScript</li>
-                  <li><span class="tool-logo logo-typescript" aria-hidden="true"></span>TypeScript</li>
-                  <li><span class="tool-logo logo-bun" aria-hidden="true"></span>Bun</li>
-                  <li><span class="tool-logo logo-hono" aria-hidden="true"></span>Hono</li>
-                  <li><span class="tool-logo logo-flutter" aria-hidden="true"></span>Flutter</li>
-                </ul>
-              </div>
-              <div>
-                <h4 data-i18n="home.software.t_ops">Betrieb</h4>
-                <ul class="toollist">
-                  <li><span class="tool-logo logo-linux" aria-hidden="true"></span>Linux</li>
-                  <li><span class="tool-logo logo-docker" aria-hidden="true"></span>Docker</li>
-                  <li><span class="tool-logo logo-coolify" aria-hidden="true"></span>Coolify</li>
-                  <li><span class="tool-logo logo-gitea" aria-hidden="true"></span>Gitea</li>
-                </ul>
-              </div>
-              <div>
-                <h4 data-i18n="home.software.t_auto">Automatisierung und KI</h4>
-                <ul class="toollist">
-                  <li><span class="tool-logo logo-n8n" aria-hidden="true"></span>n8n</li>
-                  <li><span class="tool-logo logo-make" aria-hidden="true"></span>Make</li>
-                  <li><span class="tool-logo logo-claude" aria-hidden="true"></span>Claude</li>
-                  <li><span class="tool-logo logo-terminal" aria-hidden="true"></span>Codex</li>
-                </ul>
-              </div>
-              <div>
-                <h4 data-i18n="home.software.t_know">Wissen</h4>
-                <ul class="toollist">
-                  <li><span class="tool-logo logo-obsidian" aria-hidden="true"></span>Obsidian</li>
-                  <li><span class="tool-logo logo-notion" aria-hidden="true"></span>Notion</li>
-                </ul>
-              </div>
-            </div>
-            <div class="links">
+            <dt data-i18n="home.software.h2">Software-Entwicklung</dt>
+            <dd>
+              <p data-i18n="home.ways.software">Prototypen, Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, auf deinem eigenen Server.</p>
               <a href="software.html" data-i18n="home.software.more">Mehr zur Software-Entwicklung</a>
-              <a href="kontakt.html?thema=software" data-i18n="home.software.cta">Projekt besprechen</a>
-            </div>
+            </dd>
           </div>
-        </section>
-
-        <section class="row" id="wissen" aria-labelledby="h-lehre">
-          <p class="word" aria-hidden="true" data-i18n="home.lehre.word">Wissen</p>
           <div>
-            <h2 id="h-lehre" data-i18n="home.lehre.h2">Training</h2>
-            <p data-i18n="home.lehre.p1">Kurse und Workshops für Teams, Hochschulen und Einzelne, in Freiburg, bei euch vor Ort oder online. Praxisnah, mit Übungen aus echten Projekten.</p>
-            <div class="groups">
-              <div>
-                <h3 data-i18n="home.lehre.scrum">Vorbereitung auf Scrum.org-Zertifizierungen</h3>
-                <ul class="list">
-                  <li><b>PSM&nbsp;I</b><span>Professional Scrum Master</span></li>
-                  <li><b>PSPO&nbsp;I</b><span>Professional Scrum Product Owner</span></li>
-                  <li><b>PSK&nbsp;I</b><span>Professional Scrum with Kanban</span></li>
-                </ul>
-              </div>
-              <div>
-                <h3 data-i18n="home.lehre.own">Eigene Kurse</h3>
-                <ul class="list">
-                  <li><b><a href="kurs-agenten.html" data-i18n="home.lehre.agenten">Mit KI-Agenten bauen</a><em class="badge" data-i18n="home.lehre.new">neu</em></b></li>
-                  <li><b data-i18n="home.lehre.proto">Prototyping</b></li>
-                  <li><b data-i18n="home.lehre.ki">Lernen und Texte schreiben mit KI</b></li>
-                  <li><b data-i18n="home.lehre.geld">Geldgeschichte, Bitcoin und Österreichische Schule</b></li>
-                </ul>
-              </div>
-            </div>
-            <div class="links">
+            <dt data-i18n="home.lehre.h2">Training</dt>
+            <dd>
+              <p data-i18n="home.ways.lehre">Der Kurs <a href="kurs-agenten.html">Mit KI-Agenten bauen</a>: Du oder dein Team lernt genau dieses Setup an echten Projekten. Dazu Vorbereitung auf PSM&nbsp;I, PSPO&nbsp;I und PSK&nbsp;I, in Freiburg, vor Ort oder online.</p>
               <a href="lehre.html" data-i18n="home.lehre.more">Mehr zu den Kursen</a>
-              <a href="kontakt.html?thema=lehre" data-i18n="home.lehre.cta">Kurs anfragen</a>
-            </div>
+            </dd>
           </div>
-        </section>
-
-        <section class="row" id="wege" aria-labelledby="h-coaching">
-          <p class="word" aria-hidden="true" data-i18n="home.coaching.word">Wege</p>
           <div>
-            <h2 id="h-coaching" data-i18n="home.coaching.h2">1:1-Coaching</h2>
-            <p data-i18n="home.coaching.p1">Für Menschen an einem Wendepunkt, beruflich oder persönlich. Systemisch, mit Elementen der Logotherapie, in Freiburg oder online. Das erste Gespräch dauert 20 Minuten und kostet nichts.</p>
-            <div class="links">
+            <dt data-i18n="home.coaching.h2">1:1-Coaching</dt>
+            <dd>
+              <p data-i18n="home.ways.coaching">Systemisches Coaching mit Elementen der Logotherapie, wenn sich deine Arbeit oder dein Leben verändert. In Freiburg oder online, das Erstgespräch dauert 20 Minuten und kostet nichts.</p>
               <a href="coaching.html" data-i18n="home.coaching.more">Mehr zum Coaching</a>
-              <a href="kontakt.html?thema=coaching" data-i18n="coaching.cta">Erstgespräch anfragen</a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="anfrage" aria-labelledby="h-ask">
+        <div>
+          <h2 class="heading" id="h-ask" data-i18n="home.ask.h2">Dein Werkzeug als nächstes?</h2>
+          <p class="ask-side" data-i18n="home.ask.side">Erzähl in ein paar Sätzen, was es können soll und für wen. Ich antworte innerhalb von zwei Werktagen, das erste Gespräch ist unverbindlich.</p>
+          <p class="ask-side" data-i18n="home.ask.other">Kurs oder Coaching? Schreib an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> oder nutze das <a href="kontakt.html">Kontaktformular</a>.</p>
+        </div>
+        <form class="form tool-form" id="askForm">
+          <div class="field">
+            <label for="askMessage" data-i18n="werkstatt.wall.message_label">Was soll dein Werkzeug können?</label>
+            <textarea id="askMessage" name="message" rows="4" maxlength="4800" required data-i18n-placeholder="werkstatt.wall.message_placeholder" placeholder="Zum Beispiel: Unsere Kundinnen buchen Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten."></textarea>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="askName" data-i18n="kontakt.form.name_label">Dein Name</label>
+              <input type="text" id="askName" name="name" autocomplete="name" maxlength="200" required>
+            </div>
+            <div class="field">
+              <label for="askEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
+              <input type="email" id="askEmail" name="email" autocomplete="email" maxlength="200" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
             </div>
           </div>
-        </section>
-      </div>
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+          <div class="tool-form__foot">
+            <button type="submit" class="btn" id="askSubmit" data-i18n="werkstatt.wall.submit">Anfrage senden</button>
+            <span data-i18n="home.ask.foot">Keine Cookies, keine Tracker. Die Anfrage geht direkt an mich.</span>
+          </div>
+          <div class="form-status" id="askStatus" role="status"></div>
+        </form>
+      </section>
     </div>
 
     <section class="facts" aria-labelledby="h-facts">
@@ -228,21 +267,11 @@
           <dd data-i18n="home.facts.tracker_d">Keine. Es gibt auch keine Besucherstatistik.</dd>
           <dt data-i18n="home.facts.fonts_t">Schriften</dt>
           <dd data-i18n="home.facts.fonts_d">Vom eigenen Server, nicht von Google.</dd>
-          <dt data-i18n="home.facts.server_t">Server</dt>
-          <dd data-i18n="home.facts.server_d">Hetzner in Nürnberg.</dd>
           <dt data-i18n="home.facts.code_t">Quellcode</dt>
           <dd data-i18n="home.facts.code_d">Offen, <a href="https://github.com/robinchoice/pleasance">auf GitHub</a>.</dd>
         </dl>
       </div>
     </section>
-
-    <div class="wrap">
-      <section class="mailblock" aria-labelledby="h-mail">
-        <p id="h-mail" data-i18n="home.mail.text">Schreib mir, worum es geht. Ich melde mich innerhalb von zwei Werktagen.</p>
-        <a class="mailblock__mail" href="mailto:hello@pleasance.org">hello@pleasance.org</a>
-        <p data-i18n="home.mail.form">Oder nutze das <a href="kontakt.html">Kontaktformular</a>.</p>
-      </section>
-    </div>
   </main>
 
   <div class="wrap">
@@ -259,8 +288,52 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261008a"></script>
-  <script src="main.js?v=20261008a"></script>
+  <script src="i18n.js?v=20261022a"></script>
+  <script src="main.js?v=20261022a"></script>
+
+  <script>
+  (function () {
+    var API_URL = 'https://api.pleasance.org/contact';
+    var form   = document.getElementById('askForm');
+    var submit = document.getElementById('askSubmit');
+    var status = document.getElementById('askStatus');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      form.elements.message.value = form.elements.message.value.trim();
+      if (!form.reportValidity()) return;
+      submit.disabled = true;
+      translate(submit, 'form.sending');
+      status.className = 'form-status';
+      status.removeAttribute('data-i18n');
+      status.textContent = '';
+
+      try {
+        var res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topic: 'software',
+            name: form.elements.name.value.trim(),
+            email: form.elements.email.value.trim(),
+            message: 'Neuer Prototyp:\n\n' + form.elements.message.value.trim(),
+            _honey: form.elements._honey.value,
+          }),
+        });
+        if (!res.ok) throw new Error(res.status);
+        status.className = 'form-status is-success';
+        translate(status, 'werkstatt.wall.success');
+        form.reset();
+      } catch (_) {
+        status.className = 'form-status is-error';
+        translate(status, 'form.error');
+      } finally {
+        submit.disabled = false;
+        translate(submit, 'werkstatt.wall.submit');
+      }
+    });
+  })();
+  </script>
 
 </body>
 </html>

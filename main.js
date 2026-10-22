@@ -33,6 +33,14 @@ function applyLanguage(lang) {
     if (val && val[lang]) el.placeholder = val[lang];
   });
 
+  // Translate aria-label attributes
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const val = getI18nValue(el.dataset.i18nAriaLabel);
+    if (val && val[lang]) el.setAttribute('aria-label', val[lang]);
+  });
+
+  formatDates();
+
   // Update page title + meta description
   const meta = I18N_META[document.body.dataset.page];
   if (meta) {
@@ -44,6 +52,19 @@ function applyLanguage(lang) {
   const langBtn = document.getElementById('langToggle');
   langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
   langBtn.setAttribute('aria-label', lang === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten');
+}
+
+// ── Dates ──────────────────────────────────────────────────────────────────
+// Dates written by the werkstatt action, shown in the page language
+function formatDates() {
+  const locale = currentLang === 'en' ? 'en-GB' : 'de-DE';
+  document.querySelectorAll('time[datetime]').forEach(t => {
+    const value = t.getAttribute('datetime');
+    const options = value.includes('T')
+      ? { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }
+      : { day: locale === 'de-DE' ? '2-digit' : 'numeric', month: locale === 'de-DE' ? '2-digit' : 'short', timeZone: 'Europe/Berlin' };
+    t.textContent = new Date(value).toLocaleString(locale, options);
+  });
 }
 
 // ── Dark Mode ──────────────────────────────────────────────────────────────
@@ -84,6 +105,7 @@ function initNav() {
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('pleasance-lang') || 'de';
   if (savedLang !== 'de') applyLanguage(savedLang);
+  else formatDates();
   document.getElementById('langToggle').addEventListener('click', () => {
     applyLanguage(currentLang === 'de' ? 'en' : 'de');
   });

@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261008a">
+  <link rel="stylesheet" href="style.css?v=20261022a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
 </head>
 <body data-page="werkstatt">
@@ -33,7 +33,8 @@
         <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
         <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
         <li><a href="werkstatt.html" aria-current="page" data-i18n="nav.werkstatt">Werkstatt</a></li>
-        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
+        <li><a href="handbuch.html" data-i18n="nav.handbuch">Handbuch</a></li>
         <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
         <li class="nav__tools">
           <button class="nav__theme" id="themeToggle" aria-pressed="false">
@@ -60,10 +61,10 @@
         <div>
           <div class="stats">
             <div class="stat"><b data-gh="projects">11</b><span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></div>
-            <div class="stat"><b data-gh="commits">1036</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
+            <div class="stat"><b data-gh="commits">1037</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
             <div class="stat"><b data-gh="agent">79&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
           </div>
-          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-22T12:15:20.993Z">22.10.2026, 14:15</time></p>
+          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-22T12:26:16.079Z">22.10.2026, 14:26</time></p>
         </div>
       </section>
 
@@ -238,7 +239,7 @@
               <summary>
                 <span><span class="project__name" data-i18n="werkstatt.projekte.starter_name">Starter-Vorlage</span><span class="project__desc" data-i18n="werkstatt.projekte.starter">Vorlage für neue Prototypen</span></span>
                 <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="starter.commits">110</b> Commits, <b data-gh="starter.agent">81</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="starter" style="width: 29.4%"></i></span>
+                <span class="commits"><b data-gh="starter.commits">111</b> Commits, <b data-gh="starter.agent">82</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="starter" style="width: 29.7%"></i></span>
               </summary>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="starter.last" datetime="2026-10-22">22.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Bun, Hono, SvelteKit, Drizzle, Postgres, Flutter</dd></div>
@@ -342,29 +343,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261009a"></script>
-  <script src="main.js?v=20261009a"></script>
-  <script>
-  (function () {
-    var times = document.querySelectorAll('time[datetime]');
-
-    function formatDates() {
-      var locale = document.documentElement.lang === 'en' ? 'en-GB' : 'de-DE';
-      times.forEach(function (t) {
-        var value = t.getAttribute('datetime');
-        var options = value.includes('T')
-          ? { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }
-          : { day: locale === 'de-DE' ? '2-digit' : 'numeric', month: locale === 'de-DE' ? '2-digit' : 'short', timeZone: 'Europe/Berlin' };
-        t.textContent = new Date(value).toLocaleString(locale, options);
-      });
-    }
-
-    formatDates();
-    new MutationObserver(formatDates).observe(
-      document.documentElement, { attributes: true, attributeFilter: ['lang'] }
-    );
-  })();
-  </script>
+  <script src="i18n.js?v=20261022a"></script>
+  <script src="main.js?v=20261022a"></script>
   <script>
   (function () {
     var API_URL = 'https://api.pleasance.org/contact';
