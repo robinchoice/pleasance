@@ -124,7 +124,6 @@ app.post('/contact', async (c) => {
   if (mailsThisHour >= MAX_MAILS_PER_HOUR) {
     return c.json({ error: 'Too many requests' }, 429)
   }
-  mailsThisHour++
 
   const topicLabel = TOPIC_LABELS[topic]
 
@@ -142,6 +141,8 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Send failed' }, 500)
   }
 
+  // Only mails that left count: an SMTP outage must not lock the form for an hour.
+  mailsThisHour++
   return c.json({ ok: true })
 })
 
