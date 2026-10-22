@@ -32,7 +32,7 @@ Sentry.init({
   },
 })
 
-const app = new Hono()
+export const app = new Hono()
 app.onError((error, c) => {
   Sentry.captureException(error)
   console.error(error)

@@ -10,7 +10,7 @@
 ## Checks
 
 - Website: keine automatischen Checks. Geänderte Seiten lokal im Browser ansehen, beide Sprachen.
-- API: `cd api && bun install --frozen-lockfile && bun build index.ts --target=bun --outdir="$(mktemp -d)"`
+- API: `cd api && bun install --frozen-lockfile && bun test && bun build index.ts --target=bun --outdir="$(mktemp -d)"`. Die Tests in `index.test.ts` gehen durch `app.request()`, ohne SMTP, GitHub spielt ein lokaler `Bun.serve`.
 
 ## Deploy
 
