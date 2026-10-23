@@ -1,11 +1,10 @@
-// Writes the GitHub numbers of the last 30 days and the last 24 hours into the pages in FILES.
+// Writes the GitHub numbers of the last 30 days and the last 24 hours into HTML pages with data-gh attributes.
 // The repositories are the data-gh-bar attributes in werkstatt.html.
 // Usage: GITHUB_TOKEN=… node scripts/werkstatt.mjs
-import { readFile, writeFile } from 'node:fs/promises'
+import { readdir, readFile, writeFile } from 'node:fs/promises'
 
 const OWNER = 'robinchoice'
 const DAYS = 30
-const FILES = ['werkstatt.html', 'kurs-agenten.html', 'index.html', 'nachtschicht.html', 'handbuch.html']
 const AGENT = /^Co-Authored-By:.*(Claude|Codex|noreply@anthropic\.com|noreply@openai\.com)/im
 const isWerkstattCommit = (c) => c.author?.login === 'github-actions[bot]' || c.commit.message === 'chore: update werkstatt numbers'
 
@@ -58,18 +57,17 @@ const day = (iso) => new Date(iso).toLocaleString('de-DE', { day: '2-digit', mon
 const werkstatt = await readFile('werkstatt.html', 'utf8')
 const repos = [...werkstatt.matchAll(/data-gh-bar="([^"]+)"/g)].map((m) => m[1])
 
-const stats = []
-for (const repo of repos) {
+const stats = await Promise.all(repos.map(async (repo) => {
   const commits = await commitsSince(repo)
   const latest = commits[0] ?? await latestCommit(repo)
-  stats.push({
+  return {
     repo,
     commits: commits.length,
     agent: commits.filter((c) => AGENT.test(c.commit.message)).length,
     day: commits.filter((c) => c.commit.committer.date >= daySince).length,
     last: latest?.commit.committer.date.slice(0, 10) ?? null,
-  })
-}
+  }
+}))
 
 const total = stats.reduce((sum, s) => sum + s.commits, 0)
 const agent = stats.reduce((sum, s) => sum + s.agent, 0)
@@ -90,8 +88,9 @@ for (const s of stats) {
   values[`${s.repo}.last`] = [s.last ? day(s.last) : '—', s.last]
 }
 
-for (const file of FILES) {
+for (const file of (await readdir('.')).filter((file) => file.endsWith('.html'))) {
   const original = await readFile(file, 'utf8')
+  if (!/data-gh(?:-bar)?=/.test(original)) continue
   // Fail loudly: a key the script does not know, or a bar the regex below cannot
   // reach, would otherwise keep showing stale numbers forever.
   for (const [, key] of original.matchAll(/data-gh="([^"]+)"/g)) {
