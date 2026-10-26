@@ -90,7 +90,6 @@ for (const s of stats) {
 
 for (const file of (await readdir('.')).filter((file) => file.endsWith('.html'))) {
   const original = await readFile(file, 'utf8')
-  if (!/data-gh(?:-bar)?=/.test(original)) continue
   // Fail loudly: a key the script does not know, or a bar the regex below cannot
   // reach, would otherwise keep showing stale numbers forever.
   for (const [, key] of original.matchAll(/data-gh="([^"]+)"/g)) {
