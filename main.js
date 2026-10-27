@@ -27,6 +27,12 @@ function applyLanguage(lang) {
   // Translate all [data-i18n] elements
   document.querySelectorAll('[data-i18n]').forEach(el => translate(el, el.dataset.i18n));
 
+  // Texts written by the werkstatt action carry their English version in data-en
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.dataset.de ??= el.textContent;
+    el.textContent = el.dataset[lang];
+  });
+
   // Translate placeholder attributes
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const val = getI18nValue(el.dataset.i18nPlaceholder);

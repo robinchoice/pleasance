@@ -18,10 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Exits 1 when content is stale (see the end of the script), after writing the fresh numbers.
       - run: node scripts/werkstatt.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.WERKSTATT_TOKEN }}
-      - run: |
+      - if: ${{ !cancelled() }}
+        run: |
           git diff --quiet && exit 0
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

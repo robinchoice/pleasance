@@ -1,0 +1,117 @@
+{
+  "fahrbar": { "name": "fahrbar" },
+  "music-hub": { "name": "Music Hub" },
+  "doenerapp": { "name": "Döner App" },
+  "fieldtest": { "name": "Fieldtest" },
+  "musicstreaming-connector": { "name": "Songgate" },
+  "docpilot": { "name": "docpilot" },
+  "savor": { "name": "Savor" },
+  "pleasance": {
+    "name": "pleasance.org",
+    "de": "Diese Website",
+    "en": "This website",
+    "stack": "HTML, CSS, Bun, Hono",
+    "url": "https://pleasance.org"
+  },
+  "starter": {
+    "name": "starter",
+    "de": "Vorlage für neue Prototypen: Login, Deutsch und Englisch, Tests und Deploy sind schon drin",
+    "en": "Template for new prototypes: login, German and English, tests and deploy are built in",
+    "stack": "Bun, Hono, SvelteKit, Drizzle, Postgres, Flutter"
+  },
+  "musichub-plugin": {
+    "name": "Music Hub Plugin",
+    "de": "A/B-Vergleich von Versionen in der DAW",
+    "en": "A/B comparison of versions inside the DAW",
+    "stack": "C++, JUCE (VST3, AU, AAX)"
+  },
+  "musichub-sync": {
+    "name": "Music Hub Sync",
+    "de": "Hält einen Ordner auf dem Rechner mit Music Hub synchron",
+    "en": "Keeps a folder on your computer in sync with Music Hub",
+    "stack": "Rust"
+  },
+  "pinna": {
+    "name": "Pinna",
+    "de": "Eine DAW für Agenten: Der Agent schlägt vor und misst, was er hört, du vergleichst per A/B und übernimmst",
+    "en": "An agent-native DAW: the agent proposes and measures what it hears, you A/B and accept",
+    "stack": "Rust, egui"
+  },
+  "isoglossa": {
+    "name": "Isoglossa",
+    "de": "Wörter, die in vielen Sprachen fast gleich sind: Mit jedem kommst du in allen zugleich weiter",
+    "en": "Words that are almost the same in many languages: each one moves you forward in all of them",
+    "stack": "SvelteKit, Hono, Postgres",
+    "url": "https://isoglossa.pleasance.org"
+  },
+  "findyourlogic": {
+    "name": "findyourlogic",
+    "de": "Gruppen, die es schon gibt, finden einander und reden in kleinen Runden nach festen Spielregeln",
+    "en": "Existing groups find each other and talk in small rounds with fixed rules",
+    "stack": "SvelteKit, Hono, Postgres, Nostr",
+    "url": "https://findyourlogic.pleasance.org"
+  },
+  "gigpost": {
+    "name": "gigpost",
+    "de": "Booking für Künstler: Agenten bereiten Anfragen an Clubs und Festivals vor, ich verschicke sie",
+    "en": "Booking for artists: agents draft requests to clubs and festivals, I send them",
+    "stack": "SvelteKit, Hono, Postgres",
+    "url": "https://gigpost.pleasance.org"
+  },
+  "kaefig": {
+    "name": "Käfig",
+    "de": "Arena: Bringst du einen KI-Agenten in seiner Sandbox über eine Grenze? Jeder Versuch kostet 100 sats per L402",
+    "en": "Arena: can you push an AI agent in its sandbox across a boundary? Each attempt costs 100 sats via L402",
+    "stack": "SvelteKit, Hono, Postgres, microVM, L402"
+  },
+  "stackarena": {
+    "name": "Stackarena",
+    "de": "Agenten bauen denselben Habit-Tracker auf vielen Stacks, alle gleich getestet und bewertet",
+    "en": "Agents build the same habit tracker on many stacks, all tested and scored the same way",
+    "stack": "TypeScript, Docker"
+  },
+  "agentshop": {
+    "name": "Agentshop",
+    "de": "Kleiner Shop für KI-Agenten mit L402- und x402-Checkout, gebaut für den Workshop „Agentic Payments“",
+    "en": "Tiny shop for AI agents with an L402 and an x402 checkout, built for the workshop \"Agentic Payments\"",
+    "stack": "TypeScript, Lightning (L402), x402"
+  },
+  "rust-dsp-anywhere": {
+    "name": "rust-dsp-anywhere",
+    "de": "Ein DSP-Kern in Rust für Eurorack (Daisy), MOD Dwarf und CLAP/VST3",
+    "en": "One Rust DSP core for Eurorack (Daisy), MOD Dwarf and CLAP/VST3",
+    "stack": "Rust (no_std)"
+  },
+  "rag-requirements-demo": {
+    "name": "RAG-Demo EU-MDR",
+    "de": "Anforderungen aus der EU-Medizinprodukteverordnung finden und extrahieren, mit selbst gehosteten Modellen",
+    "en": "Finding and extracting requirements from the EU Medical Device Regulation with self-hosted models",
+    "stack": "Python, pgvector, LangGraph, Kubernetes"
+  },
+  "mautrix-mattermost": {
+    "name": "mautrix-mattermost",
+    "de": "Inoffizielle Brücke zwischen Matrix und Mattermost, gedacht für upstream",
+    "en": "Unofficial Matrix–Mattermost puppeting bridge, meant to go upstream",
+    "stack": "Go, mautrix-go"
+  },
+  "chronik": {
+    "name": "Chronik",
+    "de": "Meilensteine und Geburtstage aller meiner Projekte. Daraus entsteht das Logbuch hier",
+    "en": "Milestones and birthdays of all my projects. The logbook here comes from it",
+    "stack": "Python, JavaScript"
+  },
+  "agents": {
+    "name": "Agent-Setup",
+    "de": "Übersicht über mein Agent-Setup: Regeln, Skills, Abläufe und Zettelkasten",
+    "en": "Overview of my agent setup: rules, skills, workflows and notes",
+    "stack": "JavaScript"
+  },
+  "records359": {
+    "name": "359 Records",
+    "de": "Website für das Label 359 Records und das Studio Klanglabor",
+    "en": "Website for the label 359 Records and the Klanglabor studio",
+    "stack": "HTML, CSS, JavaScript",
+    "url": "https://359records.de"
+  },
+  "pleasance-thoughts": { "hidden": true }
+}
