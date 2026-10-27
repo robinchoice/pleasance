@@ -285,7 +285,6 @@ const I18N = {
       h2:    { de: 'Die Regeln sind offen', en: 'The rules are open' },
       side:  { de: 'Die Agenten folgen neun Grundsätzen. Drei davon:', en: 'The agents follow nine principles. Three of them:' },
       hb:    { de: 'Alles im Handbuch', en: 'All of it in the handbook' },
-      khala: { de: 'Khala, die offene Ideensammlung', en: 'Khala, the open idea collection' },
       savor: { de: 'Savor, der Arbeitsplatz der Agenten', en: 'Savor, the agents\' workspace' },
     },
   },
