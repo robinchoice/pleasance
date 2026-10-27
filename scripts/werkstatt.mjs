@@ -176,8 +176,10 @@ const apps = Object.entries(projects).filter(([, p]) => p.app).flatMap(([repo, {
     `      <a href="https://github.com/${OWNER}/${repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
     '    </div>',
     '    <div class="shots">',
-    ...Object.entries(SHOTS).map(([kind, [w, h]]) =>
-      `      <a class="shot shot--${kind}" href="img/apps/${id}-${kind}.webp"><img src="img/apps/${id}-${kind}.webp" alt="${esc(name)}, ${kind === 'desktop' ? 'Desktop' : 'Smartphone'}" width="${w}" height="${h}" loading="lazy"></a>`),
+    ...Object.entries(SHOTS).map(([kind, [w, h]]) => {
+      const en = `img/apps/${id}-${kind}-en.webp`
+      return `      <a class="shot shot--${kind}" href="img/apps/${id}-${kind}.webp"><img src="img/apps/${id}-${kind}.webp"${existsSync(en) ? ` data-en-src="${en}"` : ''} alt="${esc(name)}, ${kind === 'desktop' ? 'Desktop' : 'Smartphone'}" width="${w}" height="${h}" loading="lazy"></a>`
+    }),
     '    </div>',
     '  </div>',
     '</section>',

@@ -33,6 +33,14 @@ function applyLanguage(lang) {
     el.textContent = el.dataset[lang];
   });
 
+  // App screenshots with an English version (apps.html)
+  document.querySelectorAll('img[data-en-src]').forEach(img => {
+    img.dataset.deSrc ??= img.getAttribute('src');
+    const src = lang === 'en' ? img.dataset.enSrc : img.dataset.deSrc;
+    img.setAttribute('src', src);
+    img.parentElement.setAttribute('href', src);
+  });
+
   // Translate placeholder attributes
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const val = getI18nValue(el.dataset.i18nPlaceholder);
