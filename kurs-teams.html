@@ -28,7 +28,11 @@
     "description": "Workshop für Produktteams mit eigenem Stack: Leitplanken für KI-Agenten, Cross-Review, Testgenerierung und DORA-Kennzahlen an euren eigenen Repositories. Von Robin Wahl aus Freiburg.",
     "url": "https://pleasance.org/kurs-teams.html",
     "inLanguage": "de",
-    "provider": { "@type": "Organization", "@id": "https://pleasance.org/#business", "name": "Pleasance", "url": "https://pleasance.org/" }
+    "provider": { "@type": "Organization", "@id": "https://pleasance.org/#business", "name": "Pleasance", "url": "https://pleasance.org/" },
+    "offers": [
+      { "@type": "Offer", "name": "Bestandsaufnahme", "category": "Paid", "price": "1800", "priceCurrency": "EUR", "url": "https://pleasance.org/kurs-teams.html#preis" },
+      { "@type": "Offer", "name": "Workshop", "category": "Paid", "price": "4800", "priceCurrency": "EUR", "url": "https://pleasance.org/kurs-teams.html#preis" }
+    ]
   }
   </script>
 </head>
@@ -125,7 +129,7 @@
         <div>
           <div class="prose"><p data-i18n="teams.belege.intro">Ich entwickle alle meine Projekte so, mit Agenten nach offenen Regeln. Was im Workshop vorkommt, läuft bei mir jeden Tag, samt dem, was dabei schiefging.</p></div>
           <div class="stats" style="margin-top: 1.75rem">
-            <div class="stat"><b data-gh="commits">1161</b><span data-i18n="kurs.belege.commits">Commits in den letzten 30 Tagen</span></div>
+            <div class="stat"><b data-gh="commits">1171</b><span data-i18n="kurs.belege.commits">Commits in den letzten 30 Tagen</span></div>
             <div class="stat"><b data-gh="agent">78&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
             <div class="stat"><b>18</b><span data-i18n="teams.belege.review">Repositories, die jede Nacht ein Agent prüft und ein zweiter gegenprüft</span></div>
           </div>
@@ -161,13 +165,21 @@
 
       <section class="section" id="preis" aria-labelledby="h-preis">
         <h2 class="heading" id="h-preis" data-i18n="teams.preis.h2">Format und Preis</h2>
-        <div class="offers" style="margin-top: 0">
-          <div class="offer">
-            <h3 data-i18n="teams.preis.t">Für euer Team</h3>
-            <p class="offer__detail" data-i18n="kurs.termine.team_price">Auf Anfrage</p>
-            <p class="offer__note" data-i18n="teams.preis.note">Umfang und Ablauf klären wir in einem kostenlosen Vorgespräch, passend zu Teamgröße und Stack.</p>
-            <a class="btn" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="teams.cta">Vorgespräch anfragen</a>
+        <div>
+          <div class="offers" style="margin-top: 0">
+            <div class="offer">
+              <h3 data-i18n="teams.preis.t1">1. Bestandsaufnahme</h3>
+              <p class="offer__detail">1.800&nbsp;€</p>
+              <p class="offer__note" data-i18n="teams.preis.n1">Ein Tag mit eurem Team an euren Repositories: DORA-Ausgangswerte aus Git und CI, Blick auf eure Leitplanken und ein schriftlicher Bericht mit den nächsten Schritten.</p>
+            </div>
+            <div class="offer">
+              <h3 data-i18n="teams.preis.t2">2. Workshop</h3>
+              <p class="offer__detail">4.800&nbsp;€</p>
+              <p class="offer__note" data-i18n="teams.preis.n2">Zwei Tage an eurem Code, für bis zu 12 Personen: Leitplanken, Cross-Review und Testgenerierung einrichten. Nach sechs Wochen messen wir eure DORA-Werte nach.</p>
+            </div>
           </div>
+          <p class="source" data-i18n="teams.preis.note">Vor Ort im DACH-Raum zuzüglich Reisekosten, online ohne. Das Vorgespräch ist kostenlos.</p>
+          <div style="margin-top: 1.5rem"><a class="btn" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="teams.cta">Vorgespräch anfragen</a></div>
         </div>
       </section>
 

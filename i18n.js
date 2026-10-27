@@ -620,7 +620,7 @@ const I18N = {
       single_note: { de: 'Drei Sitzungen à 2 Stunden, online oder in Freiburg. Start nach Absprache, das Vorgespräch ist kostenlos.', en: 'Three sessions of 2 hours, online or in Freiburg. Start by arrangement, the first conversation is free.' },
       single_cta:  { de: 'Vorgespräch anfragen', en: 'Request a first conversation' },
       team:        { de: 'Für Teams', en: 'For teams' },
-      team_price:  { de: 'Auf Anfrage', en: 'On request' },
+      team_price:  { de: 'ab 1.800 €', en: 'from €1,800' },
       team_note:   { de: 'Vor Ort im DACH-Raum oder online, angepasst an euren Stack und eure Regeln.', en: 'On site in Germany, Austria and Switzerland or online, adapted to your stack and your rules.' },
       team_cta:    { de: 'Zum Teamangebot', en: 'See the team offer' },
     },
@@ -718,8 +718,11 @@ const I18N = {
     },
     preis: {
       h2:   { de: 'Format und Preis', en: 'Format and price' },
-      t:    { de: 'Für euer Team', en: 'For your team' },
-      note: { de: 'Umfang und Ablauf klären wir in einem kostenlosen Vorgespräch, passend zu Teamgröße und Stack.', en: 'We agree on scope and schedule in a free first conversation, to fit your team size and stack.' },
+      t1:   { de: '1. Bestandsaufnahme', en: '1. Assessment' },
+      n1:   { de: 'Ein Tag mit eurem Team an euren Repositories: DORA-Ausgangswerte aus Git und CI, Blick auf eure Leitplanken und ein schriftlicher Bericht mit den nächsten Schritten.', en: 'One day with your team on your repositories: DORA baseline from Git and CI, a look at your guardrails and a written report with the next steps.' },
+      t2:   { de: '2. Workshop', en: '2. Workshop' },
+      n2:   { de: 'Zwei Tage an eurem Code, für bis zu 12 Personen: Leitplanken, Cross-Review und Testgenerierung einrichten. Nach sechs Wochen messen wir eure DORA-Werte nach.', en: 'Two days on your code for up to 12 people: setting up guardrails, cross-review and test generation. Six weeks later we measure your DORA numbers again.' },
+      note: { de: 'Vor Ort im DACH-Raum zuzüglich Reisekosten, online ohne. Das Vorgespräch ist kostenlos.', en: 'On site in Germany, Austria and Switzerland plus travel costs, online without. The first conversation is free.' },
     },
     faq: {
       q1: { de: 'Welche Agenten und Tools?', en: 'Which agents and tools?' },
