@@ -68,7 +68,7 @@ Tannengrün auf hellem, leicht grünstichigem Papier. Kein Creme, kein Terrakott
 - **Ink (#0E2218):** Text, Linien, Buttons. Sehr dunkles Grün statt Schwarz.
 - **Muted (#4E5F55):** Nebentexte.
 - **Fir (#1D4A34):** Links, Unterstreichungen, Hover.
-- **Deep (#0F2C1F) + Sprout (#C8E39F):** für dunkle Blöcke: Beipackzettel und die Nacht (`.night`: Band auf der Startseite, Kopf der Nachtschicht). Sprout ist Text-, Link- und Knopffarbe auf Deep, nie Textfarbe auf hellem Grund. Einzige helle Ausnahme: die Kapitelleiste im Handbuch, eine Sprout-Fläche mit Deep-Text.
+- **Deep (#0F2C1F) + Sprout (#C8E39F):** für dunkle Blöcke: Beipackzettel, die Nacht (`.night`: Band auf der Startseite, Kopf der Nachtschicht) und die großen Momente der Angebotsseiten (Kopf von Coaching, Zitat, Aussage-Band auf Software). Sprout ist Text-, Link- und Knopffarbe auf Deep, nie Textfarbe auf hellem Grund. Einzige helle Ausnahme: die Kapitelleiste im Handbuch, eine Sprout-Fläche mit Deep-Text.
 
 ## Typografie
 
@@ -88,7 +88,7 @@ Linksbündig, Raster 5fr/7fr: links das große Wort oder die Überschrift, recht
 - 1,5px-Linien trennen Zeilen und Abschnitte.
 - Haarlinien trennen Listeneinträge.
 
-Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Ablauf eines Coachings, Weg von der Idee bis live, Kapitel des Handbuchs).
+Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Vorbereitung auf eine Zertifizierung, Weg von der Idee bis live, Kapitel des Handbuchs).
 
 ## Komponenten
 
@@ -99,6 +99,7 @@ Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Ablauf eines Co
 - **Werkzeug-Wand (Werkstatt, Startseite, Reihe auf Software):** Die einzige Stelle mit Kacheln. Auf der Startseite verlinken die Kacheln auf ihr Feld in der Werkstatt, das Plus springt zum Anfrageformular. Jedes Werkzeug zeigt seine dunkle Kachel mit Zeichen aus der Produktfamilie (`img/werkzeuge`, Regeln in der DESIGN.md im Starter), Name und Status stehen auf Papier darunter, ohne Kasten und ohne Schatten. Reihenfolge nach Farbband. Die letzte Kachel „Neuer Prototyp“ öffnet das Anfrageformular in der Wand.
 
 - **Zeitleiste der Nacht (Nachtschicht):** 22 bis 8 Uhr, die Nachtschritte mit ihren echten Uhrzeiten. Nachts zeigt eine Marke „jetzt“ die aktuelle Uhrzeit. Auf dem Handy wird sie zur Liste.
+- **Große Momente (Software, Training, Coaching):** Die Angebotsseiten brechen den Text mit wenigen großen Elementen auf, ohne Bilder: Fragen-Wand (`.questions`, Coaching), große Zahlen (`.bignums`, je drei mit kurzer Zeile darunter), Zitat (`.quote` auf `.night`), Aussage-Band (`.statement`), Gegenüberstellung (`.vs`, Gemietet gegen Gekauft) und eine Probefrage zum Anklicken (`.quiz`, Training). Sparsam: neben dem Kopf höchstens drei pro Seite. Echte Fotos (Porträt, Orte, Workshop) und Screenshots der Werkzeuge kommen dazu, sobald es sie gibt, keine Stockfotos.
 - **Kapitelleiste (Handbuch):** links, klebt beim Scrollen, auf dem Handy eine waagrechte Zeile oben.
 
 ## Bewegung

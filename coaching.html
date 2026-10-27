@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261022a">
+  <link rel="stylesheet" href="style.css?v=20261027a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -58,6 +58,7 @@
 
   <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
 
+  <div class="night">
   <div class="wrap">
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
@@ -82,13 +83,29 @@
     </nav>
   </div>
 
-  <main id="main">
     <div class="wrap">
       <header class="page-head">
         <h1 class="display page-title" data-i18n="coaching.h1">Dein Weg, nicht meiner.</h1>
         <p class="lead" data-i18n="coaching.lead">Ich gebe dir keine Antworten vor. Ich höre zu, frage nach und helfe dir, deine eigenen zu finden. Systemisches Coaching mit Elementen der Logotherapie, in Freiburg oder online.</p>
         <a class="btn" href="kontakt.html?thema=coaching" data-i18n="coaching.cta">Erstgespräch anfragen</a>
       </header>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="band" aria-labelledby="h-fragen">
+        <h2 class="questions-intro" id="h-fragen" data-i18n="coaching.fragen.intro">Vielleicht fragst du dich gerade:</h2>
+        <ul class="questions">
+          <li data-i18n="coaching.fragen.q1">Soll ich kündigen?</li>
+          <li data-i18n="coaching.fragen.q2">Was will ich eigentlich?</li>
+          <li data-i18n="coaching.fragen.q3">Wofür stehe ich morgens auf?</li>
+          <li data-i18n="coaching.fragen.q4">Warum fühlt sich Erfolg so leer an?</li>
+          <li data-i18n="coaching.fragen.q5">Wer bin ich ohne diesen Job?</li>
+          <li data-i18n="coaching.fragen.q6">Traue ich mich, selbstständig zu werden?</li>
+        </ul>
+        <p class="lead" data-i18n="coaching.fragen.outro">Dann bist du hier richtig. Nicht, weil ich die Antworten habe, sondern weil du sie hast.</p>
+      </section>
 
       <section class="section" aria-labelledby="h-fuer">
         <h2 class="heading" id="h-fuer" data-i18n="coaching.fuer.h2">Für wen</h2>
@@ -133,24 +150,24 @@
           </li>
         </ul>
       </section>
+    </div>
 
-      <section class="section" aria-labelledby="h-ablauf">
+    <figure class="night band">
+      <div class="wrap">
+        <blockquote class="quote" data-i18n="coaching.zitat.text">„Es kommt nie und nimmer darauf an, was wir vom Leben noch zu erwarten haben, vielmehr lediglich darauf, was das Leben von uns erwartet.“</blockquote>
+        <figcaption class="quote-src" data-i18n="coaching.zitat.src">Viktor Frankl, Begründer der Logotherapie, in „…trotzdem Ja zum Leben sagen“. Mit Elementen daraus fragen wir, was dir wirklich wichtig ist.</figcaption>
+      </div>
+    </figure>
+
+    <div class="wrap">
+      <section class="section section--full" aria-labelledby="h-ablauf">
         <h2 class="heading" id="h-ablauf" data-i18n="coaching.ablauf.h2">So läuft ein Coaching</h2>
         <div>
-          <ol class="steps">
-            <li>
-              <h3 data-i18n="coaching.ablauf.t1">Erstgespräch</h3>
-              <p data-i18n="coaching.ablauf.d1">20 Minuten, kostenlos. Du erzählst kurz, worum es geht, und wir klären, ob ich der Richtige für dein Anliegen bin.</p>
-            </li>
-            <li>
-              <h3 data-i18n="coaching.ablauf.t2">Sessions</h3>
-              <p data-i18n="coaching.ablauf.d2">Je 60 Minuten, in Freiburg oder online per Videocall. Du bestimmst das Thema, Hausaufgaben gibt es keine.</p>
-            </li>
-            <li>
-              <h3 data-i18n="coaching.ablauf.t3">Abschluss</h3>
-              <p data-i18n="coaching.ablauf.d3">Wir hören auf, wenn du deinen nächsten Schritt kennst. Das Ziel ist, dass du mich nicht mehr brauchst.</p>
-            </li>
-          </ol>
+          <ul class="bignums">
+            <li><b>20</b><span data-i18n="coaching.ablauf.n1">Minuten Erstgespräch</span><small data-i18n="coaching.ablauf.d1">Kostenlos. Du erzählst kurz, worum es geht, und wir klären, ob ich der Richtige für dein Anliegen bin.</small></li>
+            <li><b>60</b><span data-i18n="coaching.ablauf.n2">Minuten pro Session</span><small data-i18n="coaching.ablauf.d2">In Freiburg oder online per Videocall. Ziel ist, dass du mich bald nicht mehr brauchst.</small></li>
+            <li><b>0</b><span data-i18n="coaching.ablauf.n3">Hausaufgaben</span><small data-i18n="coaching.ablauf.d3">Du bestimmst das Thema. Wir hören auf, wenn du deinen nächsten Schritt kennst.</small></li>
+          </ul>
           <div class="offers">
             <div class="offer">
               <h3 data-i18n="coaching.ablauf.t1">Erstgespräch</h3>
@@ -231,8 +248,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261027a"></script>
-  <script src="main.js?v=20261027a"></script>
+  <script src="i18n.js?v=20261027b"></script>
+  <script src="main.js?v=20261027b"></script>
 
 </body>
 </html>

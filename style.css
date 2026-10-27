@@ -327,6 +327,50 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .badge { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.4rem; font-size: 0.75rem; font-style: normal; font-weight: 700; color: var(--paper); background: var(--fir); border-radius: 3px; vertical-align: 0.15em; }
 .teaser { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--hairline); }
 
+/* Eye-catchers on the offer pages: dark head, question wall, big numbers, quote band, comparison, sample question */
+.night .page-head { border-bottom: 0; padding-bottom: 5rem; }
+.section--full { display: block; }
+.section--full > .heading { margin-bottom: 2.5rem; }
+.band { padding: 5rem 0; }
+.wrap > .band { border-bottom: var(--rule); }
+
+.questions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 2.25rem; list-style: none; }
+.questions li { font-weight: 750; font-stretch: 78%; line-height: 1; letter-spacing: -0.02em; font-variation-settings: 'opsz' 96; }
+.questions li:nth-child(odd) { font-size: clamp(2.4rem, 5.6vw, 5.25rem); }
+.questions li:nth-child(even) { font-size: clamp(1.6rem, 3.4vw, 3rem); color: var(--muted); }
+.questions-intro { margin-bottom: 2rem; font-size: 1.25rem; font-weight: 400; color: var(--muted); }
+.questions + .lead { margin-top: 2.5rem; }
+
+.bignums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; list-style: none; }
+.bignums li { padding-top: 1rem; border-top: var(--rule-thick); }
+.bignums b { display: block; font-weight: 800; font-stretch: 75%; font-size: clamp(5rem, 11vw, 10rem); line-height: 0.85; letter-spacing: -0.03em; }
+.bignums span { display: block; margin-top: 0.75rem; font-size: 1.25rem; font-weight: 650; }
+.bignums small { display: block; margin-top: 0.25rem; max-width: 22em; font-size: 1rem; color: var(--muted); }
+.bignums + .offers, .bignums + p { margin-top: 3rem; }
+
+.quote { max-width: 22em; font-weight: 700; font-stretch: 80%; font-size: clamp(2rem, 4.4vw, 4rem); line-height: 1.05; letter-spacing: -0.015em; }
+.quote-src { margin-top: 1.5rem; max-width: 36em; color: var(--muted); }
+.statement { font-weight: 800; font-stretch: 75%; font-size: clamp(3rem, 8vw, 7.5rem); line-height: 0.9; letter-spacing: -0.025em; }
+.statement + .lead { margin-top: 2rem; }
+
+.vs { display: grid; grid-template-columns: 1fr 1fr; border-top: var(--rule-thick); }
+.vs > div { padding: 2rem 2rem 0 0; }
+.vs > div + div { padding-left: 2rem; border-left: var(--rule); }
+.vs h3 { font-weight: 800; font-stretch: 75%; font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 0.9; }
+.vs .gone h3 { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 4px; }
+.vs .gone li { color: var(--muted); }
+.vs ul { list-style: none; margin-top: 1.25rem; }
+.vs li { padding: 0.55rem 0; border-top: 1px solid var(--hairline); }
+
+.quiz__q { max-width: 22em; font-weight: 700; font-stretch: 85%; font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.15; }
+.quiz__opts { display: grid; gap: 0.6rem; margin-top: 1.5rem; list-style: none; }
+.quiz__opts button { width: 100%; padding: 0.9rem 1.1rem; font: inherit; font-weight: 600; text-align: left; color: var(--ink); background: transparent; border: var(--rule); border-radius: 3px; cursor: pointer; }
+.quiz__opts button:not(:disabled):hover { color: var(--paper); background: var(--ink); }
+.quiz__opts button:disabled { cursor: default; }
+.quiz__opts button.is-right { color: var(--night); background: var(--sprout); border-color: var(--sprout); }
+.quiz__opts button.is-wrong { color: var(--muted); background: transparent; text-decoration: line-through; }
+.quiz__fb { min-height: 3em; margin-top: 1rem; max-width: 36em; color: var(--muted); }
+
 /* === Werkstatt === */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .stat { padding-top: 0.9rem; border-top: var(--rule-thick); }
@@ -477,6 +521,9 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .log li > :nth-child(n+3) { grid-column: 2; }
   .log--named li { grid-template-columns: 1fr; gap: 0.1rem; }
   .home-hero, .company .wrap, .night-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .bignums, .vs { grid-template-columns: 1fr; }
+  .vs > div + div { margin-top: 2rem; padding-left: 0; border-left: 0; border-top: var(--rule); }
+  .band, .night .page-head { padding: 3.5rem 0; }
   .home-hero { padding-top: 1.5rem; }
   .company .wrap > div + div { padding: 2rem 0 0; border-left: 0; border-top: 1px solid var(--hairline); }
   .wall.wall--home { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem 0.75rem; }

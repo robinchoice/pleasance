@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261022a">
+  <link rel="stylesheet" href="style.css?v=20261027a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -100,13 +100,28 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="h-problem">
+      <section class="section section--full" aria-labelledby="h-problem">
         <h2 class="heading" id="h-problem" data-i18n="lehre.problem.h2">Auswendig lernen reicht nicht</h2>
-        <ul class="values">
-          <li><b data-i18n="lehre.problem.t1">Die Fragen sind knifflig.</b><span data-i18n="lehre.problem.d1">Bei PSM&nbsp;I und PSPO&nbsp;I sind es 80 Fragen in 60 Minuten, bestanden hat, wer 85 Prozent richtig hat. Wer nur Begriffe paukt, stolpert über Feinheiten im Scrum Guide.</span></li>
-          <li><b data-i18n="lehre.problem.t2">Die Prüfung gibt es nicht auf Deutsch.</b><span data-i18n="lehre.problem.d2">Englische Fachbegriffe und genau formulierte Antwortoptionen machen es zusätzlich schwer.</span></li>
-          <li><b data-i18n="lehre.problem.t3">Ein Zertifikat ist noch keine Praxis.</b><span data-i18n="lehre.problem.d3">Zwischen Scrum Guide und echtem Team liegt eine Lücke. Genau dort entstehen die Fragen, die im Alltag zählen.</span></li>
+        <ul class="bignums">
+          <li><b>80</b><span data-i18n="lehre.problem.n1">Fragen</span><small data-i18n="lehre.problem.s1">bei PSM&nbsp;I und PSPO&nbsp;I, nur auf Englisch</small></li>
+          <li><b>60</b><span data-i18n="lehre.problem.n2">Minuten</span><small data-i18n="lehre.problem.s2">also 45 Sekunden pro Frage</small></li>
+          <li><b data-i18n="lehre.problem.pct">85&nbsp;%</b><span data-i18n="lehre.problem.n3">richtig zum Bestehen</span><small data-i18n="lehre.problem.s3">Wer nur Begriffe paukt, stolpert über Feinheiten im Scrum Guide.</small></li>
         </ul>
+        <p class="lead" data-i18n="lehre.problem.praxis">Und ein Zertifikat ist noch keine Praxis. Zwischen Scrum Guide und echtem Team liegt eine Lücke, genau dort entstehen die Fragen, die im Alltag zählen.</p>
+      </section>
+
+      <section class="section" aria-labelledby="h-quiz">
+        <h2 class="heading" id="h-quiz" data-i18n="lehre.quiz.h2">Probier eine Frage</h2>
+        <div class="quiz">
+          <p class="quiz__q" data-i18n="lehre.quiz.q">Wer ist dafür verantwortlich, die Einträge im Product Backlog zu ordnen?</p>
+          <ul class="quiz__opts">
+            <li><button type="button" data-i18n="lehre.quiz.o1">Der Scrum Master</button></li>
+            <li><button type="button" data-i18n="lehre.quiz.o2">Die Developers</button></li>
+            <li><button type="button" data-right data-i18n="lehre.quiz.o3">Der Product Owner</button></li>
+            <li><button type="button" data-i18n="lehre.quiz.o4">Die Stakeholder, nach Abstimmung</button></li>
+          </ul>
+          <p class="quiz__fb" aria-live="polite"></p>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="h-fuer">
@@ -222,8 +237,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261027a"></script>
-  <script src="main.js?v=20261027a"></script>
+  <script src="i18n.js?v=20261027b"></script>
+  <script src="main.js?v=20261027b"></script>
 
 </body>
 </html>

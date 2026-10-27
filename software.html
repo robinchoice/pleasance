@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://pleasance.org/img/og.png">
   <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261022a">
+  <link rel="stylesheet" href="style.css?v=20261027a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -74,13 +74,28 @@
         <a class="btn" href="kontakt.html?thema=software" data-i18n="software.cta">Projekt besprechen</a>
       </header>
 
-      <section class="section" aria-labelledby="h-problem">
+      <section class="section section--full" aria-labelledby="h-problem">
         <h2 class="heading" id="h-problem" data-i18n="software.problem.h2">Gemietet ist nicht gekauft</h2>
-        <ul class="values">
-          <li><b data-i18n="software.problem.t1">Der Baukasten kassiert jeden Monat.</b><span data-i18n="software.problem.d1">Und wenn du kündigst, bleibt kaum etwas, das du mitnehmen kannst.</span></li>
-          <li><b data-i18n="software.problem.t2">Plugins altern schneller als Inhalte.</b><span data-i18n="software.problem.d2">Updates, Lizenzen, Sicherheitslücken: Irgendwann traut sich niemand mehr, etwas anzufassen.</span></li>
-          <li><b data-i18n="software.problem.t3">Die Daten deiner Besucher landen bei Dritten.</b><span data-i18n="software.problem.d3">Tracker, Schriften von Google, eingebettete Dienste. Das bedeutet Cookie-Banner, Einwilligungen und eine lange Datenschutzerklärung.</span></li>
-        </ul>
+        <div class="vs">
+          <div class="gone">
+            <h3 data-i18n="software.problem.rent">Gemietet</h3>
+            <ul>
+              <li data-i18n="software.problem.t1">Der Baukasten kassiert jeden Monat.</li>
+              <li data-i18n="software.problem.t2">Plugins altern schneller als Inhalte.</li>
+              <li data-i18n="software.problem.t3">Die Daten deiner Besucher landen bei Dritten.</li>
+              <li data-i18n="software.problem.t4">Kündigst du, bleibt fast nichts.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="software.problem.own">Gekauft</h3>
+            <ul>
+              <li data-i18n="software.problem.o1">Server und Domain laufen auf deinen Namen.</li>
+              <li data-i18n="software.problem.o2">Open Source, keine Lizenz pro Nutzer.</li>
+              <li data-i18n="software.problem.o3">Keine Tracker, kein Cookie-Banner.</li>
+              <li data-i18n="software.problem.o4">Doku dazu, damit du nicht von mir abhängig bist.</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="h-angebot">
@@ -151,11 +166,20 @@
         </div>
       </section>
 
+    </div>
+
+    <section class="night band" aria-labelledby="h-band">
+      <div class="wrap">
+        <h2 class="statement" id="h-band" data-i18n="software.band.h2">0 Cookies.<br>0 Tracker.<br>100&nbsp;% deins.</h2>
+        <p class="lead" data-i18n="software.band.text">Diese Website ist das Beispiel: kein CMS, keine Cookies, keine Tracker, der Quellcode liegt offen <a href="https://github.com/robinchoice/pleasance">auf GitHub</a>. So baue ich auch deine.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
       <section class="section" aria-labelledby="h-belege">
         <h2 class="heading" id="h-belege" data-i18n="software.belege.h2">Belege statt Versprechen</h2>
         <div>
           <ul class="values">
-            <li><b data-i18n="software.belege.t1">Diese Website.</b><span data-i18n="software.belege.d1">Kein CMS, keine Cookies, keine Tracker, eigener Server bei Hetzner in Nürnberg. Der Quellcode liegt offen <a href="https://github.com/robinchoice/pleasance">auf GitHub</a>.</span></li>
             <li><b data-i18n="software.belege.t2">Erfahrung mit Prozessen.</b><span data-i18n="software.belege.d2">Vorher Business Process Consultant bei SAP, danach habe ich in einer Schweizer Holding Abläufe automatisiert.</span></li>
           </ul>
           <h3 class="tools-title" data-i18n="software.belege.wall">Gebaut in meiner Werkstatt</h3>
@@ -262,8 +286,8 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261027a"></script>
-  <script src="main.js?v=20261027a"></script>
+  <script src="i18n.js?v=20261027b"></script>
+  <script src="main.js?v=20261027b"></script>
 
 </body>
 </html>

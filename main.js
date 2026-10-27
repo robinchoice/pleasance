@@ -108,6 +108,21 @@ function initNav() {
   });
 }
 
+// Sample exam question on lehre.html: mark the answer and explain it
+function initQuiz() {
+  document.querySelectorAll('.quiz').forEach(quiz => {
+    const feedback = quiz.querySelector('.quiz__fb');
+    quiz.querySelectorAll('.quiz__opts button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const right = btn.hasAttribute('data-right');
+        btn.classList.add(right ? 'is-right' : 'is-wrong');
+        translate(feedback, right ? 'lehre.quiz.right' : 'lehre.quiz.wrong');
+        if (right) quiz.querySelectorAll('.quiz__opts button').forEach(b => { b.disabled = true; });
+      });
+    });
+  });
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('pleasance-lang') || 'de';
@@ -117,4 +132,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   initTheme();
   initNav();
+  initQuiz();
 });
