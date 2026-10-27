@@ -52,6 +52,16 @@ const I18N_META = {
       en: 'Workshop for product teams with their own stack: guardrails for AI agents, cross-review, test generation and DORA metrics on your own repositories. By Robin Wahl from Freiburg.',
     },
   },
+  produkte: {
+    title: {
+      de: 'Produkte: Freehold, Savor, Pinna, Academy und Labs — Pleasance',
+      en: 'Products: Freehold, Savor, Pinna, Academy and Labs — Pleasance',
+    },
+    desc: {
+      de: 'Pleasance ist die Dachmarke für Freehold, Savor, Pinna, die Academy und die Labs. Die Software ist Open Source und läuft auf dem eigenen Rechner oder Server.',
+      en: 'Pleasance is the umbrella brand for Freehold, Savor, Pinna, the Academy and the Labs. The software is open source and runs on your own computer or server.',
+    },
+  },
   apps: {
     title: {
       de: 'Apps: Open Source und selbst betrieben — Pleasance',
@@ -132,6 +142,7 @@ const I18N = {
   // ── Shared: Nav + Footer ──────────────────────────────────────────────────
   nav: {
     menu:     { de: 'Menü',      en: 'Menu'     },
+    produkte: { de: 'Produkte',  en: 'Products' },
     software: { de: 'Software',  en: 'Software' },
     lehre:    { de: 'Training',  en: 'Training' },
     coaching: { de: 'Coaching',  en: 'Coaching' },
@@ -780,6 +791,64 @@ const I18N = {
     final: {
       h2:   { de: 'Wo hakt es bei euch?', en: 'Where are you stuck?' },
       text: { de: 'Erzählt mir kurz von eurem Team, eurem Stack und was euch bei der Arbeit mit Agenten bremst. Ich melde mich innerhalb von zwei Werktagen und sage euch ehrlich, ob der Workshop passt.', en: 'Tell me briefly about your team, your stack and what slows you down when working with agents. I\'ll get back to you within two business days and tell you honestly whether the workshop is a fit.' },
+    },
+  },
+
+  // ── produkte.html ─────────────────────────────────────────────────────────
+  produkte: {
+    h1:   { de: 'Alles von Pleasance.', en: 'Everything from Pleasance.' },
+    lead: {
+      de: 'Pleasance ist das Dach, darunter trägt jedes Produkt den Namen Pleasance und einen eigenen. Die Software ist Open Source und läuft auf dem eigenen Rechner oder Server.',
+      en: 'Pleasance is the umbrella, and every product under it carries the Pleasance name plus its own. The software is open source and runs on your own computer or server.',
+    },
+    freehold: {
+      tagline:     { de: 'Die eigene IT für kleine Betriebe.', en: 'Your own IT for small businesses.' },
+      p1:          { de: 'Ein Baukasten aus Open-Source-Software für Praxen, Kanzleien und andere kleine Betriebe ohne eigene IT: Mail, Kalender, Dateien, Passwörter, Website und Backups laufen auf einem eigenen Server.', en: 'A kit of open-source software for practices, law firms and other small businesses without an IT department: mail, calendar, files, passwords, website and backups run on their own server.' },
+      p2:          { de: 'Den Betrieb übernimmt ein KI-Agent in engen Grenzen: Er darf nur, was vorher festgelegt ist, und jeder seiner Schritte lässt sich nachprüfen. Pleasance richtet Freehold ein und betreibt es für euch.', en: 'An AI agent runs it within tight limits: it may only do what has been defined in advance, and every one of its steps can be verified. Pleasance sets Freehold up and runs it for you.' },
+    },
+    vs: {
+      h2:   { de: 'Statt Google Workspace und Microsoft 365', en: 'Instead of Google Workspace and Microsoft 365' },
+      sub:  { de: 'Die europäische, selbst gehostete Antwort.', en: 'The European, self-hosted answer.' },
+      rent: { de: 'Gemietet', en: 'Rented' },
+      r1:   { de: 'Jeder Arbeitsplatz kostet jeden Monat.', en: 'Every seat costs money every month.' },
+      r2:   { de: 'Die Daten liegen beim Anbieter, zu seinen Bedingungen.', en: 'Your data sits with the vendor, on the vendor\'s terms.' },
+      r3:   { de: 'Preise und Funktionen ändert der Anbieter, wann er will.', en: 'The vendor changes prices and features whenever it likes.' },
+      own:  { de: 'Eigen', en: 'Owned' },
+      o1:   { de: 'Der Server läuft auf euren Namen.', en: 'The server runs in your name.' },
+      o2:   { de: 'Open Source, keine Lizenz pro Arbeitsplatz.', en: 'Open source, no licence per seat.' },
+      o3:   { de: 'Backups gehören dazu, jeder Schritt im Betrieb bleibt nachprüfbar.', en: 'Backups are included, every step in operation stays verifiable.' },
+    },
+    band: {
+      h2:   { de: 'Besitzen statt mieten.', en: 'Own your stack, don\'t rent it.' },
+      text: { de: 'Freehold ist noch in Arbeit. Wenn ihr es für euren Betrieb im Blick behalten wollt, schreibt uns.', en: 'Freehold is still in progress. If you want to keep an eye on it for your business, write to us.' },
+    },
+    savor: {
+      tagline: { de: 'Viele Agenten. Ein Arbeitsplatz.', en: 'Many agents. One workspace.' },
+      text: { de: 'Die lokale Arbeitsumgebung für Coding-Agenten: mehrere Agenten nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort. Für Linux, macOS und Windows.', en: 'The local workspace for coding agents: several agents side by side on your own computer, with conversations, preview and decisions in one place. For Linux, macOS and Windows.' },
+      link: { de: 'Mehr über Savor', en: 'More about Savor' },
+    },
+    pinna: {
+      tagline: { de: 'Agenten schlagen vor. Du hörst und entscheidest.', en: 'Agents propose. You listen and decide.' },
+      text: { de: 'Eine Audio-Workstation für Agenten: Der Agent schlägt Änderungen vor und misst, was er hört, du vergleichst per A/B und übernimmst. Der Song liegt als Textdatei in Git. Für Linux, macOS und Windows.', en: 'An audio workstation for agents: the agent proposes changes and measures what it hears, you compare by A/B and accept. The song lives as a text file in Git. For Linux, macOS and Windows.' },
+      link: { de: 'Herunterladen', en: 'Download' },
+    },
+    academy: {
+      tagline: { de: 'Agentisches Arbeiten lernen.', en: 'Learn to work with agents.' },
+      text:    { de: 'Training und Coaching für Menschen und Teams, die mit KI-Agenten bauen wollen: an echten Projekten, mit dem Setup, mit dem Pleasance selbst arbeitet.', en: 'Training and coaching for people and teams who want to build with AI agents: on real projects, with the setup Pleasance works with itself.' },
+      kurs:    { de: 'Mit KI-Agenten bauen', en: 'Building with AI agents' },
+      kurs_d:  { de: 'Ein eigenes Setup mit Claude Code oder Codex, in der Gruppe oder 1:1 an deinem Projekt.', en: 'Your own setup with Claude Code or Codex, in a group or 1:1 on your project.' },
+      teams:   { de: 'AI-native Engineering für Produktteams', en: 'AI-native engineering for product teams' },
+      teams_d: { de: 'Workshop an euren eigenen Repositories: Leitplanken, Review und Kennzahlen.', en: 'Workshop on your own repositories: guardrails, review and metrics.' },
+    },
+    labs: {
+      tagline:    { de: 'Experimente, öffentlich gebaut. Ob daraus ein Produkt wird, ist offen.', en: 'Experiments, built in public. Whether they become products is open.' },
+      badge:      { de: 'Experiment', en: 'Experiment' },
+      kaefig:     { de: 'Eine Arena: Bringst du einen KI-Agenten in seiner Sandbox über eine Grenze?', en: 'An arena: can you push an AI agent in its sandbox across a boundary?' },
+      stackarena: { de: 'Agenten bauen dieselbe App auf vielen Stacks, jeder Lauf wird gleich getestet und bewertet.', en: 'Agents build the same app on many stacks, every run is tested and scored the same way.' },
+      docpilot:   { de: 'Dokumentation, die bei jedem Push mitwächst: Eine GitHub Action schlägt die neue README als Pull Request vor.', en: 'Documentation that grows with every push: a GitHub Action proposes the new README as a pull request.' },
+    },
+    fahrbar: {
+      text: { de: 'Ein offener Fahrdienst: Eine geprüfte Fahrerin oder ein geprüfter Fahrer bringt dich in deinem eigenen Auto nach Hause. Der erste Pilot in Freiburg, für Menschen nach einem ambulanten Eingriff, ist in Vorbereitung.', en: 'An open driver service: a vetted driver takes you home in your own car. The first pilot in Freiburg, for people after an outpatient procedure, is in preparation.' },
     },
   },
 

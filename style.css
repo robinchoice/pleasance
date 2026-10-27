@@ -387,6 +387,10 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .pillars h3 { font-weight: 750; font-stretch: 80%; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.015em; }
 .pillars p { margin-top: 0.75rem; max-width: 24em; color: var(--muted); }
 
+/* === Produkte === */
+.approach--named h3 { font-size: 1.6rem; font-weight: 750; font-stretch: 80%; line-height: 1.1; }
+.approach .links { margin-top: 0.6rem; }
+
 /* === Werkstatt === */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .stat { padding-top: 0.9rem; border-top: var(--rule-thick); }
@@ -493,7 +497,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .footer a { color: var(--ink); }
 .footer__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; list-style: none; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1240px) {
   /* The hamburger takes over before the nav links run out of room */
   .nav__menu { display: inline-block; }
   .nav__links {
@@ -514,6 +518,9 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .nav__links li { border-top: 1px solid var(--hairline); }
   .nav__links a { display: block; padding: 0.9rem 0; font-size: 1.25rem; }
   .nav__links li:last-child { padding-top: 1rem; }
+}
+
+@media (max-width: 1100px) {
   .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2rem; }
   .handbook { grid-template-columns: 13rem minmax(0, 1fr); gap: 2.5rem; }
 }
