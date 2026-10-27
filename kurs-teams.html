@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-native Engineering für Produktteams — Pleasance</title>
+  <meta name="description" content="Workshop für Produktteams mit eigenem Stack: Leitplanken für KI-Agenten, Cross-Review, Testgenerierung und DORA-Kennzahlen an euren eigenen Repositories. Von Robin Wahl aus Freiburg.">
+  <link rel="canonical" href="https://pleasance.org/kurs-teams.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/kurs-teams.html">
+  <meta property="og:title" content="AI-native Engineering für Produktteams — Pleasance">
+  <meta property="og:description" content="Workshop für Produktteams mit eigenem Stack: Leitplanken für KI-Agenten, Cross-Review, Testgenerierung und DORA-Kennzahlen an euren eigenen Repositories. Von Robin Wahl aus Freiburg.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261022a">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": "https://pleasance.org/kurs-teams.html#course",
+    "name": "AI-native Engineering für Produktteams",
+    "description": "Workshop für Produktteams mit eigenem Stack: Leitplanken für KI-Agenten, Cross-Review, Testgenerierung und DORA-Kennzahlen an euren eigenen Repositories. Von Robin Wahl aus Freiburg.",
+    "url": "https://pleasance.org/kurs-teams.html",
+    "inLanguage": "de",
+    "provider": { "@type": "Organization", "@id": "https://pleasance.org/#business", "name": "Pleasance", "url": "https://pleasance.org/" }
+  }
+  </script>
+</head>
+<body data-page="teams">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" aria-current="page" data-i18n="nav.lehre">Training</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
+        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
+        <li><a href="handbuch.html" data-i18n="nav.handbuch">Handbuch</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <a class="back" href="kurs-agenten.html" data-i18n="teams.back">← Mit KI-Agenten bauen</a>
+        <h1 class="display page-title page-title--long" data-i18n="teams.h1">AI-native Engineering für Produktteams.</h1>
+        <p class="lead" data-i18n="teams.lead">Euer Team arbeitet schon mit Claude Code, Codex oder Copilot. Jetzt geht es darum, dass mehr Code nicht mehr Fehler heißt. Wir richten an euren eigenen Repositories Leitplanken, Cross-Review und Testgenerierung ein und messen mit DORA-Kennzahlen, ob es wirkt.</p>
+        <ul class="keyfacts">
+          <li data-i18n="teams.facts.f1">Für Engineering Leads und ihre Teams</li>
+          <li data-i18n="teams.facts.f2">An eurem Stack und euren Repos</li>
+          <li data-i18n="teams.facts.f3">Vor Ort im DACH-Raum oder online</li>
+        </ul>
+        <div class="head-actions">
+          <a class="btn" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="teams.cta">Vorgespräch anfragen</a>
+          <a class="btn btn--ghost" href="#bausteine" data-i18n="teams.cta2">Bausteine ansehen</a>
+        </div>
+      </header>
+
+      <section class="section" aria-labelledby="h-problem">
+        <h2 class="heading" id="h-problem" data-i18n="teams.problem.h2">Mehr Code ist noch kein Fortschritt</h2>
+        <ul class="values">
+          <li><b data-i18n="teams.problem.t1">Jeder arbeitet anders mit dem Agenten.</b><span data-i18n="teams.problem.d1">Die Regeln stehen in einzelnen Köpfen und Chatverläufen. Was eine Person ihrem Agenten beigebracht hat, weiß der Agent der nächsten nicht.</span></li>
+          <li><b data-i18n="teams.problem.t2">Das Review wird zum Engpass.</b><span data-i18n="teams.problem.d2">Agenten schreiben in Minuten, was Menschen in Stunden prüfen. Entweder stauen sich die Pull Requests, oder es wird durchgewunken.</span></li>
+          <li><b data-i18n="teams.problem.t3">Niemand weiß, ob es schneller wird.</b><span data-i18n="teams.problem.d3">Gefühlt geht alles schneller. Ob ihr häufiger ausliefert und seltener zurückrollt, misst bisher niemand.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="bausteine" aria-labelledby="h-bausteine">
+        <h2 class="heading" id="h-bausteine" data-i18n="teams.bausteine.h2">Vier Bausteine, an eurem Code</h2>
+        <div>
+          <div class="prose"><p data-i18n="teams.bausteine.intro">Wir arbeiten nicht an einem Beispielprojekt, sondern an euren Repositories, eurer CI und euren Regeln. Was wir bauen, bleibt als Dateien bei euch.</p></div>
+          <ol class="steps">
+            <li>
+              <h3 data-i18n="teams.bausteine.t1">Leitplanken</h3>
+              <p data-i18n="teams.bausteine.d1">Eure Arbeitsweise als Dateien, die jeder Agent zuerst liest: Projektregeln, Checks, Fallen. Was nie passieren darf, sperrt ein Hook vor dem Befehl, statt nur im Text zu stehen. Zugangsdaten bleiben aus dem Kontext des Agenten.</p>
+            </li>
+            <li>
+              <h3 data-i18n="teams.bausteine.t2">Cross-Review</h3>
+              <p data-i18n="teams.bausteine.d2">Kein Modell prüft seine eigene Arbeit. Ein zweiter Agent eines anderen Herstellers liest jeden Diff mit frischem Blick, über die Befunde, die übrig bleiben, entscheiden Menschen.</p>
+            </li>
+            <li>
+              <h3 data-i18n="teams.bausteine.t3">Testgenerierung</h3>
+              <p data-i18n="teams.bausteine.d3">Agenten schreiben Tests zuerst, zu jedem Fehler einen, der ihn nachstellt. Rote Checks halten den Deploy an. Wir legen fest, welche Tests der Agent selbst ändern darf und welche nur ein Mensch.</p>
+            </li>
+            <li>
+              <h3 data-i18n="teams.bausteine.t4">DORA-Kennzahlen</h3>
+              <p data-i18n="teams.bausteine.d4">Deployment-Frequenz, Durchlaufzeit, Änderungsfehlerrate und Wiederherstellungszeit, berechnet aus eurer Git- und CI-Historie. Einmal vorher, einmal nachher, damit ihr seht, was sich tatsächlich verändert hat.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-danach">
+        <h2 class="heading" id="h-danach" data-i18n="teams.danach.h2">Was euer Team danach hat</h2>
+        <ul class="values">
+          <li><b data-i18n="teams.danach.t1">Leitplanken im Repository.</b><span data-i18n="teams.danach.d1">Regeln, Hooks und Checks, versioniert neben dem Code. Sie gelten für jeden Agenten, der Dateien lesen kann, und für alle, die neu ins Team kommen.</span></li>
+          <li><b data-i18n="teams.danach.t2">Ein Review-Schritt, der mitwächst.</b><span data-i18n="teams.danach.d2">Cross-Review und Testgates in eurer CI, mit klaren Regeln, wann ein Mensch entscheidet.</span></li>
+          <li><b data-i18n="teams.danach.t3">Eine Messung statt eines Gefühls.</b><span data-i18n="teams.danach.d3">Eure DORA-Werte vorher und nachher und ein Skript, mit dem ihr sie selbst weiter messt.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="h-belege">
+        <h2 class="heading" id="h-belege" data-i18n="teams.belege.h2">Erprobt im eigenen Betrieb</h2>
+        <div>
+          <div class="prose"><p data-i18n="teams.belege.intro">Ich entwickle alle meine Projekte so, mit Agenten nach offenen Regeln. Was im Workshop vorkommt, läuft bei mir jeden Tag, samt dem, was dabei schiefging.</p></div>
+          <div class="stats" style="margin-top: 1.75rem">
+            <div class="stat"><b data-gh="commits">1161</b><span data-i18n="kurs.belege.commits">Commits in den letzten 30 Tagen</span></div>
+            <div class="stat"><b data-gh="agent">78&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
+            <div class="stat"><b>18</b><span data-i18n="teams.belege.review">Repositories, die jede Nacht ein Agent prüft und ein zweiter gegenprüft</span></div>
+          </div>
+          <ul class="values" style="margin-top: 2rem">
+            <li><b data-i18n="teams.belege.t1">Text allein wird umgangen.</b><span data-i18n="teams.belege.d1">In einer Woche schalteten Agenten dreimal die Commit-Signatur ab, obwohl eine Regel es verbot, und fanden zweimal einen Umweg um die Sperre für Zugangsdaten. Geholfen haben schärfere Sperren und eine Regel, die das Ziel sperrt, nicht nur den Befehl.</span></li>
+            <li><b data-i18n="teams.belege.t2">Ein grüner Job heißt nicht live.</b><span data-i18n="teams.belege.d2">Zweimal war der Deploy-Job grün, obwohl nichts ausgeliefert wurde. Seitdem zählt ein Deploy erst, wenn die Live-Seite den neuen Commit meldet.</span></li>
+          </ul>
+          <p class="source" data-i18n="teams.belege.source">Die Zahlen werden jede Nacht aktualisiert. Wie ich arbeite und was schiefging: <a href="handbuch.html">im Handbuch</a> und <a href="werkstatt.html">in der Werkstatt</a>.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-fuer">
+        <h2 class="heading" id="h-fuer" data-i18n="kurs.fuer.h2">Für wen</h2>
+        <div class="groups" style="margin-top: 0">
+          <div>
+            <h3 data-i18n="teams.fuer.yes">Passt, wenn ihr</h3>
+            <ul class="list">
+              <li data-i18n="teams.fuer.y1">ein Produktteam mit eigenem Stack, eigener CI und eigenem Deploy seid</li>
+              <li data-i18n="teams.fuer.y2">schon mit KI-Agenten arbeitet und Qualität und Tempo zusammenbringen wollt</li>
+              <li data-i18n="teams.fuer.y3">Ergebnisse messen wollt, statt Eindrücke zu sammeln</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="teams.fuer.no">Passt nicht, wenn ihr</h3>
+            <ul class="list">
+              <li data-i18n="teams.fuer.n1">eine Produktschulung für ein einzelnes Tool sucht</li>
+              <li data-i18n="teams.fuer.n2">Agenten ohne Review direkt in Produktion schreiben lassen wollt</li>
+              <li data-i18n="teams.fuer.n3">erst noch klären müsst, ob ihr Agenten überhaupt einsetzen dürft</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="preis" aria-labelledby="h-preis">
+        <h2 class="heading" id="h-preis" data-i18n="teams.preis.h2">Format und Preis</h2>
+        <div class="offers" style="margin-top: 0">
+          <div class="offer">
+            <h3 data-i18n="teams.preis.t">Für euer Team</h3>
+            <p class="offer__detail" data-i18n="kurs.termine.team_price">Auf Anfrage</p>
+            <p class="offer__note" data-i18n="teams.preis.note">Umfang und Ablauf klären wir in einem kostenlosen Vorgespräch, passend zu Teamgröße und Stack.</p>
+            <a class="btn" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="teams.cta">Vorgespräch anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="h-faq">
+        <h2 class="heading" id="h-faq" data-i18n="kurs.faq.h2">Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="teams.faq.q1">Welche Agenten und Tools?</summary>
+            <div class="faq__answer" data-i18n="teams.faq.a1">Ich arbeite selbst mit Claude Code und Codex. Leitplanken in Dateien und Checks in der CI funktionieren mit jedem Agenten, der Dateien lesen kann, auch mit Copilot oder Cursor. Wir nehmen, was ihr nutzt.</div>
+          </details>
+          <details>
+            <summary data-i18n="teams.faq.q2">Muss unser Stack zu deinem passen?</summary>
+            <div class="faq__answer" data-i18n="teams.faq.a2">Nein. Mein eigener Stack dient als Beispiel, gebaut wird an eurem. Voraussetzung sind ein Git-Repository und eine CI, die Tests ausführt.</div>
+          </details>
+          <details>
+            <summary data-i18n="teams.faq.q3">Was passiert mit unserem Code?</summary>
+            <div class="faq__answer" data-i18n="teams.faq.a3">Wir arbeiten in eurer Umgebung mit euren Zugängen, ich bekomme nur, was ihr freigebt. Eine Vertraulichkeitsvereinbarung ist selbstverständlich. Der Agent schickt die Dateien, an denen er arbeitet, an seinen Anbieter. Wo das nicht geht, zeige ich, was offene Modelle heute können.</div>
+          </details>
+          <details>
+            <summary data-i18n="teams.faq.q4">Wir messen DORA bisher nicht. Ist das ein Problem?</summary>
+            <div class="faq__answer" data-i18n="teams.faq.a4">Nein, die meisten Teams messen sie nicht. Die Werte lassen sich nachträglich aus Git, Pull Requests und CI-Läufen berechnen. Das ist der erste Schritt.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-cta">
+        <h2 class="heading" id="h-cta" data-i18n="teams.final.h2">Wo hakt es bei euch?</h2>
+        <div class="stack">
+          <p data-i18n="teams.final.text">Erzählt mir kurz von eurem Team, eurem Stack und was euch bei der Arbeit mit Agenten bremst. Ich melde mich innerhalb von zwei Werktagen und sage euch ehrlich, ob der Workshop passt.</p>
+          <div><a class="btn" href="kontakt.html?thema=lehre&amp;kurs=team" data-i18n="teams.cta">Vorgespräch anfragen</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="vendor/sentry-11.4.0.min.js"></script>
+  <script src="monitoring.js"></script>
+  <script src="i18n.js?v=20261022a"></script>
+  <script src="main.js?v=20261022a"></script>
+
+</body>
+</html>

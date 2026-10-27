@@ -42,6 +42,16 @@ const I18N_META = {
       en: 'Four evenings to set up your own workflow with Claude Code or Codex: rules, template, your own server and review. Online, at most 8 people, by Robin Wahl from Freiburg.',
     },
   },
+  teams: {
+    title: {
+      de: 'AI-native Engineering für Produktteams — Pleasance',
+      en: 'AI-native engineering for product teams — Pleasance',
+    },
+    desc: {
+      de: 'Workshop für Produktteams mit eigenem Stack: Leitplanken für KI-Agenten, Cross-Review, Testgenerierung und DORA-Kennzahlen an euren eigenen Repositories. Von Robin Wahl aus Freiburg.',
+      en: 'Workshop for product teams with their own stack: guardrails for AI agents, cross-review, test generation and DORA metrics on your own repositories. By Robin Wahl from Freiburg.',
+    },
+  },
   werkstatt: {
     title: {
       de: 'Werkstatt: Woran ich gerade baue — Pleasance',
@@ -612,7 +622,7 @@ const I18N = {
       team:        { de: 'Für Teams', en: 'For teams' },
       team_price:  { de: 'Auf Anfrage', en: 'On request' },
       team_note:   { de: 'Vor Ort im DACH-Raum oder online, angepasst an euren Stack und eure Regeln.', en: 'On site in Germany, Austria and Switzerland or online, adapted to your stack and your rules.' },
-      team_cta:    { de: 'Team-Kurs anfragen', en: 'Enquire for your team' },
+      team_cta:    { de: 'Zum Teamangebot', en: 'See the team offer' },
     },
     fuer: {
       h2:  { de: 'Für wen', en: 'Who it\'s for' },
@@ -641,6 +651,89 @@ const I18N = {
     final: {
       h2:   { de: 'Was willst du bauen?', en: 'What do you want to build?' },
       text: { de: 'Erzähl mir kurz von deinem Vorhaben. Ich melde mich innerhalb von zwei Werktagen und sage dir ehrlich, ob der Kurs passt.', en: 'Tell me briefly about your project. I\'ll get back to you within two business days and tell you honestly whether the course is a fit.' },
+    },
+  },
+
+  // ── kurs-teams.html ───────────────────────────────────────────────────────
+  teams: {
+    back: { de: '← Mit KI-Agenten bauen', en: '← Building with AI agents' },
+    h1:   { de: 'AI-native Engineering für Produktteams.', en: 'AI-native engineering for product teams.' },
+    lead: { de: 'Euer Team arbeitet schon mit Claude Code, Codex oder Copilot. Jetzt geht es darum, dass mehr Code nicht mehr Fehler heißt. Wir richten an euren eigenen Repositories Leitplanken, Cross-Review und Testgenerierung ein und messen mit DORA-Kennzahlen, ob es wirkt.', en: 'Your team already works with Claude Code, Codex or Copilot. Now the point is that more code doesn\'t mean more bugs. On your own repositories we set up guardrails, cross-review and test generation, and use DORA metrics to measure whether it works.' },
+    cta:  { de: 'Vorgespräch anfragen', en: 'Request a first conversation' },
+    cta2: { de: 'Bausteine ansehen', en: 'See the building blocks' },
+    facts: {
+      f1: { de: 'Für Engineering Leads und ihre Teams', en: 'For engineering leads and their teams' },
+      f2: { de: 'An eurem Stack und euren Repos', en: 'On your stack and your repos' },
+      f3: { de: 'Vor Ort im DACH-Raum oder online', en: 'On site in Germany, Austria and Switzerland or online' },
+    },
+    problem: {
+      h2: { de: 'Mehr Code ist noch kein Fortschritt', en: 'More code isn\'t progress yet' },
+      t1: { de: 'Jeder arbeitet anders mit dem Agenten.', en: 'Everyone works with the agent differently.' },
+      d1: { de: 'Die Regeln stehen in einzelnen Köpfen und Chatverläufen. Was eine Person ihrem Agenten beigebracht hat, weiß der Agent der nächsten nicht.', en: 'The rules live in individual heads and chat histories. What one person taught their agent, the next person\'s agent doesn\'t know.' },
+      t2: { de: 'Das Review wird zum Engpass.', en: 'Review becomes the bottleneck.' },
+      d2: { de: 'Agenten schreiben in Minuten, was Menschen in Stunden prüfen. Entweder stauen sich die Pull Requests, oder es wird durchgewunken.', en: 'Agents write in minutes what people need hours to review. Either pull requests pile up or they get waved through.' },
+      t3: { de: 'Niemand weiß, ob es schneller wird.', en: 'Nobody knows whether it\'s getting faster.' },
+      d3: { de: 'Gefühlt geht alles schneller. Ob ihr häufiger ausliefert und seltener zurückrollt, misst bisher niemand.', en: 'Everything feels faster. Whether you ship more often and roll back less, nobody measures yet.' },
+    },
+    bausteine: {
+      h2:    { de: 'Vier Bausteine, an eurem Code', en: 'Four building blocks, on your code' },
+      intro: { de: 'Wir arbeiten nicht an einem Beispielprojekt, sondern an euren Repositories, eurer CI und euren Regeln. Was wir bauen, bleibt als Dateien bei euch.', en: 'We don\'t work on a sample project but on your repositories, your CI and your rules. What we build stays with you as files.' },
+      t1:    { de: 'Leitplanken', en: 'Guardrails' },
+      d1:    { de: 'Eure Arbeitsweise als Dateien, die jeder Agent zuerst liest: Projektregeln, Checks, Fallen. Was nie passieren darf, sperrt ein Hook vor dem Befehl, statt nur im Text zu stehen. Zugangsdaten bleiben aus dem Kontext des Agenten.', en: 'Your way of working as files every agent reads first: project rules, checks, pitfalls. What must never happen is blocked by a hook before the command runs instead of just being written down. Credentials stay out of the agent\'s context.' },
+      t2:    { de: 'Cross-Review', en: 'Cross-review' },
+      d2:    { de: 'Kein Modell prüft seine eigene Arbeit. Ein zweiter Agent eines anderen Herstellers liest jeden Diff mit frischem Blick, über die Befunde, die übrig bleiben, entscheiden Menschen.', en: 'No model reviews its own work. A second agent from another vendor reads every diff with fresh eyes, and people decide on the findings that remain.' },
+      t3:    { de: 'Testgenerierung', en: 'Test generation' },
+      d3:    { de: 'Agenten schreiben Tests zuerst, zu jedem Fehler einen, der ihn nachstellt. Rote Checks halten den Deploy an. Wir legen fest, welche Tests der Agent selbst ändern darf und welche nur ein Mensch.', en: 'Agents write tests first, and for every bug one that reproduces it. Red checks stop the deploy. We decide which tests the agent may change itself and which only a person may.' },
+      t4:    { de: 'DORA-Kennzahlen', en: 'DORA metrics' },
+      d4:    { de: 'Deployment-Frequenz, Durchlaufzeit, Änderungsfehlerrate und Wiederherstellungszeit, berechnet aus eurer Git- und CI-Historie. Einmal vorher, einmal nachher, damit ihr seht, was sich tatsächlich verändert hat.', en: 'Deployment frequency, lead time for changes, change failure rate and time to restore, calculated from your Git and CI history. Once before, once after, so you see what has actually changed.' },
+    },
+    danach: {
+      h2: { de: 'Was euer Team danach hat', en: 'What your team has afterwards' },
+      t1: { de: 'Leitplanken im Repository.', en: 'Guardrails in the repository.' },
+      d1: { de: 'Regeln, Hooks und Checks, versioniert neben dem Code. Sie gelten für jeden Agenten, der Dateien lesen kann, und für alle, die neu ins Team kommen.', en: 'Rules, hooks and checks, versioned next to the code. They apply to every agent that can read files and to everyone who joins the team.' },
+      t2: { de: 'Ein Review-Schritt, der mitwächst.', en: 'A review step that scales.' },
+      d2: { de: 'Cross-Review und Testgates in eurer CI, mit klaren Regeln, wann ein Mensch entscheidet.', en: 'Cross-review and test gates in your CI, with clear rules for when a person decides.' },
+      t3: { de: 'Eine Messung statt eines Gefühls.', en: 'A measurement instead of a feeling.' },
+      d3: { de: 'Eure DORA-Werte vorher und nachher und ein Skript, mit dem ihr sie selbst weiter messt.', en: 'Your DORA numbers before and after, and a script to keep measuring them yourselves.' },
+    },
+    belege: {
+      h2:     { de: 'Erprobt im eigenen Betrieb', en: 'Proven in my own work' },
+      intro:  { de: 'Ich entwickle alle meine Projekte so, mit Agenten nach offenen Regeln. Was im Workshop vorkommt, läuft bei mir jeden Tag, samt dem, was dabei schiefging.', en: 'I build all my projects this way, with agents following open rules. Everything in the workshop runs in my own work every day, including what went wrong.' },
+      review: { de: 'Repositories, die jede Nacht ein Agent prüft und ein zweiter gegenprüft', en: 'repositories that one agent reviews every night and a second one checks' },
+      t1:     { de: 'Text allein wird umgangen.', en: 'Text alone gets bypassed.' },
+      d1:     { de: 'In einer Woche schalteten Agenten dreimal die Commit-Signatur ab, obwohl eine Regel es verbot, und fanden zweimal einen Umweg um die Sperre für Zugangsdaten. Geholfen haben schärfere Sperren und eine Regel, die das Ziel sperrt, nicht nur den Befehl.', en: 'In one week agents turned off commit signing three times although a rule forbade it, and twice found a way around the credentials block. What helped were stricter blocks and a rule that blocks the goal, not just the command.' },
+      t2:     { de: 'Ein grüner Job heißt nicht live.', en: 'A green job doesn\'t mean live.' },
+      d2:     { de: 'Zweimal war der Deploy-Job grün, obwohl nichts ausgeliefert wurde. Seitdem zählt ein Deploy erst, wenn die Live-Seite den neuen Commit meldet.', en: 'Twice the deploy job was green although nothing had shipped. Since then a deploy only counts once the live site reports the new commit.' },
+      source: { de: 'Die Zahlen werden jede Nacht aktualisiert. Wie ich arbeite und was schiefging: <a href="handbuch.html">im Handbuch</a> und <a href="werkstatt.html">in der Werkstatt</a>.', en: 'The numbers are updated every night. How I work and what went wrong: <a href="handbuch.html">in the handbook</a> and <a href="werkstatt.html">on my workbench</a>.' },
+    },
+    fuer: {
+      yes: { de: 'Passt, wenn ihr', en: 'A good fit if you' },
+      y1:  { de: 'ein Produktteam mit eigenem Stack, eigener CI und eigenem Deploy seid', en: 'are a product team with your own stack, CI and deploy' },
+      y2:  { de: 'schon mit KI-Agenten arbeitet und Qualität und Tempo zusammenbringen wollt', en: 'already work with AI agents and want quality and speed together' },
+      y3:  { de: 'Ergebnisse messen wollt, statt Eindrücke zu sammeln', en: 'want to measure results instead of collecting impressions' },
+      no:  { de: 'Passt nicht, wenn ihr', en: 'Not a fit if you' },
+      n1:  { de: 'eine Produktschulung für ein einzelnes Tool sucht', en: 'are looking for product training on a single tool' },
+      n2:  { de: 'Agenten ohne Review direkt in Produktion schreiben lassen wollt', en: 'want agents to write straight to production without review' },
+      n3:  { de: 'erst noch klären müsst, ob ihr Agenten überhaupt einsetzen dürft', en: 'still need to clarify whether you\'re allowed to use agents at all' },
+    },
+    preis: {
+      h2:   { de: 'Format und Preis', en: 'Format and price' },
+      t:    { de: 'Für euer Team', en: 'For your team' },
+      note: { de: 'Umfang und Ablauf klären wir in einem kostenlosen Vorgespräch, passend zu Teamgröße und Stack.', en: 'We agree on scope and schedule in a free first conversation, to fit your team size and stack.' },
+    },
+    faq: {
+      q1: { de: 'Welche Agenten und Tools?', en: 'Which agents and tools?' },
+      a1: { de: 'Ich arbeite selbst mit Claude Code und Codex. Leitplanken in Dateien und Checks in der CI funktionieren mit jedem Agenten, der Dateien lesen kann, auch mit Copilot oder Cursor. Wir nehmen, was ihr nutzt.', en: 'I work with Claude Code and Codex myself. Guardrails in files and checks in CI work with any agent that can read files, including Copilot or Cursor. We use what you use.' },
+      q2: { de: 'Muss unser Stack zu deinem passen?', en: 'Does our stack need to match yours?' },
+      a2: { de: 'Nein. Mein eigener Stack dient als Beispiel, gebaut wird an eurem. Voraussetzung sind ein Git-Repository und eine CI, die Tests ausführt.', en: 'No. My own stack serves as an example, we build on yours. All you need is a Git repository and a CI that runs tests.' },
+      q3: { de: 'Was passiert mit unserem Code?', en: 'What happens to our code?' },
+      a3: { de: 'Wir arbeiten in eurer Umgebung mit euren Zugängen, ich bekomme nur, was ihr freigebt. Eine Vertraulichkeitsvereinbarung ist selbstverständlich. Der Agent schickt die Dateien, an denen er arbeitet, an seinen Anbieter. Wo das nicht geht, zeige ich, was offene Modelle heute können.', en: 'We work in your environment with your access, and I only get what you share. A non-disclosure agreement goes without saying. The agent sends the files it works on to its provider. Where that\'s not an option, I show what open models can do today.' },
+      q4: { de: 'Wir messen DORA bisher nicht. Ist das ein Problem?', en: 'We don\'t measure DORA yet. Is that a problem?' },
+      a4: { de: 'Nein, die meisten Teams messen sie nicht. Die Werte lassen sich nachträglich aus Git, Pull Requests und CI-Läufen berechnen. Das ist der erste Schritt.', en: 'No, most teams don\'t. The numbers can be calculated after the fact from Git, pull requests and CI runs. That\'s the first step.' },
+    },
+    final: {
+      h2:   { de: 'Wo hakt es bei euch?', en: 'Where are you stuck?' },
+      text: { de: 'Erzählt mir kurz von eurem Team, eurem Stack und was euch bei der Arbeit mit Agenten bremst. Ich melde mich innerhalb von zwei Werktagen und sage euch ehrlich, ob der Workshop passt.', en: 'Tell me briefly about your team, your stack and what slows you down when working with agents. I\'ll get back to you within two business days and tell you honestly whether the workshop is a fit.' },
     },
   },
 
