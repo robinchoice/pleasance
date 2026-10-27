@@ -111,6 +111,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   display: block;
   width: 110px;
   height: 21px;
+  flex: none;
   background: var(--ink);
   -webkit-mask: url('img/pleasance-logo-mask.svg') left center / contain no-repeat;
           mask: url('img/pleasance-logo-mask.svg') left center / contain no-repeat;
@@ -371,6 +372,21 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .quiz__opts button.is-wrong { color: var(--muted); background: transparent; text-decoration: line-through; }
 .quiz__fb { min-height: 3em; margin-top: 1rem; max-width: 36em; color: var(--muted); }
 
+/* === Apps (apps.html, blocks written by scripts/werkstatt.mjs) === */
+.app__icon { display: block; width: 4.5rem; height: 4.5rem; margin-bottom: 1.25rem; }
+.app__tagline { margin-top: 0.75rem; max-width: 20em; font-size: 1.3125rem; line-height: 1.35; color: var(--muted); }
+.app__text { max-width: 34em; }
+.app__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; margin-top: 1.5rem; }
+/* Same height side by side: columns in the ratio of the screenshots (16:10 and 780:1688) */
+.shots { display: grid; grid-template-columns: 1.6fr 0.462fr; gap: 1rem; margin-top: 2rem; }
+.shot img { display: block; width: 100%; height: auto; border: var(--rule); border-radius: 3px; }
+.shot:hover img { border-color: var(--fir); }
+
+.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2.5rem; list-style: none; }
+.pillars li { padding-top: 1rem; border-top: var(--rule-thick); }
+.pillars h3 { font-weight: 750; font-stretch: 80%; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.015em; }
+.pillars p { margin-top: 0.75rem; max-width: 24em; color: var(--muted); }
+
 /* === Werkstatt === */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .stat { padding-top: 0.9rem; border-top: var(--rule-thick); }
@@ -478,13 +494,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .footer__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; list-style: none; }
 
 @media (max-width: 1100px) {
-  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2rem; }
-  .handbook { grid-template-columns: 13rem minmax(0, 1fr); gap: 2.5rem; }
-}
-
-/* === Mobile === */
-@media (max-width: 860px) {
-  :root { --gutter: 1.25rem; }
+  /* The hamburger takes over before the nav links run out of room */
   .nav__menu { display: inline-block; }
   .nav__links {
     position: absolute;
@@ -504,6 +514,13 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .nav__links li { border-top: 1px solid var(--hairline); }
   .nav__links a { display: block; padding: 0.9rem 0; font-size: 1.25rem; }
   .nav__links li:last-child { padding-top: 1rem; }
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2rem; }
+  .handbook { grid-template-columns: 13rem minmax(0, 1fr); gap: 2.5rem; }
+}
+
+/* === Mobile === */
+@media (max-width: 860px) {
+  :root { --gutter: 1.25rem; }
   .intro, .row, .section, .facts .wrap { grid-template-columns: 1fr; gap: 1.5rem; }
   .groups, .offers, .form__row { grid-template-columns: 1fr; }
   .facts dl { grid-template-columns: 1fr; }
@@ -522,6 +539,12 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .log--named li { grid-template-columns: 1fr; gap: 0.1rem; }
   .home-hero, .company .wrap, .night-hero { grid-template-columns: 1fr; gap: 2rem; }
   .bignums, .vs { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .app > div { min-width: 0; }
+  .shots { display: flex; gap: 0.75rem; margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); overflow-x: auto; }
+  .shot { flex: none; }
+  .shot img { width: auto; height: 22rem; }
+  .shot--phone { order: -1; }
   .vs > div + div { margin-top: 2rem; padding-left: 0; border-left: 0; border-top: var(--rule); }
   .band, .night .page-head { padding: 3.5rem 0; }
   .home-hero { padding-top: 1.5rem; }

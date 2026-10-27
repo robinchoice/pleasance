@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps: Open Source und selbst betrieben — Pleasance</title>
+  <meta name="description" content="Kleine Apps mit je einem Zweck, gebaut mit KI-Agenten und selbst betrieben: Savor, Music Hub, Songgate und die Döner App. Alle Open Source.">
+  <link rel="canonical" href="https://pleasance.org/apps.html">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pleasance">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://pleasance.org/apps.html">
+  <meta property="og:title" content="Apps: Open Source und selbst betrieben — Pleasance">
+  <meta property="og:description" content="Kleine Apps mit je einem Zweck, gebaut mit KI-Agenten und selbst betrieben: Savor, Music Hub, Songgate und die Döner App. Alle Open Source.">
+  <meta property="og:image" content="https://pleasance.org/img/og.png">
+  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=20261027b">
+  <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
+</head>
+<body data-page="apps">
+
+  <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
+      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
+        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
+        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
+        <li><a href="apps.html" aria-current="page" data-i18n="nav.apps">Apps</a></li>
+        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
+        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
+        <li><a href="handbuch.html" data-i18n="nav.handbuch">Handbuch</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li class="nav__tools">
+          <button class="nav__theme" id="themeToggle" aria-pressed="false">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+          </button>
+          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display page-title" data-i18n="apps.h1">Apps, die du heute benutzen kannst.</h1>
+        <p class="lead" data-i18n="apps.lead">Ich baue sie mit Agenten und betreibe sie selbst, jede ist Open Source. Woran ich sonst gerade arbeite, steht in der <a href="werkstatt.html">Werkstatt</a>.</p>
+      </header>
+
+      <!-- werkstatt:apps -->
+      <section class="section app" id="savor" aria-labelledby="h-savor">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/savor.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-savor">Savor</h2>
+          <p class="app__tagline" data-en="Many agents. One workspace.">Viele Agenten. Ein Arbeitsplatz.</p>
+        </div>
+        <div>
+          <p class="app__text" data-en="Several coding agents side by side on your own computer, with conversations, preview and decisions in one place. For Linux, macOS and Windows, the phone app is in testing.">Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort. Für Linux, macOS und Windows, die App fürs Handy ist im Test.</p>
+          <div class="app__links">
+            <a class="btn" href="https://github.com/robinchoice/savor/releases/latest" data-en="Download">Herunterladen</a>
+            <a class="btn btn--ghost" href="https://savor.pleasance.org" data-en="More about Savor">Mehr über Savor</a>
+            <a href="https://github.com/robinchoice/savor" data-i18n="home.facts.code_t">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/savor-desktop.webp"><img src="img/apps/savor-desktop.webp" alt="Savor, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/savor-phone.webp"><img src="img/apps/savor-phone.webp" alt="Savor, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
+      </section>
+      <section class="section app" id="musichub" aria-labelledby="h-musichub">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/musichub.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-musichub">Music Hub</h2>
+          <p class="app__tagline" data-en="Versions for music. Without the chaos.">Versionen für Musik. Ohne Chaos.</p>
+        </div>
+        <div>
+          <p class="app__text" data-en="Every version of a track in one place, comments pinned to the second, and in the end it is clear which mix is approved. For producers, bands and everyone working on the song.">Jede Fassung eines Tracks an einem Ort, Kommentare auf der Sekunde, und am Ende ist klar, welcher Mix freigegeben ist. Für Producer, Bands und alle, die am Song arbeiten.</p>
+          <div class="app__links">
+            <a class="btn" href="https://hub.pleasance.org" data-en="Open Music Hub">Music Hub öffnen</a>
+            <a href="https://github.com/robinchoice/music-hub" data-i18n="home.facts.code_t">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/musichub-desktop.webp"><img src="img/apps/musichub-desktop.webp" alt="Music Hub, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/musichub-phone.webp"><img src="img/apps/musichub-phone.webp" alt="Music Hub, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
+      </section>
+      <section class="section app" id="musiclink" aria-labelledby="h-musiclink">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/musiclink.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-musiclink">Songgate</h2>
+          <p class="app__tagline" data-en="One link. Everyone listens in their own service.">Ein Link. Jeder hört im eigenen Dienst.</p>
+        </div>
+        <div>
+          <p class="app__text" data-en="Paste a song or album link and Songgate finds it on Spotify, Apple Music, YouTube Music and Deezer. No account, friends and groups stay on your device.">Füg einen Song- oder Albumlink ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music und Deezer. Ohne Konto, Freunde und Gruppen bleiben auf deinem Gerät.</p>
+          <div class="app__links">
+            <a class="btn" href="https://songgate.app" data-en="Open Songgate">Songgate öffnen</a>
+            <a href="https://github.com/robinchoice/musicstreaming-connector" data-i18n="home.facts.code_t">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/musiclink-desktop.webp"><img src="img/apps/musiclink-desktop.webp" alt="Songgate, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/musiclink-phone.webp"><img src="img/apps/musiclink-phone.webp" alt="Songgate, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
+      </section>
+      <section class="section app" id="doener" aria-labelledby="h-doener">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/doener.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-doener">Döner App</h2>
+          <p class="app__tagline" data-en="The best döner in your city.">Der beste Döner deiner Stadt.</p>
+        </div>
+        <div>
+          <p class="app__text" data-en="People near you rate sauce, meat, salad and bread, and that becomes the ranking of your city. For iPhone and Android, currently in testing.">Leute aus deiner Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Ranking der Stadt. Für iPhone und Android, gerade im Test.</p>
+          <div class="app__links">
+            <a class="btn" href="https://doener-api.pleasance.org" data-en="Join the test">Für den Test anmelden</a>
+            <a href="https://github.com/robinchoice/doenerapp" data-i18n="home.facts.code_t">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/doener-desktop.webp"><img src="img/apps/doener-desktop.webp" alt="Döner App, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/doener-phone.webp"><img src="img/apps/doener-phone.webp" alt="Döner App, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
+      </section>
+      <!-- /werkstatt:apps -->
+    </div>
+
+    <section class="night band" aria-labelledby="h-values">
+      <div class="wrap">
+        <h2 class="heading" id="h-values" data-i18n="apps.values.h2">Was alle gemeinsam haben</h2>
+        <ul class="pillars">
+          <li><h3 data-i18n="apps.values.t1">Offener Code.</h3><p data-i18n="apps.values.d1">Jede App ist Open Source. Lies nach, wie sie funktioniert, betreib sie selbst oder mach sie besser.</p></li>
+          <li><h3 data-i18n="apps.values.t2">Deine Daten bleiben deine.</h3><p data-i18n="apps.values.d2">Keine Werbung, kein Verkauf von Daten. Erhoben wird nur, was die App wirklich braucht.</p></li>
+          <li><h3 data-i18n="apps.values.t3">Eine App, ein Zweck.</h3><p data-i18n="apps.values.d3">Jede macht eine Sache und die gründlich. Gebaut mit Agenten, entschieden von einem Menschen.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" aria-labelledby="h-cta">
+        <h2 class="heading" id="h-cta" data-i18n="apps.cta.h2">Du brauchst ein eigenes Werkzeug?</h2>
+        <div class="stack">
+          <p data-i18n="apps.cta.text">Aus deiner Idee wird zuerst ein klickbarer Prototyp, gebaut wie diese Apps. Am Ende gehört er dir.</p>
+          <div><a class="btn" href="kontakt.html?thema=software" data-i18n="apps.cta.btn">Projekt besprechen</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="wrap">
+    <footer class="footer">
+      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <ul class="footer__links">
+        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
+        <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="vendor/sentry-11.4.0.min.js"></script>
+  <script src="monitoring.js"></script>
+  <script src="i18n.js?v=20261027c"></script>
+  <script src="main.js?v=20261027b"></script>
+
+</body>
+</html>

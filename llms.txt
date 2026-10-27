@@ -12,6 +12,7 @@
 ## Über Robin Wahl
 
 - [Über mich](https://pleasance.org/ueber.html): Vorher Business Process Consultant und Scrum Master bei SAP, unter anderem im Catena-X-Netzwerk und in einem KI-Projekt mit dem Bundesfinanzministerium, danach Prozessautomatisierung in einer Schweizer Holding. Zertifizierter Professional Scrum Master (PSM I). Studium der Betriebswirtschaft, Marketing Science und Wirtschaftsinformatik in Saarbrücken.
+- [Apps](https://pleasance.org/apps.html): Kleine Apps mit je einem Zweck, mit KI-Agenten gebaut und selbst betrieben, alle Open Source: Savor (Arbeitsplatz für Coding-Agents, Download für Linux, macOS und Windows), Music Hub (Versionen für Musikproduktionen), Songgate (ein Musiklink für alle Streamingdienste) und die Döner App (Döner-Ranking der Stadt, im Test).
 - [Werkstatt](https://pleasance.org/werkstatt.html): Woran Robin gerade baut, mit Commits der letzten 30 Tage aus GitHub (jede Nacht aktualisiert), einem Logbuch und dem, was nicht geklappt hat.
 - [Nachtschicht](https://pleasance.org/nachtschicht.html): Wie Pleasance nachts arbeitet. KI-Agenten committen Liegengebliebenes, prüfen sich gegenseitig (Claude findet, Codex prüft gegen), tragen neue Standards aus der Vorlage in alle Apps und legen morgens einen Bericht vor. Robin entscheidet tagsüber.
 - [Handbuch](https://pleasance.org/handbuch.html): Das offene Handbuch einer Firma, die von KI-Agenten betrieben wird: Grundsätze, Prototyp-Fabrik, Nachtschicht, was schiefging und wie man mit Robin arbeitet.

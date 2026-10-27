@@ -1,9 +1,10 @@
 // Keeps the werkstatt pages current: GitHub numbers of the last 30 days and 24 hours in every
-// HTML page with data-gh attributes, the project list and the logbook in werkstatt.html.
+// HTML page with data-gh attributes, the project list and the logbook in werkstatt.html, the apps in apps.html.
 // Projects: the wall in werkstatt.html (by hand) plus every public, active repository, texts in
 // scripts/projects.json. Logbook: entries with "public": true in milestones.jsonl of robinchoice/chronik.
 // Anything stale (missing texts, old logbook, a wall project gone) is listed at the end and fails the run.
 // Usage: GITHUB_TOKEN=… node scripts/werkstatt.mjs
+import { existsSync } from 'node:fs'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 
 const OWNER = 'robinchoice'
@@ -66,7 +67,7 @@ function setText(html, key, text, datetime) {
 // Replaces everything between <!-- werkstatt:name --> and <!-- /werkstatt:name -->
 function fill(html, name, lines) {
   const re = new RegExp(`(\\n( *)<!-- werkstatt:${name} -->)[\\s\\S]*?(\\n *<!-- /werkstatt:${name} -->)`)
-  if (!re.test(html)) throw new Error(`werkstatt.html: markers for "${name}" missing`)
+  if (!re.test(html)) throw new Error(`markers for "${name}" missing`)
   return html.replace(re, (_, open, indent, close) => open + lines.map((l) => `\n${indent}${l}`).join('') + close)
 }
 
@@ -153,6 +154,38 @@ const misses = milestones.filter((e) => e.miss).slice(0, MISSES).map((e) => `<li
 if (!entries.length || entries[0].at < daysAgo(STALE_LOG_DAYS).slice(0, 10)) {
   problems.push(`logbook: no public milestone in the last ${STALE_LOG_DAYS} days, add some to chronik milestones.jsonl`)
 }
+
+// Apps page: one block per app, same order as in scripts/projects.json
+const SHOTS = { desktop: [1440, 900], phone: [780, 1688] }
+const apps = Object.entries(projects).filter(([, p]) => p.app).flatMap(([repo, { name, app }]) => {
+  const id = app.icon
+  for (const kind of Object.keys(SHOTS)) {
+    if (!existsSync(`img/apps/${id}-${kind}.webp`)) problems.push(`img/apps/${id}-${kind}.webp is missing`)
+  }
+  return [
+    `<section class="section app" id="${id}" aria-labelledby="h-${id}">`,
+    '  <div>',
+    `    <img class="app__icon" src="img/werkzeuge/${id}.svg" alt="" width="72" height="72">`,
+    `    <h2 class="heading" id="h-${id}">${esc(name)}</h2>`,
+    `    <p class="app__tagline" data-en="${esc(app.tagline.en)}">${esc(app.tagline.de)}</p>`,
+    '  </div>',
+    '  <div>',
+    `    <p class="app__text" data-en="${esc(app.text.en)}">${esc(app.text.de)}</p>`,
+    '    <div class="app__links">',
+    ...app.links.map((l, i) => `      <a class="btn${i ? ' btn--ghost' : ''}" href="${esc(l.href)}" data-en="${esc(l.en)}">${esc(l.de)}</a>`),
+    `      <a href="https://github.com/${OWNER}/${repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
+    '    </div>',
+    '    <div class="shots">',
+    ...Object.entries(SHOTS).map(([kind, [w, h]]) =>
+      `      <a class="shot shot--${kind}" href="img/apps/${id}-${kind}.webp"><img src="img/apps/${id}-${kind}.webp" alt="${esc(name)}, ${kind === 'desktop' ? 'Desktop' : 'Smartphone'}" width="${w}" height="${h}" loading="lazy"></a>`),
+    '    </div>',
+    '  </div>',
+    '</section>',
+  ]
+})
+const appsPage = await readFile('apps.html', 'utf8')
+const appsFilled = fill(appsPage, 'apps', apps)
+if (appsFilled !== appsPage) await writeFile('apps.html', appsFilled)
 
 let page = fill(werkstatt, 'projects', projectList)
 page = fill(page, 'log', log)

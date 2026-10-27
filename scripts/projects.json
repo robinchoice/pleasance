@@ -1,11 +1,96 @@
 {
+  "savor": {
+    "name": "Savor",
+    "app": {
+      "icon": "savor",
+      "tagline": {
+        "de": "Viele Agenten. Ein Arbeitsplatz.",
+        "en": "Many agents. One workspace."
+      },
+      "text": {
+        "de": "Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort. Für Linux, macOS und Windows, die App fürs Handy ist im Test.",
+        "en": "Several coding agents side by side on your own computer, with conversations, preview and decisions in one place. For Linux, macOS and Windows, the phone app is in testing."
+      },
+      "links": [
+        {
+          "href": "https://github.com/robinchoice/savor/releases/latest",
+          "de": "Herunterladen",
+          "en": "Download"
+        },
+        {
+          "href": "https://savor.pleasance.org",
+          "de": "Mehr über Savor",
+          "en": "More about Savor"
+        }
+      ]
+    }
+  },
+  "music-hub": {
+    "name": "Music Hub",
+    "app": {
+      "icon": "musichub",
+      "tagline": {
+        "de": "Versionen für Musik. Ohne Chaos.",
+        "en": "Versions for music. Without the chaos."
+      },
+      "text": {
+        "de": "Jede Fassung eines Tracks an einem Ort, Kommentare auf der Sekunde, und am Ende ist klar, welcher Mix freigegeben ist. Für Producer, Bands und alle, die am Song arbeiten.",
+        "en": "Every version of a track in one place, comments pinned to the second, and in the end it is clear which mix is approved. For producers, bands and everyone working on the song."
+      },
+      "links": [
+        {
+          "href": "https://hub.pleasance.org",
+          "de": "Music Hub öffnen",
+          "en": "Open Music Hub"
+        }
+      ]
+    }
+  },
+  "musicstreaming-connector": {
+    "name": "Songgate",
+    "app": {
+      "icon": "musiclink",
+      "tagline": {
+        "de": "Ein Link. Jeder hört im eigenen Dienst.",
+        "en": "One link. Everyone listens in their own service."
+      },
+      "text": {
+        "de": "Füg einen Song- oder Albumlink ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music und Deezer. Ohne Konto, Freunde und Gruppen bleiben auf deinem Gerät.",
+        "en": "Paste a song or album link and Songgate finds it on Spotify, Apple Music, YouTube Music and Deezer. No account, friends and groups stay on your device."
+      },
+      "links": [
+        {
+          "href": "https://songgate.app",
+          "de": "Songgate öffnen",
+          "en": "Open Songgate"
+        }
+      ]
+    }
+  },
+  "doenerapp": {
+    "name": "Döner App",
+    "app": {
+      "icon": "doener",
+      "tagline": {
+        "de": "Der beste Döner deiner Stadt.",
+        "en": "The best döner in your city."
+      },
+      "text": {
+        "de": "Leute aus deiner Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Ranking der Stadt. Für iPhone und Android, gerade im Test.",
+        "en": "People near you rate sauce, meat, salad and bread, and that becomes the ranking of your city. For iPhone and Android, currently in testing."
+      },
+      "links": [
+        {
+          "href": "https://doener-api.pleasance.org",
+          "de": "Für den Test anmelden",
+          "en": "Join the test"
+        }
+      ]
+    }
+  },
   "fahrbar": { "name": "fahrbar" },
-  "music-hub": { "name": "Music Hub" },
-  "doenerapp": { "name": "Döner App" },
   "fieldtest": { "name": "Fieldtest" },
-  "musicstreaming-connector": { "name": "Songgate" },
   "docpilot": { "name": "docpilot" },
-  "savor": { "name": "Savor" },
   "pleasance": {
     "name": "pleasance.org",
     "de": "Diese Website",

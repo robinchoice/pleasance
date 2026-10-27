@@ -52,6 +52,16 @@ const I18N_META = {
       en: 'Workshop for product teams with their own stack: guardrails for AI agents, cross-review, test generation and DORA metrics on your own repositories. By Robin Wahl from Freiburg.',
     },
   },
+  apps: {
+    title: {
+      de: 'Apps: Open Source und selbst betrieben — Pleasance',
+      en: 'Apps: open source and self-hosted — Pleasance',
+    },
+    desc: {
+      de: 'Kleine Apps mit je einem Zweck, gebaut mit KI-Agenten und selbst betrieben: Savor, Music Hub, Songgate und die Döner App. Alle Open Source.',
+      en: 'Small apps, each with one job, built with AI agents and self-hosted: Savor, Music Hub, Songgate and the Döner App. All open source.',
+    },
+  },
   werkstatt: {
     title: {
       de: 'Werkstatt: Woran ich gerade baue — Pleasance',
@@ -125,6 +135,7 @@ const I18N = {
     software: { de: 'Software',  en: 'Software' },
     lehre:    { de: 'Training',  en: 'Training' },
     coaching: { de: 'Coaching',  en: 'Coaching' },
+    apps:     { de: 'Apps',      en: 'Apps'     },
     werkstatt: { de: 'Werkstatt', en: 'Workbench' },
     nacht:    { de: 'Nachtschicht', en: 'Night shift' },
     handbuch: { de: 'Handbuch',  en: 'Handbook' },
@@ -770,6 +781,29 @@ const I18N = {
     final: {
       h2:   { de: 'Wo hakt es bei euch?', en: 'Where are you stuck?' },
       text: { de: 'Erzählt mir kurz von eurem Team, eurem Stack und was euch bei der Arbeit mit Agenten bremst. Ich melde mich innerhalb von zwei Werktagen und sage euch ehrlich, ob der Workshop passt.', en: 'Tell me briefly about your team, your stack and what slows you down when working with agents. I\'ll get back to you within two business days and tell you honestly whether the workshop is a fit.' },
+    },
+  },
+
+  // ── apps.html (the app blocks carry their English in data-en, see scripts/projects.json) ──
+  apps: {
+    h1:   { de: 'Apps, die du heute benutzen kannst.', en: 'Apps you can use today.' },
+    lead: {
+      de: 'Ich baue sie mit Agenten und betreibe sie selbst, jede ist Open Source. Woran ich sonst gerade arbeite, steht in der <a href="werkstatt.html">Werkstatt</a>.',
+      en: 'I build them with agents and run them myself, each one is open source. What else I am working on is in the <a href="werkstatt.html">workbench</a>.',
+    },
+    values: {
+      h2: { de: 'Was alle gemeinsam haben', en: 'What they all share' },
+      t1: { de: 'Offener Code.', en: 'Open code.' },
+      d1: { de: 'Jede App ist Open Source. Lies nach, wie sie funktioniert, betreib sie selbst oder mach sie besser.', en: 'Every app is open source. See how it works, run it yourself or make it better.' },
+      t2: { de: 'Deine Daten bleiben deine.', en: 'Your data stays yours.' },
+      d2: { de: 'Keine Werbung, kein Verkauf von Daten. Erhoben wird nur, was die App wirklich braucht.', en: 'No ads, no selling of data. Only what the app really needs is collected.' },
+      t3: { de: 'Eine App, ein Zweck.', en: 'One app, one job.' },
+      d3: { de: 'Jede macht eine Sache und die gründlich. Gebaut mit Agenten, entschieden von einem Menschen.', en: 'Each does one thing and does it properly. Built with agents, decided by a human.' },
+    },
+    cta: {
+      h2:   { de: 'Du brauchst ein eigenes Werkzeug?', en: 'Need a tool of your own?' },
+      text: { de: 'Aus deiner Idee wird zuerst ein klickbarer Prototyp, gebaut wie diese Apps. Am Ende gehört er dir.', en: 'Your idea first becomes a clickable prototype, built like these apps. In the end it belongs to you.' },
+      btn:  { de: 'Projekt besprechen', en: 'Discuss a project' },
     },
   },
 

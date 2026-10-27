@@ -57,6 +57,7 @@ Pleasance ist das Dach für Robin Wahls freie Arbeit: Software-Entwicklung, Lehr
 - **Startseite (Schaufenster):** „Software aus einer Werkstatt voller Agenten.“ Daneben die Werkzeug-Wand mit den 30-Tage-Zahlen, darunter der Weg von der Idee bis live, der Nacht-Band mit Links zu Nachtschicht und Handbuch, die drei Angebote und das Anfrageformular. Führt zu Anfragen.
 - **Nachtschicht:** „Nachts arbeitet die Firma. Tagsüber entscheide ich.“ Die Nacht als Zeitleiste, ein Tag in der Fabrik, die Angebote unter den Wörtern Werkzeuge, Wissen und Wege.
 - **Handbuch:** Die Arbeitsweise als offene Kapitel: Grundsätze, Fabrik, Nacht, was schiefging, mit mir arbeiten.
+- **Apps:** „Apps, die du heute benutzen kannst.“ Nur Apps, die live oder herunterladbar sind, jede im selben Block (nach dem Vorbild von dergigi.org): Zeichen, Name, Tagline, ein Satz, Links, Quellcode, Screenshots Desktop und Handy. Darunter drei Werte auf dunklem Band. Was noch in Arbeit ist, steht in der Werkstatt.
 
 Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften auf eigenem Server. Der „Beipackzettel“ auf der Startseite zählt das auf. Er muss immer stimmen. Keine Infrastruktur-Details (Hosts, Anbieter, Server) auf die Seite.
 
@@ -100,6 +101,7 @@ Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Vorbereitung au
 
 - **Zeitleiste der Nacht (Nachtschicht):** 22 bis 8 Uhr, die Nachtschritte mit ihren echten Uhrzeiten. Nachts zeigt eine Marke „jetzt“ die aktuelle Uhrzeit. Auf dem Handy wird sie zur Liste.
 - **Große Momente (Software, Training, Coaching):** Die Angebotsseiten brechen den Text mit wenigen großen Elementen auf, ohne Bilder: Fragen-Wand (`.questions`, Coaching), große Zahlen (`.bignums`, je drei mit kurzer Zeile darunter), Zitat (`.quote` auf `.night`), Aussage-Band (`.statement`), Gegenüberstellung (`.vs`, Gemietet gegen Gekauft) und eine Probefrage zum Anklicken (`.quiz`, Training). Sparsam: neben dem Kopf höchstens drei pro Seite. Echte Fotos (Porträt, Orte, Workshop) und Screenshots der Werkzeuge kommen dazu, sobald es sie gibt, keine Stockfotos.
+- **App-Block (Apps):** Raster 5fr/7fr, links Zeichen aus `img/werkzeuge`, Name und Tagline, rechts Satz, Knöpfe, Quellcode und die Screenshots (`img/apps/<zeichen>-desktop.webp` und `-phone.webp`, aus `docs/screenshots` der App) gleich hoch nebeneinander, auf dem Handy als waagrechte Reihe. Die Blöcke schreibt `scripts/werkstatt.mjs` aus `scripts/projects.json` (Feld `app`).
 - **Kapitelleiste (Handbuch):** links, klebt beim Scrollen, auf dem Handy eine waagrechte Zeile oben.
 
 ## Bewegung
