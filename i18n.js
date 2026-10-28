@@ -1009,6 +1009,11 @@ const I18N = {
     },
   },
 
+  // ── hosting-agb.html ──────────────────────────────────────────────────────
+  agb: {
+    note: { de: 'Verbindlich ist die deutsche Fassung.', en: 'These terms are available in German only. The German version is binding.' },
+  },
+
   form: {
     sending: { de: 'Wird gesendet…', en: 'Sending…' },
     error:   { de: 'Etwas hat nicht geklappt. Versuch es nochmal oder schreib an hello@pleasance.org.', en: 'Something went wrong. Try again or write to hello@pleasance.org.' },
