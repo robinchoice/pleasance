@@ -1,6 +1,7 @@
 {
   "name": "pleasance-api",
   "type": "module",
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "bun run index.ts"
   },
