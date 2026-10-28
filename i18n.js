@@ -210,9 +210,9 @@ const I18N = {
       proof:      { de: 'Belege statt Versprechen: Mit diesem Setup baue und betreibe ich allein <a href="apps.html">mehrere Apps, die live sind</a>, und <a href="werkstatt.html#savor">Savor</a>, die Arbeitsumgebung, in der meine Agenten laufen. Wie die Firma dahinter arbeitet, steht offen im <a href="handbuch.html">Handbuch</a>.', en: 'Proof, not promises: with this setup I build and run <a href="apps.html">several live apps</a> on my own, plus <a href="werkstatt.html#savor">Savor</a>, the workspace my agents run in. How the company behind it works is open in the <a href="handbuch.html">handbook</a>.' },
       pay:        { de: 'Das Erstgespräch dauert 20 Minuten und ist kostenlos. Bezahlen kannst du per Überweisung oder in Bitcoin, auch über Lightning. Lieber in einer Gruppe? Der Kurs <a href="kurs-agenten.html">Mit KI-Agenten bauen</a> startet am 3. November.', en: 'The first call takes 20 minutes and is free. You can pay by bank transfer or in bitcoin, Lightning included. Prefer a group? The course <a href="kurs-agenten.html">Building with AI agents</a> starts on 3 November.' },
       coach_price: { de: '90 €', en: '€90' },
-      half_price:  { de: '1.100 €', en: '€1,100' },
+      half_price:  { de: '1.200 €', en: '€1,200' },
       full_price:  { de: '1.800 €', en: '€1,800' },
-      setup_price: { de: '1.400 €', en: '€1,400' },
+      setup_price: { de: '1.500 €', en: '€1,500' },
       cta:        { de: 'An hello@pleasance.org schreiben', en: 'Write to hello@pleasance.org' },
     },
     ways: {
