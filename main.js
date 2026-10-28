@@ -120,12 +120,13 @@ function initNav() {
 function initQuiz() {
   document.querySelectorAll('.quiz').forEach(quiz => {
     const feedback = quiz.querySelector('.quiz__fb');
-    quiz.querySelectorAll('.quiz__opts button').forEach(btn => {
+    const buttons = quiz.querySelectorAll('.quiz__opts button');
+    buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         const right = btn.hasAttribute('data-right');
         btn.classList.add(right ? 'is-right' : 'is-wrong');
         translate(feedback, right ? 'lehre.quiz.right' : 'lehre.quiz.wrong');
-        if (right) quiz.querySelectorAll('.quiz__opts button').forEach(b => { b.disabled = true; });
+        if (right) buttons.forEach(b => { b.disabled = true; });
       });
     });
   });

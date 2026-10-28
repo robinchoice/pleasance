@@ -50,11 +50,11 @@ async function latestCommit(repo) {
   }
 }
 
-const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+const reEscape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const escHtml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 function setText(html, key, text, datetime) {
-  const re = new RegExp(`(<(\\w+)[^>]*\\sdata-gh="${escape(key)}"[^>]*>)[^<]*(</\\2>)`, 'g')
+  const re = new RegExp(`(<(\\w+)[^>]*\\sdata-gh="${reEscape(key)}"[^>]*>)[^<]*(</\\2>)`, 'g')
   return html.replace(re, (_, open, _tag, close) => {
     if (datetime !== undefined) {
       open = open.replace(/ datetime="[^"]*"/, '')
@@ -92,7 +92,7 @@ const listed = repos
   .filter((r) => visible.has(r.name) && !r.fork && r.pushed_at >= daysAgo(ACTIVE_DAYS))
   .map((r) => r.name)
   .filter((repo) => !wall.includes(repo) && !projects[repo]?.hidden)
-for (const repo of listed) if (!projects[repo]?.de || !projects[repo]?.en) problems.push(`scripts/projects.json: ${repo} needs name, de, en and stack`)
+for (const repo of listed) if (!projects[repo]?.de || !projects[repo]?.en) problems.push(`scripts/projects.json: ${repo} needs de and en`)
 
 const stats = await Promise.all([...wall, ...listed].map(async (repo) => {
   const commits = await commitsSince(repo)
@@ -114,22 +114,22 @@ const width = (s) => (max ? Math.round((s.commits / max) * 1000) / 10 : 0)
 const now = new Date().toISOString()
 
 const STATUS = { live: 'Live', test: 'Testphase', work: 'In Arbeit', quiet: 'Ruht' }
-const projectList = stats.filter((s) => listed.includes(s.repo)).sort((a, b) => b.commits - a.commits).flatMap((s) => {
+const projectList = stats.slice(wall.length).sort((a, b) => b.commits - a.commits).flatMap((s) => {
   const p = projects[s.repo] ?? {}
   const status = p.status ?? (p.url ? 'live' : s.commits ? 'work' : 'quiet')
   const links = [
-    p.url && `<a href="${esc(p.url)}">${esc(new URL(p.url).host)}</a>`,
+    p.url && `<a href="${escHtml(p.url)}">${escHtml(new URL(p.url).host)}</a>`,
     `<a href="https://github.com/${OWNER}/${s.repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
   ].filter(Boolean).join(' · ')
   return [
     '<details>',
     '  <summary>',
-    `    <span><span class="project__name">${esc(p.name ?? s.repo)}</span><span class="project__desc" data-en="${esc(p.en ?? '')}">${esc(p.de ?? '')}</span></span>`,
+    `    <span><span class="project__name">${escHtml(p.name ?? s.repo)}</span><span class="project__desc" data-en="${escHtml(p.en ?? '')}">${escHtml(p.de ?? '')}</span></span>`,
     `    <span class="status${status === 'live' ? '' : ` status--${status}`}" data-i18n="werkstatt.status.${status}">${STATUS[status]}</span>`,
     `    <span class="commits"><b data-gh="${s.repo}.commits">${s.commits}</b> Commits, <b data-gh="${s.repo}.agent">${s.agent}</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="${s.repo}" style="width: ${width(s)}%"></i></span>`,
     '  </summary>',
     '  <dl class="project__more">',
-    `    <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="${s.repo}.last"${s.last ? ` datetime="${s.last}">${day(s.last)}` : '>—'}</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>${esc(p.stack ?? '')}</dd></div>`,
+    `    <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="${s.repo}.last"${s.last ? ` datetime="${s.last}">${day(s.last)}` : '>—'}</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>${escHtml(p.stack ?? '')}</dd></div>`,
     `    <div><dt>Links</dt><dd>${links}</dd></div>`,
     '  </dl>',
     '</details>',
@@ -137,19 +137,20 @@ const projectList = stats.filter((s) => listed.includes(s.repo)).sort((a, b) => 
 })
 
 // Logbook: public milestones, newest first. "miss": true goes to "what didn't work".
-const chronikNames = JSON.parse(await chronik('projects.json'))
-const milestones = (await chronik('milestones.jsonl')).split('\n').filter((l) => l.trim()).map((l) => JSON.parse(l))
+const [names, jsonl] = await Promise.all([chronik('projects.json'), chronik('milestones.jsonl')])
+const chronikNames = JSON.parse(names)
+const milestones = jsonl.split('\n').filter((l) => l.trim()).map((l) => JSON.parse(l))
   .filter((e) => e.public)
   .sort((a, b) => b.at.localeCompare(a.at))
 for (const e of milestones) if (!e.en) problems.push(`chronik milestones.jsonl: public entry "${e.title}" needs "en"`)
 const logDate = (e) => `<time datetime="${e.at.slice(0, 10)}">${e.at.slice(8, 10)}.${e.at.slice(5, 7)}.</time>`
 const logText = (e) => {
   const [de, en] = e.tag ? [`${e.tag}: ${e.title}`, `${e.tag}: ${e.en}`] : [e.title, e.en]
-  return `<span data-en="${esc(en ?? de)}">${esc(de)}</span>`
+  return `<span data-en="${escHtml(en ?? de)}">${escHtml(de)}</span>`
 }
 const entries = milestones.filter((e) => !e.miss)
 const log = entries.slice(0, LOG_ENTRIES).map((e) =>
-  `<li>${logDate(e)}<b>${esc(projects[e.repo]?.name ?? chronikNames[e.repo]?.name ?? e.repo)}</b>${logText(e)}</li>`)
+  `<li>${logDate(e)}<b>${escHtml(projects[e.repo]?.name ?? chronikNames[e.repo]?.name ?? e.repo)}</b>${logText(e)}</li>`)
 const misses = milestones.filter((e) => e.miss).slice(0, MISSES).map((e) => `<li>${logDate(e)}${logText(e)}</li>`)
 if (!entries.length || entries[0].at < daysAgo(STALE_LOG_DAYS).slice(0, 10)) {
   problems.push(`logbook: no public milestone in the last ${STALE_LOG_DAYS} days, add some to chronik milestones.jsonl`)
@@ -159,26 +160,25 @@ if (!entries.length || entries[0].at < daysAgo(STALE_LOG_DAYS).slice(0, 10)) {
 const SHOTS = { desktop: [1440, 900], phone: [780, 1688] }
 const apps = Object.entries(projects).filter(([, p]) => p.app).flatMap(([repo, { name, app }]) => {
   const id = app.icon
-  for (const kind of Object.keys(SHOTS)) {
-    if (!existsSync(`img/apps/${id}-${kind}.webp`)) problems.push(`img/apps/${id}-${kind}.webp is missing`)
-  }
   return [
     `<section class="section app" id="${id}" aria-labelledby="h-${id}">`,
     '  <div>',
     `    <img class="app__icon" src="img/werkzeuge/${id}.svg" alt="" width="72" height="72">`,
-    `    <h2 class="heading" id="h-${id}">${esc(name)}</h2>`,
-    `    <p class="app__tagline" data-en="${esc(app.tagline.en)}">${esc(app.tagline.de)}</p>`,
+    `    <h2 class="heading" id="h-${id}">${escHtml(name)}</h2>`,
+    `    <p class="app__tagline" data-en="${escHtml(app.tagline.en)}">${escHtml(app.tagline.de)}</p>`,
     '  </div>',
     '  <div>',
-    `    <p class="app__text" data-en="${esc(app.text.en)}">${esc(app.text.de)}</p>`,
+    `    <p class="app__text" data-en="${escHtml(app.text.en)}">${escHtml(app.text.de)}</p>`,
     '    <div class="app__links">',
-    ...app.links.map((l, i) => `      <a class="btn${i ? ' btn--ghost' : ''}" href="${esc(l.href)}" data-en="${esc(l.en)}">${esc(l.de)}</a>`),
+    ...app.links.map((l, i) => `      <a class="btn${i ? ' btn--ghost' : ''}" href="${escHtml(l.href)}" data-en="${escHtml(l.en)}">${escHtml(l.de)}</a>`),
     `      <a href="https://github.com/${OWNER}/${repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
     '    </div>',
     '    <div class="shots">',
     ...Object.entries(SHOTS).map(([kind, [w, h]]) => {
+      const src = `img/apps/${id}-${kind}.webp`
+      if (!existsSync(src)) problems.push(`${src} is missing`)
       const en = `img/apps/${id}-${kind}-en.webp`
-      return `      <a class="shot shot--${kind}" href="img/apps/${id}-${kind}.webp"><img src="img/apps/${id}-${kind}.webp"${existsSync(en) ? ` data-en-src="${en}"` : ''} alt="${esc(name)}, ${kind === 'desktop' ? 'Desktop' : 'Smartphone'}" width="${w}" height="${h}" loading="lazy"></a>`
+      return `      <a class="shot shot--${kind}" href="${src}"><img src="${src}"${existsSync(en) ? ` data-en-src="${en}"` : ''} alt="${escHtml(name)}, ${kind === 'desktop' ? 'Desktop' : 'Smartphone'}" width="${w}" height="${h}" loading="lazy"></a>`
     }),
     '    </div>',
     '  </div>',
@@ -221,7 +221,7 @@ for (const file of (await readdir('.')).filter((file) => file.endsWith('.html'))
   let html = original
   for (const [key, value] of Object.entries(values)) html = setText(html, key, ...value)
   for (const s of stats) {
-    html = html.replace(new RegExp(`(data-gh-bar="${escape(s.repo)}" style="width: )[\\d.]+%`), `$1${width(s)}%`)
+    html = html.replace(new RegExp(`(data-gh-bar="${reEscape(s.repo)}" style="width: )[\\d.]+%`), `$1${width(s)}%`)
   }
   if (html !== original) {
     html = setText(html, 'updated', new Date(now).toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }), now)

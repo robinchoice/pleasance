@@ -342,8 +342,8 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .questions-intro { margin-bottom: 2rem; font-size: 1.25rem; font-weight: 400; color: var(--muted); }
 .questions + .lead { margin-top: 2.5rem; }
 
-.bignums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; list-style: none; }
-.bignums li { padding-top: 1rem; border-top: var(--rule-thick); }
+.bignums, .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; list-style: none; }
+.bignums li, .pillars li { padding-top: 1rem; border-top: var(--rule-thick); }
 .bignums b { display: block; font-weight: 800; font-stretch: 75%; font-size: clamp(5rem, 11vw, 10rem); line-height: 0.85; letter-spacing: -0.03em; }
 .bignums span { display: block; margin-top: 0.75rem; font-size: 1.25rem; font-weight: 650; }
 .bignums small { display: block; margin-top: 0.25rem; max-width: 22em; font-size: 1rem; color: var(--muted); }
@@ -382,8 +382,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .shot img { display: block; width: 100%; height: auto; border: var(--rule); border-radius: 3px; }
 .shot:hover img { border-color: var(--fir); }
 
-.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2.5rem; list-style: none; }
-.pillars li { padding-top: 1rem; border-top: var(--rule-thick); }
+.pillars { margin-top: 2.5rem; }
 .pillars h3 { font-weight: 750; font-stretch: 80%; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.015em; }
 .pillars p { margin-top: 0.75rem; max-width: 24em; color: var(--muted); }
 
@@ -545,8 +544,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
   .log li > :nth-child(n+3) { grid-column: 2; }
   .log--named li { grid-template-columns: 1fr; gap: 0.1rem; }
   .home-hero, .company .wrap, .night-hero { grid-template-columns: 1fr; gap: 2rem; }
-  .bignums, .vs { grid-template-columns: 1fr; }
-  .pillars { grid-template-columns: 1fr; }
+  .bignums, .vs, .pillars { grid-template-columns: 1fr; }
   .app > div { min-width: 0; }
   .shots { display: flex; gap: 0.75rem; margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); overflow-x: auto; }
   .shot { flex: none; }
