@@ -290,7 +290,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .offers--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .offers--3 .offer h3 { font-size: 1.35rem; font-weight: 750; font-stretch: 85%; }
 .offers--3 .offer p { margin-top: 0.4rem; font-size: 1rem; }
-.agent-more { display: grid; gap: 1rem; max-width: 40em; margin-top: 2.5rem; }
+.agent-more { max-width: 40em; margin-top: 2.5rem; }
 
 /* === Subpages === */
 .page-head { padding: 4rem 0; border-bottom: var(--rule-thick); }

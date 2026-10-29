@@ -199,7 +199,6 @@ const I18N = {
     agent: {
       h2:         { de: 'Coaching und Training: agentisches Arbeiten', en: 'Coaching and training: working with agents' },
       lead:       { de: 'Für Entwickler, Teams und Selbstständige, die mit Claude Code, Codex und Co. produktiv werden wollen. Ich zeige dir das Setup, mit dem diese Firma läuft: Regeln, Skills, Workflows und Review, an deinem eigenen Code.', en: 'For developers, teams and freelancers who want to get productive with Claude Code, Codex and the like. I show you the setup this company runs on: rules, skills, workflows and review, on your own code.' },
-      coach:      { de: '1:1-Coaching', en: '1:1 coaching' },
       coach_note: { de: 'Pro Session, 60 Minuten, online oder in Freiburg. Deine Fragen, dein Repository, dein nächster Schritt.', en: 'Per session, 60 minutes, online or in Freiburg. Your questions, your repository, your next step.' },
       half:       { de: 'Team-Workshop, halber Tag', en: 'Team workshop, half day' },
       half_note:  { de: '4 Stunden, bis 12 Personen, online oder bei euch vor Ort. Der Einstieg: Werkzeuge, Aufgaben formulieren, Ergebnisse prüfen.', en: '4 hours, up to 12 people, online or on site. The starting point: tools, writing tasks, checking results.' },
