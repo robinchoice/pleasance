@@ -256,7 +256,7 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.35; }
 .timeline__chain { position: absolute; top: 2.6rem; left: 20%; width: 26%; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--sprout), rgba(200, 227, 159, 0.12)); }
 .timeline__now { position: absolute; top: 1.9rem; height: 1.4rem; border-left: 2px dashed var(--ink); }
 .timeline__now span { position: absolute; top: -1.9rem; left: -1.4rem; padding: 0 0.4rem; font-size: 0.8125rem; font-weight: 700; color: var(--paper); background: var(--ink); border-radius: 3px; white-space: nowrap; }
-.timeline__events { position: relative; height: 23rem; margin-top: 1.5rem; list-style: none; }
+.timeline__events { position: relative; height: 29rem; margin-top: 1.5rem; list-style: none; }
 .ev { position: absolute; top: 0; left: var(--at); width: min(15rem, 27%); padding-left: 0.9rem; border-left: 1.5px solid var(--sprout); }
 .ev time { display: block; font-weight: 700; color: var(--sprout); font-variant-numeric: tabular-nums; }
 .ev b { display: block; margin-bottom: 0.2rem; font-size: 1.15rem; font-weight: 650; }
