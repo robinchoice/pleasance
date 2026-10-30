@@ -88,8 +88,8 @@ const I18N_META = {
       en: 'Night shift: a company run by agents at night — Pleasance',
     },
     desc: {
-      de: 'Wie Pleasance nachts arbeitet: KI-Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in alle Apps. Robin Wahl aus Freiburg entscheidet tagsüber.',
-      en: 'How Pleasance works at night: AI agents tidy up, check each other and carry new standards into every app. Robin Wahl from Freiburg decides by day.',
+      de: 'Wie Pleasance nachts arbeitet: KI-Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in die Apps. Robin Wahl aus Freiburg entscheidet tagsüber.',
+      en: 'How Pleasance works at night: AI agents tidy up, check each other and carry new standards into the apps. Robin Wahl from Freiburg decides by day.',
     },
   },
   handbuch: {
@@ -190,7 +190,7 @@ const I18N = {
     },
     company: {
       h2:         { de: 'Nachts arbeitet die Firma. Tagsüber entscheide ich.', en: 'At night the company runs. By day, I decide.' },
-      nacht:      { de: 'Um Mitternacht beginnt die Nachtschicht: Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in alle Apps. Um 7 Uhr liegt ein Bericht für mich bereit.', en: 'At midnight the night shift starts: agents tidy up, check each other and carry new standards into every app. At 7 a report is waiting for me.' },
+      nacht:      { de: 'Um Mitternacht beginnt die Nachtschicht: Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in die Apps. Um 7 Uhr liegt ein Bericht für mich bereit.', en: 'At midnight the night shift starts: agents tidy up, check each other and carry new standards into the apps. At 7 a report is waiting for me.' },
       nacht_link: { de: 'Die Nachtschicht ansehen', en: 'See the night shift' },
       hb_h3:      { de: 'Das Handbuch', en: 'The handbook' },
       hb:         { de: 'Wie eine Firma mit Agenten arbeitet: die Grundsätze, die Fabrik, die Nacht und was schiefging. Offen, zum Nachlesen und Übernehmen.', en: 'How a company works with agents: the principles, the factory, the night and what went wrong. Open, to read and to copy.' },
@@ -281,7 +281,7 @@ const I18N = {
       t1: { de: 'Feierabend', en: 'Closing time' },
       d1: { de: 'Liegengebliebene Arbeit wird geprüft, committet und veröffentlicht, Offenes kommt ins Backlog.', en: 'Leftover work is checked, committed and shipped, open ends go to the backlog.' },
       t2: { de: 'Nacht-Review und Ausrollen', en: 'Night review and rollout' },
-      d2: { de: 'Claude sucht Fehler, Codex prüft gegen und schreibt Korrekturen. Neue Standards aus der Vorlage gehen in alle Apps.', en: 'Claude looks for bugs, Codex checks the findings and writes fixes. New standards from the template go into every app.' },
+      d2: { de: 'Codex sucht Fehler, ein zweiter Durchgang prüft die Befunde und schreibt Korrekturen. Codex urteilt auch über die Befehle, die Claude ausgeführt hat. In der Nacht auf Montag gehen neue Standards aus der Vorlage in die Apps.', en: 'Codex looks for bugs, a second pass checks the findings and writes fixes. Codex also judges the commands Claude ran. In the night to Monday, new standards from the template go into the apps.' },
       t3: { de: 'Nachtwache', en: 'Night watch' },
       d3: { de: 'Fehlt ein Schritt, sucht sie die Ursache, behebt sie in engen Grenzen und startet ihn neu.', en: 'If a step is missing, it finds the cause, fixes it within tight limits and reruns it.' },
       t4: { de: 'Morgenbericht', en: 'Morning report' },
@@ -353,7 +353,7 @@ const I18N = {
       p1:  { de: 'Nachts hält sich das Setup selbst in Ordnung. Zwei Modelle verschiedener Hersteller prüfen sich gegenseitig, keins bewertet seine eigene Arbeit.', en: 'At night the setup keeps itself in order. Two models from different vendors check each other, none grades its own work.' },
       mon: { de: 'Mo 10:00', en: 'Mon 10:00' },
       e1:  { de: 'Feierabend: Liegengebliebenes wird geprüft, committet und veröffentlicht.', en: 'Closing time: leftover work is checked, committed and shipped.' },
-      e2:  { de: 'Nacht-Review: Claude findet, Codex prüft gegen und schreibt Korrekturen. Ausrollen trägt neue Standards in alle Apps.', en: 'Night review: Claude finds, Codex checks and writes fixes. Rollout carries new standards into every app.' },
+      e2:  { de: 'Nacht-Review: Codex findet, ein zweiter Durchgang prüft und schreibt Korrekturen, dazu urteilt Codex über Claudes Befehle. Ausrollen trägt in der Nacht auf Montag neue Standards in die Apps.', en: 'Night review: Codex finds, a second pass checks and writes fixes, and Codex judges Claude\'s commands. In the night to Monday, rollout carries new standards into the apps.' },
       e3:  { de: 'Nachtwache: Fehlt ein Schritt, sucht sie die Ursache und startet ihn neu.', en: 'Night watch: if a step is missing, it finds the cause and reruns it.' },
       e4:  { de: 'Morgenbericht für mich. Korrekturen gehen erst nach meinem Klick live.', en: 'Morning report for me. Fixes only go live after my click.' },
       e5:  { de: 'Werkstatt: höchstens fünf Vorschläge, wie die Regeln besser werden. Löschen geht vor Ergänzen.', en: 'Workshop run: at most five proposals to improve the rules. Deleting comes before adding.' },

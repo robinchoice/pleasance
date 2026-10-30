@@ -62,11 +62,11 @@
         <h2 class="heading" id="h-zahlen" data-i18n="werkstatt.zahlen.h2">Die letzten 30 Tage</h2>
         <div>
           <div class="stats">
-            <div class="stat"><b data-gh="projects">25</b><span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></div>
-            <div class="stat"><b data-gh="commits">1493</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
+            <div class="stat"><b data-gh="projects">24</b><span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></div>
+            <div class="stat"><b data-gh="commits">1492</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
             <div class="stat"><b data-gh="agent">78&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
           </div>
-          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-30T15:00:40.738Z">30.10.2026, 16:00</time></p>
+          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-10-30T17:02:36.604Z">30.10.2026, 18:02</time></p>
         </div>
       </section>
 
@@ -81,7 +81,7 @@
               <img src="img/werkzeuge/fahrbar.svg" alt="" width="112" height="112">
               <span class="tool__name">fahrbar</span>
               <span class="tool__desc" data-i18n="werkstatt.projekte.fahrbar">Offenes Protokoll für Carsharing und Fahrdienste</span>
-              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
             </button>
             <button type="button" class="tool" id="musichub" aria-expanded="false" aria-controls="tool-musichub">
               <img src="img/werkzeuge/musichub.svg" alt="" width="112" height="112">
@@ -99,7 +99,7 @@
               <img src="img/werkzeuge/fieldtest.svg" alt="" width="112" height="112">
               <span class="tool__name">Fieldtest</span>
               <span class="tool__desc" data-i18n="werkstatt.projekte.fieldtest">Tester für Prototypen, belohnt in Sats</span>
-              <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
             </button>
             <button type="button" class="tool" id="musiclink" aria-expanded="false" aria-controls="tool-musiclink">
               <img src="img/werkzeuge/musiclink.svg" alt="" width="112" height="112">
@@ -264,7 +264,7 @@
               <summary>
                 <span><span class="project__name">Chronik</span><span class="project__desc" data-en="Milestones and birthdays of all my projects. The logbook here comes from it">Meilensteine und Geburtstage aller meiner Projekte. Daraus entsteht das Logbuch hier</span></span>
                 <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="chronik.commits">33</b> Commits, <b data-gh="chronik.agent">32</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="chronik" style="width: 8.2%"></i></span>
+                <span class="commits"><b data-gh="chronik.commits">34</b> Commits, <b data-gh="chronik.agent">33</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="chronik" style="width: 8.4%"></i></span>
               </summary>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="chronik.last" datetime="2026-10-30">30.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Python, JavaScript</dd></div>
@@ -414,17 +414,6 @@
                 <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/kaefig" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
               </dl>
             </details>
-            <details>
-              <summary>
-                <span><span class="project__name">geldfluss</span><span class="project__desc" data-en=""></span></span>
-                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="geldfluss.commits">2</b> Commits, <b data-gh="geldfluss.agent">2</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="geldfluss" style="width: 0.5%"></i></span>
-              </summary>
-              <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="geldfluss.last" datetime="2026-10-28">28.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd></dd></div>
-                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/geldfluss" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
-              </dl>
-            </details>
             <!-- /werkstatt:projects -->
           </div>
         </div>
@@ -436,15 +425,15 @@
           <ul class="log">
             <!-- werkstatt:log -->
             <li><time datetime="2026-10-30">30.10.</time><b>Döner App</b><span data-en="I now offer the Döner app for Android straight from its landing page, with an update hint in the app">Ich biete die Döner App für Android jetzt direkt auf der Landingpage an, mit Update-Hinweis in der App</span></li>
+            <li><time datetime="2026-10-28">28.10.</time><b>starter</b><span data-en="My apps take Lightning: L402 for agents and a checkout for people, built into starter">Meine Apps nehmen Lightning an: L402 für Agenten, Checkout für Menschen, fertig eingebaut im starter</span></li>
+            <li><time datetime="2026-10-28">28.10.</time><b>pleasance.org</b><span data-en="I now offer coaching and training for agentic work on pleasance.org">Ich biete auf pleasance.org Coaching und Training für agentisches Arbeiten an</span></li>
+            <li><time datetime="2026-10-28">28.10.</time><b>Music Hub</b><span data-en="Music Hub detects tempo and key of every version and shows a board by production stage">Music Hub erkennt Tempo und Tonart jeder Version und zeigt ein Board nach Produktionsstufe</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>Döner App</b><span data-en="The döner map shows score and name on its pins, and search knows every shop">Die Döner-Karte zeigt Bewertung und Namen an den Pins, die Suche kennt alle Läden</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>Music Hub</b><span data-en="Music Hub speaks English, also in the CLI and the update mails">Music Hub spricht Englisch, auch in der CLI und den Update-Mails</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>Songgate</b><span data-en="Songgate in German and English, including the iOS share extension">Songgate gibt es auf Deutsch und Englisch, samt iOS-Share-Extension</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>starter</b><span data-en="The starter's start page is now a landing page template">Die Startseite des starter ist eine Landingpage-Vorlage</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>pleasance.org</b><span data-en="Team offer for AI-native engineering and an apps page on pleasance.org">Teamangebot AI-native Engineering und Apps-Seite auf pleasance.org</span></li>
             <li><time datetime="2026-10-27">27.10.</time><b>Döner App</b><span data-en="The döner ranking can be filtered by ingredient, red onion is new">Die Döner-Rangliste lässt sich nach Zutaten filtern, rote Zwiebeln sind neu dabei</span></li>
-            <li><time datetime="2026-10-27">27.10.</time><b>RAG-Demo EU-MDR</b><span data-en="Built a RAG demo on the EU Medical Device Regulation: self-hosted models, verified citations, evaluation">RAG-Demo zur EU-Medizinprodukteverordnung gebaut: selbst gehostete Modelle, geprüfte Zitate, Auswertung</span></li>
-            <li><time datetime="2026-10-26">26.10.</time><b>Music Hub Sync</b><span data-en="Music Hub Sync updates itself from GitHub releases">Music Hub Sync aktualisiert sich selbst aus GitHub-Releases</span></li>
-            <li><time datetime="2026-10-26">26.10.</time><b>Music Hub</b><span data-en="Deliver projects to clients, with revision rounds and a paywall">Projekte an Kunden liefern, mit Korrekturrunden und Paywall</span></li>
             <!-- /werkstatt:log -->
           </ul>
           <h3 class="tools-title" data-i18n="werkstatt.log.misses">Was nicht geklappt hat</h3>
@@ -509,7 +498,7 @@
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261028b"></script>
+  <script src="i18n.js?v=20261030a"></script>
   <script src="main.js?v=20261027c"></script>
   <script>
   (function () {
