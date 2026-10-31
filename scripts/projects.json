@@ -76,8 +76,8 @@
         "en": "The best döner in your city."
       },
       "text": {
-        "de": "Leute aus deiner Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Ranking der Stadt. Für iPhone und Android, gerade im Test.",
-        "en": "People near you rate sauce, meat, salad and bread, and that becomes the ranking of your city. For iPhone and Android, currently in testing."
+        "de": "Leute aus deiner Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Ranking der Stadt. Gerade im Test: iPhone über TestFlight, Android zum Herunterladen.",
+        "en": "People near you rate sauce, meat, salad and bread, and that becomes the ranking of your city. Currently in testing: iPhone via TestFlight, Android as a download."
       },
       "links": [
         {

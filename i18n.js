@@ -866,7 +866,7 @@ const I18N = {
       docpilot:   { de: 'Dokumentation, die bei jedem Push mitwächst: Eine GitHub Action schlägt die neue README als Pull Request vor.', en: 'Documentation that grows with every push: a GitHub Action proposes the new README as a pull request.' },
     },
     fahrbar: {
-      text: { de: 'Ein offener Fahrdienst: Eine geprüfte Fahrerin oder ein geprüfter Fahrer bringt dich in deinem eigenen Auto nach Hause. Der erste Pilot in Freiburg, für Menschen nach einem ambulanten Eingriff, ist in Vorbereitung.', en: 'An open driver service: a vetted driver takes you home in your own car. The first pilot in Freiburg, for people after an outpatient procedure, is in preparation.' },
+      text: { de: 'Ein offener Fahrdienst: Eine geprüfte Fahrerin oder ein geprüfter Fahrer bringt dich in deinem eigenen Auto nach Hause. Der geplante erste Pilot in Freiburg für Menschen nach einem ambulanten Eingriff ist zurückgestellt.', en: 'An open driver service: a vetted driver takes you home in your own car. The planned first pilot in Freiburg, for people after an outpatient procedure, is on hold.' },
     },
   },
 
