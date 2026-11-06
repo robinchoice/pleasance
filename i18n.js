@@ -841,8 +841,8 @@ const I18N = {
       text: { de: 'Freehold ist noch in Arbeit. Wenn ihr es für euren Betrieb im Blick behalten wollt, schreibt uns.', en: 'Freehold is still in progress. If you want to keep an eye on it for your business, write to us.' },
     },
     savor: {
-      tagline: { de: 'Viele Agenten. Ein Arbeitsplatz.', en: 'Many agents. One workspace.' },
-      text: { de: 'Die lokale Arbeitsumgebung für Coding-Agenten: mehrere Agenten nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort. Für Linux, macOS und Windows.', en: 'The local workspace for coding agents: several agents side by side on your own computer, with conversations, preview and decisions in one place. For Linux, macOS and Windows.' },
+      tagline: { de: 'Coding-Agents, die sich zurückmelden.', en: 'Coding agents that report back.' },
+      text: { de: 'Die lokale Arbeitsumgebung für Claude Code, Codex und OpenCode: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows.', en: 'The local workspace for Claude Code, Codex and OpenCode: every task ends with one clear result, the questions that need you, and next steps. For Linux, macOS and Windows.' },
       link: { de: 'Mehr über Savor', en: 'More about Savor' },
     },
     pinna: {
@@ -934,7 +934,7 @@ const I18N = {
       musiclink:   { de: 'Ein Link für einen Song, der bei allen im eigenen Streamingdienst aufgeht.', en: 'One link for a song that opens in everyone\'s own streaming service.' },
       docpilot:    { de: 'Bei jedem Push liest docpilot die Änderungen und schlägt per Pull Request die passende Aktualisierung der README vor.', en: 'On every push, docpilot reads the changes and suggests the matching README update as a pull request.' },
       fieldtest:   { de: 'Eingeladene Tester sehen im Prototyp ein Overlay, bekommen für aktive Zeit und erreichte Ziele sofort Sats und hinterlassen Feedback genau an der Stelle in der App.', en: 'Invited testers see an overlay in the prototype, get sats right away for active time and reached goals, and leave feedback right at the spot in the app.' },
-      savor:       { de: 'Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort.', en: 'Several coding agents side by side on your own computer, with conversations, preview and decisions in one place.' },
+      savor:       { de: 'Ein Arbeitsplatz für Claude Code, Codex und OpenCode auf dem eigenen Rechner. Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten.', en: 'A workspace for Claude Code, Codex and OpenCode on your own computer. Every task ends with one clear result, the questions that need you, and next steps.' },
       new_name:    { de: 'Neuer Prototyp', en: 'New prototype' },
       new_desc:    { de: 'Dein Werkzeug als nächstes', en: 'Your tool, next' },
       free:        { de: 'Frei', en: 'Open' },

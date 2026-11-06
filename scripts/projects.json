@@ -4,12 +4,12 @@
     "app": {
       "icon": "savor",
       "tagline": {
-        "de": "Viele Agenten. Ein Arbeitsplatz.",
-        "en": "Many agents. One workspace."
+        "de": "Coding-Agents, die sich zurückmelden.",
+        "en": "Coding agents that report back."
       },
       "text": {
-        "de": "Mehrere Coding-Agents nebeneinander auf dem eigenen Rechner, mit Gesprächen, Vorschau und Entscheidungen an einem Ort. Für Linux, macOS und Windows, die App fürs Handy ist im Test.",
-        "en": "Several coding agents side by side on your own computer, with conversations, preview and decisions in one place. For Linux, macOS and Windows, the phone app is in testing."
+        "de": "Ein Arbeitsplatz für Claude Code, Codex und OpenCode auf dem eigenen Rechner: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows, die App fürs Handy ist im Test.",
+        "en": "A workspace for Claude Code, Codex and OpenCode on your own computer: every task ends with one clear result, the questions that need you, and next steps. For Linux, macOS and Windows, the phone app is in testing."
       },
       "links": [
         {
@@ -55,8 +55,8 @@
         "en": "One link. Everyone listens in their own service."
       },
       "text": {
-        "de": "Füg einen Song- oder Albumlink ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music und Deezer. Ohne Konto, Freunde und Gruppen bleiben auf deinem Gerät.",
-        "en": "Paste a song or album link and Songgate finds it on Spotify, Apple Music, YouTube Music and Deezer. No account, friends and groups stay on your device."
+        "de": "Füg einen Link zu Song, Album oder Podcast ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, Freunde und Gruppen bleiben auf deinem Gerät.",
+        "en": "Paste a link to a song, album or podcast and Songgate finds it on Spotify, Apple Music, YouTube Music, Deezer and TIDAL. No account, friends and groups stay on your device."
       },
       "links": [
         {
@@ -178,6 +178,12 @@
     "de": "Inoffizielle Brücke zwischen Matrix und Mattermost, gedacht für upstream",
     "en": "Unofficial Matrix–Mattermost puppeting bridge, meant to go upstream",
     "stack": "Go, mautrix-go"
+  },
+  "postgres-pgbackrest": {
+    "name": "postgres-pgbackrest",
+    "de": "PostgreSQL 16 mit pgBackRest: WAL-Archiv und Wiederherstellung auf jeden Zeitpunkt, in der CI für amd64 und arm64 getestet",
+    "en": "PostgreSQL 16 with pgBackRest: WAL archiving and point-in-time recovery, tested in CI for amd64 and arm64",
+    "stack": "Docker, PostgreSQL, pgBackRest"
   },
   "chronik": {
     "name": "Chronik",
