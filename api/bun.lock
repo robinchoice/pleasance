@@ -7,7 +7,7 @@
       "dependencies": {
         "@sentry/bun": "^11.4.0",
         "hono": "^4.13.12",
-        "nodemailer": "^10.2.1",
+        "nodemailer": "^10.3.1",
       },
     },
   },
