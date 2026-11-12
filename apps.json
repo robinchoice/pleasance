@@ -1,0 +1,8 @@
+{
+  "apps": [
+    { "name": "Music Hub", "url": "https://hub.pleasance.org", "icon": "https://pleasance.org/img/werkzeuge/musichub.svg", "band": { "from": 1.35, "to": 2.2 } },
+    { "name": "Döner", "url": "https://doener-api.pleasance.org", "icon": "https://pleasance.org/img/werkzeuge/doener.svg", "band": { "from": 2.55, "to": 3.2 } },
+    { "name": "Songgate", "url": "https://songgate.app", "icon": "https://pleasance.org/img/werkzeuge/musiclink.svg", "band": { "from": 3.85, "to": 4.55 } },
+    { "name": "Savor", "url": "https://savor.pleasance.org", "icon": "https://pleasance.org/img/werkzeuge/savor.svg", "band": { "from": 5.5, "to": 6.45 }, "desktop": true }
+  ]
+}
