@@ -168,9 +168,13 @@
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var name    = document.getElementById('contactName').value.trim();
-      var email   = document.getElementById('contactEmail').value.trim();
-      var message = textarea.value.trim();
+      form.elements.name.value = form.elements.name.value.trim();
+      form.elements.email.value = form.elements.email.value.trim();
+      textarea.value = textarea.value.trim();
+      if (!form.reportValidity()) return;
+      var name    = form.elements.name.value;
+      var email   = form.elements.email.value;
+      var message = textarea.value;
       var topic   = form.elements.topic.value;
       if (topic === 'lehre' && course.value) message = course.options[course.selectedIndex].text + '\n\n' + message;
 

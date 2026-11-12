@@ -102,7 +102,8 @@ const stats = await Promise.all([...wall, ...listed].map(async (repo) => {
     commits: commits.length,
     agent: commits.filter((c) => AGENT.test(c.commit.message)).length,
     day: commits.filter((c) => c.commit.committer.date >= daySince).length,
-    last: latest?.commit.committer.date.slice(0, 10) ?? null,
+    // The commit day in Berlin, as YYYY-MM-DD
+    last: latest ? new Date(latest.commit.committer.date).toLocaleDateString('sv-SE', { timeZone: 'Europe/Berlin' }) : null,
   }
 }))
 
@@ -124,7 +125,7 @@ const projectList = stats.slice(wall.length).sort((a, b) => b.commits - a.commit
   return [
     '<details>',
     '  <summary>',
-    `    <span><span class="project__name">${escHtml(p.name ?? s.repo)}</span><span class="project__desc" data-en="${escHtml(p.en ?? '')}">${escHtml(p.de ?? '')}</span></span>`,
+    `    <span><span class="project__name">${escHtml(p.name ?? s.repo)}</span><span class="project__desc" data-en="${escHtml(p.en ?? p.de ?? '')}">${escHtml(p.de ?? '')}</span></span>`,
     `    <span class="status${status === 'live' ? '' : ` status--${status}`}" data-i18n="werkstatt.status.${status}">${STATUS[status]}</span>`,
     `    <span class="commits"><b data-gh="${s.repo}.commits">${s.commits}</b> Commits, <b data-gh="${s.repo}.agent">${s.agent}</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="${s.repo}" style="width: ${width(s)}%"></i></span>`,
     '  </summary>',

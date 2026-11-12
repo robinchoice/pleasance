@@ -126,6 +126,8 @@ app.post('/contact', async (c) => {
   }
 
   const topicLabel = TOPIC_LABELS[topic]
+  // Count before sending so concurrent requests cannot overshoot the cap.
+  mailsThisHour++
 
   try {
     await mailer.sendMail({
@@ -136,13 +138,13 @@ app.post('/contact', async (c) => {
       text:    `Thema: ${topicLabel}\nName: ${name}\nE-Mail: ${email}\n\n${message}`,
     })
   } catch (error) {
+    // Only mails that left count: an SMTP outage must not lock the form for an hour.
+    mailsThisHour--
     console.error('SMTP error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 500)
   }
 
-  // Only mails that left count: an SMTP outage must not lock the form for an hour.
-  mailsThisHour++
   return c.json({ ok: true })
 })
 
@@ -272,6 +274,8 @@ app.post('/savor/feedback', async (c) => {
       labels: ['bug', 'feedback'],
     })
   } catch (error) {
+    // Failed sends must not use up the hourly cap during a GitHub outage.
+    feedbackThisHour--
     console.error('GitHub error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 502)
