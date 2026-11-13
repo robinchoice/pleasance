@@ -114,6 +114,12 @@
     "en": "Template for new prototypes: login, German and English, tests and deploy are built in",
     "stack": "Bun, Hono, SvelteKit, Drizzle, Postgres, Flutter"
   },
+  "homebrew-tap": {
+    "name": "Homebrew Tap",
+    "de": "Savor per Homebrew installieren, das Cask zieht jedem Release automatisch nach",
+    "en": "Install Savor with Homebrew, the cask follows every release on its own",
+    "stack": "Homebrew, GitHub Actions"
+  },
   "musichub-plugin": {
     "name": "Music Hub Plugin",
     "de": "A/B-Vergleich von Versionen in der DAW",
@@ -215,6 +221,5 @@
     "stack": "C#, .NET, BTCPay Server, Lightning (L402)"
   },
   "pleasance-thoughts": { "hidden": true },
-  "geldfluss": { "hidden": true },
-  "homebrew-tap": { "hidden": true }
+  "geldfluss": { "hidden": true }
 }
