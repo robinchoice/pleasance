@@ -4,12 +4,12 @@
 const I18N_META = {
   home: {
     title: {
-      de: 'Software-Entwicklung, Kurse und Coaching in Freiburg — Pleasance',
-      en: 'Software development, courses and coaching in Freiburg — Pleasance',
+      de: 'Software-Entwicklung, Training und Coaching in Freiburg — Pleasance',
+      en: 'Software development, training and coaching in Freiburg — Pleasance',
     },
     desc: {
-      de: 'Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Kurse zu Scrum und KI. Systemisches Coaching in Freiburg und online.',
-      en: 'Robin Wahl from Freiburg, Germany: websites, web apps and automations you own. Courses on Scrum and AI. Systemic coaching in Freiburg and online.',
+      de: 'Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Training zu KI-Agenten und Scrum. Systemisches Coaching in Freiburg und online.',
+      en: 'Robin Wahl from Freiburg, Germany: websites, web apps and automations you own. Training on AI agents and Scrum. Systemic coaching in Freiburg and online.',
     },
   },
   software: {
@@ -34,12 +34,12 @@ const I18N_META = {
   },
   kurs: {
     title: {
-      de: 'Kurs: Mit KI-Agenten bauen, online — Pleasance',
-      en: 'Course: Building with AI agents, online — Pleasance',
+      de: 'Mit KI-Agenten bauen: 1:1 oder im Team — Pleasance',
+      en: 'Building with AI agents: 1:1 or as a team — Pleasance',
     },
     desc: {
-      de: 'In vier Abenden ein eigenes Setup mit Claude Code oder Codex: Regeln, Vorlage, eigener Server und Review. Online, höchstens 8 Personen, von Robin Wahl aus Freiburg.',
-      en: 'Four evenings to set up your own workflow with Claude Code or Codex: rules, template, your own server and review. Online, at most 8 people, by Robin Wahl from Freiburg.',
+      de: 'Ein eigenes Setup mit Claude Code oder Codex: Regeln, Vorlage, eigener Server und Review. 1:1 an deinem Projekt oder als Workshop für dein Team, von Robin Wahl aus Freiburg.',
+      en: 'Your own workflow with Claude Code or Codex: rules, template, your own server and review. 1:1 on your project or as a workshop for your team, by Robin Wahl from Freiburg.',
     },
   },
   teams: {
@@ -207,7 +207,7 @@ const I18N = {
       setup:      { de: 'Setup-Begleitung', en: 'Setup guidance' },
       setup_note: { de: 'Zwei Wochen, vier Sitzungen à 90 Minuten. Wir bauen dein Agent-Setup wie bei Pleasance selbst: Regeln, Skills, Workflows und Nachtschicht.', en: 'Two weeks, four sessions of 90 minutes. We build your agent setup the way Pleasance runs its own: rules, skills, workflows and a night shift.' },
       proof:      { de: 'Belege statt Versprechen: Mit diesem Setup baue und betreibe ich allein <a href="apps.html">mehrere Apps, die live sind</a>, und <a href="werkstatt.html#savor">Savor</a>, die Arbeitsumgebung, in der meine Agenten laufen. Wie die Firma dahinter arbeitet, steht offen im <a href="handbuch.html">Handbuch</a>.', en: 'Proof, not promises: with this setup I build and run <a href="apps.html">several live apps</a> on my own, plus <a href="werkstatt.html#savor">Savor</a>, the workspace my agents run in. How the company behind it works is open in the <a href="handbuch.html">handbook</a>.' },
-      pay:        { de: 'Das Erstgespräch dauert 20 Minuten und ist kostenlos. Bezahlen kannst du per Überweisung oder in Bitcoin, auch über Lightning. Lieber in einer Gruppe? Der Kurs <a href="kurs-agenten.html">Mit KI-Agenten bauen</a> startet am 3. November.', en: 'The first call takes 20 minutes and is free. You can pay by bank transfer or in bitcoin, Lightning included. Prefer a group? The course <a href="kurs-agenten.html">Building with AI agents</a> starts on 3 November.' },
+      pay:        { de: 'Das Erstgespräch dauert 20 Minuten und ist kostenlos. Bezahlen kannst du per Überweisung oder in Bitcoin, auch über Lightning.', en: 'The first call takes 20 minutes and is free. You can pay by bank transfer or in bitcoin, Lightning included.' },
       coach_price: { de: '90 €', en: '€90' },
       half_price:  { de: '1.200 €', en: '€1,200' },
       full_price:  { de: '1.800 €', en: '€1,800' },
@@ -217,13 +217,13 @@ const I18N = {
     ways: {
       h2:       { de: 'Drei Wege zusammenzuarbeiten', en: 'Three ways to work together' },
       software: { de: 'Prototypen, Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, auf deinem eigenen Server.', en: 'Prototypes, web apps, websites and automations for freelancers, small businesses and teams. Open source, on your own server.' },
-      lehre:    { de: 'Der Kurs <a href="kurs-agenten.html">Mit KI-Agenten bauen</a>: Du oder dein Team lernt genau dieses Setup an echten Projekten. Dazu Vorbereitung auf PSM&nbsp;I, PSPO&nbsp;I und PSK&nbsp;I, in Freiburg, vor Ort oder online.', en: 'The course <a href="kurs-agenten.html">Building with AI agents</a>: you or your team learn exactly this setup on real projects. Plus preparation for PSM&nbsp;I, PSPO&nbsp;I and PSK&nbsp;I, in Freiburg, on site or online.' },
+      lehre:    { de: '<a href="kurs-agenten.html">Mit KI-Agenten bauen</a>, 1:1 oder als Workshop: Du oder dein Team lernt genau dieses Setup an echten Projekten. Dazu Vorbereitung auf PSM&nbsp;I, PSPO&nbsp;I und PSK&nbsp;I, in Freiburg, vor Ort oder online.', en: '<a href="kurs-agenten.html">Building with AI agents</a>, 1:1 or as a workshop: you or your team learn exactly this setup on real projects. Plus preparation for PSM&nbsp;I, PSPO&nbsp;I and PSK&nbsp;I, in Freiburg, on site or online.' },
       coaching: { de: 'Systemisches Coaching mit Elementen der Logotherapie, wenn sich deine Arbeit oder dein Leben verändert. In Freiburg oder online, das Erstgespräch dauert 20 Minuten und kostet nichts.', en: 'Systemic coaching with elements of logotherapy when your work or your life is changing. In Freiburg or online, the first conversation takes 20 minutes and is free.' },
     },
     ask: {
       h2:    { de: 'Dein Werkzeug als nächstes?', en: 'Your tool next?' },
       side:  { de: 'Erzähl in ein paar Sätzen, was es können soll und für wen. Ich antworte innerhalb von zwei Werktagen, das erste Gespräch ist unverbindlich.', en: 'Tell me in a few sentences what it should do and for whom. I reply within two business days, the first conversation is free of obligation.' },
-      other: { de: 'Kurs oder Coaching? Schreib an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> oder nutze das <a href="kontakt.html">Kontaktformular</a>.', en: 'Course or coaching? Write to <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> or use the <a href="kontakt.html">contact form</a>.' },
+      other: { de: 'Training oder Coaching? Schreib an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> oder nutze das <a href="kontakt.html">Kontaktformular</a>.', en: 'Training or coaching? Write to <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> or use the <a href="kontakt.html">contact form</a>.' },
       foot:  { de: 'Keine Cookies, keine Tracker. Die Anfrage geht direkt an mich.', en: 'No cookies, no trackers. Your request goes straight to me.' },
     },
     software: {
@@ -248,8 +248,8 @@ const I18N = {
       proto:      { de: 'Prototyping', en: 'Prototyping' },
       ki:         { de: 'Lernen und Texte schreiben mit KI', en: 'Learning and writing with AI' },
       geld:       { de: 'Geldgeschichte, Bitcoin und Österreichische Schule', en: 'History of money, Bitcoin and the Austrian School' },
-      more:       { de: 'Mehr zu den Kursen', en: 'More about the courses' },
-      cta:        { de: 'Kurs anfragen', en: 'Enquire about a course' },
+      more:       { de: 'Mehr zum Training', en: 'More about training' },
+      cta:        { de: 'Training anfragen', en: 'Enquire about training' },
     },
     coaching: {
       word: { de: 'Wege', en: 'Paths' },
@@ -305,9 +305,9 @@ const I18N = {
       sw_h2:    { de: 'Software, gebaut von dieser Fabrik', en: 'Software, built by this factory' },
       sw:       { de: 'Erst ein klickbarer Prototyp, damit wir früh sehen, ob die Richtung stimmt. Dann die App, Open Source, auf deinem eigenen Server. Die Nachtschicht pflegt sie weiter, abhängig von mir bist du trotzdem nicht.', en: 'First a clickable prototype, so we see early whether the direction is right. Then the app, open source, on your own server. The night shift keeps maintaining it, and you still don\'t depend on me.' },
       sw_cta:   { de: 'Prototyp anfragen', en: 'Request a prototype' },
-      kurs_h2:  { de: 'Kurs: Mit KI-Agenten bauen', en: 'Course: building with AI agents' },
+      kurs_h2:  { de: 'Training: Mit KI-Agenten bauen', en: 'Training: building with AI agents' },
       kurs:     { de: 'Du oder dein Team lernt genau dieses Setup an echten Projekten: Regeln, die Agenten befolgen, Sperren für gefährliche Befehle, eine Nachtschicht und Review durch einen zweiten Agenten.', en: 'You or your team learn exactly this setup on real projects: rules agents follow, locks on dangerous commands, a night shift and review by a second agent.' },
-      kurs_cta: { de: 'Zum Kurs', en: 'See the course' },
+      kurs_cta: { de: 'Zum Training', en: 'See the training' },
       coaching: { de: 'Wenn sich deine Arbeit verändert, durch KI oder aus anderen Gründen: systemisches Coaching mit Elementen der Logotherapie, in Freiburg oder online. Das erste Gespräch dauert 20 Minuten und kostet nichts.', en: 'When your work is changing, through AI or for other reasons: systemic coaching with elements of logotherapy, in Freiburg or online. The first conversation takes 20 minutes and is free.' },
     },
     rules: {
@@ -372,7 +372,7 @@ const I18N = {
     w: {
       h2:        { de: 'Mit mir arbeiten', en: 'Work with me' },
       learn_h3:  { de: 'Lernen', en: 'Learn' },
-      learn:     { de: 'Kurs oder Workshop „Mit KI-Agenten bauen“: Du oder dein Team richtet dieses Setup an euren eigenen Projekten ein. Dazu Vorbereitung auf die Scrum.org-Zertifizierungen.', en: 'Course or workshop “Building with AI agents”: you or your team set up this system on your own projects. Plus preparation for the Scrum.org certifications.' },
+      learn:     { de: '1:1-Training oder Workshop „Mit KI-Agenten bauen“: Du oder dein Team richtet dieses Setup an euren eigenen Projekten ein. Dazu Vorbereitung auf die Scrum.org-Zertifizierungen.', en: '1:1 training or workshop “Building with AI agents”: you or your team set up this system on your own projects. Plus preparation for the Scrum.org certifications.' },
       learn_cta: { de: 'Workshop anfragen', en: 'Ask about a workshop' },
       build_h3:  { de: 'Bauen lassen', en: 'Have it built' },
       build:     { de: 'Prototyp, Web-App oder Automatisierung aus dieser Fabrik. Open Source, auf deinem eigenen Server.', en: 'Prototype, web app or automation from this factory. Open source, on your own server.' },
@@ -576,7 +576,7 @@ const I18N = {
     },
     kurse: {
       h2:    { de: 'Kurse im Überblick', en: 'Courses at a glance' },
-      agenten: { de: 'Ein eigenes Setup mit Claude Code oder Codex, vom Entwurf bis zum Betrieb auf dem eigenen Server. Nächster Kurs ab 3. November.', en: 'Your own setup with Claude Code or Codex, from the first draft to running on your own server. Next course starts 3 November.' },
+      agenten: { de: 'Ein eigenes Setup mit Claude Code oder Codex, vom Entwurf bis zum Betrieb auf dem eigenen Server. 1:1 oder für dein Team, Start nach Absprache.', en: 'Your own setup with Claude Code or Codex, from the first draft to running on your own server. 1:1 or for your team, start by arrangement.' },
       proto: { de: 'Ideen schnell greifbar machen und testen, bevor viel Geld in die Umsetzung fließt.', en: 'Make ideas tangible quickly and test them before a lot of money goes into building them.' },
       ki:    { de: 'KI als Werkzeug zum Verstehen, Üben und Schreiben, ohne das eigene Denken abzugeben.', en: 'AI as a tool for understanding, practising and writing, without handing over your own thinking.' },
       geld:  { de: 'Wie Geld entstanden ist, was gutes Geld ausmacht und welche Rolle Bitcoin dabei spielt.', en: 'How money came about, what makes good money and what role Bitcoin plays in it.' },
@@ -638,15 +638,16 @@ const I18N = {
 
   // ── kurs-agenten.html ─────────────────────────────────────────────────────
   kurs: {
-    back: { de: '← Alle Kurse', en: '← All courses' },
+    back: { de: '← Training', en: '← Training' },
     h1:   { de: 'Mit KI-Agenten bauen, ohne die Kontrolle abzugeben.', en: 'Build with AI agents without giving up control.' },
-    lead: { de: 'In vier Abenden richtest du dir ein Arbeits-Setup mit Claude Code oder Codex ein, mit dem du eigene Werkzeuge baust und selbst betreibst. Du lernst es an dem Setup, mit dem ich meine eigenen Projekte allein entwickle.', en: 'Over four evenings you set up a way of working with Claude Code or Codex that lets you build your own tools and run them yourself. You learn it from the setup I use to build my own projects on my own.' },
-    cta:  { de: 'Platz anfragen', en: 'Request a place' },
-    cta2: { de: 'Termine ansehen', en: 'See dates' },
+    lead: { de: 'In vier Schritten richtest du dir ein Arbeits-Setup mit Claude Code oder Codex ein, mit dem du eigene Werkzeuge baust und selbst betreibst. Du lernst es an dem Setup, mit dem ich meine eigenen Projekte allein entwickle, 1:1 an deinem Projekt oder als Workshop für dein Team.', en: 'In four steps you set up a way of working with Claude Code or Codex that lets you build your own tools and run them yourself. You learn it from the setup I use to build my own projects on my own, 1:1 on your project or as a workshop for your team.' },
+    cta:  { de: 'Vorgespräch anfragen', en: 'Request a first conversation' },
+    cta2: { de: 'Formate und Preise', en: 'Formats and prices' },
     facts: {
-      f1: { de: '4 Abende à 2,5 Stunden', en: '4 evenings of 2.5 hours' },
-      f2: { de: 'Online', en: 'Online' },
-      f3: { de: 'Höchstens 8 Personen', en: 'At most 8 people' },
+      f1: { de: '1:1 oder im Team', en: '1:1 or as a team' },
+      f2: { de: 'Online oder in Freiburg', en: 'Online or in Freiburg' },
+      f3: { de: 'Start nach Absprache', en: 'Start by arrangement' },
+      f4: { de: 'ab 690 €', en: 'from €690' },
     },
     problem: {
       h2: { de: 'Schnell gebaut, schnell verloren', en: 'Built fast, lost fast' },
@@ -658,8 +659,8 @@ const I18N = {
       d3: { de: 'Agenten bauen schnell, auch Fehler. Ohne Tests und Review merkst du es erst, wenn jemand anderes es merkt.', en: 'Agents build fast, bugs included. Without tests and review you only notice when someone else does.' },
     },
     ablauf: {
-      h2:    { de: 'Vier Abende, ein Setup', en: 'Four evenings, one setup' },
-      intro: { de: 'Jeder Abend baut auf dem vorigen auf. Zwischen den Abenden arbeitest du an deinem eigenen Vorhaben weiter, etwa zwei Stunden pro Woche.', en: 'Each evening builds on the one before. In between you keep working on your own project, about two hours a week.' },
+      h2:    { de: 'Vier Schritte, ein Setup', en: 'Four steps, one setup' },
+      intro: { de: 'Jeder Schritt baut auf dem vorigen auf. Zwischen den Sitzungen arbeitest du an deinem eigenen Vorhaben weiter, etwa zwei Stunden pro Woche.', en: 'Each step builds on the one before. Between sessions you keep working on your own project, about two hours a week.' },
       t1:    { de: 'Werkzeug einrichten', en: 'Set up the tool' },
       d1:    { de: 'Claude Code oder Codex im Terminal, ein erstes Projekt, und wie du Aufgaben so formulierst, dass der Agent sie versteht.', en: 'Claude Code or Codex in the terminal, a first project, and how to phrase tasks so the agent understands them.' },
       t2:    { de: 'Dem Agenten ein Gedächtnis geben', en: 'Give the agent a memory' },
@@ -685,9 +686,7 @@ const I18N = {
       source:   { de: 'Jede Nacht aktualisiert. Alle Projekte, das Logbuch und was nicht geklappt hat: <a href="werkstatt.html">in der Werkstatt</a>.', en: 'Updated every night. All projects, the logbook and what didn\'t work: <a href="werkstatt.html">on my workbench</a>.' },
     },
     termine: {
-      h2:          { de: 'Termine und Preis', en: 'Dates and price' },
-      group:       { de: 'Gruppenkurs online', en: 'Online group course' },
-      group_note:  { de: 'Dienstags 3., 10., 17. und 24. November 2026, 18:00 bis 20:30 Uhr. Höchstens 8 Personen.', en: 'Tuesdays 3, 10, 17 and 24 November 2026, 6 to 8:30 pm CET. At most 8 people.' },
+      h2:          { de: 'Formate und Preise', en: 'Formats and prices' },
       single:      { de: '1:1 an deinem Projekt', en: '1:1 on your project' },
       single_note: { de: 'Drei Sitzungen à 2 Stunden, online oder in Freiburg. Start nach Absprache, das Vorgespräch ist kostenlos.', en: 'Three sessions of 2 hours, online or in Freiburg. Start by arrangement, the first conversation is free.' },
       single_cta:  { de: 'Vorgespräch anfragen', en: 'Request a first conversation' },
@@ -705,7 +704,7 @@ const I18N = {
       no:  { de: 'Passt nicht, wenn du', en: 'Not a fit if you' },
       n1:  { de: 'ein Baukasten-Tool suchst, bei dem du nie Code siehst', en: 'are looking for a no-code builder where you never see code' },
       n2:  { de: 'an einem Wochenende ein fertiges Produkt erwartest', en: 'expect a finished product in a weekend' },
-      n3:  { de: 'keine zwei Stunden pro Woche zwischen den Abenden hast', en: 'don\'t have two hours a week between the evenings' },
+      n3:  { de: 'keine zwei Stunden pro Woche zwischen den Sitzungen hast', en: 'don\'t have two hours a week between sessions' },
     },
     faq: {
       h2: { de: 'Häufige Fragen', en: 'Frequently asked questions' },
@@ -714,15 +713,13 @@ const I18N = {
       q2: { de: 'Welche Kosten kommen dazu?', en: 'What other costs are there?' },
       a2: { de: 'Ein Abo für Claude Pro oder ChatGPT Plus, rund 20 € im Monat. Für den eigenen Server rechne mit etwa 5 € im Monat bei Hetzner. Alles andere ist Open Source.', en: 'A Claude Pro or ChatGPT Plus subscription, around 20 € a month. For your own server, expect about 5 € a month at Hetzner. Everything else is open source.' },
       q3: { de: 'Warum nicht Lovable, Bolt oder ein anderer Baukasten?', en: 'Why not Lovable, Bolt or another builder?' },
-      a3: { de: 'Weil dir dort weder der Code noch der Betrieb gehört. In diesem Kurs liegt beides bei dir, und du kannst jederzeit den Agenten oder den Anbieter wechseln.', en: 'Because there you own neither the code nor the hosting. In this course both stay with you, and you can switch agents or providers at any time.' },
+      a3: { de: 'Weil dir dort weder der Code noch der Betrieb gehört. Hier liegt beides bei dir, und du kannst jederzeit den Agenten oder den Anbieter wechseln.', en: 'Because there you own neither the code nor the hosting. Here both stay with you, and you can switch agents or providers at any time.' },
       q4: { de: 'Was passiert mit meinem Code?', en: 'What happens to my code?' },
-      a4: { de: 'Der Agent schickt die Dateien, an denen er arbeitet, an seinen Anbieter, also Anthropic oder OpenAI. Für vertrauliche Projekte zeige ich am zweiten Abend, wie du offene Modelle einsetzt und was sie heute können.', en: 'The agent sends the files it works on to its provider, Anthropic or OpenAI. For confidential projects I show you on the second evening how to use open models and what they can do today.' },
-      q5: { de: 'Was, wenn ich einen Abend verpasse?', en: 'What if I miss an evening?' },
-      a5: { de: 'Du bekommst die Unterlagen und eine halbe Stunde mit mir, um aufzuholen. Aufzeichnungen gibt es nicht, damit alle offen über ihre Projekte sprechen können.', en: 'You get the materials and half an hour with me to catch up. There are no recordings, so everyone can talk openly about their projects.' },
+      a4: { de: 'Der Agent schickt die Dateien, an denen er arbeitet, an seinen Anbieter, also Anthropic oder OpenAI. Für vertrauliche Projekte zeige ich im zweiten Schritt, wie du offene Modelle einsetzt und was sie heute können.', en: 'The agent sends the files it works on to its provider, Anthropic or OpenAI. For confidential projects I show you in the second step how to use open models and what they can do today.' },
     },
     final: {
       h2:   { de: 'Was willst du bauen?', en: 'What do you want to build?' },
-      text: { de: 'Erzähl mir kurz von deinem Vorhaben. Ich melde mich innerhalb von zwei Werktagen und sage dir ehrlich, ob der Kurs passt.', en: 'Tell me briefly about your project. I\'ll get back to you within two business days and tell you honestly whether the course is a fit.' },
+      text: { de: 'Erzähl mir kurz von deinem Vorhaben. Ich melde mich innerhalb von zwei Werktagen und sage dir ehrlich, ob das passt.', en: 'Tell me briefly about your project. I\'ll get back to you within two business days and tell you honestly whether it\'s a fit.' },
     },
   },
 
@@ -854,7 +851,7 @@ const I18N = {
       tagline: { de: 'Agentisches Arbeiten lernen.', en: 'Learn to work with agents.' },
       text:    { de: 'Training und Coaching für Menschen und Teams, die mit KI-Agenten bauen wollen: an echten Projekten, mit dem Setup, mit dem Pleasance selbst arbeitet.', en: 'Training and coaching for people and teams who want to build with AI agents: on real projects, with the setup Pleasance works with itself.' },
       kurs:    { de: 'Mit KI-Agenten bauen', en: 'Building with AI agents' },
-      kurs_d:  { de: 'Ein eigenes Setup mit Claude Code oder Codex, in der Gruppe oder 1:1 an deinem Projekt.', en: 'Your own setup with Claude Code or Codex, in a group or 1:1 on your project.' },
+      kurs_d:  { de: 'Ein eigenes Setup mit Claude Code oder Codex, 1:1 an deinem Projekt oder als Workshop für dein Team.', en: 'Your own setup with Claude Code or Codex, 1:1 on your project or as a workshop for your team.' },
       teams:   { de: 'AI-native Engineering für Produktteams', en: 'AI-native engineering for product teams' },
       teams_d: { de: 'Workshop an euren eigenen Repositories: Leitplanken, Review und Kennzahlen.', en: 'Workshop on your own repositories: guardrails, review and metrics.' },
     },
@@ -960,7 +957,7 @@ const I18N = {
       d2:   { de: 'Arbeitsweise, Technik und Grenzen stehen in Dateien, die jeder Agent zuerst liest. So beginnt keine Sitzung bei null.', en: 'Ways of working, stack and limits live in files every agent reads first. So no session starts from scratch.' },
       t3:   { de: 'Nichts geht ungeprüft raus.', en: 'Nothing ships unchecked.' },
       d3:   { de: 'Tests, Typprüfung und eine Zweitmeinung von einem zweiten Agenten laufen vor jedem Commit.', en: 'Tests, type checks and a second opinion from a second agent run before every commit.' },
-      kurs: { de: 'Das lernst du im Kurs „Mit KI-Agenten bauen“', en: 'Learn this in the course “Building with AI agents”' },
+      kurs: { de: 'Das zeige ich dir im Training „Mit KI-Agenten bauen“', en: 'Learn this in the training “Building with AI agents”' },
     },
     facts: {
       h2:        { de: 'Beipackzettel dieser Seite', en: 'The fine print of this page' },
@@ -1028,7 +1025,6 @@ const I18N = {
       topic_lehre:    { de: 'Training', en: 'Training' },
       course_label:   { de: 'Welcher Kurs?', en: 'Which course?' },
       course_open:    { de: 'Weiß ich noch nicht', en: 'Not sure yet' },
-      course_agenten: { de: 'Mit KI-Agenten bauen: Gruppenkurs ab 3. November', en: 'Building with AI agents: group course from 3 November' },
       course_einzel:  { de: 'Mit KI-Agenten bauen: 1:1 an meinem Projekt', en: 'Building with AI agents: 1:1 on my project' },
       course_team:    { de: 'Mit KI-Agenten bauen: für unser Team', en: 'Building with AI agents: for our team' },
       course_scrum:   { de: 'Scrum-Vorbereitung: PSM I, PSPO I oder PSK I', en: 'Scrum preparation: PSM I, PSPO I or PSK I' },
