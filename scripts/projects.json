@@ -46,7 +46,7 @@
       ]
     }
   },
-  "musicstreaming-connector": {
+  "songgate": {
     "name": "Songgate",
     "app": {
       "icon": "musiclink",
@@ -115,12 +115,6 @@
     "de": "Hält einen Ordner auf dem Rechner mit Music Hub synchron",
     "en": "Keeps a folder on your computer in sync with Music Hub",
     "stack": "Rust"
-  },
-  "pinna": {
-    "name": "Pinna",
-    "de": "Eine DAW für Agenten: Der Agent schlägt vor und misst, was er hört, du vergleichst per A/B und übernimmst",
-    "en": "An agent-native DAW: the agent proposes and measures what it hears, you A/B and accept",
-    "stack": "Rust, egui"
   },
   "isoglossa": {
     "name": "Isoglossa",
