@@ -63,12 +63,22 @@
           "href": "https://songgate.app",
           "de": "Songgate öffnen",
           "en": "Open Songgate"
+        },
+        {
+          "href": "https://apps.apple.com/app/id6819013473",
+          "de": "App Store",
+          "en": "App Store"
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=org.pleasance.songgate",
+          "de": "Google Play",
+          "en": "Google Play"
         }
       ]
     }
   },
   "doenerapp": {
-    "name": "Döner App",
+    "name": "Lieblingsdöner",
     "app": {
       "icon": "doener",
       "tagline": {
@@ -198,6 +208,13 @@
     "stack": "HTML, CSS, JavaScript",
     "url": "https://359records.de"
   },
+  "meterbolt": {
+    "name": "Meterbolt",
+    "de": "Plugin für BTCPay Server, das APIs per L402 mit Lightning bezahlbar macht. Steht noch am Anfang",
+    "en": "BTCPay Server plugin that lets APIs charge per request with Lightning via L402. Just getting started",
+    "stack": "C#, .NET, BTCPay Server, Lightning (L402)"
+  },
   "pleasance-thoughts": { "hidden": true },
-  "geldfluss": { "hidden": true }
+  "geldfluss": { "hidden": true },
+  "homebrew-tap": { "hidden": true }
 }

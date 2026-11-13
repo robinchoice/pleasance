@@ -54,12 +54,12 @@ const I18N_META = {
   },
   produkte: {
     title: {
-      de: 'Produkte: Freehold, Savor, Pinna, Academy und Labs — Pleasance',
-      en: 'Products: Freehold, Savor, Pinna, Academy and Labs — Pleasance',
+      de: 'Produkte: Freehold, Savor, Academy und Labs — Pleasance',
+      en: 'Products: Freehold, Savor, Academy and Labs — Pleasance',
     },
     desc: {
-      de: 'Pleasance ist die Dachmarke für Freehold, Savor, Pinna, die Academy und die Labs. Die Software ist Open Source und läuft auf dem eigenen Rechner oder Server.',
-      en: 'Pleasance is the umbrella brand for Freehold, Savor, Pinna, the Academy and the Labs. The software is open source and runs on your own computer or server.',
+      de: 'Pleasance ist die Dachmarke für Freehold, Savor, die Academy und die Labs. Die Software ist Open Source und läuft auf dem eigenen Rechner oder Server.',
+      en: 'Pleasance is the umbrella brand for Freehold, Savor, the Academy and the Labs. The software is open source and runs on your own computer or server.',
     },
   },
   apps: {
@@ -68,8 +68,8 @@ const I18N_META = {
       en: 'Apps: open source and self-hosted — Pleasance',
     },
     desc: {
-      de: 'Kleine Apps mit je einem Zweck, gebaut mit KI-Agenten und selbst betrieben: Savor, Music Hub, Songgate und die Döner App. Alle Open Source.',
-      en: 'Small apps, each with one job, built with AI agents and self-hosted: Savor, Music Hub, Songgate and the Döner App. All open source.',
+      de: 'Kleine Apps mit je einem Zweck, gebaut mit KI-Agenten und selbst betrieben: Savor, Music Hub, Songgate und Lieblingsdöner. Alle Open Source.',
+      en: 'Small apps, each with one job, built with AI agents and self-hosted: Savor, Music Hub, Songgate and Lieblingsdöner. All open source.',
     },
   },
   werkstatt: {
@@ -841,11 +841,6 @@ const I18N = {
       tagline: { de: 'Coding-Agents, die sich zurückmelden.', en: 'Coding agents that report back.' },
       text: { de: 'Die lokale Arbeitsumgebung für Claude Code, Codex und OpenCode: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows.', en: 'The local workspace for Claude Code, Codex and OpenCode: every task ends with one clear result, the questions that need you, and next steps. For Linux, macOS and Windows.' },
       link: { de: 'Mehr über Savor', en: 'More about Savor' },
-    },
-    pinna: {
-      tagline: { de: 'Agenten schlagen vor. Du hörst und entscheidest.', en: 'Agents propose. You listen and decide.' },
-      text: { de: 'Eine Audio-Workstation für Agenten: Der Agent schlägt Änderungen vor und misst, was er hört, du vergleichst per A/B und übernimmst. Der Song liegt als Textdatei in Git. Für Linux, macOS und Windows.', en: 'An audio workstation for agents: the agent proposes changes and measures what it hears, you compare by A/B and accept. The song lives as a text file in Git. For Linux, macOS and Windows.' },
-      link: { de: 'Herunterladen', en: 'Download' },
     },
     academy: {
       tagline: { de: 'Agentisches Arbeiten lernen.', en: 'Learn to work with agents.' },
