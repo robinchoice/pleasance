@@ -171,7 +171,7 @@ const apps = Object.entries(projects).filter(([, p]) => p.app).flatMap(([repo, {
     '  <div>',
     `    <p class="app__text" data-en="${escHtml(app.text.en)}">${escHtml(app.text.de)}</p>`,
     '    <div class="app__links">',
-    ...app.links.map((l, i) => `      <a class="btn${i ? ' btn--ghost' : ''}" href="${escHtml(l.href)}" data-en="${escHtml(l.en)}">${escHtml(l.de)}</a>`),
+    ...app.links.map((l, i) => `      <a class="btn${i ? ' btn--ghost' : ''}" href="${escHtml(l.href)}" data-en="${escHtml(l.en ?? l.de)}">${escHtml(l.de)}</a>`),
     `      <a href="https://github.com/${OWNER}/${repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
     '    </div>',
     '    <div class="shots">',

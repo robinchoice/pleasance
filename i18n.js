@@ -689,7 +689,6 @@ const I18N = {
       h2:          { de: 'Formate und Preise', en: 'Formats and prices' },
       single:      { de: '1:1 an deinem Projekt', en: '1:1 on your project' },
       single_note: { de: 'Drei Sitzungen à 2 Stunden, online oder in Freiburg. Start nach Absprache, das Vorgespräch ist kostenlos.', en: 'Three sessions of 2 hours, online or in Freiburg. Start by arrangement, the first conversation is free.' },
-      single_cta:  { de: 'Vorgespräch anfragen', en: 'Request a first conversation' },
       team:        { de: 'Für Teams', en: 'For teams' },
       team_price:  { de: 'ab 1.200 €', en: 'from €1,200' },
       team_note:   { de: 'Vor Ort im DACH-Raum oder online, angepasst an euren Stack und eure Regeln.', en: 'On site in Germany, Austria and Switzerland or online, adapted to your stack and your rules.' },
