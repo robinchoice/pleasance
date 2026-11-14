@@ -139,7 +139,8 @@ app.post('/contact', async (c) => {
     })
   } catch (error) {
     // Only mails that left count: an SMTP outage must not lock the form for an hour.
-    mailsThisHour--
+    // Math.max: the hourly reset may have run while this mail was pending.
+    mailsThisHour = Math.max(0, mailsThisHour - 1)
     console.error('SMTP error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 500)
@@ -248,6 +249,7 @@ app.post('/savor/feedback', async (c) => {
   const titleChars = Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(firstLine), ({ segment }) => segment)
   const title = titleChars.length > 70 ? `${titleChars.slice(0, 69).join('')}…` : firstLine
   const sections = [message]
+  let committed = false
 
   try {
     if (image) {
@@ -257,6 +259,7 @@ app.post('/savor/feedback', async (c) => {
         content: image.content,
         branch:  'main',
       })
+      committed = true
       sections.push(`![Screenshot](https://github.com/${FEEDBACK_REPO}/blob/main/${path}?raw=true)`)
     }
 
@@ -274,8 +277,9 @@ app.post('/savor/feedback', async (c) => {
       labels: ['bug', 'feedback'],
     })
   } catch (error) {
-    // Failed sends must not use up the hourly cap during a GitHub outage.
-    feedbackThisHour--
+    // Failed sends must not use up the hourly cap during a GitHub outage,
+    // unless a screenshot already landed in the repo.
+    if (!committed) feedbackThisHour = Math.max(0, feedbackThisHour - 1)
     console.error('GitHub error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 502)
