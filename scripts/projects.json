@@ -51,11 +51,11 @@
     "app": {
       "icon": "musiclink",
       "tagline": {
-        "de": "Ein Link. Jeder hört im eigenen Dienst.",
+        "de": "Ein Link. Alle hören im eigenen Dienst.",
         "en": "One link. Everyone listens in their own service."
       },
       "text": {
-        "de": "Füg einen Link zu Song, Album oder Podcast ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, Freunde und Gruppen bleiben auf deinem Gerät.",
+        "de": "Füg einen Link zu Song, Album oder Podcast ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, Kontakte und Gruppen bleiben auf deinem Gerät.",
         "en": "Paste a link to a song, album or podcast and Songgate finds it on Spotify, Apple Music, YouTube Music, Deezer and TIDAL. No account, friends and groups stay on your device."
       },
       "links": [
@@ -146,7 +146,7 @@
   },
   "gigpost": {
     "name": "gigpost",
-    "de": "Booking für Künstler: Agenten bereiten Anfragen an Clubs und Festivals vor, ich verschicke sie",
+    "de": "Booking für Bands und Acts: Agenten bereiten Anfragen an Clubs und Festivals vor, ich verschicke sie",
     "en": "Booking for artists: agents draft requests to clubs and festivals, I send them",
     "stack": "SvelteKit, Hono, Postgres",
     "url": "https://gigpost.pleasance.org"

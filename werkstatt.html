@@ -63,10 +63,10 @@
         <div>
           <div class="stats">
             <div class="stat"><b data-gh="projects">26</b><span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></div>
-            <div class="stat"><b data-gh="commits">884</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
+            <div class="stat"><b data-gh="commits">886</b><span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></div>
             <div class="stat"><b data-gh="agent">72&nbsp;%</b><span data-i18n="werkstatt.zahlen.agent">davon mit einem KI-Agenten als Co-Autor</span></div>
           </div>
-          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-11-15T07:54:30.636Z">15.11.2026, 08:54</time></p>
+          <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-11-15T23:11:51.466Z">16.11.2026, 00:11</time></p>
         </div>
       </section>
 
@@ -98,7 +98,7 @@
             <button type="button" class="tool" id="fieldtest" aria-expanded="false" aria-controls="tool-fieldtest">
               <img src="img/werkzeuge/fieldtest.svg" alt="" width="112" height="112">
               <span class="tool__name">Fieldtest</span>
-              <span class="tool__desc" data-i18n="werkstatt.projekte.fieldtest">Tester für Prototypen, belohnt in Sats</span>
+              <span class="tool__desc" data-i18n="werkstatt.projekte.fieldtest">Menschen, die Prototypen testen, belohnt in Sats</span>
               <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
             </button>
             <button type="button" class="tool" id="musiclink" aria-expanded="false" aria-controls="tool-musiclink">
@@ -128,7 +128,7 @@
             <div class="tool-panel" id="tool-fahrbar" style="--line: linear-gradient(90deg, #F2545B, #F45E57, #F56853)" hidden>
               <div class="tool-panel__head">
                 <img src="img/werkzeuge/fahrbar.svg" alt="" width="56" height="56">
-                <div><h3>fahrbar</h3><p data-i18n="werkstatt.wall.fahrbar">Eine geprüfte Fahrerin oder ein geprüfter Fahrer kommt zu dir und fährt dich in deinem eigenen Auto nach Hause. Eine offene Plattform für Fahrdienste.</p></div>
+                <div><h3>fahrbar</h3><p data-i18n="werkstatt.wall.fahrbar">Eine geprüfte Person kommt zu dir und fährt dich in deinem eigenen Auto nach Hause. Eine offene Plattform für Fahrdienste.</p></div>
               </div>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="fahrbar.last" datetime="2026-10-27">27.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Supabase, OpenStreetMap</dd></div>
@@ -148,7 +148,7 @@
             <div class="tool-panel" id="tool-doener" style="--line: linear-gradient(90deg, #F6A94A, #F3BA4D, #D7C45B)" hidden>
               <div class="tool-panel__head">
                 <img src="img/werkzeuge/doener.svg" alt="" width="56" height="56">
-                <div><h3>Lieblingsdöner</h3><p data-i18n="werkstatt.wall.doener">Wer in der Nähe Döner isst, bewertet Soße, Fleisch und Brot. Daraus entsteht das Ranking der Stadt. Freunde verbinden sich per QR-Code.</p></div>
+                <div><h3>Lieblingsdöner</h3><p data-i18n="werkstatt.wall.doener">Wer in der Nähe Döner isst, bewertet Soße, Fleisch und Brot. Daraus entsteht das Ranking der Stadt. Wer sich kennt, verbindet sich per QR-Code.</p></div>
               </div>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="doenerapp.last" datetime="2026-11-14">14.11.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Flutter, Dart, Postgres</dd></div>
@@ -158,7 +158,7 @@
             <div class="tool-panel" id="tool-fieldtest" style="--line: linear-gradient(90deg, #D7C45B, #ACC870, #80CD84)" hidden>
               <div class="tool-panel__head">
                 <img src="img/werkzeuge/fieldtest.svg" alt="" width="56" height="56">
-                <div><h3>Fieldtest</h3><p data-i18n="werkstatt.wall.fieldtest">Eingeladene Tester sehen im Prototyp ein Overlay, bekommen für aktive Zeit und erreichte Ziele sofort Sats und hinterlassen Feedback genau an der Stelle in der App.</p></div>
+                <div><h3>Fieldtest</h3><p data-i18n="werkstatt.wall.fieldtest">Wer zum Testen eingeladen ist, sieht im Prototyp ein Overlay, bekommt für aktive Zeit und erreichte Ziele sofort Sats und hinterlässt Feedback genau an der Stelle in der App.</p></div>
               </div>
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="fieldtest.last" datetime="2026-10-28">28.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Postgres, Nostr Wallet Connect</dd></div>
@@ -203,7 +203,7 @@
               <form class="form tool-form" id="newForm">
                 <div class="field">
                   <label for="newMessage" data-i18n="werkstatt.wall.message_label">Was soll dein Werkzeug können?</label>
-                  <textarea id="newMessage" name="message" rows="4" maxlength="4800" required data-i18n-placeholder="werkstatt.wall.message_placeholder" placeholder="Zum Beispiel: Unsere Kundinnen buchen Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten."></textarea>
+                  <textarea id="newMessage" name="message" rows="4" maxlength="4800" required data-i18n-placeholder="werkstatt.wall.message_placeholder" placeholder="Zum Beispiel: Unsere Kundschaft bucht Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten."></textarea>
                 </div>
                 <div class="form__row">
                   <div class="field">
@@ -273,6 +273,17 @@
             </details>
             <details>
               <summary>
+                <span><span class="project__name">Music Hub Sync</span><span class="project__desc" data-en="Keeps a folder on your computer in sync with Music Hub">Hält einen Ordner auf dem Rechner mit Music Hub synchron</span></span>
+                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
+                <span class="commits"><b data-gh="musichub-sync.commits">28</b> Commits, <b data-gh="musichub-sync.agent">17</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musichub-sync" style="width: 18.9%"></i></span>
+              </summary>
+              <dl class="project__more">
+                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musichub-sync.last" datetime="2026-11-16">16.11.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Rust</dd></div>
+                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/musichub-sync" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
+              </dl>
+            </details>
+            <details>
+              <summary>
                 <span><span class="project__name">findyourlogic</span><span class="project__desc" data-en="Existing groups find each other and talk in small rounds with fixed rules">Gruppen, die es schon gibt, finden einander und reden in kleinen Runden nach festen Spielregeln</span></span>
                 <span class="status" data-i18n="werkstatt.status.live">Live</span>
                 <span class="commits"><b data-gh="findyourlogic.commits">27</b> Commits, <b data-gh="findyourlogic.agent">14</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="findyourlogic" style="width: 18.2%"></i></span>
@@ -280,17 +291,6 @@
               <dl class="project__more">
                 <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="findyourlogic.last" datetime="2026-10-28">28.10.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>SvelteKit, Hono, Postgres, Nostr</dd></div>
                 <div><dt>Links</dt><dd><a href="https://findyourlogic.pleasance.org">findyourlogic.pleasance.org</a> · <a href="https://github.com/robinchoice/findyourlogic" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
-              </dl>
-            </details>
-            <details>
-              <summary>
-                <span><span class="project__name">Music Hub Sync</span><span class="project__desc" data-en="Keeps a folder on your computer in sync with Music Hub">Hält einen Ordner auf dem Rechner mit Music Hub synchron</span></span>
-                <span class="status status--work" data-i18n="werkstatt.status.work">In Arbeit</span>
-                <span class="commits"><b data-gh="musichub-sync.commits">26</b> Commits, <b data-gh="musichub-sync.agent">15</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="musichub-sync" style="width: 17.6%"></i></span>
-              </summary>
-              <dl class="project__more">
-                <div><dt data-i18n="werkstatt.projekte.last">Zuletzt geändert</dt><dd><time data-gh="musichub-sync.last" datetime="2026-11-14">14.11.</time></dd><dt data-i18n="werkstatt.projekte.stack">Technik</dt><dd>Rust</dd></div>
-                <div><dt>Links</dt><dd><a href="https://github.com/robinchoice/musichub-sync" data-i18n="home.facts.code_t">Quellcode</a></dd></div>
               </dl>
             </details>
             <details>
@@ -350,7 +350,7 @@
             </details>
             <details>
               <summary>
-                <span><span class="project__name">gigpost</span><span class="project__desc" data-en="Booking for artists: agents draft requests to clubs and festivals, I send them">Booking für Künstler: Agenten bereiten Anfragen an Clubs und Festivals vor, ich verschicke sie</span></span>
+                <span><span class="project__name">gigpost</span><span class="project__desc" data-en="Booking for artists: agents draft requests to clubs and festivals, I send them">Booking für Bands und Acts: Agenten bereiten Anfragen an Clubs und Festivals vor, ich verschicke sie</span></span>
                 <span class="status" data-i18n="werkstatt.status.live">Live</span>
                 <span class="commits"><b data-gh="gigpost.commits">6</b> Commits, <b data-gh="gigpost.agent">5</b> <span data-i18n="werkstatt.projekte.agent">mit Agent</span><i data-gh-bar="gigpost" style="width: 4.1%"></i></span>
               </summary>
