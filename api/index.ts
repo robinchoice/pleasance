@@ -58,7 +58,11 @@ setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
 
 const MAX_MAILS_PER_HOUR = 20
 let mailsThisHour = 0
-setInterval(() => { mailsThisHour = 0 }, 60 * 60 * 1000)
+let mailWindow = 0
+setInterval(() => {
+  mailsThisHour = 0
+  mailWindow++
+}, 60 * 60 * 1000)
 
 const TOPIC_LABELS: Record<string, string> = {
   software: 'Software',
@@ -128,6 +132,7 @@ app.post('/contact', async (c) => {
   const topicLabel = TOPIC_LABELS[topic]
   // Count before sending so concurrent requests cannot overshoot the cap.
   mailsThisHour++
+  const countedIn = mailWindow
 
   try {
     await mailer.sendMail({
@@ -139,8 +144,8 @@ app.post('/contact', async (c) => {
     })
   } catch (error) {
     // Only mails that left count: an SMTP outage must not lock the form for an hour.
-    // Math.max: the hourly reset may have run while this mail was pending.
-    mailsThisHour = Math.max(0, mailsThisHour - 1)
+    // Skip if the hourly reset ran meanwhile: the new window never counted this mail.
+    if (countedIn === mailWindow) mailsThisHour--
     console.error('SMTP error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 500)
@@ -157,9 +162,11 @@ const MAX_FEEDBACK_PER_IP = 5
 const MAX_FEEDBACK_PER_HOUR = 30
 const feedbackPerIp = new Map<string, number>()
 let feedbackThisHour = 0
+let feedbackWindow = 0
 setInterval(() => {
   feedbackPerIp.clear()
   feedbackThisHour = 0
+  feedbackWindow++
 }, 60 * 60 * 1000)
 
 const tableCell = (value: string) => value.replace(/\|/g, '\\|').replace(/\r?\n/g, ' ')
@@ -244,6 +251,7 @@ app.post('/savor/feedback', async (c) => {
     return c.json({ error: 'Too many requests' }, 429)
   }
   feedbackThisHour++
+  const countedIn = feedbackWindow
 
   const firstLine = message.split('\n')[0].trim()
   const titleChars = Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(firstLine), ({ segment }) => segment)
@@ -278,8 +286,8 @@ app.post('/savor/feedback', async (c) => {
     })
   } catch (error) {
     // Failed sends must not use up the hourly cap during a GitHub outage,
-    // unless a screenshot already landed in the repo.
-    if (!committed) feedbackThisHour = Math.max(0, feedbackThisHour - 1)
+    // unless a screenshot already landed in the repo or the hourly reset ran meanwhile.
+    if (!committed && countedIn === feedbackWindow) feedbackThisHour--
     console.error('GitHub error:', error)
     Sentry.captureException(error)
     return c.json({ error: 'Send failed' }, 502)
