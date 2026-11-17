@@ -45,7 +45,7 @@ function applyLanguage(lang) {
     });
   });
 
-  formatDates();
+  formatDates(lang);
 
   // Update page title + meta description
   const meta = I18N_META[document.body.dataset.page];
@@ -62,8 +62,8 @@ function applyLanguage(lang) {
 
 // ── Dates ──────────────────────────────────────────────────────────────────
 // Dates written by the werkstatt action, shown in the page language
-function formatDates() {
-  const en = document.documentElement.lang === 'en';
+function formatDates(lang) {
+  const en = lang === 'en';
   const locale = en ? 'en-GB' : 'de-DE';
   document.querySelectorAll('time[datetime]').forEach(t => {
     const value = t.getAttribute('datetime');

@@ -24,14 +24,15 @@ const headers = {
   Accept: 'application/vnd.github+json',
 }
 
-async function api(path, accept) {
+async function api(path, { accept, emptyOn409 } = {}) {
   const res = await fetch(`https://api.github.com/${path}`, { headers: accept ? { ...headers, Accept: accept } : headers })
-  if (res.status === 409 && !accept) return []
+  // Commit lists of empty repositories answer 409
+  if (res.status === 409 && emptyOn409) return []
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`)
   return accept ? res.text() : res.json()
 }
-const get = (path) => api(`repos/${OWNER}/${path}`)
-const chronik = (file) => api(`repos/${OWNER}/chronik/contents/${file}`, 'application/vnd.github.raw+json')
+const get = (path) => api(`repos/${OWNER}/${path}`, { emptyOn409: true })
+const chronik = (file) => api(`repos/${OWNER}/chronik/contents/${file}`, { accept: 'application/vnd.github.raw+json' })
 
 async function commitsSince(repo) {
   const commits = []
