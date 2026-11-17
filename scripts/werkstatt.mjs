@@ -26,7 +26,7 @@ const headers = {
 
 async function api(path, accept) {
   const res = await fetch(`https://api.github.com/${path}`, { headers: accept ? { ...headers, Accept: accept } : headers })
-  if (res.status === 409) return []
+  if (res.status === 409 && !accept) return []
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`)
   return accept ? res.text() : res.json()
 }
