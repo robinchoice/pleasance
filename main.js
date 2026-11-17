@@ -1,8 +1,5 @@
 'use strict';
 
-// ── State ──────────────────────────────────────────────────────────────────
-let currentLang = 'de';
-
 // ── i18n ───────────────────────────────────────────────────────────────────
 function getI18nValue(key) {
   return key.split('.').reduce((obj, part) => (obj == null ? obj : obj[part]), I18N);
@@ -10,17 +7,16 @@ function getI18nValue(key) {
 
 function translate(el, key) {
   el.dataset.i18n = key;
-  const val = getI18nValue(key);
-  if (!val || !val[currentLang]) return;
-  if (/<[a-z][\s\S]*>/i.test(val[currentLang])) {
-    el.innerHTML = val[currentLang];
+  const val = getI18nValue(key)?.[document.documentElement.lang];
+  if (!val) return;
+  if (/<[a-z][\s\S]*>/i.test(val)) {
+    el.innerHTML = val;
   } else {
-    el.textContent = val[currentLang];
+    el.textContent = val;
   }
 }
 
 function applyLanguage(lang) {
-  currentLang = lang;
   document.documentElement.lang = lang;
   localStorage.setItem('pleasance-lang', lang);
 
@@ -41,16 +37,12 @@ function applyLanguage(lang) {
     img.parentElement.setAttribute('href', src);
   });
 
-  // Translate placeholder attributes
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const val = getI18nValue(el.dataset.i18nPlaceholder);
-    if (val && val[lang]) el.placeholder = val[lang];
-  });
-
-  // Translate aria-label attributes
-  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
-    const val = getI18nValue(el.dataset.i18nAriaLabel);
-    if (val && val[lang]) el.setAttribute('aria-label', val[lang]);
+  // Translate placeholder and aria-label attributes
+  ['placeholder', 'aria-label'].forEach(attr => {
+    document.querySelectorAll(`[data-i18n-${attr}]`).forEach(el => {
+      const val = getI18nValue(el.getAttribute(`data-i18n-${attr}`))?.[lang];
+      if (val) el.setAttribute(attr, val);
+    });
   });
 
   formatDates();
@@ -71,7 +63,7 @@ function applyLanguage(lang) {
 // ── Dates ──────────────────────────────────────────────────────────────────
 // Dates written by the werkstatt action, shown in the page language
 function formatDates() {
-  const en = currentLang === 'en';
+  const en = document.documentElement.lang === 'en';
   const locale = en ? 'en-GB' : 'de-DE';
   document.querySelectorAll('time[datetime]').forEach(t => {
     const value = t.getAttribute('datetime');
@@ -137,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('pleasance-lang') || 'de';
   if (savedLang !== 'de') applyLanguage(savedLang);
   document.getElementById('langToggle').addEventListener('click', () => {
-    applyLanguage(currentLang === 'de' ? 'en' : 'de');
+    applyLanguage(document.documentElement.lang === 'de' ? 'en' : 'de');
   });
   initTheme();
   initNav();

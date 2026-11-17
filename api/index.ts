@@ -169,6 +169,7 @@ setInterval(() => {
   feedbackWindow++
 }, 60 * 60 * 1000)
 
+const graphemes = new Intl.Segmenter(undefined, { granularity: 'grapheme' })
 const tableCell = (value: string) => value.replace(/\|/g, '\\|').replace(/\r?\n/g, ' ')
 
 const isContext = (value: unknown): value is [string, string][] =>
@@ -225,7 +226,7 @@ app.post('/savor/feedback', async (c) => {
   const { text, context, screenshot } = body
 
   const message = typeof text === 'string' ? text.trim() : ''
-  if (typeof text !== 'string' || !message || message.length > 4000) {
+  if (!message || message.length > 4000) {
     return c.json({ error: 'Invalid text' }, 400)
   }
 
@@ -254,7 +255,7 @@ app.post('/savor/feedback', async (c) => {
   const countedIn = feedbackWindow
 
   const firstLine = message.split('\n')[0].trim()
-  const titleChars = Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(firstLine), ({ segment }) => segment)
+  const titleChars = Array.from(graphemes.segment(firstLine), ({ segment }) => segment)
   const title = titleChars.length > 70 ? `${titleChars.slice(0, 69).join('')}…` : firstLine
   const sections = [message]
   let committed = false

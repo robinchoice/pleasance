@@ -114,10 +114,10 @@ const max = Math.max(...stats.map((s) => s.commits))
 const width = (s) => (max ? Math.round((s.commits / max) * 1000) / 10 : 0)
 const now = new Date().toISOString()
 
-const STATUS = { live: 'Live', test: 'Testphase', work: 'In Arbeit', quiet: 'Ruht' }
+const STATUS = { live: 'Live', work: 'In Arbeit', quiet: 'Ruht' }
 const projectList = stats.slice(wall.length).sort((a, b) => b.commits - a.commits).flatMap((s) => {
   const p = projects[s.repo] ?? {}
-  const status = p.status ?? (p.url ? 'live' : s.commits ? 'work' : 'quiet')
+  const status = p.url ? 'live' : s.commits ? 'work' : 'quiet'
   const links = [
     p.url && `<a href="${escHtml(p.url)}">${escHtml(new URL(p.url).host)}</a>`,
     `<a href="https://github.com/${OWNER}/${s.repo}" data-i18n="home.facts.code_t">Quellcode</a>`,
