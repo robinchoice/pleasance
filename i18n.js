@@ -837,7 +837,7 @@ const I18N = {
       text: { de: 'Freehold ist noch in Arbeit. Wenn ihr es für euren Betrieb im Blick behalten wollt, schreibt uns.', en: 'Freehold is still in progress. If you want to keep an eye on it for your business, write to us.' },
     },
     savor: {
-      tagline: { de: 'Coding-Agents, die sich zurückmelden.', en: 'Coding agents that report back.' },
+      tagline: { de: 'Deine Coding-Agents. Auf deinem Rechner.', en: 'Your coding agents. On your own machine.' },
       text: { de: 'Die lokale Arbeitsumgebung für Claude Code, Codex und OpenCode: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows.', en: 'The local workspace for Claude Code, Codex and OpenCode: every task ends with one clear result, the questions that need you, and next steps. For Linux, macOS and Windows.' },
       link: { de: 'Mehr über Savor', en: 'More about Savor' },
     },
@@ -921,7 +921,7 @@ const I18N = {
       others:      { de: 'Außerdem in Arbeit', en: 'Also in progress' },
       fahrbar:     { de: 'Eine geprüfte Person kommt zu dir und fährt dich in deinem eigenen Auto nach Hause. Eine offene Plattform für Fahrdienste.', en: 'A vetted driver comes to you and drives you home in your own car. An open platform for driver services.' },
       musichub:    { de: 'Versionsverwaltung für Musikproduktionen. Jede Fassung eines Tracks an einem Ort, kein final_v2_WIRKLICH_FINAL.wav mehr.', en: 'Version control for music productions. Every take of a track in one place, no more final_v2_REALLY_FINAL.wav.' },
-      doener:      { de: 'Wer in der Nähe Döner isst, bewertet Soße, Fleisch und Brot. Daraus entsteht das Ranking der Stadt. Wer sich kennt, verbindet sich per QR-Code.', en: 'People who eat döner nearby rate the sauce, meat and bread. That makes the city\'s ranking. Friends connect via QR code.' },
+      doener:      { de: 'Wer in der Nähe Döner isst, bewertet Soße, Fleisch, Salat und Brot. Daraus entsteht das Ranking der Stadt. Wer sich kennt, verbindet sich per QR-Code.', en: 'People who eat döner nearby rate the sauce, meat, salad and bread. That makes the city\'s ranking. Friends connect via QR code.' },
       musiclink:   { de: 'Ein Link für einen Song, der bei allen im eigenen Streamingdienst aufgeht.', en: 'One link for a song that opens in everyone\'s own streaming service.' },
       docpilot:    { de: 'Bei jedem Push liest docpilot die Änderungen und schlägt per Pull Request die passende Aktualisierung der README vor.', en: 'On every push, docpilot reads the changes and suggests the matching README update as a pull request.' },
       fieldtest:   { de: 'Wer zum Testen eingeladen ist, sieht im Prototyp ein Overlay, bekommt für aktive Zeit und erreichte Ziele sofort Sats und hinterlässt Feedback genau an der Stelle in der App.', en: 'Invited testers see an overlay in the prototype, get sats right away for active time and reached goals, and leave feedback right at the spot in the app.' },

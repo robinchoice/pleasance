@@ -4,8 +4,8 @@
     "app": {
       "icon": "savor",
       "tagline": {
-        "de": "Coding-Agents, die sich zurückmelden.",
-        "en": "Coding agents that report back."
+        "de": "Deine Coding-Agents. Auf deinem Rechner.",
+        "en": "Your coding agents. On your own machine."
       },
       "text": {
         "de": "Ein Arbeitsplatz für Claude Code, Codex und OpenCode auf dem eigenen Rechner: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows, die App fürs Handy ist im Test.",
@@ -51,8 +51,8 @@
     "app": {
       "icon": "musiclink",
       "tagline": {
-        "de": "Ein Link. Alle hören im eigenen Dienst.",
-        "en": "One link. Everyone listens in their own service."
+        "de": "Musik teilen, egal wer was hört.",
+        "en": "Share music, whatever they listen on."
       },
       "text": {
         "de": "Füg einen Link zu Song, Album oder Podcast ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, Kontakte und Gruppen bleiben auf deinem Gerät.",
@@ -129,6 +129,12 @@
     "de": "Hält einen Ordner auf dem Rechner mit Music Hub synchron",
     "en": "Keeps a folder on your computer in sync with Music Hub",
     "stack": "Rust"
+  },
+  "strategyradar": {
+    "name": "Strategy Radar",
+    "de": "Ein KI-Agent, der öffentliche Marktsignale zu wöchentlichen Briefings mit Quellenangaben verdichtet",
+    "en": "An AI agent that turns public market signals into weekly briefings with citations",
+    "stack": "Python, LangGraph, Azure"
   },
   "isoglossa": {
     "name": "Isoglossa",
