@@ -1118,14 +1118,14 @@ const I18N = {
     preis: {
       h2: { de: 'Format und Preis', en: 'Format and price' },
       t1: { de: 'Analyse und Workshop', en: 'Analysis and workshop' },
-      p1: { de: 'Preis folgt', en: 'Price to follow' },
+      p1: { de: '1.800 €', en: '€1,800' },
       n1: { de: 'Gespräche mit den Beteiligten, ein Workshop mit eurem Team und ein schriftlicher Plan.', en: 'Conversations with the people involved, a workshop with your team and a written plan.' },
       t2: { de: 'Umsetzung', en: 'Implementation' },
-      p2: { de: 'Preis folgt', en: 'Price to follow' },
+      p2: { de: 'ab 4.500 €', en: 'from €4,500' },
       n2: { de: 'Festpreis pro Projekt, abhängig von Zahl und Umfang der Abläufe. Ihr kennt ihn, bevor ich anfange.', en: 'Fixed price per project, depending on the number and scope of workflows. You know it before I start.' },
       t3: { de: 'Betreuung', en: 'Ongoing care' },
-      p3: { de: 'Preis folgt', en: 'Price to follow' },
-      n3: { de: 'Fester Monatspreis für Betrieb, Pflege, Updates der Agenten und den Monatsbericht.', en: 'Fixed monthly price for operations, maintenance, agent updates and the monthly report.' },
+      p3: { de: 'ab 450 € im Monat', en: 'from €450 a month' },
+      n3: { de: 'Fester Monatspreis für Betrieb, Pflege, Updates der Agenten und den Monatsbericht, zuzüglich der Kosten für euren Server.', en: 'Fixed monthly price for operations, maintenance, agent updates and the monthly report, plus the cost of your server.' },
       note: { de: 'Bezahlen könnt ihr per Überweisung oder in Bitcoin, auch über Lightning. Vor Ort im DACH-Raum zuzüglich Reisekosten, online ohne. Das Erstgespräch ist kostenlos.', en: 'You can pay by bank transfer or in bitcoin, including Lightning. On site in the DACH region plus travel costs, online without. The first call is free.' },
     },
     faq: {
