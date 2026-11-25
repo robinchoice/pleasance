@@ -52,6 +52,9 @@ const ALLOWED_ORIGINS = [
 const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/
 const isAllowedOrigin = (origin: string) => ALLOWED_ORIGINS.includes(origin) || LOCAL_ORIGIN.test(origin)
 
+// Traefik appends the address it saw to X-Forwarded-For, earlier entries come from the client.
+const clientIp = (header: string | undefined) => header?.split(',').at(-1)?.trim() || 'unknown'
+
 const MAX_REQUESTS = 5
 const requestsPerIp = new Map<string, number>()
 setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
@@ -84,7 +87,7 @@ app.post('/contact', async (c) => {
     return c.json({ error: 'Forbidden' }, 403)
   }
 
-  const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+  const ip = clientIp(c.req.header('x-forwarded-for'))
   const count = (requestsPerIp.get(ip) ?? 0) + 1
   requestsPerIp.set(ip, count)
   if (count > MAX_REQUESTS) {
@@ -204,7 +207,7 @@ app.post('/savor/feedback', async (c) => {
     return c.json({ error: 'Unsupported content type' }, 415)
   }
 
-  const ip = c.req.header('x-forwarded-for')?.split(',')[0].trim() ?? 'unknown'
+  const ip = clientIp(c.req.header('x-forwarded-for'))
   const count = (feedbackPerIp.get(ip) ?? 0) + 1
   feedbackPerIp.set(ip, count)
   if (count > MAX_FEEDBACK_PER_IP) {
