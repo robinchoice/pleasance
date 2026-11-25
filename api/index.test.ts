@@ -56,6 +56,12 @@ describe('/contact', () => {
     for (let i = 0; i < 5; i++) expect((await json('/contact', { _honey: 'x' }, ip)).status).toBe(200)
     expect((await json('/contact', { _honey: 'x' }, ip)).status).toBe(429)
   })
+
+  test('keys the limit on the proxy-appended address, not client-supplied ones', async () => {
+    const request = (i: number) => json('/contact', { _honey: 'x' }, { ...origin, 'X-Forwarded-For': `1.2.3.${i}, 10.1.0.2` })
+    for (let i = 0; i < 5; i++) expect((await request(i)).status).toBe(200)
+    expect((await request(5)).status).toBe(429)
+  })
 })
 
 describe('/savor/feedback', () => {
