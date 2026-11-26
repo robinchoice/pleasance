@@ -23,29 +23,13 @@ function applyLanguage(lang) {
   // Translate all [data-i18n] elements
   document.querySelectorAll('[data-i18n]').forEach(el => translate(el, el.dataset.i18n));
 
-  // Texts written by the werkstatt action carry their English version in data-en
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.dataset.de ??= el.textContent;
-    el.textContent = el.dataset[lang];
-  });
-
-  // App screenshots with an English version (apps.html)
+  // App screenshots with an English version
   document.querySelectorAll('img[data-en-src]').forEach(img => {
     img.dataset.deSrc ??= img.getAttribute('src');
     const src = lang === 'en' ? img.dataset.enSrc : img.dataset.deSrc;
     img.setAttribute('src', src);
     img.parentElement.setAttribute('href', src);
   });
-
-  // Translate placeholder and aria-label attributes
-  ['placeholder', 'aria-label'].forEach(attr => {
-    document.querySelectorAll(`[data-i18n-${attr}]`).forEach(el => {
-      const val = getI18nValue(el.getAttribute(`data-i18n-${attr}`))?.[lang];
-      if (val) el.setAttribute(attr, val);
-    });
-  });
-
-  formatDates(lang);
 
   // Update page title + meta description
   const meta = I18N_META[document.body.dataset.page];
@@ -58,20 +42,6 @@ function applyLanguage(lang) {
   const langBtn = document.getElementById('langToggle');
   langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
   langBtn.setAttribute('aria-label', lang === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten');
-}
-
-// ── Dates ──────────────────────────────────────────────────────────────────
-// Dates written by the werkstatt action, shown in the page language
-function formatDates(lang) {
-  const en = lang === 'en';
-  const locale = en ? 'en-GB' : 'de-DE';
-  document.querySelectorAll('time[datetime]').forEach(t => {
-    const value = t.getAttribute('datetime');
-    const options = value.includes('T')
-      ? { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Berlin' }
-      : { day: en ? 'numeric' : '2-digit', month: en ? 'short' : '2-digit', timeZone: 'Europe/Berlin' };
-    t.textContent = new Date(value).toLocaleString(locale, options);
-  });
 }
 
 // ── Dark Mode ──────────────────────────────────────────────────────────────
@@ -92,38 +62,6 @@ function initTheme() {
   });
 }
 
-// ── Nav ────────────────────────────────────────────────────────────────────
-function initNav() {
-  const toggle = document.getElementById('navToggle');
-  const links  = document.getElementById('navLinks');
-
-  toggle.addEventListener('click', () => {
-    toggle.setAttribute('aria-expanded', links.classList.toggle('is-open'));
-  });
-  links.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
-
-// Sample exam question on lehre.html: mark the answer and explain it
-function initQuiz() {
-  document.querySelectorAll('.quiz').forEach(quiz => {
-    const feedback = quiz.querySelector('.quiz__fb');
-    const buttons = quiz.querySelectorAll('.quiz__opts button');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const right = btn.hasAttribute('data-right');
-        btn.classList.add(right ? 'is-right' : 'is-wrong');
-        translate(feedback, right ? 'lehre.quiz.right' : 'lehre.quiz.wrong');
-        if (right) buttons.forEach(b => { b.disabled = true; });
-      });
-    });
-  });
-}
-
 // ── Init ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('pleasance-lang') || 'de';
@@ -132,6 +70,4 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(document.documentElement.lang === 'de' ? 'en' : 'de');
   });
   initTheme();
-  initNav();
-  initQuiz();
 });

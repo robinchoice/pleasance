@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software-Entwicklung, Training und Coaching in Freiburg — Pleasance</title>
-  <meta name="description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Training zu KI-Agenten und Scrum. Systemisches Coaching in Freiburg und online.">
+  <title>Kleine Apps von Robin Wahl — Pleasance</title>
+  <meta name="description" content="Songgate, Savor und Music Hub: kleine Open-Source-Apps von Robin Wahl aus Freiburg, mit KI-Agenten gebaut und selbst betrieben.">
   <link rel="canonical" href="https://pleasance.org/">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -12,12 +12,12 @@
   <meta property="og:site_name" content="Pleasance">
   <meta property="og:locale" content="de_DE">
   <meta property="og:url" content="https://pleasance.org/">
-  <meta property="og:title" content="Software-Entwicklung, Training und Coaching in Freiburg — Pleasance">
-  <meta property="og:description" content="Robin Wahl aus Freiburg: Websites, Web-Apps und Automatisierungen, die dir gehören. Training zu KI-Agenten und Scrum. Systemisches Coaching in Freiburg und online.">
+  <meta property="og:title" content="Kleine Apps von Robin Wahl — Pleasance">
+  <meta property="og:description" content="Songgate, Savor und Music Hub: kleine Open-Source-Apps von Robin Wahl aus Freiburg, mit KI-Agenten gebaut und selbst betrieben.">
   <meta property="og:image" content="https://pleasance.org/img/og.png">
-  <meta property="og:image:alt" content="Pleasance: Werkzeuge, Wissen und Wege, die dir gehören. Software, Training und Coaching aus Freiburg.">
+  <meta property="og:image:alt" content="Pleasance: Ich baue kleine Apps. Songgate, Savor, Music Hub.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=20261117a">
+  <link rel="stylesheet" href="style.css?v=20261126a">
   <script>(function(){var t=localStorage.getItem('pleasance-theme');if(t==='dark'||(t===null&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';})();</script>
   <script type="application/ld+json">
   {
@@ -29,48 +29,14 @@
         "url": "https://pleasance.org/",
         "name": "Pleasance",
         "inLanguage": "de",
-        "publisher": { "@id": "https://pleasance.org/#business" }
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://pleasance.org/#business",
-        "name": "Pleasance",
-        "description": "Software-Entwicklung, Kurse und systemisches Coaching von Robin Wahl aus Freiburg im Breisgau.",
-        "url": "https://pleasance.org/",
-        "image": "https://pleasance.org/img/og.png",
-        "email": "hello@pleasance.org",
-        "founder": { "@id": "https://pleasance.org/#robin" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Bugginger Straße 37",
-          "postalCode": "79114",
-          "addressLocality": "Freiburg im Breisgau",
-          "addressRegion": "Baden-Württemberg",
-          "addressCountry": "DE"
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Freiburg im Breisgau" },
-          { "@type": "Country", "name": "Deutschland" },
-          { "@type": "Country", "name": "Österreich" },
-          { "@type": "Country", "name": "Schweiz" }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Leistungen",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software-Entwicklung", "description": "Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source und selbst gehostet.", "url": "https://pleasance.org/software.html" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Training und Workshops", "description": "Training und Workshops zum Bauen mit KI-Agenten, Vorbereitung auf die Scrum.org-Zertifizierungen PSM I, PSPO I und PSK I sowie Kurse zu Prototyping und zum Lernen und Schreiben mit KI. In Freiburg, vor Ort bei Teams im DACH-Raum oder online.", "url": "https://pleasance.org/lehre.html" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemisches 1:1-Coaching", "description": "Systemisches Coaching mit Elementen der Logotherapie, persönlich in Freiburg oder online per Videocall.", "url": "https://pleasance.org/coaching.html" } }
-          ]
-        }
+        "publisher": { "@id": "https://pleasance.org/#robin" }
       },
       {
         "@type": "Person",
         "@id": "https://pleasance.org/#robin",
         "name": "Robin Wahl",
-        "jobTitle": "Software-Entwickler, Dozent und Coach",
-        "url": "https://pleasance.org/ueber.html",
-        "worksFor": { "@id": "https://pleasance.org/#business" },
+        "jobTitle": "Software-Entwickler",
+        "url": "https://pleasance.org/",
         "sameAs": ["https://www.linkedin.com/in/robinwahl359", "https://github.com/robinchoice"]
       }
     ]
@@ -84,290 +50,101 @@
   <div class="wrap">
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="index.html" class="wordmark" aria-label="Pleasance, zur Startseite"></a>
-      <button class="nav__menu" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menü</button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="produkte.html" data-i18n="nav.produkte">Produkte</a></li>
-        <li><a href="software.html" data-i18n="nav.software">Software</a></li>
-        <li><a href="lehre.html" data-i18n="nav.lehre">Training</a></li>
-        <li><a href="coaching.html" data-i18n="nav.coaching">Coaching</a></li>
-        <li><a href="apps.html" data-i18n="nav.apps">Apps</a></li>
-        <li><a href="werkstatt.html" data-i18n="nav.werkstatt">Werkstatt</a></li>
-        <li><a href="nachtschicht.html" data-i18n="nav.nacht">Nachtschicht</a></li>
-        <li><a href="handbuch.html" data-i18n="nav.handbuch">Handbuch</a></li>
-        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
-        <li class="nav__tools">
-          <button class="nav__theme" id="themeToggle" aria-pressed="false">
-            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
-          </button>
-          <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
-        </li>
-      </ul>
+      <div class="nav__tools">
+        <button class="nav__theme" id="themeToggle" aria-pressed="false">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="sr-only" data-i18n="nav.theme">Dunkles Farbschema</span>
+        </button>
+        <button class="nav__lang" id="langToggle" aria-label="Switch to English">EN</button>
+      </div>
     </nav>
   </div>
 
   <main id="main">
     <div class="wrap">
-      <section class="home-hero">
+      <header class="page-head">
+        <h1 class="display page-title" data-i18n="home.h1">Ich baue kleine Apps.</h1>
+        <p class="lead" data-i18n="home.lead">Ich bin Robin Wahl aus Freiburg. Meine Apps baue ich mit KI-Agenten, sie sind Open Source und laufen auf meinem eigenen Server. Zwei kann man heute benutzen, eine ist im Test.</p>
+      </header>
+
+      <section class="section app" id="songgate" aria-labelledby="h-songgate">
         <div>
-          <h1 class="display home-title" data-i18n="home.h1">Software aus einer Werkstatt voller Agenten.</h1>
-          <p class="lead" data-i18n="home.lead">Ich bin Robin Wahl, Software-Entwickler, Dozent und Coach aus Freiburg im Breisgau. Mit KI-Agenten baue ich Werkzeuge, die dir gehören: erst ein klickbarer Prototyp, dann die App auf deinem eigenen Server. Alles, was du hier siehst, ist so entstanden.</p>
-          <a class="btn" href="#anfrage" data-i18n="home.cta">Dein Werkzeug anfragen</a>
+          <img class="app__icon" src="img/werkzeuge/musiclink.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-songgate">Songgate</h2>
+          <p class="app__tagline" data-i18n="apps.songgate.tagline">Musik teilen, egal wer was hört.</p>
         </div>
         <div>
-          <div class="wall wall--home">
-            <a class="tool" href="werkstatt.html#fahrbar">
-              <img src="img/werkzeuge/fahrbar.svg" alt="" width="112" height="112">
-              <span class="tool__name">fahrbar</span>
-              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
-            </a>
-            <a class="tool" href="werkstatt.html#musichub">
-              <img src="img/werkzeuge/musichub.svg" alt="" width="112" height="112">
-              <span class="tool__name">Music Hub</span>
-              <span class="status" data-i18n="werkstatt.status.live">Live</span>
-            </a>
-            <a class="tool" href="werkstatt.html#doener">
-              <img src="img/werkzeuge/doener.svg" alt="" width="112" height="112">
-              <span class="tool__name">Lieblingsdöner</span>
-              <span class="status status--test" data-i18n="werkstatt.status.test">Testphase</span>
-            </a>
-            <a class="tool" href="werkstatt.html#fieldtest">
-              <img src="img/werkzeuge/fieldtest.svg" alt="" width="112" height="112">
-              <span class="tool__name">Fieldtest</span>
-              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
-            </a>
-            <a class="tool" href="werkstatt.html#musiclink">
-              <img src="img/werkzeuge/musiclink.svg" alt="" width="112" height="112">
-              <span class="tool__name">Songgate</span>
-              <span class="status" data-i18n="werkstatt.status.live">Live</span>
-            </a>
-            <a class="tool" href="werkstatt.html#docpilot">
-              <img src="img/werkzeuge/docpilot.svg" alt="" width="112" height="112">
-              <span class="tool__name">docpilot</span>
-              <span class="status status--quiet" data-i18n="werkstatt.status.quiet">Ruht</span>
-            </a>
-            <a class="tool" href="werkstatt.html#savor">
-              <img src="img/werkzeuge/savor.svg" alt="" width="112" height="112">
-              <span class="tool__name">Savor</span>
-              <span class="status" data-i18n="werkstatt.status.live">Live</span>
-            </a>
-            <a class="tool" href="#anfrage">
-              <img src="img/werkzeuge/new.svg" alt="" width="112" height="112">
-              <span class="tool__name" data-i18n="home.wall.new">Deins?</span>
-              <span class="status status--work" data-i18n="werkstatt.wall.free">Frei</span>
-            </a>
+          <p class="app__text" data-i18n="apps.songgate.text">Füg einen Link zu Song, Album oder Podcast ein, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, Kontakte und Gruppen bleiben auf deinem Gerät.</p>
+          <div class="app__links">
+            <a class="btn" href="https://songgate.app" data-i18n="apps.songgate.open">Songgate öffnen</a>
+            <a class="btn btn--ghost" href="https://apps.apple.com/app/id6819013473">App Store</a>
+            <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=org.pleasance.songgate">Google Play</a>
+            <a href="https://github.com/robinchoice/songgate" data-i18n="apps.code">Quellcode</a>
           </div>
-          <div class="pulse">
-            <p><b data-gh="projects">14</b> <span data-i18n="werkstatt.zahlen.projects">Projekte in Arbeit</span></p>
-            <p><b data-gh="commits">514</b> <span data-i18n="werkstatt.zahlen.commits">Commits in 30 Tagen</span></p>
-            <p><b data-gh="agent">79&nbsp;%</b> <span data-i18n="home.pulse.agent">davon mit Agent</span></p>
-            <p class="source"><span data-i18n="werkstatt.zahlen.stand">Stand:</span> <time data-gh="updated" datetime="2026-11-27T09:07:51.436Z">27.11.2026, 10:07</time>, <a href="werkstatt.html" data-i18n="home.pulse.source">alle Projekte in der Werkstatt</a></p>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/musiclink-desktop.webp"><img src="img/apps/musiclink-desktop.webp" data-en-src="img/apps/musiclink-desktop-en.webp" alt="Songgate, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/musiclink-phone.webp"><img src="img/apps/musiclink-phone.webp" data-en-src="img/apps/musiclink-phone-en.webp" alt="Songgate, Smartphone" width="780" height="1688" loading="lazy"></a>
           </div>
         </div>
       </section>
 
-      <section class="flow-block" aria-labelledby="h-flow">
-        <h2 class="heading" id="h-flow" data-i18n="home.flow.h2">Von der Idee bis live</h2>
-        <p class="lead" data-i18n="home.flow.lead">Jeder Prototyp läuft durch dieselben Schritte. Die Agenten bauen, ich entscheide an jeder Schwelle, ob es weitergeht.</p>
-        <ol class="flow">
-          <li><b data-i18n="home.flow.s1">Gespräch</b><p data-i18n="home.flow.d1">20 Minuten, kostenlos. Was soll es können, und für wen?</p></li>
-          <li><b data-i18n="home.flow.s2">Gibt es das schon?</b><p data-i18n="home.flow.d2">Suche im Web, in den App Stores und auf GitHub. Wenn ja, sage ich es dir.</p></li>
-          <li><b data-i18n="home.flow.s3">Mockups</b><p data-i18n="home.flow.d3">2–3 klickbare Richtungen für Handy und Desktop. Du wählst.</p></li>
-          <li><b data-i18n="home.flow.s4">Bau aus der Vorlage</b><p data-i18n="home.flow.d4">Login, Deutsch und Englisch, Tests und Deploy sind schon drin.</p></li>
-          <li><b data-i18n="home.flow.s5">Live</b><p data-i18n="home.flow.d5">Auf deiner Domain und deinem Server. Jeder Push geht live.</p></li>
-          <li><b data-i18n="home.flow.s6">Nachts gepflegt</b><p data-i18n="home.flow.d6">Review durch einen zweiten Agenten, Sicherheitsupdates, neue Standards.</p></li>
-        </ol>
-        <p class="flow-example" data-i18n="home.flow.example">Wie schnell das gehen kann: Songgate (damals MusicLink) lief 1&nbsp;Stunde 14&nbsp;Minuten nach dem ersten Commit.</p>
+      <section class="section app" id="savor" aria-labelledby="h-savor">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/savor.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-savor">Savor</h2>
+          <p class="app__tagline" data-i18n="apps.savor.tagline">Deine Coding-Agents. Auf deinem Rechner.</p>
+        </div>
+        <div>
+          <p class="app__text" data-i18n="apps.savor.text">Ein Arbeitsplatz für Claude Code, Codex und OpenCode auf dem eigenen Rechner: Jede Aufgabe endet mit einem klaren Ergebnis, den Fragen an dich und den nächsten Schritten. Für Linux, macOS und Windows, die App fürs Handy ist im Test.</p>
+          <div class="app__links">
+            <a class="btn" href="https://github.com/robinchoice/savor/releases/latest" data-i18n="apps.savor.download">Herunterladen</a>
+            <a class="btn btn--ghost" href="https://savor.pleasance.org" data-i18n="apps.savor.more">Mehr über Savor</a>
+            <a href="https://github.com/robinchoice/savor" data-i18n="apps.code">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/savor-desktop.webp"><img src="img/apps/savor-desktop.webp" alt="Savor, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/savor-phone.webp"><img src="img/apps/savor-phone.webp" alt="Savor, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app" id="musichub" aria-labelledby="h-musichub">
+        <div>
+          <img class="app__icon" src="img/werkzeuge/musichub.svg" alt="" width="72" height="72">
+          <h2 class="heading" id="h-musichub">Music Hub</h2>
+          <p class="app__tagline" data-i18n="apps.musichub.tagline">Versionen für Musik. Ohne Chaos.</p>
+        </div>
+        <div>
+          <p class="app__text" data-i18n="apps.musichub.text">Jede Fassung eines Tracks an einem Ort, Kommentare auf der Sekunde, und am Ende ist klar, welcher Mix freigegeben ist. Music Hub ist noch im Test, einen Zugang gibt es auf Anfrage.</p>
+          <div class="app__links">
+            <a class="btn" href="mailto:hello@pleasance.org?subject=Music%20Hub%20Testzugang" data-i18n="apps.musichub.ask">Testzugang anfragen</a>
+            <a href="https://github.com/robinchoice/music-hub" data-i18n="apps.code">Quellcode</a>
+          </div>
+          <div class="shots">
+            <a class="shot shot--desktop" href="img/apps/musichub-desktop.webp"><img src="img/apps/musichub-desktop.webp" data-en-src="img/apps/musichub-desktop-en.webp" alt="Music Hub, Desktop" width="1440" height="900" loading="lazy"></a>
+            <a class="shot shot--phone" href="img/apps/musichub-phone.webp"><img src="img/apps/musichub-phone.webp" data-en-src="img/apps/musichub-phone-en.webp" alt="Music Hub, Smartphone" width="780" height="1688" loading="lazy"></a>
+          </div>
+        </div>
       </section>
     </div>
-
-    <section class="night company" aria-labelledby="h-company">
-      <div class="wrap">
-        <div>
-          <h2 class="heading" id="h-company" data-i18n="home.company.h2">Nachts arbeitet die Firma. Tagsüber entscheide ich.</h2>
-          <p data-i18n="home.company.nacht">Um Mitternacht beginnt die Nachtschicht: Agenten räumen auf, prüfen sich gegenseitig und tragen neue Standards in die Apps. Um 7 Uhr liegt ein Bericht für mich bereit.</p>
-          <a class="btn" href="nachtschicht.html" data-i18n="home.company.nacht_link">Die Nachtschicht ansehen</a>
-        </div>
-        <div>
-          <h3 data-i18n="home.company.hb_h3">Das Handbuch</h3>
-          <p data-i18n="home.company.hb">Wie eine Firma mit Agenten arbeitet: die Grundsätze, die Fabrik, die Nacht und was schiefging. Offen, zum Nachlesen und Übernehmen.</p>
-          <a href="handbuch.html" data-i18n="home.company.hb_link">Zum Handbuch</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <section class="section section--full" id="agentisch" aria-labelledby="h-agentisch">
-        <h2 class="heading" id="h-agentisch" data-i18n="home.agent.h2">Coaching und Training: agentisches Arbeiten</h2>
-        <p class="lead" data-i18n="home.agent.lead">Für Teams, Selbstständige und alle, die mit Claude Code, Codex und Co. produktiv entwickeln wollen. Ich zeige dir das Setup, mit dem diese Firma läuft: Regeln, Skills, Workflows und Review, an deinem eigenen Code.</p>
-        <div class="offers">
-          <div class="offer">
-            <h3 data-i18n="home.coaching.h2">1:1-Coaching</h3>
-            <p class="offer__detail" data-i18n="home.agent.coach_price">90&nbsp;€</p>
-            <p class="offer__note" data-i18n="home.agent.coach_note">Pro Session, 60 Minuten, online oder in Freiburg. Deine Fragen, dein Repository, dein nächster Schritt.</p>
-          </div>
-          <div class="offer">
-            <h3 data-i18n="home.agent.half">Team-Workshop, halber Tag</h3>
-            <p class="offer__detail" data-i18n="home.agent.half_price">1.200&nbsp;€</p>
-            <p class="offer__note" data-i18n="home.agent.half_note">4 Stunden, bis 12 Personen, online oder bei euch vor Ort. Der Einstieg: Werkzeuge, Aufgaben formulieren, Ergebnisse prüfen.</p>
-          </div>
-          <div class="offer">
-            <h3 data-i18n="home.agent.full">Team-Workshop, ganzer Tag</h3>
-            <p class="offer__detail" data-i18n="home.agent.full_price">1.800&nbsp;€</p>
-            <p class="offer__note" data-i18n="home.agent.full_note">8 Stunden an eurem Code, bis 12 Personen. Ihr richtet Regeln, Skills und die Zweitmeinung eines zweiten Agenten in euren eigenen Repositories ein.</p>
-          </div>
-          <div class="offer">
-            <h3 data-i18n="home.agent.setup">Setup-Begleitung</h3>
-            <p class="offer__detail" data-i18n="home.agent.setup_price">1.500&nbsp;€</p>
-            <p class="offer__note" data-i18n="home.agent.setup_note">Zwei Wochen, vier Sitzungen à 90 Minuten. Wir bauen dein Agent-Setup wie bei Pleasance selbst: Regeln, Skills, Workflows und Nachtschicht.</p>
-          </div>
-        </div>
-        <div class="agent-more stack">
-          <p data-i18n="home.agent.proof">Belege statt Versprechen: Mit diesem Setup baue und betreibe ich allein <a href="apps.html">mehrere Apps, die live sind</a>, und <a href="werkstatt.html#savor">Savor</a>, die Arbeitsumgebung, in der meine Agenten laufen. Wie die Firma dahinter arbeitet, steht offen im <a href="handbuch.html">Handbuch</a>.</p>
-          <p data-i18n="home.agent.pay">Das Erstgespräch dauert 20 Minuten und ist kostenlos. Bezahlen kannst du per Überweisung oder in Bitcoin, auch über Lightning.</p>
-          <div><a class="btn" href="mailto:hello@pleasance.org?subject=Agentisches%20Arbeiten" data-i18n="home.agent.cta">An hello@pleasance.org schreiben</a></div>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="h-ways">
-        <h2 class="heading" id="h-ways" data-i18n="home.ways.h2">Drei Wege zusammenzuarbeiten</h2>
-        <dl class="ways">
-          <div>
-            <dt data-i18n="home.software.h2">Software-Entwicklung</dt>
-            <dd>
-              <p data-i18n="home.ways.software">Prototypen, Web-Apps, Websites und Automatisierungen für Selbstständige, kleine Firmen und Teams. Open Source, auf deinem eigenen Server.</p>
-              <a href="software.html" data-i18n="home.software.more">Mehr zur Software-Entwicklung</a>
-            </dd>
-          </div>
-          <div>
-            <dt data-i18n="home.lehre.h2">Training</dt>
-            <dd>
-              <p data-i18n="home.ways.lehre"><a href="kurs-agenten.html">Mit KI-Agenten bauen</a>, 1:1 oder als Workshop: Du oder dein Team lernt genau dieses Setup an echten Projekten. Dazu Vorbereitung auf PSM&nbsp;I, PSPO&nbsp;I und PSK&nbsp;I, in Freiburg, vor Ort oder online.</p>
-              <a href="lehre.html" data-i18n="home.lehre.more">Mehr zum Training</a>
-            </dd>
-          </div>
-          <div>
-            <dt data-i18n="home.coaching.h2">1:1-Coaching</dt>
-            <dd>
-              <p data-i18n="home.ways.coaching">Systemisches Coaching mit Elementen der Logotherapie, wenn sich deine Arbeit oder dein Leben verändert. In Freiburg oder online, das Erstgespräch dauert 20 Minuten und kostet nichts.</p>
-              <a href="coaching.html" data-i18n="home.coaching.more">Mehr zum Coaching</a>
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="section" id="anfrage" aria-labelledby="h-ask">
-        <div>
-          <h2 class="heading" id="h-ask" data-i18n="home.ask.h2">Dein Werkzeug als nächstes?</h2>
-          <p class="ask-side" data-i18n="home.ask.side">Erzähl in ein paar Sätzen, was es können soll und für wen. Ich antworte innerhalb von zwei Werktagen, das erste Gespräch ist unverbindlich.</p>
-          <p class="ask-side" data-i18n="home.ask.other">Training oder Coaching? Schreib an <a href="mailto:hello@pleasance.org">hello@pleasance.org</a> oder nutze das <a href="kontakt.html">Kontaktformular</a>.</p>
-        </div>
-        <form class="form tool-form" id="askForm">
-          <div class="field">
-            <label for="askMessage" data-i18n="werkstatt.wall.message_label">Was soll dein Werkzeug können?</label>
-            <textarea id="askMessage" name="message" rows="4" maxlength="4800" required data-i18n-placeholder="werkstatt.wall.message_placeholder" placeholder="Zum Beispiel: Unsere Kundschaft bucht Termine per Mail und Telefon. Das soll einfacher werden, ohne dass wir ein Abo mieten."></textarea>
-          </div>
-          <div class="form__row">
-            <div class="field">
-              <label for="askName" data-i18n="kontakt.form.name_label">Dein Name</label>
-              <input type="text" id="askName" name="name" autocomplete="name" maxlength="200" required>
-            </div>
-            <div class="field">
-              <label for="askEmail" data-i18n="kontakt.form.email_label">Deine E-Mail</label>
-              <input type="email" id="askEmail" name="email" autocomplete="email" maxlength="200" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
-            </div>
-          </div>
-          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
-          <div class="tool-form__foot">
-            <button type="submit" class="btn" id="askSubmit" data-i18n="werkstatt.wall.submit">Anfrage senden</button>
-            <span data-i18n="home.ask.foot">Keine Cookies, keine Tracker. Die Anfrage geht direkt an mich.</span>
-          </div>
-          <div class="form-status" id="askStatus" role="status"></div>
-        </form>
-      </section>
-    </div>
-
-    <section class="facts" aria-labelledby="h-facts">
-      <div class="wrap">
-        <div>
-          <h2 class="heading" id="h-facts" data-i18n="home.facts.h2">Beipackzettel dieser Website</h2>
-          <p class="facts__lead" data-i18n="home.facts.lead">Was diese Seite mit deinem Browser macht, und was nicht.</p>
-        </div>
-        <dl>
-          <dt data-i18n="home.facts.cookies_t">Cookies</dt>
-          <dd data-i18n="home.facts.cookies_d">Keine.</dd>
-          <dt data-i18n="home.facts.tracker_t">Tracker von Dritten</dt>
-          <dd data-i18n="home.facts.tracker_d">Keine. Es gibt auch keine Besuchsstatistik.</dd>
-          <dt data-i18n="home.facts.fonts_t">Schriften</dt>
-          <dd data-i18n="home.facts.fonts_d">Vom eigenen Server, nicht von Google.</dd>
-          <dt data-i18n="home.facts.code_t">Quellcode</dt>
-          <dd data-i18n="home.facts.code_d">Offen, <a href="https://github.com/robinchoice/pleasance">auf GitHub</a>.</dd>
-        </dl>
-      </div>
-    </section>
   </main>
 
   <div class="wrap">
     <footer class="footer">
-      <p>Pleasance, Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
+      <p>Robin Wahl, Freiburg im Breisgau. <a href="mailto:hello@pleasance.org">hello@pleasance.org</a></p>
       <ul class="footer__links">
-        <li><a href="ueber.html" data-i18n="nav.ueber">Über mich</a></li>
-        <li><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></li>
         <li><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></li>
         <li><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></li>
+        <li><a href="https://github.com/robinchoice/pleasance" data-i18n="apps.code">Quellcode</a></li>
       </ul>
     </footer>
   </div>
 
   <script src="vendor/sentry-11.4.0.min.js"></script>
   <script src="monitoring.js"></script>
-  <script src="i18n.js?v=20261122a"></script>
-  <script src="main.js?v=20261027c"></script>
-
-  <script>
-  (function () {
-    var API_URL = 'https://api.pleasance.org/contact';
-    var form   = document.getElementById('askForm');
-    var submit = document.getElementById('askSubmit');
-    var status = document.getElementById('askStatus');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      form.elements.message.value = form.elements.message.value.trim();
-      if (!form.reportValidity()) return;
-      submit.disabled = true;
-      translate(submit, 'form.sending');
-      status.className = 'form-status';
-      status.removeAttribute('data-i18n');
-      status.textContent = '';
-
-      try {
-        var res = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            topic: 'software',
-            name: form.elements.name.value.trim(),
-            email: form.elements.email.value.trim(),
-            message: 'Neuer Prototyp:\n\n' + form.elements.message.value.trim(),
-            _honey: form.elements._honey.value,
-          }),
-        });
-        if (!res.ok) throw new Error(res.status);
-        status.className = 'form-status is-success';
-        translate(status, 'werkstatt.wall.success');
-        form.reset();
-      } catch (_) {
-        status.className = 'form-status is-error';
-        translate(status, 'form.error');
-      } finally {
-        submit.disabled = false;
-        translate(submit, 'werkstatt.wall.submit');
-      }
-    });
-  })();
-  </script>
+  <script src="i18n.js?v=20261126a"></script>
+  <script src="main.js?v=20261126a"></script>
 
 </body>
 </html>

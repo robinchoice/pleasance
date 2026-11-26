@@ -6,8 +6,6 @@ colors:
   ink: "#0E2218"
   muted: "#4E5F55"
   fir: "#1D4A34"
-  deep: "#0F2C1F"
-  sprout: "#C8E39F"
   error: "#9B2C2C"
 typography:
   family: Bricolage Grotesque (variable, opsz 12–96, wdth 75–100, wght 200–800)
@@ -52,14 +50,9 @@ rounded:
 
 ## Überblick
 
-Pleasance ist das Dach für Robin Wahls freie Arbeit: Software-Entwicklung, Lehre und 1:1-Coaching, gebaut und betrieben mit KI-Agenten. Die Seite zeigt Belege statt Adjektive: echte Werkzeuge, echte Zahlen aus GitHub, echte Abläufe und Lehren.
+Pleasance ist der Name, unter dem Robin Wahl kleine Apps baut. Die Seite ist bewusst klein: eine Startseite „Ich baue kleine Apps.“ mit den Apps, die live sind, je ein App-Block, darunter nur Impressum und Datenschutz. Keine Angebote, keine Preise, keine Projektzahlen.
 
-- **Startseite (Schaufenster):** „Software aus einer Werkstatt voller Agenten.“ Daneben die Werkzeug-Wand mit den 30-Tage-Zahlen, darunter der Weg von der Idee bis live, der Nacht-Band mit Links zu Nachtschicht und Handbuch, die drei Angebote und das Anfrageformular. Führt zu Anfragen.
-- **Nachtschicht:** „Nachts arbeitet die Firma. Tagsüber entscheide ich.“ Die Nacht als Zeitleiste, ein Tag in der Fabrik, die Angebote unter den Wörtern Werkzeuge, Wissen und Wege.
-- **Handbuch:** Die Arbeitsweise als offene Kapitel: Grundsätze, Fabrik, Nacht, was schiefging, mit mir arbeiten.
-- **Apps:** „Apps, die du heute benutzen kannst.“ Nur Apps, die live oder herunterladbar sind, jede im selben Block (nach dem Vorbild von dergigi.org): Zeichen, Name, Tagline, ein Satz, Links, Quellcode, Screenshots Desktop und Handy. Darunter drei Werte auf dunklem Band. Was noch in Arbeit ist, steht in der Werkstatt.
-
-Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften auf eigenem Server. Der „Beipackzettel“ auf der Startseite zählt das auf. Er muss immer stimmen. Keine Infrastruktur-Details (Hosts, Anbieter, Server) auf die Seite.
+Haltung: Eigentum vor Miete, Open Source zuerst, Sorgfalt vor Tempo. Die Seite beweist das selbst: keine Cookies, keine Tracker von Dritten, Schriften auf eigenem Server. Keine Infrastruktur-Details (Hosts, Anbieter, Server) auf die Seite.
 
 ## Farben
 
@@ -69,7 +62,6 @@ Tannengrün auf hellem, leicht grünstichigem Papier. Kein Creme, kein Terrakott
 - **Ink (#0E2218):** Text, Linien, Buttons. Sehr dunkles Grün statt Schwarz.
 - **Muted (#4E5F55):** Nebentexte.
 - **Fir (#1D4A34):** Links, Unterstreichungen, Hover.
-- **Deep (#0F2C1F) + Sprout (#C8E39F):** für dunkle Blöcke: Beipackzettel, die Nacht (`.night`: Band auf der Startseite, Kopf der Nachtschicht) und die großen Momente der Angebotsseiten (Kopf von Coaching, Zitat, Aussage-Band auf Software). Sprout ist Text-, Link- und Knopffarbe auf Deep, nie Textfarbe auf hellem Grund. Einzige helle Ausnahme: die Kapitelleiste im Handbuch, eine Sprout-Fläche mit Deep-Text.
 
 ## Typografie
 
@@ -89,27 +81,20 @@ Linksbündig, Raster 5fr/7fr: links das große Wort oder die Überschrift, recht
 - 1,5px-Linien trennen Zeilen und Abschnitte.
 - Haarlinien trennen Listeneinträge.
 
-Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist (Vorbereitung auf eine Zertifizierung, Weg von der Idee bis live, Kapitel des Handbuchs).
+Nummerierungen nur, wo der Inhalt wirklich eine Reihenfolge ist.
 
 ## Komponenten
 
 - **Button:** Ink-Fläche, Paper-Text, 3px Radius. Sekundär: `btn--ghost` mit 1,5px-Kontur.
 - **Links:** Fir, 2px unterstrichen.
-- **Formulare:** weiße Felder mit 1,5px Ink-Rand; Themenwahl als Radio-Buttons im Button-Look.
-- **FAQ:** `details` mit Linien und +/−.
-- **Werkzeug-Wand (Werkstatt, Startseite, Reihe auf Software):** Die einzige Stelle mit Kacheln. Auf der Startseite verlinken die Kacheln auf ihr Feld in der Werkstatt, das Plus springt zum Anfrageformular. Jedes Werkzeug zeigt seine dunkle Kachel mit Zeichen aus der Produktfamilie (`img/werkzeuge`, Regeln in der DESIGN.md im Starter), Name und Status stehen auf Papier darunter, ohne Kasten und ohne Schatten. Reihenfolge nach Farbband. Die letzte Kachel „Neuer Prototyp“ öffnet das Anfrageformular in der Wand.
-
-- **Zeitleiste der Nacht (Nachtschicht):** 22 bis 8 Uhr, die Nachtschritte mit ihren echten Uhrzeiten. Nachts zeigt eine Marke „jetzt“ die aktuelle Uhrzeit. Auf dem Handy wird sie zur Liste.
-- **Große Momente (Software, Training, Coaching):** Die Angebotsseiten brechen den Text mit wenigen großen Elementen auf, ohne Bilder: Fragen-Wand (`.questions`, Coaching), große Zahlen (`.bignums`, je drei mit kurzer Zeile darunter), Zitat (`.quote` auf `.night`), Aussage-Band (`.statement`), Gegenüberstellung (`.vs`, Gemietet gegen Gekauft) und eine Probefrage zum Anklicken (`.quiz`, Training). Sparsam: neben dem Kopf höchstens drei pro Seite. Echte Fotos (Porträt, Orte, Workshop) und Screenshots der Werkzeuge kommen dazu, sobald es sie gibt, keine Stockfotos.
-- **App-Block (Apps):** Raster 5fr/7fr, links Zeichen aus `img/werkzeuge`, Name und Tagline, rechts Satz, Knöpfe, Quellcode und die Screenshots (`img/apps/<zeichen>-desktop.webp` und `-phone.webp`, aus `docs/screenshots` der App) gleich hoch nebeneinander, auf dem Handy als waagrechte Reihe. Die Blöcke schreibt `scripts/werkstatt.mjs` aus `scripts/projects.json` (Feld `app`).
-- **Kapitelleiste (Handbuch):** links, klebt beim Scrollen, auf dem Handy eine waagrechte Zeile oben.
+- **App-Block (Startseite):** Raster 5fr/7fr, links Zeichen aus `img/werkzeuge`, Name und Tagline, rechts Satz, Knöpfe, Quellcode und die Screenshots (`img/apps/<zeichen>-desktop.webp` und `-phone.webp`, aus `docs/screenshots` der App) gleich hoch nebeneinander, auf dem Handy als waagrechte Reihe. Die Blöcke stehen von Hand in `index.html`.
 
 ## Bewegung
 
-Keine Einblend-Animationen. Nur Reaktionen auf Nutzeraktionen (Hover, Menü, FAQ öffnen). `prefers-reduced-motion` schaltet weiches Scrollen ab.
+Keine Einblend-Animationen. Nur Reaktionen auf Nutzeraktionen (Hover). `prefers-reduced-motion` schaltet weiches Scrollen ab.
 
 ## Was dieses Design nicht ist
 
 - Kein Creme-mit-Serifen-und-Terrakotta-Look
-- Keine Karten-Raster mit Schatten und Icons (die Werkzeug-Wand ist die Ausnahme, siehe Komponenten)
+- Keine Karten-Raster mit Schatten und Icons
 - Keine Tracker, keine eingebetteten Dienste von Dritten beim Seitenaufruf
