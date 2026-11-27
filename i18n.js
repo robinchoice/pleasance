@@ -30,8 +30,8 @@ const I18N = {
   home: {
     h1:   { de: 'Ich baue kleine Apps.', en: 'I build small apps.' },
     lead: {
-      de: 'Ich bin Robin Wahl aus Freiburg. Meine Apps baue ich mit KI-Agenten, sie sind Open Source und laufen auf meinem eigenen Server. Zwei kann man heute benutzen, eine ist im Test.',
-      en: 'I’m Robin Wahl from Freiburg, Germany. I build my apps with AI agents, they are open source and run on my own server. Two are ready to use today, one is in testing.',
+      de: 'Robin Wahl aus Freiburg. Lebenslauf auf <a href="https://www.linkedin.com/in/robinwahl359">LinkedIn</a>.',
+      en: 'Robin Wahl from Freiburg, Germany. CV on <a href="https://www.linkedin.com/in/robinwahl359">LinkedIn</a>.',
     },
   },
 
