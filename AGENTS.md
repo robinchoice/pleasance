@@ -2,7 +2,7 @@
 
 ## Zweck & Links
 
-- Website von Pleasance (https://pleasance.org und `www.`): eine Startseite mit den Apps, die live sind (Songgate, Savor, Music Hub als Testzugang auf Anfrage), dazu Impressum, Datenschutz und die AGB für gehostetes Savor. Statisches HTML, CSS und JS ohne Build, dazu eine kleine Bun-API in `api/` (https://api.pleasance.org), die nur noch `/savor/feedback` bedient.
+- Website von Pleasance (https://pleasance.org und `www.`): eine Startseite mit den Apps, die live sind (Lieblingsdöner, Songgate, Savor, Music Hub als Testzugang auf Anfrage), dazu Impressum, Datenschutz und die AGB für gehostetes Savor. Statisches HTML, CSS und JS ohne Build, dazu eine kleine Bun-API in `api/` (https://api.pleasance.org), die nur noch `/savor/feedback` bedient.
 - Coolify auf VPS 1, Projekt `pleasance-website`, Anwendungen `pleasance-site` und `pleasance-api`.
 - Gestaltung: DESIGN.md.
 - `POST /savor/feedback`: Der Bug-Käfer in Savor schickt Meldungen über den lokalen Savor-Daemon hierher, die API legt daraus ein Issue im privaten Repo `robinchoice/savor-feedback` an (Screenshot unter `screenshots/`). Nichts wird gespeichert.

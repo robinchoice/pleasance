@@ -8,8 +8,8 @@ const I18N_META = {
       en: 'Small apps by Robin Wahl — Pleasance',
     },
     desc: {
-      de: 'Songgate, Savor und Music Hub: kleine Open-Source-Apps von Robin Wahl aus Freiburg, mit KI-Agenten gebaut und selbst betrieben.',
-      en: 'Songgate, Savor and Music Hub: small open source apps by Robin Wahl from Freiburg, Germany, built with AI agents and self-hosted.',
+      de: 'Lieblingsdöner, Songgate, Savor und Music Hub: kleine Open-Source-Apps von Robin Wahl aus Freiburg, mit KI-Agenten gebaut und selbst betrieben.',
+      en: 'Lieblingsdöner, Songgate, Savor and Music Hub: small open source apps by Robin Wahl from Freiburg, Germany, built with AI agents and self-hosted.',
     },
   },
 };
@@ -37,6 +37,14 @@ const I18N = {
 
   apps: {
     code: { de: 'Quellcode', en: 'Source code' },
+    doener: {
+      tagline: { de: 'Der beste Döner deiner Stadt.', en: 'The best döner in your city.' },
+      text: {
+        de: 'Leute aus deiner Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Ranking der Stadt. Neu im App Store und bei Google Play.',
+        en: 'People near you rate sauce, meat, salad and bread, and that becomes the ranking of your city. New on the App Store and Google Play.',
+      },
+      web: { de: 'Im Browser', en: 'In the browser' },
+    },
     songgate: {
       tagline: { de: 'Musik teilen, egal wer was hört.', en: 'Share music, whatever they listen on.' },
       text: {

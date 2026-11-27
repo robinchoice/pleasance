@@ -4,6 +4,7 @@
 
 ## Apps
 
+- [Lieblingsdöner](https://doener-api.pleasance.org): Leute aus der Gegend bewerten Soße, Fleisch, Salat und Brot, daraus entsteht das Döner-Ranking der Stadt. Im App Store (https://apps.apple.com/app/id6792510350), bei Google Play (https://play.google.com/store/apps/details?id=com.robinchoice.doener) und im Browser. Quellcode: https://github.com/robinchoice/doenerapp
 - [Songgate](https://songgate.app): Ein Link zu Song, Album oder Podcast, Songgate findet ihn bei Spotify, Apple Music, YouTube Music, Deezer und TIDAL. Ohne Konto, im Web, im App Store und bei Google Play. Quellcode: https://github.com/robinchoice/songgate
 - [Savor](https://savor.pleasance.org): Arbeitsplatz für Coding-Agents (Claude Code, Codex, OpenCode) auf dem eigenen Rechner, für Linux, macOS und Windows. Quellcode: https://github.com/robinchoice/savor
 - [Music Hub](https://pleasance.org/#musichub): Versionen und Kommentare für Musikproduktionen. Im Test, Zugang auf Anfrage an hello@pleasance.org. Quellcode: https://github.com/robinchoice/music-hub
