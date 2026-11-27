@@ -1,6 +1,5 @@
-// Tests the API through its interface: app.request() with the same headers a
-// browser or the Savor daemon sends. Nothing is mailed: /contact is covered up
-// to the point where a mail would leave, /savor/feedback talks to a fake GitHub.
+// Tests the API through its interface: app.request() with the same headers the
+// Savor daemon sends. /savor/feedback talks to a fake GitHub.
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test'
 
 const githubRequests: { method: string, path: string, body: any }[] = []
@@ -28,42 +27,6 @@ test('GET / answers ok', async () => {
   expect(await (await app.request('/')).json()).toEqual({ ok: true })
 })
 
-describe('/contact', () => {
-  const origin = { Origin: 'https://pleasance.org' }
-  const valid = { topic: 'software', name: 'Ada', email: 'ada@example.org', message: 'Hallo' }
-
-  test('needs an allowed origin', async () => {
-    expect((await json('/contact', valid)).status).toBe(403)
-    expect((await json('/contact', valid, { Origin: 'https://evil.example' })).status).toBe(403)
-    expect((await json('/contact', { ...valid, _honey: 'x' }, { Origin: 'http://localhost:8080' })).status).toBe(200)
-  })
-
-  test('rejects broken or incomplete bodies', async () => {
-    expect((await json('/contact', '{', origin)).status).toBe(400)
-    expect((await json('/contact', { ...valid, message: '' }, origin)).status).toBe(400)
-    expect((await json('/contact', { ...valid, name: 42 }, origin)).status).toBe(400)
-    expect((await json('/contact', { ...valid, topic: 'constructor' }, origin)).status).toBe(400)
-    expect((await json('/contact', { ...valid, email: 'ada at example' }, origin)).status).toBe(400)
-    expect((await json('/contact', { ...valid, message: 'x'.repeat(5001) }, origin)).status).toBe(400)
-  })
-
-  test('honeypot submissions are accepted and dropped', async () => {
-    expect(await (await json('/contact', { ...valid, _honey: 'bot' }, origin)).json()).toEqual({ ok: true })
-  })
-
-  test('limits requests per address', async () => {
-    const ip = { ...origin, 'X-Forwarded-For': '10.1.0.1' }
-    for (let i = 0; i < 5; i++) expect((await json('/contact', { _honey: 'x' }, ip)).status).toBe(200)
-    expect((await json('/contact', { _honey: 'x' }, ip)).status).toBe(429)
-  })
-
-  test('keys the limit on the proxy-appended address, not client-supplied ones', async () => {
-    const request = (i: number) => json('/contact', { _honey: 'x' }, { ...origin, 'X-Forwarded-For': `1.2.3.${i}, 10.1.0.2` })
-    for (let i = 0; i < 5; i++) expect((await request(i)).status).toBe(200)
-    expect((await request(5)).status).toBe(429)
-  })
-})
-
 describe('/savor/feedback', () => {
   const valid = { text: 'Button does nothing\n\nSteps: click it', context: [['Agents', 'claude 2.1']] }
 
@@ -80,6 +43,12 @@ describe('/savor/feedback', () => {
     expect((await json('/savor/feedback', { ...valid, context: { Agents: 'claude' } })).status).toBe(400)
     expect((await json('/savor/feedback', { ...valid, screenshot: 'data:image/gif;base64,R0lGODlh' })).status).toBe(400)
     expect((await json('/savor/feedback', { ...valid, screenshot: 'https://example.org/x.png' })).status).toBe(400)
+  })
+
+  test('keys the limit on the proxy-appended address, not client-supplied ones', async () => {
+    const request = (i: number) => json('/savor/feedback', { ...valid, text: '' }, { 'X-Forwarded-For': `1.2.3.${i}, 10.1.0.2` })
+    for (let i = 0; i < 5; i++) expect((await request(i)).status).toBe(400)
+    expect((await request(5)).status).toBe(429)
   })
 
   test('answers 503 without a token', async () => {

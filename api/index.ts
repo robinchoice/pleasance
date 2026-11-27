@@ -1,8 +1,6 @@
 import * as Sentry from '@sentry/bun'
 import { Hono } from 'hono'
 import { bodyLimit } from 'hono/body-limit'
-import { cors } from 'hono/cors'
-import { createTransport } from 'nodemailer'
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -38,124 +36,11 @@ app.onError((error, c) => {
   console.error(error)
   return c.json({ error: 'Internal server error' }, 500)
 })
-const mailer = createTransport({
-  host:       'smtp.protonmail.ch',
-  port:       587,
-  requireTLS: true,
-  auth:       { user: 'noreply@pleasance.org', pass: process.env.SMTP_TOKEN },
-})
-
-const ALLOWED_ORIGINS = [
-  'https://pleasance.org',
-  'https://www.pleasance.org',
-]
-const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/
-const isAllowedOrigin = (origin: string) => ALLOWED_ORIGINS.includes(origin) || LOCAL_ORIGIN.test(origin)
 
 // Traefik appends the address it saw to X-Forwarded-For, earlier entries come from the client.
 const clientIp = (header: string | undefined) => header?.split(',').at(-1)?.trim() || 'unknown'
 
-const MAX_REQUESTS = 5
-const requestsPerIp = new Map<string, number>()
-setInterval(() => requestsPerIp.clear(), 10 * 60 * 1000)
-
-const MAX_MAILS_PER_HOUR = 20
-let mailsThisHour = 0
-let mailWindow = 0
-setInterval(() => {
-  mailsThisHour = 0
-  mailWindow++
-}, 60 * 60 * 1000)
-
-const TOPIC_LABELS: Record<string, string> = {
-  software: 'Software',
-  lehre:    'Training',
-  coaching: 'Coaching',
-}
-
 app.get('/', (c) => c.json({ ok: true }))
-
-app.use('/contact', cors({
-  origin: (origin) => isAllowedOrigin(origin) ? origin : null,
-  allowMethods: ['POST', 'OPTIONS'],
-  allowHeaders: ['Content-Type'],
-}))
-app.use('/contact', bodyLimit({ maxSize: 32 * 1024 }))
-
-app.post('/contact', async (c) => {
-  if (!isAllowedOrigin(c.req.header('origin') ?? '')) {
-    return c.json({ error: 'Forbidden' }, 403)
-  }
-
-  const ip = clientIp(c.req.header('x-forwarded-for'))
-  const count = (requestsPerIp.get(ip) ?? 0) + 1
-  requestsPerIp.set(ip, count)
-  if (count > MAX_REQUESTS) {
-    return c.json({ error: 'Too many requests' }, 429)
-  }
-
-  let body: Record<string, unknown>
-
-  try {
-    body = await c.req.json()
-  } catch {
-    return c.json({ error: 'Invalid JSON' }, 400)
-  }
-
-  const { topic, name, email, message, _honey } = body
-
-  if (_honey) {
-    return c.json({ ok: true })
-  }
-
-  if (!topic || !name || !email || !message) {
-    return c.json({ error: 'Missing fields' }, 400)
-  }
-
-  if (typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
-    return c.json({ error: 'Invalid fields' }, 400)
-  }
-
-  if (typeof topic !== 'string' || !Object.hasOwn(TOPIC_LABELS, topic)) {
-    return c.json({ error: 'Invalid topic' }, 400)
-  }
-
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return c.json({ error: 'Invalid email' }, 400)
-  }
-
-  if (name.length > 200 || email.length > 200 || message.length > 5000) {
-    return c.json({ error: 'Input too long' }, 400)
-  }
-
-  if (mailsThisHour >= MAX_MAILS_PER_HOUR) {
-    return c.json({ error: 'Too many requests' }, 429)
-  }
-
-  const topicLabel = TOPIC_LABELS[topic]
-  // Count before sending so concurrent requests cannot overshoot the cap.
-  mailsThisHour++
-  const countedIn = mailWindow
-
-  try {
-    await mailer.sendMail({
-      from:    'Pleasance Kontakt <noreply@pleasance.org>',
-      to:      'hello@pleasance.org',
-      replyTo: email,
-      subject: `[${topicLabel}] Anfrage von ${name}`,
-      text:    `Thema: ${topicLabel}\nName: ${name}\nE-Mail: ${email}\n\n${message}`,
-    })
-  } catch (error) {
-    // Only mails that left count: an SMTP outage must not lock the form for an hour.
-    // Skip if the hourly reset ran meanwhile: the new window never counted this mail.
-    if (countedIn === mailWindow) mailsThisHour--
-    console.error('SMTP error:', error)
-    Sentry.captureException(error)
-    return c.json({ error: 'Send failed' }, 500)
-  }
-
-  return c.json({ ok: true })
-})
 
 const FEEDBACK_REPO = 'robinchoice/savor-feedback'
 const GITHUB_API_URL = process.env.GITHUB_API_URL || 'https://api.github.com'
